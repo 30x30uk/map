@@ -83,11 +83,15 @@
             background: #B5E370;
         }
 
+        .asking-for-support {
+            background-color: #1B27C1;
+            border-radius: 50%;
+        }
+
         .explainer{
             font-size: 9px;
             text-align: center;
         }
-
     </style>
 </head>
 <body>
@@ -114,18 +118,130 @@
         <div class="legend-item">
             <div class="legend-color mixed-condition"></div> Other protected areas
         </div>
+        <div class="legend-item">
+            <div class="legend-color asking-for-support"></div> Requesting your help
+        </div>
+
         <div class="explainer"><a href="#">What does this mean?</a></div>
     </div>
     <script>
-        const MAPBOX_TOKEN = "pk.eyJ1IjoiZTk4Nzg5czdkZiIsImEiOiJjbTcwZm8xOHAwMWZ6MmlzZ2ZkeXJzN21rIn0.eDCzqjXb6hx54675TiNWpg";  // Replace with actual token
+        const MAPBOX_TOKEN = "pk.eyJ1IjoiZTk4Nzg5czdkZiIsImEiOiJjbTcwZm8xOHAwMWZ6MmlzZ2ZkeXJzN21rIn0.eDCzqjXb6hx54675TiNWpg";
+
+        const projects = [
+            {
+                name: "Heal Somerset",
+                coordinates: [-2.75, 51.1], // Longitude, Latitude
+                image: "https://www.projectsfornature.com/uploads/project_images/7d/d8/1552288/1701804763_heal_somerset.jpg",
+                description: "Transforming a site in Somerset from nature-poor to nature-rich, creating an inspiring place for wildlife and people.",
+                website: "https://healrewilding.org.uk"
+            },
+            {
+                name: "Blue Recovery: People-Powered Ocean Conservation",
+                coordinates: [-3.435973, 55.378051], // Approximate center of the UK
+                image: "https://www.projectsfornature.com/images/blue-recovery.jpg",
+                description: "Empowering volunteers to clean beaches and survey marine life, contributing to healthier seas and marine habitats.",
+                website: "https://www.projectsfornature.com/p/blue-recovery-inspiring-action-protecting-oceans"
+            },
+            {
+                name: "Building the Freshwater Network",
+                coordinates: [-1.1743, 52.3555], // Approximate location in England
+                image: "https://www.projectsfornature.com/images/freshwater-network.jpg",
+                description: "Creating a network of wilder, wetter, cleaner, and more connected habitats to halt and reverse the decline of freshwater biodiversity.",
+                website: "https://www.projectsfornature.com/p/building-the-freshwater-network"
+            },
+            {
+                name: "Peak District - Nature Recovery at Dalehead",
+                coordinates: [-1.8, 53.3], // Approximate location in Peak District
+                image: "https://www.projectsfornature.com/images/peak-district-dalehead.jpg",
+                description: "Demonstrating how different land management can benefit people, nature, and climate in the Peak District.",
+                website: "https://www.projectsfornature.com/p/peak-district-nature-recovery-at-dalehead"
+            },
+            {
+                name: "Midlands WILD Revival",
+                coordinates: [-1.5, 52.4], // Approximate location in Midlands
+                image: "https://www.projectsfornature.com/images/midlands-wild-revival.jpg",
+                description: "Rewilding 750 acres of land and reviving the River Blythe to create a haven for nature in the Midlands.",
+                website: "https://www.projectsfornature.com/p/midlands-wild-revival"
+            },
+            {
+                name: "The Re-Pond Project",
+                coordinates: [-2.25, 51.9], // Severn Vale, approximate location
+                image: "https://www.projectsfornature.com/images/re-pond-project.jpg",
+                description: "Restoring and creating ponds to support nature recovery across the Severn Vale and Somerset Coastal Levels.",
+                website: "https://www.projectsfornature.com/p/re-pond-project"
+            },
+            {
+                name: "Wild Coast Project",
+                coordinates: [1.0, 51.5], // Essex coast, approximate location
+                image: "https://www.projectsfornature.com/images/wild-coast-project.jpg",
+                description: "Restoring coastal habitats to benefit wildlife and people along the Essex coast.",
+                website: "https://www.projectsfornature.com/p/wild-coast-project"
+            },
+            {
+                name: "Northern Forest",
+                coordinates: [-1.5, 53.8], // Northern England, approximate location
+                image: "https://www.projectsfornature.com/images/northern-forest.jpg",
+                description: "Creating a new forest across the North of England to boost wildlife, mitigate climate change, and enhance well-being.",
+                website: "https://www.projectsfornature.com/p/northern-forest"
+            },
+            {
+                name: "Great Fen Project",
+                coordinates: [-0.2, 52.5], // Cambridgeshire, approximate location
+                image: "https://www.projectsfornature.com/images/great-fen-project.jpg",
+                description: "Restoring 3,700 hectares of fenland habitat to create a haven for wildlife and people.",
+                website: "https://www.projectsfornature.com/p/great-fen-project"
+            },
+            {
+                name: "Wilder Blean",
+                coordinates: [1.05, 51.3], // Kent, approximate location
+                image: "https://www.projectsfornature.com/images/wilder-blean.jpg",
+                description: "Introducing European bison to restore natural processes and biodiversity in Blean Woods.",
+                website: "https://www.projectsfornature.com/p/wilder-blean"
+            },
+            {
+                name: "Wild Ennerdale",
+                coordinates: [-3.4, 54.5], // Cumbria, approximate location
+                image: "https://www.projectsfornature.com/images/wild-ennerdale.jpg",
+                description: "A partnership project to allow the Ennerdale valley to evolve naturally, promoting ecological restoration.",
+                website: "https://www.projectsfornature.com/p/wild-ennerdale"
+            },
+            {
+                name: "Knepp Estate Rewilding",
+                coordinates: [-0.4, 51.0], // West Sussex, approximate location
+                image: "https://www.projectsfornature.com/images/knepp-estate.jpg",
+                description: "A pioneering rewilding project turning intensively farmed land into a biodiversity hotspot.",
+                website: "https://www.projectsfornature.com/p/knepp-estate-rewilding"
+            },
+            {
+                name: "Summerscales Park Naturalisation",
+                coordinates: [-1.9, 53.7], // West Yorkshire, approximate location
+                image: "https://www.projectsfornature.com/images/summerscales-park.jpg",
+                description: "Transforming a former landfill site into a naturalised park for wildlife and community enjoyment.",
+                website: "https://www.projectsfornature.com/p/summerscales-park-naturalisation"
+            },
+            {
+                name: "Carrifran Wildwood",
+                coordinates: [-3.3, 55.4], // Scottish Borders, approximate location
+                image: "https://www.projectsfornature.com/images/carrifran-wildwood.jpg",
+                description: "Restoring native woodland in the Southern Uplands to enhance biodiversity and carbon sequestration.",
+                website: "https://www.projectsfornature.com/p/carrifran-wildwood"
+            },
+            {
+                name: "Avalon Marshes",
+                coordinates: [-2.8, 51.1], // Somerset, approximate location
+                image: "https://www.projectsfornature.com/images/avalon-marshes.jpg",
+                description: "A landscape-scale project restoring wetlands for wildlife and people in the Somerset Levels.",
+                website: "https://www.projectsfornature.com/p/avalon-marshes"
+            }
+        ];
+
 
         function loadMap() {
             console.log('load map')
             mapboxgl.accessToken = MAPBOX_TOKEN;
             var map = new mapboxgl.Map({
                 container: "root",
-                // style: "mapbox://styles/e98789s7df/cm70fthzc01ji01qxawvpabla",
-                style: "mapbox://styles/e98789s7df/cm70fthzc01ji01qxawvpabla/draft",
+                style: "mapbox://styles/e98789s7df/cm70fthzc01ji01qxawvpabla",
                 center: [-1.5, 52.5],  // Center of the UK
                 pitch: 30, // pitch in degrees
                 bearing: -10, // bearing in degrees
@@ -206,6 +322,47 @@
             });
             map.on('mouseleave', 'spa_england_simple', function () {
                 map.getCanvas().style.cursor = '';
+            });
+
+            projects.forEach(project => {
+                // Create a smaller marker with custom styling
+                const markerElement = document.createElement('div');
+                markerElement.style.width = "14px"; // Adjust marker size
+                markerElement.style.height = "14px";
+                markerElement.style.backgroundColor = "#1B27C1"; // Keep color
+                markerElement.style.borderRadius = "50%"; // Make it round
+                markerElement.style.cursor = "pointer"; // Ensure pointer style
+                // markerElement.style.boxShadow = "0 0 8px rgba(0, 0, 0, 0.3)";
+
+                // Create the marker using custom element
+                const marker = new mapboxgl.Marker(markerElement)
+                    .setLngLat(project.coordinates)
+                    .addTo(map);
+
+                // Create a popup
+                const popup = new mapboxgl.Popup({ offset: 20 })
+                    .setHTML(`
+                        <div style="text-align:center;">
+                            <h3>${project.name}</h3>
+                            <div class="legend-color asking-for-support"></div>
+                            <p><strong>This project would love your help!</strong></p>
+                            <img src="${project.image}" alt="${project.name}" style="width:170px; border-radius:3px; margin-bottom:8px;">
+                            <p>${project.description}</p>
+                            <a href="${project.website}" target="_blank" style="color:#1B27C1; font-weight:bold;">Learn More</a>
+                        </div>
+                    `);
+
+                // Attach popup to marker
+                marker.setPopup(popup);
+
+                // Change cursor on hover
+                markerElement.addEventListener("mouseenter", () => {
+                    map.getCanvas().style.cursor = "pointer";
+                });
+
+                markerElement.addEventListener("mouseleave", () => {
+                    map.getCanvas().style.cursor = "";
+                });
             });
 
         }
