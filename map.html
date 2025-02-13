@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/mapbox-gl/dist/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet">
+
+    <!-- https://api.mapbox.com/styles/v1/e98789s7df/cm70fthzc01ji01qxawvpabla/draft.html?title=view&access_token=pk.eyJ1IjoiZTk4Nzg5czdkZiIsImEiOiJjbTcwZm8xOHAwMWZ6MmlzZ2ZkeXJzN21rIn0.eDCzqjXb6hx54675TiNWpg&zoomwheel=true&fresh=true#10/50.9296/-1.8703/0/59 -->
+
+    <style>
+        #root { width: 100vw; height: 100vh; }
+        #map { width: 100vw; height: 100vh; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        const MAPBOX_TOKEN = "pk.eyJ1IjoiZTk4Nzg5czdkZiIsImEiOiJjbTcwZm8xOHAwMWZ6MmlzZ2ZkeXJzN21rIn0.eDCzqjXb6hx54675TiNWpg";  // Replace with actual token
+
+        function loadMap() {
+            console.log('load map')
+            mapboxgl.accessToken = MAPBOX_TOKEN;
+            var map = new mapboxgl.Map({
+                container: "root",
+                // style: "mapbox://styles/e98789s7df/cm70fthzc01ji01qxawvpabla",
+                style: "mapbox://styles/e98789s7df/cm70fthzc01ji01qxawvpabla/draft",
+                center: [-1.5, 52.5],  // Center of the UK
+                pitch: 30, // pitch in degrees
+                bearing: -10, // bearing in degrees
+                zoom: 6
+            });
+
+            // Add click event to show a pop-up
+            map.on('click', 'spa_england_simple', function (e) {
+                console.log('click')
+                const properties = e.features[0].properties;
+                console.log(properties)
+
+                // Example properties (ensure your GeoJSON contains these fields)
+                const name = properties.SITENAME || "Unknown SPA";
+
+                // Create the pop-up
+                new mapboxgl.Popup()
+                    .setLngLat(e.lngLat)
+                    .setHTML(`<h3>${name}</h3><p>Designation: Special Protection Area</p>`)
+                    .addTo(map);
+            });
+            map.on('click', 'sssi_england_simple', function (e) {
+                console.log('click')
+                const properties = e.features[0].properties;
+                console.log(properties)
+
+                // Example properties (ensure your GeoJSON contains these fields)
+                const name = properties.SSSI_NAME || "Unknown SPA";
+                const designation = properties.designation || "N/A";
+                const area = properties.SSSI_AREA || "Unknown";
+
+                // Create the pop-up
+                new mapboxgl.Popup()
+                    .setLngLat(e.lngLat)
+                    .setHTML(`<h3>${name}</h3><p>Designation: Special Site of Scientific Interest</p><p>Area: ${area.toFixed(2)} hectares</p>`)
+                    .addTo(map);
+            });
+
+            // Change cursor to pointer when hovering over polygons
+            map.on('mouseenter', 'sssi_england_simple', function () {
+                map.getCanvas().style.cursor = 'pointer';
+            });
+            map.on('mouseenter', 'spa_england_simple', function () {
+                map.getCanvas().style.cursor = 'pointer';
+            });
+
+            // Reset cursor when not hovering
+            map.on('mouseleave', 'sssi_england_simple', function () {
+                map.getCanvas().style.cursor = '';
+            });
+            map.on('mouseleave', 'spa_england_simple', function () {
+                map.getCanvas().style.cursor = '';
+            });
+
+        }
+
+        loadMap();
+    </script>
+</body>
+</html>
