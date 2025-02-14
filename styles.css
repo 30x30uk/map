@@ -134,11 +134,6 @@ body {
     border-radius: 50%;
 }
 
-.explainer{
-    font-size: 9px;
-    text-align: center;
-}
-
 /* 📌 Base Footer Styles */
 .map-footer {
     position: fixed;
@@ -154,6 +149,7 @@ body {
     gap: 15px;
     font-size: 10px;
     z-index: 1000;
+    letter-spacing: 0.2px;
 }
 
 /* 📌 Footer Links */
@@ -166,7 +162,7 @@ body {
 }
 
 .footer-link:hover {
-    opacity: 0.8;
+    text-decoration: underline;
 }
 
 /* 📌 Responsive Design: Scale Up After 1024px */
@@ -179,9 +175,16 @@ body {
 }
 
 
-
 /* Mapbox ovverrides */
 .mapboxgl-popup-content {
     font-family: 'Nunito', sans-serif;
     font-size: 14px; 
+}
+
+.popup-title {
+    display: flex;
+    align-items: center;
+}
+.popup-title h3 {
+    margin: 0;
 }

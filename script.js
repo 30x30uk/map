@@ -140,13 +140,17 @@ function loadMap() {
         const mapItem = features[0].properties;
 
         console.log('selected this one - ')
-        console.log(mapItem)
+        console.log(features[0])
 
         // // Example properties (ensure your GeoJSON contains these fields)
+        const name = mapItem.SSSI_NAME || mapItem.SPA_NAME || mapItem.SAC_NAME || mapItem.NAME || "Unknown protected area";
+        const code = mapItem.ENSIS_ID || mapItem.SAC_CODE || mapItem.SPA_CODE || mapItem.CODE ||"Unknown";
         var type = "UNKNOWN";
         var itemDescription = "Unknown";
         var mapKeyStatus = "mixed-condition"
         var mapKeyLabel = "Other protected areas, may count to 30x30 in future"
+        var area = mapItem.UNIT_AREA || mapItem.SAC_AREA || mapItem.SPA_AREA || mapItem.AREA || "Unknown";
+        var link = '';
 
         if (mapItem.SSSI_NAME) {
             type = "SSSI";
@@ -162,18 +166,24 @@ function loadMap() {
                     mapKeyLabel = "Counting towards 30x30, in 'recovering' condition";
                     break;
             }
+            link = 'https://designatedsites.naturalengland.org.uk/SiteDetail.aspx?SiteCode=S' + code
         } else if (mapItem.SPA_NAME) {
             type = "SPA";
             typeDescription = "Special Protected Area";
+            link = 'https://designatedsites.naturalengland.org.uk/SiteDetail.aspx?SiteCode=' + code
             itemDescription = ''
         }  else if (mapItem.SAC_NAME) {
             type = "SAC";
             typeDescription = "Special Area of Conservation";
             itemDescription = ''
+            link = 'https://designatedsites.naturalengland.org.uk/SiteDetail.aspx?SiteCode=' + code
+        } else if (mapItem.NAME) { // RAMSAR
+            type = "RAMSAR";
+            typeDescription = "Ramsar site - internationally important wetland";
+            itemDescription = ''
+            link = 'https://designatedsites.naturalengland.org.uk/SiteDetail.aspx?SiteCode=' + code
         }
 
-        const name = mapItem.SSSI_NAME || mapItem.SPA_NAME || mapItem.SAC_NAME || "Unknown protected area";
-        var area = mapItem.UNIT_AREA || mapItem.SAC_AREA || mapItem.SPA_AREA || "Unknown";
 
         function formatNumber(value) {
             if (isNaN(value)) return "Invalid number";
@@ -193,40 +203,27 @@ function loadMap() {
         // Show popup for the topmost layer only
         new mapboxgl.Popup()
             .setLngLat(e.lngLat)
-            .setHTML(`<h3>${name}</h3>
-                      <div class="legend-color ${mapKeyStatus}"></div> ${mapKeyLabel}
-                      <p>Designation: ${typeDescription}</p>
-                      <p>Area size: ${area} hectares</p>
-                      <p>${itemDescription}</p>
+            .setHTML(`
+                <div class="popup-title">
+                    <div class="legend-color ${mapKeyStatus}"></div> 
+                    <h3>${name}</h3>
+                </div>
+                <p><strong>Role:</strong> ${mapKeyLabel}</p>
+                <p><strong>Official designation:</strong> ${typeDescription}</p>
+                <p><strong>Size:</strong> ${area} hectares</p>
+                <p>${itemDescription}</p>
+                <p><a href="${link}" target="_blank">View details</a></p>
                       `)
             .addTo(map);
     });
 
     // Change cursor to pointer when hovering over polygons
-    map.on('mouseenter', 'sssi_units_england_simple', function () {
-        map.getCanvas().style.cursor = 'pointer';
-    });
-    map.on('mouseenter', 'spa_england_simple', function () {
-        map.getCanvas().style.cursor = 'pointer';
-    });
-    map.on('mouseenter', 'sac_england_simple', function () {
-        map.getCanvas().style.cursor = 'pointer';
-    });
-    map.on('mouseenter', 'ramsar_england_simple', function () {
+    map.on('mouseenter', ['sssi_units_england_simple','spa_england_simple', 'sac_england_simple','ramsar_england_simple'], function () {
         map.getCanvas().style.cursor = 'pointer';
     });
 
     // Reset cursor when not hovering
-    map.on('mouseleave', 'sssi_units_england_simple', function () {
-        map.getCanvas().style.cursor = '';
-    });
-    map.on('mouseleave', 'spa_england_simple', function () {
-        map.getCanvas().style.cursor = '';
-    });
-    map.on('mouseleave', 'sac_england_simple', function () {
-        map.getCanvas().style.cursor = '';
-    });
-    map.on('mouseleave', 'ramsar_england_simple', function () {
+    map.on('mouseleave', ['sssi_units_england_simple', 'spa_england_simple', 'sac_england_simple', 'ramsar_england_simple'], function () {
         map.getCanvas().style.cursor = '';
     });
 
@@ -238,7 +235,6 @@ function loadMap() {
         markerElement.style.backgroundColor = "#1B27C1"; // Keep color
         markerElement.style.borderRadius = "50%"; // Make it round
         markerElement.style.cursor = "pointer"; // Ensure pointer style
-        // markerElement.style.boxShadow = "0 0 8px rgba(0, 0, 0, 0.3)";
 
         // Create the marker using custom element
         const marker = new mapboxgl.Marker(markerElement)
