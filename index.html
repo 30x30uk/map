@@ -46,7 +46,7 @@
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Nunito:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="root"></div>
@@ -66,23 +66,32 @@
 
     <!-- Fixed Map Legend -->
 
-    <div class="map-legend">
-        <div class="legend-title">Map Legend</div>
-        <div class="legend-item">
-            <div class="legend-color good-condition"></div> 30x30, good condition
-        </div>
-        <div class="legend-item">
-            <div class="legend-color recovering-condition"></div> 30x30, recovering
-        </div>
-        <div class="legend-item">
-            <div class="legend-color mixed-condition"></div> Other protected areas
-        </div>
-        <div class="legend-item">
-            <div class="legend-color asking-for-support"></div> Requesting your help
-        </div>
+    <div class="panel map-legend">
+        <div class="panel-item">
+            <div class="legend-title">Map key</div>
+            <div class="legend-item">
+                <div class="legend-color good-condition"></div> 30x30, good condition
+            </div>
+            <div class="legend-item">
+                <div class="legend-color recovering-condition"></div> 30x30, recovering
+            </div>
+            <div class="legend-item">
+                <div class="legend-color mixed-condition"></div> Other protected areas
+            </div>
+            <div class="legend-item">
+                <div class="legend-color asking-for-support"></div> Requesting your help
+            </div>
 
-        <div class="explainer"><a href="#">What does this mean?</a></div>
+            <div class="explainer"><a href="#">What does this mean?</a></div>
+        </div>
     </div>
+
+    <footer class="map-footer">
+        <a href="https://30x30.org.uk" class="footer-link">👈 Back home</a>
+        <a href="#" class="footer-link">🗺️ What is this map?</a>
+        <a href="#" class="footer-link">📍 Submit your project</a>
+    </footer>
+
     <script src="script.js" defer></script>
 </body>
 </html>
