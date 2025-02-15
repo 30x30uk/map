@@ -110,7 +110,7 @@ const projects = [
 
 
 function loadMap() {
-    console.log('load map')
+    console.log('load map3')
     mapboxgl.accessToken = MAPBOX_TOKEN;
     var map = new mapboxgl.Map({
         container: "root",
@@ -125,6 +125,7 @@ function loadMap() {
 
     map.on('click', function (e) {
         // Query all layers at the clicked point
+
         const features = map.queryRenderedFeatures(e.point, {
             layers: [
                 'sssi_units_england_simple', 
@@ -170,8 +171,8 @@ function loadMap() {
         } else if (mapItem.SPA_NAME) {
             type = "SPA";
             typeDescription = "Special Protected Area";
-            link = 'https://designatedsites.naturalengland.org.uk/SiteDetail.aspx?SiteCode=' + code
             itemDescription = ''
+            link = 'https://designatedsites.naturalengland.org.uk/SiteDetail.aspx?SiteCode=' + code
         }  else if (mapItem.SAC_NAME) {
             type = "SAC";
             typeDescription = "Special Area of Conservation";
@@ -200,6 +201,12 @@ function loadMap() {
         // Prevent lower layers from triggering their popups
         map.once('click', () => {});
 
+        map.easeTo({
+            center: [e.lngLat.lng, e.lngLat.lat], // Center on clicked location
+            offset: [0, -100], // Adjust upward so popup is visible
+            duration: 800 // Smooth animation
+        });
+
         // Show popup for the topmost layer only
         new mapboxgl.Popup()
             .setLngLat(e.lngLat)
@@ -215,6 +222,7 @@ function loadMap() {
                 <p><a href="${link}" target="_blank">View details</a></p>
                       `)
             .addTo(map);
+
     });
 
     // Change cursor to pointer when hovering over polygons
@@ -242,16 +250,17 @@ function loadMap() {
             .addTo(map);
 
         // Create a popup
-        const popup = new mapboxgl.Popup({ offset: 20 })
+        const popup = new mapboxgl.Popup({ offset: 20, maxWidth: "250px" })
             .setHTML(`
-                <div style="text-align:center;">
+                <div class="popup-title">
+                    <div class="legend-color asking-for-support"></div> 
                     <h3>${project.name}</h3>
-                    <div class="legend-color asking-for-support"></div>
-                    <p><strong>This project would love your help!</strong></p>
-                    <img src="${project.image}" alt="${project.name}" style="width:170px; border-radius:3px; margin-bottom:8px;">
-                    <p>${project.description}</p>
-                    <a href="${project.website}" target="_blank" style="color:#1B27C1; font-weight:bold;">Learn More</a>
                 </div>
+                <p><strong>This project would love your help! 👋</strong></p>
+                <img src="${project.image}" alt="${project.name}" style="width:100%; border-radius:3px; margin-bottom:8px;">
+                <p>${project.description}</p>
+                <p><strong>Help:</strong> 👩‍🌾 Volunteer, 💸 Donate</p>
+                <p><a href="${project.website}" target="_blank">View website</a></p>
             `);
 
         // Attach popup to marker
@@ -265,6 +274,17 @@ function loadMap() {
         markerElement.addEventListener("mouseleave", () => {
             map.getCanvas().style.cursor = "";
         });
+        // Not working
+        // markerElement.addEventListener("click", (e) => {
+        //         console.log('click marker')
+        //         console.log(e)
+
+        //         map.easeTo({
+        //         center: [e.lngLat.lng, e.lngLat.lat], // Center on clicked location
+        //         offset: [0, -100], // Adjust upward so popup is visible
+        //         duration: 800 // Smooth animation
+        //     });
+        // });
     });
 
 }

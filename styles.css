@@ -109,10 +109,11 @@ body {
 }
 
 .legend-color {
-    width: 20px;
-    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
     margin-right: 10px;
     border-radius: 4px;
+    flex-shrink: 0;
 }
 
 /* Colors for legend */
@@ -179,6 +180,9 @@ body {
 .mapboxgl-popup-content {
     font-family: 'Nunito', sans-serif;
     font-size: 14px; 
+}
+.mapboxgl-popup {
+    z-index: 1001;
 }
 
 .popup-title {
