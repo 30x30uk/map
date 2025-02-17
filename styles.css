@@ -32,11 +32,15 @@ body {
     top: 20px;
     left: 0px;
     width: 203px;
+    align-items: stretch; /* ✅ Ensures children stretch properly */
+    width: fit-content; /* ✅ Prevents it from exceeding content width */
+    min-width: 203px; /* ✅ Set a reasonable max-width if needed */
+
 }
 @media screen and (min-width: 1024px) {
     .map-header {
         top: 50px;
-        width: 300px;
+        min-width: 203px;
     }
 }
 
@@ -66,7 +70,7 @@ body {
     width: 100px;
     font-family: 'Comfortaa', sans-serif;
     font-size: 12px;
-    line-height: 1.3;
+    line-height: 1.2;
     font-weight: 700;
 }
 @media screen and (min-width: 1024px) {
@@ -75,6 +79,44 @@ body {
         font-size: 16px;
     }
 }
+.header-feedback {
+    color: black;
+    border-bottom-right-radius: 3px;
+    width: 100%;
+    max-width: inherit;
+    font-size: 10px;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+    text-align: left;
+    margin-top: 5px;
+}
+@media screen and (min-width: 1024px) {
+    .header-feedback {
+        margin-top: 22px;
+    }
+}
+
+/* 📌 BETA Label */
+.beta-label {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1px 5px;
+    margin-right: 5px;
+    background: #d6fdc5;
+    color: #1827c9;
+}
+
+/* 📌 Feedback Link */
+.feedback-link {
+    text-decoration: underline;
+    color: black;
+}
+
+.feedback-link:hover {
+    text-decoration: underline;
+}
+
 
 .map-legend {
     bottom: 50px;
