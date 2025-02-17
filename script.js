@@ -297,4 +297,31 @@ function loadMap() {
 
 }
 
+/**
+ * Explain Map popup
+ */
+document.addEventListener("DOMContentLoaded", function() {
+    const explainMapOverlay = document.getElementById("explain-map-overlay");
+    const explainMapLink = document.getElementById("explain-map-link");
+    const closeOverlay = document.getElementById("close-overlay");
+
+    // Show overlay when clicking "Explain Map"
+    explainMapLink.addEventListener("click", function(event) {
+        event.preventDefault();
+        explainMapOverlay.style.display = "flex";
+    });
+
+    // Close overlay when clicking close button
+    closeOverlay.addEventListener("click", function() {
+        explainMapOverlay.style.display = "none";
+    });
+
+    // Close overlay when clicking outside the content box
+    explainMapOverlay.addEventListener("click", function(event) {
+        if (event.target === explainMapOverlay) {
+            explainMapOverlay.style.display = "none";
+        }
+    });
+});
+
 loadMap();
