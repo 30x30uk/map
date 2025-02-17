@@ -262,6 +262,11 @@ body {
     max-height: 85vh;
     max-width: 85vw;
 }
+@media screen and (min-width: 1024px) {
+    .overlay-content {
+        max-width: 600px;
+    }
+}
 
 /* 📌 Close Button */
 .close-btn {
@@ -276,4 +281,5 @@ body {
 
 .overlay-content .legend-item {
     margin-bottom: 8px;
+    font-size: 12px;
 }
