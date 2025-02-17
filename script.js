@@ -4,31 +4,44 @@ const projects = [
     {
         name: "Heal Somerset",
         coordinates: [-2.75, 51.1], // Longitude, Latitude
-        image: "https://www.projectsfornature.com/uploads/projects/1552901_211x130.jpg?1702385931",
+        image: "https://static.wixstatic.com/media/0aa383_e5002f0b0189447f84ecf0bd53f1f9c9~mv2.png/v1/fill/w_1200,h_403,al_b,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/0aa383_e5002f0b0189447f84ecf0bd53f1f9c9~mv2.png",
         description: "Transforming a site in Somerset from nature-poor to nature-rich, creating an inspiring place for wildlife and people.",
-        website: "https://healrewilding.org.uk"
+        website: "https://healrewilding.org.uk",
+        helpNeeded: {
+            donations: true,
+            volunteers: true
+        }
     },
     {
-        name: "Blue Recovery: People-Powered Ocean Conservation",
-        coordinates: [-3.435973, 55.378051], // Approximate center of the UK
-        image: "https://www.projectsfornature.com/uploads/projects/1552901_211x130.jpg?1702385931",
-        description: "Empowering volunteers to clean beaches and survey marine life, contributing to healthier seas and marine habitats.",
-        website: "https://www.projectsfornature.com/p/blue-recovery-inspiring-action-protecting-oceans"
-    },
-    {
-        name: "Building the Freshwater Network",
-        coordinates: [-1.1743, 52.3555], // Approximate location in England
-        image: "https://www.projectsfornature.com/uploads/projects/1552901_211x130.jpg?1702385931",
-        description: "Creating a network of wilder, wetter, cleaner, and more connected habitats to halt and reverse the decline of freshwater biodiversity.",
-        website: "https://www.projectsfornature.com/p/building-the-freshwater-network"
-    },
-    {
-        name: "Peak District - Nature Recovery at Dalehead",
-        coordinates: [-1.8, 53.3], // Approximate location in Peak District
-        image: "https://www.projectsfornature.com/uploads/projects/1552901_211x130.jpg?1702385931",
-        description: "Demonstrating how different land management can benefit people, nature, and climate in the Peak District.",
-        website: "https://www.projectsfornature.com/p/peak-district-nature-recovery-at-dalehead"
-    },
+        name: "Weald to Waves - Connecting nature across Sussex",
+        coordinates: [-0.3276, 51.0631], // Approximate location in Peak District
+        image: "https://www.wealdtowaves.co.uk/static/4d48300aa832a3e2abb8bca5e1d3d799/9ff6b/The_Corridor_Main_Map_Thumbnail_1590b55b3e.webp",
+        description: "We are establishing a 100-mile nature recovery corridor across Sussex. Connecting our fragmented landscape will boost biodiversity, capture carbon, enhance food production and enrich our rural economy.",
+        website: "https://www.wealdtowaves.co.uk/"
+    },{
+        name: "Affric Highlands",
+        coordinates: [-4.8897, 57.2737], // Longitude, Latitude
+        image: "https://images.prismic.io/mossyearth/1e10f2b2-3b90-4fa2-8a5c-f822b820a8f9_Barren+Scotland.jpg?auto=compress,format",
+        description: "A 30-year project aiming to rewild a vast area between the west coast and Loch Ness, enhancing nature-based tourism and restoring natural habitats.",
+        website: "https://www.mossy.earth/rewilding-knowledge/rewilding-scotland",
+        helpNeeded: {
+            donations: true,
+            volunteers: false
+        }
+    }, {
+        name: "Securing the Survival of Bolton's Willow Tits",
+        coordinates: [-2.4244, 53.5785], // Longitude, Latitude
+        image: "https://www.projectsfornature.com/uploads/project_images/c3/92/1593746/1733314104_willow_tit_by_adam_jones_.jpg",
+        description: "Creating more and better-connected habitats in Bolton for endangered willow tits while benefiting local people by fostering a connection to nature.",
+        website: "https://www.projectsfornature.com/p/bolton-willow-tit",
+        helpNeeded: {
+            donations: true,
+            volunteers: true
+        }
+    }
+
+
+    /*,
     {
         name: "Midlands WILD Revival",
         coordinates: [-1.5, 52.4], // Approximate location in Midlands
@@ -105,20 +118,29 @@ const projects = [
         image: "https://www.projectsfornature.com/uploads/projects/1552901_211x130.jpg?1702385931",
         description: "A landscape-scale project restoring wetlands for wildlife and people in the Somerset Levels.",
         website: "https://www.projectsfornature.com/p/avalon-marshes"
-    }
+    }*/
 ];
 
 
 function loadMap() {
     console.log('load map3')
     mapboxgl.accessToken = MAPBOX_TOKEN;
+    var zoomLevel = 5;
+    var center = [-2.3, 53.1];
+    var pitch = 30;
+    if (window.innerWidth > 1024) {
+        zoomLevel = 6;
+        pitch = 45;
+        center = [-2.3, 52.9]
+    }
+
     var map = new mapboxgl.Map({
         container: "root",
         style: "mapbox://styles/e98789s7df/cm70fthzc01ji01qxawvpabla",
-        center: [-1.5, 52.5],  // Center of the UK
+        center: center,  // Center of the UK
         pitch: 30, // pitch in degrees
         bearing: -10, // bearing in degrees
-        zoom: 6
+        zoom: zoomLevel
     });
 
     map.addControl(new mapboxgl.NavigationControl(), 'top-right');
@@ -216,7 +238,7 @@ function loadMap() {
                 <p><strong>Official designation:</strong> ${typeDescription}</p>
                 <p><strong>Size:</strong> ${area} hectares</p>
                 <p>${itemDescription}</p>
-                <p><a href="${link}" target="_blank">View details</a></p>
+                <p>🔗 <a href="${link}" target="_blank">View details</a></p>
                       `)
             .addTo(map);
 
@@ -257,7 +279,7 @@ function loadMap() {
                 <img src="${project.image}" alt="${project.name}" style="width:100%; border-radius:3px; margin-bottom:8px;">
                 <p>${project.description}</p>
                 <p><strong>Help:</strong> 👩‍🌾 Volunteer, 💸 Donate</p>
-                <p><a href="${project.website}" target="_blank">View website</a></p>
+                <p>🔗 <a href="${project.website}" target="_blank">View website</a></p>
             `);
 
         // Attach popup to marker
