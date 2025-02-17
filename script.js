@@ -140,9 +140,6 @@ function loadMap() {
         // Sort features by layer order (last one in array is topmost)
         const mapItem = features[0].properties;
 
-        console.log('selected this one - ')
-        console.log(features[0])
-
         // // Example properties (ensure your GeoJSON contains these fields)
         const name = mapItem.SSSI_NAME || mapItem.SPA_NAME || mapItem.SAC_NAME || mapItem.NAME || "Unknown protected area";
         const code = mapItem.ENSIS_ID || mapItem.SAC_CODE || mapItem.SPA_CODE || mapItem.CODE ||"Unknown";
@@ -274,17 +271,6 @@ function loadMap() {
         markerElement.addEventListener("mouseleave", () => {
             map.getCanvas().style.cursor = "";
         });
-        // Not working
-        // markerElement.addEventListener("click", (e) => {
-        //         console.log('click marker')
-        //         console.log(e)
-
-        //         map.easeTo({
-        //         center: [e.lngLat.lng, e.lngLat.lat], // Center on clicked location
-        //         offset: [0, -100], // Adjust upward so popup is visible
-        //         duration: 800 // Smooth animation
-        //     });
-        // });
     });
 
 }
