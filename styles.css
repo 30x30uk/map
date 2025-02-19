@@ -278,8 +278,21 @@ body {
     font-size: 24px;
     cursor: pointer;
 }
-
+.overlay-content .legend {
+    max-width: 400px;
+    margin: 0 auto;
+}
 .overlay-content .legend-item {
     margin-bottom: 8px;
     font-size: 12px;
+}
+
+.overlay-content ul {
+    list-style-position: inside; /* Moves bullets closer to text */
+    padding-left: 0; /* Removes extra left padding */
+}
+
+/* Optional: Adjust line height for better spacing */
+.overlay-content li {
+    margin-bottom: 6px; /* Space between list items */
 }
