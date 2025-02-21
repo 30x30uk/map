@@ -164,12 +164,12 @@ body {
 }
 
 .recovering-condition {
-    background: url('assets/map-crosshatch.svg');
-    background-size: contain;
+    background: url('assets/map-crosshatch-key.svg');
+    background-size: 300%;
 }
 
 .mixed-condition {
-    background: #B5E370;
+    background: #d89bdf7d;
 }
 
 .asking-for-support {
