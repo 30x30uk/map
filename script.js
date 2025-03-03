@@ -14,11 +14,12 @@ const projects = [
     },
     {
         name: "Weald to Waves - Connecting nature across Sussex",
-        coordinates: [-0.3276, 51.0631], // Approximate location in Peak District
+        coordinates: [-0.3276, 51.0631], // Approximate location
         image: "https://www.wealdtowaves.co.uk/static/4d48300aa832a3e2abb8bca5e1d3d799/9ff6b/The_Corridor_Main_Map_Thumbnail_1590b55b3e.webp",
         description: "We are establishing a 100-mile nature recovery corridor across Sussex. Connecting our fragmented landscape will boost biodiversity, capture carbon, enhance food production and enrich our rural economy.",
         website: "https://www.wealdtowaves.co.uk/"
-    },{
+    },
+    {
         name: "Affric Highlands",
         coordinates: [-4.8897, 57.2737], // Longitude, Latitude
         image: "https://images.prismic.io/mossyearth/1e10f2b2-3b90-4fa2-8a5c-f822b820a8f9_Barren+Scotland.jpg?auto=compress,format",
@@ -28,7 +29,8 @@ const projects = [
             donations: true,
             volunteers: false
         }
-    }, {
+    }, 
+    {
         name: "Securing the Survival of Bolton's Willow Tits",
         coordinates: [-2.4244, 53.5785], // Longitude, Latitude
         image: "https://www.projectsfornature.com/uploads/project_images/c3/92/1593746/1733314104_willow_tit_by_adam_jones_.jpg",
@@ -38,91 +40,130 @@ const projects = [
             donations: true,
             volunteers: true
         }
+    },
+    {
+        name: "Stump Up For Trees",
+        coordinates: [-3.01957229171891, 51.89349024709819], // Longitude, Latitude
+        image: "https://stumpupfortrees.org/media/sqed3aj1/kwee5325.jpg",
+        description: "A community charity planting one million trees in the Brecon Beacons area of south-east Wales.",
+        website: "https://stumpupfortrees.org/",
+        helpNeeded: {
+            donations: true,
+            volunteers: true
+        }
+    },
+    {
+        name: "Wild Woodbury",
+        coordinates: [-2.215747281959573, 50.753980362128424], // Longitude, Latitude
+        image: "https://www.dorsetwildlifetrust.org.uk/sites/default/files/styles/hero_default/public/2022-10/Flowering%20musk%20thistle%20Seb%20Haggett.JPG",
+        description: "A Dorset Wildlife Trust’s community project rewilding 150 hectares near Bere Regis.",
+        website: "https://www.dorsetwildlifetrust.org.uk/appeals/wild-woodbury-project",
+        helpNeeded: {
+            donations: true,
+            volunteers: true
+        }
+    },
+    {
+        name: "The Great London Pond Project",
+        coordinates: [-0.24609632664032371, 51.47520578459729], // Longitude, Latitude
+        image: "https://www.crowdfunder.co.uk/uploads/projects/1592216.jpg",
+        description: "Working with local communities to restore Greater London’s ponds for nature recovery, wellbeing and climate resilience.",
+        website: "https://www.projectsfornature.com/p/the-great-london-pond-project",
+        helpNeeded: {
+            donations: true,
+            volunteers: true
+        }
+    },
+    {
+        name: "Northey Island Saltmarsh Restoration",
+        coordinates: [0.7217656242410322, 51.722648541952225], // Longitude, Latitude
+        image: "https://www.projectsfornature.com/p/northey-island---saltmarsh-restoration-project/og-image",
+        description: "Restoring lost saltmarsh on a remote island in Essex, cared for by the National Trust.",
+        website: "https://www.projectsfornature.com/p/northey-island---saltmarsh-restoration-project",
+        helpNeeded: {
+            donations: true,
+            volunteers: true
+        }
+    },
+    {
+        name: "Cambridge City Chalk Streams Project",
+        coordinates: [0.13404426836766054, 52.18604176228212], // Longitude, Latitude
+        image: "https://www.crowdfunder.co.uk/uploads/projects/1594590.jpg?1733492151",
+        description: "Restoring Cambridge’s chalk streams into thriving, resilient ecosystems and reviving wildlife habitats.",
+        website: "https://www.projectsfornature.com/p/cambridge-city-chalk-streams-project",
+        helpNeeded: {
+            donations: true,
+            volunteers: true
+        }
+    },
+    {
+        name: "Restoring Seagrass & Oysters to North West Scotland",
+        coordinates: [-5.5215, 56.1809], // Longitude, Latitude
+        image: "https://www.crowdfunder.co.uk/uploads/projects/1594590.jpg?1733492151",
+        description: "The Scottish charity, Seawilding, is working with communities to restore native oyster beds and seagrass meadows in Loch Craignish.",
+        website: "https://www.rewildingbritain.org.uk/rewilding-projects/restoring-seagrass-oysters-to-north-west-scotland",
+        helpNeeded: {
+            donations: true,
+            volunteers: true
+        }
+    }
+];
+
+function showMapLoading() {
+    const loadingMessages = [
+        "🦔 Finding suitable places for hedgehogs...",
+        "🔎 Found +12M places for Wild Orchids...",
+        "👨‍👩‍👦 Loading future picnic spots...",
+        "🐬 Spotting bottlenose dolphins frolicking...",
+        "🌺 Downloading wildflower meadows...",
+        "🌳 Found an old tree!...",
+        "🐟 Counting fish in clean rivers...",
+        "🦡 Mapping new badger-friendly zones...",
+        "👂 Converting nightingale songs to locations...",
+        "🥪 823 volunteers requesting re-supply...",
+        "🦋 Creating butterfly-friendly grasslands...",
+        "🌍 Connecting wildlife corridors...",
+        "🐾 Tracking otters in restored rivers...",
+        "🦆 Checking wetland wetness...",
+        "🦌 Spotting large herbivores in rewilded landscapes...",
+        "🦡 Checking in on hedgerow highways...",
+        "⚖️ Balancing life on Earth vs. profits...",
+        "🦎 Received request from reptiles for more sun..."
+    ];
+
+    // Function to shuffle the messages randomly
+    function shuffleMessages(array) {
+        return array.sort(() => Math.random() - 0.5);
     }
 
+    // Function to display messages with random intervals
+    function showLoadingMessages() {
+        let messages = shuffleMessages([...loadingMessages]); // Copy & shuffle messages
+        let index = 0;
 
-    /*,
-    {
-        name: "Midlands WILD Revival",
-        coordinates: [-1.5, 52.4], // Approximate location in Midlands
-        image: "https://www.projectsfornature.com/uploads/projects/1552901_211x130.jpg?1702385931",
-        description: "Rewilding 750 acres of land and reviving the River Blythe to create a haven for nature in the Midlands.",
-        website: "https://www.projectsfornature.com/p/midlands-wild-revival"
-    },
-    {
-        name: "The Re-Pond Project",
-        coordinates: [-2.25, 51.9], // Severn Vale, approximate location
-        image: "https://www.projectsfornature.com/uploads/projects/1552901_211x130.jpg?1702385931",
-        description: "Restoring and creating ponds to support nature recovery across the Severn Vale and Somerset Coastal Levels.",
-        website: "https://www.projectsfornature.com/p/re-pond-project"
-    },
-    {
-        name: "Wild Coast Project",
-        coordinates: [1.0, 51.5], // Essex coast, approximate location
-        image: "https://www.projectsfornature.com/uploads/projects/1552901_211x130.jpg?1702385931",
-        description: "Restoring coastal habitats to benefit wildlife and people along the Essex coast.",
-        website: "https://www.projectsfornature.com/p/wild-coast-project"
-    },
-    {
-        name: "Northern Forest",
-        coordinates: [-1.5, 53.8], // Northern England, approximate location
-        image: "https://www.projectsfornature.com/uploads/projects/1552901_211x130.jpg?1702385931",
-        description: "Creating a new forest across the North of England to boost wildlife, mitigate climate change, and enhance well-being.",
-        website: "https://www.projectsfornature.com/p/northern-forest"
-    },
-    {
-        name: "Great Fen Project",
-        coordinates: [-0.2, 52.5], // Cambridgeshire, approximate location
-        image: "https://www.projectsfornature.com/uploads/projects/1552901_211x130.jpg?1702385931",
-        description: "Restoring 3,700 hectares of fenland habitat to create a haven for wildlife and people.",
-        website: "https://www.projectsfornature.com/p/great-fen-project"
-    },
-    {
-        name: "Wilder Blean",
-        coordinates: [1.05, 51.3], // Kent, approximate location
-        image: "https://www.projectsfornature.com/uploads/projects/1552901_211x130.jpg?1702385931",
-        description: "Introducing European bison to restore natural processes and biodiversity in Blean Woods.",
-        website: "https://www.projectsfornature.com/p/wilder-blean"
-    },
-    {
-        name: "Wild Ennerdale",
-        coordinates: [-3.4, 54.5], // Cumbria, approximate location
-        image: "https://www.projectsfornature.com/uploads/projects/1552901_211x130.jpg?1702385931",
-        description: "A partnership project to allow the Ennerdale valley to evolve naturally, promoting ecological restoration.",
-        website: "https://www.projectsfornature.com/p/wild-ennerdale"
-    },
-    {
-        name: "Knepp Estate Rewilding",
-        coordinates: [-0.4, 51.0], // West Sussex, approximate location
-        image: "https://www.projectsfornature.com/uploads/projects/1552901_211x130.jpg?1702385931",
-        description: "A pioneering rewilding project turning intensively farmed land into a biodiversity hotspot.",
-        website: "https://www.projectsfornature.com/p/knepp-estate-rewilding"
-    },
-    {
-        name: "Summerscales Park Naturalisation",
-        coordinates: [-1.9, 53.7], // West Yorkshire, approximate location
-        image: "https://www.projectsfornature.com/uploads/projects/1552901_211x130.jpg?1702385931",
-        description: "Transforming a former landfill site into a naturalised park for wildlife and community enjoyment.",
-        website: "https://www.projectsfornature.com/p/summerscales-park-naturalisation"
-    },
-    {
-        name: "Carrifran Wildwood",
-        coordinates: [-3.3, 55.4], // Scottish Borders, approximate location
-        image: "https://www.projectsfornature.com/uploads/projects/1552901_211x130.jpg?1702385931",
-        description: "Restoring native woodland in the Southern Uplands to enhance biodiversity and carbon sequestration.",
-        website: "https://www.projectsfornature.com/p/carrifran-wildwood"
-    },
-    {
-        name: "Avalon Marshes",
-        coordinates: [-2.8, 51.1], // Somerset, approximate location
-        image: "https://www.projectsfornature.com/uploads/projects/1552901_211x130.jpg?1702385931",
-        description: "A landscape-scale project restoring wetlands for wildlife and people in the Somerset Levels.",
-        website: "https://www.projectsfornature.com/p/avalon-marshes"
-    }*/
-];
+        function updateMessage() {
+            if (index < messages.length) {
+                document.getElementById("loading-message").textContent = messages[index];
+                index++;
+
+                // Set next message at a random interval (1-3 seconds)
+                let delay = Math.floor(Math.random() * 2000) + 1000;
+                setTimeout(updateMessage, delay);
+            }
+        }
+
+        updateMessage();
+    }
+
+    // Show loading overlay when map starts loading
+    document.getElementById("loading-overlay").style.display = "flex";
+    showLoadingMessages();
+}
 
 
 function loadMap() {
+    showMapLoading()
+
     console.log('load map3')
     mapboxgl.accessToken = MAPBOX_TOKEN;
     var zoomLevel = 5;
@@ -252,6 +293,11 @@ function loadMap() {
     // Reset cursor when not hovering
     map.on('mouseleave', ['sssi_units_england_simple', 'spa_england_simple', 'sac_england_simple', 'ramsar_england_simple'], function () {
         map.getCanvas().style.cursor = '';
+    });
+
+    // Hide loading overlay when all layers and tiles are fully loaded
+    map.on("idle", function () {
+        // document.getElementById("loading-overlay").style.display = "none";
     });
 
     projects.forEach(project => {
