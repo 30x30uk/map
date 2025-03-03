@@ -1,4 +1,4 @@
-const MAPBOX_TOKEN = "pk.eyJ1IjoiZTk4Nzg5czdkZiIsImEiOiJjbTcwZm8xOHAwMWZ6MmlzZ2ZkeXJzN21rIn0.eDCzqjXb6hx54675TiNWpg";
+const MAPBOX_TOKEN = "pk.eyJ1IjoiZTk4Nzg5czdkZiIsImEiOiJjbTd0MnZkejUxaWY3MmtxdHl2aXY3ZDJyIn0.BlgOWYTNNFS_GjoMwu0Y9g"; // public access and locked to domain
 
 const projects = [
     {
