@@ -1,6 +1,6 @@
 const MAPBOX_TOKEN = "pk.eyJ1IjoiZTk4Nzg5czdkZiIsImEiOiJjbTd0MnZkejUxaWY3MmtxdHl2aXY3ZDJyIn0.BlgOWYTNNFS_GjoMwu0Y9g"; // public access and locked to domain
 
-const projects = [
+var projects = [
     {
         name: "Heal Somerset",
         coordinates: [-2.75, 51.1], // Longitude, Latitude
@@ -309,46 +309,50 @@ function loadMap() {
         document.getElementById("loading-overlay").style.display = "none";
     });
 
+    projects = projects.sort(() => Math.random() - 0.5);
+
     projects.forEach(project => {
-        // Create a smaller marker with custom styling
-        const markerElement = document.createElement('div');
-        markerElement.style.width = "14px"; // Adjust marker size
-        markerElement.style.height = "14px";
-        markerElement.style.backgroundColor = "#1B27C1"; // Keep color
-        markerElement.style.borderRadius = "50%"; // Make it round
-        markerElement.style.cursor = "pointer"; // Ensure pointer style
+        setTimeout(() => {
+            // Create a smaller marker with custom styling
+            const markerElement = document.createElement('div');
+            markerElement.style.width = "14px"; // Adjust marker size
+            markerElement.style.height = "14px";
+            markerElement.style.backgroundColor = "#1B27C1"; // Keep color
+            markerElement.style.borderRadius = "50%"; // Make it round
+            markerElement.style.cursor = "pointer"; // Ensure pointer style
 
-        // Create the marker using custom element
-        const marker = new mapboxgl.Marker(markerElement)
-            .setLngLat(project.coordinates)
-            .addTo(map);
+            // Create the marker using custom element
+            const marker = new mapboxgl.Marker(markerElement)
+                .setLngLat(project.coordinates)
+                .addTo(map);
 
-        // Create a popup
-        const popup = new mapboxgl.Popup({ offset: 20, maxWidth: "250px" })
-            .setHTML(`
-                <div class="popup-title">
-                    <div class="legend-color asking-for-support"></div> 
-                    <h3>${project.name}</h3>
-                </div>
-                <p><strong>This project would love your help! 👋</strong></p>
-                <img src="${project.image}" alt="${project.name}" style="width:100%; border-radius:3px; margin-bottom:8px;">
-                <p>${project.description}</p>
-                <p><strong>Help:</strong> 👩‍🌾 Volunteer, 💸 Donate</p>
-                <p><strong>n.b. This project is not yet certified for 30x30 although it may meet the criteria. See <a href="#" onclick="onExplainMapTap()">Explain map</a></strong></p>
-                <p>🔗 <a href="${project.website}" target="_blank">View website</a></p>
-            `);
+            // Create a popup
+            const popup = new mapboxgl.Popup({ offset: 20, maxWidth: "250px" })
+                .setHTML(`
+                    <div class="popup-title">
+                        <div class="legend-color asking-for-support"></div> 
+                        <h3>${project.name}</h3>
+                    </div>
+                    <p><strong>This project would love your help! 👋</strong></p>
+                    <img src="${project.image}" alt="${project.name}" style="width:100%; border-radius:3px; margin-bottom:8px;">
+                    <p>${project.description}</p>
+                    <p><strong>Help:</strong> 👩‍🌾 Volunteer, 💸 Donate</p>
+                    <p><strong>n.b. This project is not yet certified for 30x30 although it may meet the criteria. See <a href="#" onclick="onExplainMapTap()">Explain map</a></strong></p>
+                    <p>🔗 <a href="${project.website}" target="_blank">View website</a></p>
+                `);
 
-        // Attach popup to marker
-        marker.setPopup(popup);
+            // Attach popup to marker
+            marker.setPopup(popup);
 
-        // Change cursor on hover
-        markerElement.addEventListener("mouseenter", () => {
-            map.getCanvas().style.cursor = "pointer";
-        });
+            // Change cursor on hover
+            markerElement.addEventListener("mouseenter", () => {
+                map.getCanvas().style.cursor = "pointer";
+            });
 
-        markerElement.addEventListener("mouseleave", () => {
-            map.getCanvas().style.cursor = "";
-        });
+            markerElement.addEventListener("mouseleave", () => {
+                map.getCanvas().style.cursor = "";
+            });
+        }, Math.floor(Math.random() * 500) + 500)
     });
 
 }
