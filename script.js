@@ -7,6 +7,7 @@ const projects = [
         image: "https://static.wixstatic.com/media/0aa383_e5002f0b0189447f84ecf0bd53f1f9c9~mv2.png/v1/fill/w_1200,h_403,al_b,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/0aa383_e5002f0b0189447f84ecf0bd53f1f9c9~mv2.png",
         description: "Transforming a site in Somerset from nature-poor to nature-rich, creating an inspiring place for wildlife and people.",
         website: "https://healrewilding.org.uk",
+        eligibility: "criteria-matched",
         helpNeeded: {
             donations: true,
             volunteers: true
@@ -25,6 +26,7 @@ const projects = [
         image: "https://images.prismic.io/mossyearth/1e10f2b2-3b90-4fa2-8a5c-f822b820a8f9_Barren+Scotland.jpg?auto=compress,format",
         description: "A 30-year project aiming to rewild a vast area between the west coast and Loch Ness, enhancing nature-based tourism and restoring natural habitats.",
         website: "https://www.mossy.earth/rewilding-knowledge/rewilding-scotland",
+        eligibility: "criteria-matched",
         helpNeeded: {
             donations: true,
             volunteers: false
@@ -36,6 +38,7 @@ const projects = [
         image: "https://www.projectsfornature.com/uploads/project_images/c3/92/1593746/1733314104_willow_tit_by_adam_jones_.jpg",
         description: "Creating more and better-connected habitats in Bolton for endangered willow tits while benefiting local people by fostering a connection to nature.",
         website: "https://www.projectsfornature.com/p/bolton-willow-tit",
+        eligibility: "criteria-matched",
         helpNeeded: {
             donations: true,
             volunteers: true
@@ -47,6 +50,7 @@ const projects = [
         image: "https://stumpupfortrees.org/media/sqed3aj1/kwee5325.jpg",
         description: "A community charity planting one million trees in the Brecon Beacons area of south-east Wales.",
         website: "https://stumpupfortrees.org/",
+        eligibility: "criteria-matched",
         helpNeeded: {
             donations: true,
             volunteers: true
@@ -58,6 +62,7 @@ const projects = [
         image: "https://www.dorsetwildlifetrust.org.uk/sites/default/files/styles/hero_default/public/2022-10/Flowering%20musk%20thistle%20Seb%20Haggett.JPG",
         description: "A Dorset Wildlife Trust’s community project rewilding 150 hectares near Bere Regis.",
         website: "https://www.dorsetwildlifetrust.org.uk/appeals/wild-woodbury-project",
+        eligibility: "criteria-matched",
         helpNeeded: {
             donations: true,
             volunteers: true
@@ -69,6 +74,7 @@ const projects = [
         image: "https://www.crowdfunder.co.uk/uploads/projects/1592216.jpg",
         description: "Working with local communities to restore Greater London’s ponds for nature recovery, wellbeing and climate resilience.",
         website: "https://www.projectsfornature.com/p/the-great-london-pond-project",
+        eligibility: "criteria-matched",
         helpNeeded: {
             donations: true,
             volunteers: true
@@ -80,6 +86,7 @@ const projects = [
         image: "https://www.projectsfornature.com/p/northey-island---saltmarsh-restoration-project/og-image",
         description: "Restoring lost saltmarsh on a remote island in Essex, cared for by the National Trust.",
         website: "https://www.projectsfornature.com/p/northey-island---saltmarsh-restoration-project",
+        eligibility: "criteria-matched",
         helpNeeded: {
             donations: true,
             volunteers: true
@@ -91,6 +98,7 @@ const projects = [
         image: "https://www.crowdfunder.co.uk/uploads/projects/1594590.jpg?1733492151",
         description: "Restoring Cambridge’s chalk streams into thriving, resilient ecosystems and reviving wildlife habitats.",
         website: "https://www.projectsfornature.com/p/cambridge-city-chalk-streams-project",
+        eligibility: "criteria-matched",
         helpNeeded: {
             donations: true,
             volunteers: true
@@ -102,6 +110,7 @@ const projects = [
         image: "https://www.crowdfunder.co.uk/uploads/projects/1594590.jpg?1733492151",
         description: "The Scottish charity, Seawilding, is working with communities to restore native oyster beds and seagrass meadows in Loch Craignish.",
         website: "https://www.rewildingbritain.org.uk/rewilding-projects/restoring-seagrass-oysters-to-north-west-scotland",
+        eligibility: "criteria-matched",
         helpNeeded: {
             donations: true,
             volunteers: true
@@ -325,6 +334,7 @@ function loadMap() {
                 <img src="${project.image}" alt="${project.name}" style="width:100%; border-radius:3px; margin-bottom:8px;">
                 <p>${project.description}</p>
                 <p><strong>Help:</strong> 👩‍🌾 Volunteer, 💸 Donate</p>
+                <p><strong>n.b. This project is not yet certified for 30x30 although it may meet the criteria. See <a href="#" onclick="onExplainMapTap()">Explain map</a></strong></p>
                 <p>🔗 <a href="${project.website}" target="_blank">View website</a></p>
             `);
 
@@ -352,10 +362,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const closeOverlay = document.getElementById("close-overlay");
 
     // Show overlay when clicking "Explain Map"
-    explainMapLink.addEventListener("click", function(event) {
-        event.preventDefault();
-        explainMapOverlay.style.display = "flex";
-    });
+    explainMapLink.addEventListener("click", onExplainMapTap);
 
     // Close overlay when clicking close button
     closeOverlay.addEventListener("click", function() {
@@ -369,6 +376,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+function onExplainMapTap() {
+    const explainMapOverlay = document.getElementById("explain-map-overlay");
+    explainMapOverlay.style.display = "flex";
+}
 
 
 loadMap();
