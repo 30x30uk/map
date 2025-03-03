@@ -297,7 +297,7 @@ function loadMap() {
 
     // Hide loading overlay when all layers and tiles are fully loaded
     map.on("idle", function () {
-        // document.getElementById("loading-overlay").style.display = "none";
+        document.getElementById("loading-overlay").style.display = "none";
     });
 
     projects.forEach(project => {
