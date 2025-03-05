@@ -193,6 +193,8 @@ function loadMap() {
         zoom: zoomLevel
     });
 
+    window.xMap = map // debugging
+
     map.addControl(new mapboxgl.NavigationControl(), 'top-right');
 
     map.on('click', function (e) {
@@ -317,8 +319,8 @@ function loadMap() {
             const markerElement = document.createElement('div');
             markerElement.className = "custom-marker";
             markerElement.style.backgroundImage = "url('/assets/map-marker.svg')"; // Path to your SVG
-            markerElement.style.width = "30px"; // Adjust size as needed
-            markerElement.style.height = "40px";
+            markerElement.style.width = "35px"; // Adjust size as needed
+            markerElement.style.height = "46px";
             markerElement.style.backgroundSize = "contain";
             markerElement.style.cursor = "pointer";
 
