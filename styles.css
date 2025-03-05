@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Nunito'; sans-serif;
+    font-family: 'Fredoka'; sans-serif;
     font-weight: 300;
 }
 
@@ -68,7 +68,7 @@ body {
 
 .tagline {
     width: 100px;
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Fredoka', sans-serif;
     font-size: 12px;
     line-height: 1.2;
     font-weight: 700;
@@ -85,7 +85,7 @@ body {
     width: 100%;
     max-width: inherit;
     font-size: 10px;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Fredoka', sans-serif;
     box-sizing: border-box;
     text-align: left;
     margin-top: 5px;
@@ -136,7 +136,7 @@ body {
 
 /* Legend title */
 .legend-title {
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Fredoka', sans-serif;
     font-size: 12px;
     line-height: 1.3;
     font-weight: 700;
@@ -165,7 +165,7 @@ body {
 }
 
 .recovering-condition {
-    background: url('assets/map-crosshatch-key.svg');
+    background: url('/assets/map-crosshatch-key.svg');
     background-size: 300%;
 }
 
@@ -174,54 +174,62 @@ body {
 }
 
 .asking-for-support {
-    background-color: #1B27C1;
-    border-radius: 50%;
+    background: url('/assets/map-marker.svg') no-repeat center;
+    background-size: contain; /* Uses the same branded marker */
+    min-height: 30px;
 }
 
-/* 📌 Base Footer Styles */
+/* 📌 Floating Footer */
 .map-footer {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #1E2EE4; /* Dark Blue */
-    color: white;
-    text-align: center;
-    padding: 5px 0;
+    bottom: 47px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 1); /* Soft white background */
+    padding: 0px 20px;
+    border-radius: 4px;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.08); /* Soft shadow */
     display: flex;
     justify-content: center;
-    gap: 15px;
-    font-size: 10px;
+    align-items: center;
+    gap: 25px;
+    font-size: 16px;
+    font-weight: 400;
     z-index: 1000;
-    letter-spacing: 0.2px;
+    transition: all 0.3s ease-in-out;
 }
 
 /* 📌 Footer Links */
 .footer-link {
-    color: white;
+    color: #28466F;
     text-decoration: none;
-    font-weight: 600;
-    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 20px 12px;
     transition: opacity 0.2s ease-in-out;
 }
 
 .footer-link:hover {
-    text-decoration: underline;
+    opacity: 0.75;
 }
 
-/* 📌 Responsive Design: Scale Up After 1024px */
+/* 📌 Footer Icons */
+.footer-icon {
+    font-size: 18px;
+}
+
+/* 📌 Responsive Design: Adjustments for larger screens */
 @media screen and (min-width: 1024px) {
     .map-footer {
-        font-size: 13px; /* Slightly larger text */
-        padding: 7px 0; /* More padding */
-        gap: 25px; /* More space between links */
+        gap: 35px;
     }
 }
 
 
 /* Mapbox ovverrides */
 .mapboxgl-popup-content {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Fredoka', sans-serif;
     font-size: 14px; 
 }
 .mapboxgl-popup {
@@ -312,7 +320,7 @@ body {
     flex-direction: column;
     z-index: 999;
     color: white;
-    font-family: "Nunito", sans-serif;
+    font-family: "Fredoka", sans-serif;
     text-align: center;
 }
 

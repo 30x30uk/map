@@ -315,11 +315,13 @@ function loadMap() {
         setTimeout(() => {
             // Create a smaller marker with custom styling
             const markerElement = document.createElement('div');
-            markerElement.style.width = "14px"; // Adjust marker size
-            markerElement.style.height = "14px";
-            markerElement.style.backgroundColor = "#1B27C1"; // Keep color
-            markerElement.style.borderRadius = "50%"; // Make it round
-            markerElement.style.cursor = "pointer"; // Ensure pointer style
+            markerElement.className = "custom-marker";
+            markerElement.style.backgroundImage = "url('/assets/map-marker.svg')"; // Path to your SVG
+            markerElement.style.width = "30px"; // Adjust size as needed
+            markerElement.style.height = "40px";
+            markerElement.style.backgroundSize = "contain";
+            markerElement.style.cursor = "pointer";
+
 
             // Create the marker using custom element
             const marker = new mapboxgl.Marker(markerElement)
