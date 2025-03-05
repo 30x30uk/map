@@ -199,6 +199,13 @@ function loadMap() {
 
     map.on('click', function (e) {
         // Query all layers at the clicked point
+        console.log('click')
+        console.log(e)
+        
+        // If a custom maker is being clicked on, then don’t show any other popup
+        if (e.originalEvent && e.originalEvent.srcElement && e.originalEvent.srcElement.className.includes('custom-marker')) {
+            e.originalEvent.stopPropagation();
+        }
 
         const features = map.queryRenderedFeatures(e.point, {
             layers: [
@@ -330,8 +337,14 @@ function loadMap() {
                 .setLngLat(project.coordinates)
                 .addTo(map);
 
+            var popupConfig = { offset: 20, maxWidth: "350px", className: "x-custom-marker-container" };
+
+            if (window.innerWidth < 1024) {
+                popupConfig.anchor = 'center'
+            }
+
             // Create a popup
-            const popup = new mapboxgl.Popup({ offset: 20, maxWidth: "250px" })
+            const popup = new mapboxgl.Popup(popupConfig)
                 .setHTML(`
                     <div class="popup-title">
                         <div class="legend-color asking-for-support"></div> 
@@ -344,6 +357,19 @@ function loadMap() {
                     <p><strong>n.b. This project is not yet certified for 30x30 although it may meet the criteria. See <a href="#" onclick="onExplainMapTap()">Explain map</a></strong></p>
                     <p>🔗 <a href="${project.website}" target="_blank">View website</a></p>
                 `);
+
+            popup.on('open', (e) => {
+                console.log("Popup has been opened.");
+                document.querySelectorAll('.close-while-popup-open').forEach(function(element) {
+                    element.style = "display: none"
+                })
+            });
+            popup.on('close', () => {
+                console.log("Popup has been closed.");
+                document.querySelectorAll('.close-while-popup-open').forEach(function(element) {
+                    element.style = "display: block"
+                })
+            });
 
             // Attach popup to marker
             marker.setPopup(popup);

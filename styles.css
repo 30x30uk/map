@@ -278,8 +278,24 @@ body {
     font-family: 'Fredoka', sans-serif;
     font-size: 14px; 
 }
+
+.x-custom-marker-container .mapboxgl-popup-content {
+    margin: 115px 10px;
+}
+
 .mapboxgl-popup {
     z-index: 1001;
+}
+.mapboxgl-popup-anchor-center {
+    display: contents;
+}
+@media screen and (min-width: 1024px) {
+    .mapboxgl-popup-anchor-center {
+        display: flex;
+    }
+    .x-custom-marker-container .mapboxgl-popup-content {
+        margin: 0;
+    }
 }
 
 .popup-title {
