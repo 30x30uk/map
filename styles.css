@@ -2,10 +2,18 @@ body {
     margin: 0;
     font-family: 'Fredoka'; sans-serif;
     font-weight: 300;
+    color: #28466F;
+}
+a {
+    color: #28466F;
 }
 
 #root { width: 100vw; height: 100vh; }
 #map { width: 100vw; height: 100vh; }
+
+strong {
+    font-weight: 500;
+}
 
 
 .panel {
@@ -113,17 +121,6 @@ body {
     margin-right: 5px;
     background: #d6fdc5;
     color: #1C4772;
-}
-
-/* 📌 Feedback Link */
-.feedback-link {
-    text-decoration: underline;
-    color: #1C4772;
-    font-weight: 400;
-}
-
-.feedback-link:hover {
-    text-decoration: underline;
 }
 
 
@@ -277,7 +274,29 @@ body {
 .mapboxgl-popup-content {
     font-family: 'Fredoka', sans-serif;
     font-size: 14px; 
+    font-weight: 300;
+    color: #1C4772;
+    overflow-y: scroll;
+    max-height: calc(100vh - 205px);
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
 }
+
+.mapboxgl-popup-content a {
+    color: #1C4772
+}
+
+
+.mapboxgl-popup-close-button {
+    background-color: #1c4772;
+    color: #d6fdc5;
+}
+
+.mapboxgl-popup-close-button:hover {
+    background-color: rgb(214 253 197);
+    color: #1c4772;
+}
+
 
 .x-custom-marker-container .mapboxgl-popup-content {
     margin: 115px 10px;
@@ -290,11 +309,23 @@ body {
     display: contents;
 }
 @media screen and (min-width: 1024px) {
+    .mapboxgl-popup-content {
+        max-height: 90vh;
+        padding: 7px 20px 20px 20px;
+    }
+
+    .mapboxgl-popup-content p {
+        font-size: 16px;
+    }
+
     .mapboxgl-popup-anchor-center {
         display: flex;
     }
     .x-custom-marker-container .mapboxgl-popup-content {
         margin: 0;
+    }
+    .mapboxgl-popup-tip {
+        display: none;
     }
 }
 
@@ -303,8 +334,44 @@ body {
     align-items: center;
 }
 .popup-title h3 {
-    margin: 0;
+    margin: 5px 0 15px 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #1C4772;
 }
+.popup-title .legend-color {
+    margin: 5px 7px 15px 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .popup-title h3 {
+        font-size: 24px;
+    }
+}
+
+.project-photo {
+    width:100%; 
+    border-radius:4px; 
+}
+
+.requesting-help-panel {
+    background: #F9FCED;
+    text-align: center;
+    padding: 1px 0;
+    margin-bottom: 8px;
+}
+.visit-website {
+    text-align: center;
+    display: block;
+    font-size: 18px;
+}
+.visit-website a {
+    color: #1C4772;
+    font-weight: 500;
+}
+
+
 
 /* 📌 Fullscreen Overlay */
 .overlay {
@@ -326,8 +393,7 @@ body {
     padding: 20px;
     max-width: 600px;
     width: 90%;
-    text-align: center;
-    border-radius: 10px;
+    border-radius: 4px;
     position: relative;
     overflow-y: auto;
     max-height: 85vh;
@@ -349,13 +415,37 @@ body {
     font-size: 24px;
     cursor: pointer;
 }
-.overlay-content .legend {
-    max-width: 400px;
-    margin: 0 auto;
+
+.overlay-content .legend-container {
+    background: #F9FCED;
+    padding: 1px 10px 10px 10px;
 }
 .overlay-content .legend-item {
     margin-bottom: 8px;
     font-size: 12px;
+}
+@media screen and (min-width: 1024px) {
+    .overlay-content .legend-container {
+        padding: 1px 20px 20px 20px;
+    }
+
+    .overlay-content .legend-item {
+        margin-bottom: 12px;
+        font-size: 14px;
+    }
+}
+.overlay-content .legend-color {
+    margin-right: 8px;
+}
+
+.overlay-content h2 {
+    font-weight: 400;
+    font-size: 24px;
+    color: #28466F;
+}
+
+.overlay-content h3 {
+    font-weight: 400;
 }
 
 .overlay-content ul {

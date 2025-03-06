@@ -115,6 +115,37 @@ var projects = [
             donations: true,
             volunteers: true
         }
+    },     {
+        name: "Wild Walsall",
+        coordinates: [-1.9109576599867157, 52.57479744328497], // Longitude, Latitude
+        image: "https://www.bbcwildlife.org.uk/sites/default/files/styles/large/public/2024-11/Cuckoos%20Nook%204.jpg",
+        description: "An ambitious nature recovery project run by Birmingham and Black Country Wildlife Trust targeting 1% of land in the Walsall borough.",
+        website: "https://www.bbcwildlife.org.uk/WildWalsall",
+        helpNeeded: {
+            donations: true,
+            volunteers: true
+        }
+    },
+    {
+        name: "Rothbury for Nature and the Nation",
+        coordinates: [-1.962415728811595, 55.28537978480107], // Longitude, Latitude
+        image: "https://www.nwt.org.uk/sites/default/files/styles/spotlight_single_desk_wide/public/2024-10/20240725_132712%20%281%29.webp?h=ab359401&itok=pC6b-9CH",
+        description: "Northumberland Wildlife Trust has partnered to buy and care for the 3,800-hectare Rothbury Estate and showcase nature recovery on a vast scale.",
+        website: "https://www.nwt.org.uk/what-we-do/projects/rothbury-nature-and-nation",
+        helpNeeded: {
+            donations: true,
+            volunteers: false
+        }
+    }, {
+        name: "Northern Devon Natural Solutions",
+        coordinates: [-4.057333613625808, 50.90205809837728], // Longitude, Latitude
+        image: "https://www.devonwildlifetrust.org/sites/default/files/styles/hero_desk_wide/public/2018-03/meshaw%20-%20David%20Chamberlain%20%2812%29.webp?h=3899bc90&itok=MswcUuQS",
+        description: "Working with farmers and landowners to return rivers to their natural state, restore wildflower-rich grasslands, and create new areas of woodland in North Devon.",
+        website: "https://www.devonwildlifetrust.org/northern-devon-natural-solutions",
+        helpNeeded: {
+            donations: true,
+            volunteers: true
+        }
     }
 ];
 
@@ -130,7 +161,7 @@ function showMapLoading() {
         "🦡 Mapping new badger-friendly zones...",
         "👂 Converting nightingale songs to locations...",
         "🥪 823 volunteers requesting re-supply...",
-        "🦋 Creating butterfly-friendly grasslands...",
+        "🦋 Triangulating nectar borders...",
         "🌍 Connecting wildlife corridors...",
         "🐾 Tracking otters in restored rivers...",
         "🦆 Checking wetland wetness...",
@@ -205,6 +236,7 @@ function loadMap() {
         // If a custom maker is being clicked on, then don’t show any other popup
         if (e.originalEvent && e.originalEvent.srcElement && e.originalEvent.srcElement.className.includes('custom-marker')) {
             e.originalEvent.stopPropagation();
+            return
         }
 
         const features = map.queryRenderedFeatures(e.point, {
@@ -337,37 +369,40 @@ function loadMap() {
                 .setLngLat(project.coordinates)
                 .addTo(map);
 
-            var popupConfig = { offset: 20, maxWidth: "350px", className: "x-custom-marker-container" };
-
-            if (window.innerWidth < 1024) {
-                popupConfig.anchor = 'center'
-            }
+            var popupConfig = { offset: 20, maxWidth: "350px", className: "x-custom-marker-container", anchor: "center" };
 
             // Create a popup
             const popup = new mapboxgl.Popup(popupConfig)
                 .setHTML(`
                     <div class="popup-title">
-                        <div class="legend-color asking-for-support"></div> 
                         <h3>${project.name}</h3>
                     </div>
-                    <p><strong>This project would love your help! 👋</strong></p>
-                    <img src="${project.image}" alt="${project.name}" style="width:100%; border-radius:3px; margin-bottom:8px;">
+                    <img src="${project.image}" alt="${project.name}" class="project-photo">
                     <p>${project.description}</p>
-                    <p><strong>Help:</strong> 👩‍🌾 Volunteer, 💸 Donate</p>
-                    <p><strong>n.b. This project is not yet certified for 30x30 although it may meet the criteria. See <a href="#" onclick="onExplainMapTap()">Explain map</a></strong></p>
-                    <p>🔗 <a href="${project.website}" target="_blank">View website</a></p>
+                    <div class="requesting-help-panel">
+                        <p><strong>This project would love your help! 👋</strong></p>
+                        <p>💪 Volunteer&nbsp;&nbsp;💳 Donate</p>
+                    </div>
+                    <p>💡 These projects are not yet certified for 30x30 however they may meet the criteria. See <a href="#" onclick="onExplainMapTap()">Explain map</a></p>
+                    <span class="visit-website"><a href="${project.website}" target="_blank">Visit project website</a></span>
                 `);
 
             popup.on('open', (e) => {
-                console.log("Popup has been opened.");
+                console.log(document.querySelector('.mapboxgl-popup-content').scrollTop)
+                document.querySelector('.mapboxgl-popup-content').scrollTop = 0;
+                if (window.innerWidth >= 1024) {
+                    return;
+                }
                 document.querySelectorAll('.close-while-popup-open').forEach(function(element) {
                     element.style = "display: none"
                 })
             });
             popup.on('close', () => {
-                console.log("Popup has been closed.");
+                if (window.innerWidth >= 1024) {
+                    return;
+                }
                 document.querySelectorAll('.close-while-popup-open').forEach(function(element) {
-                    element.style = "display: block"
+                    element.style = "display: flex"
                 })
             });
 
