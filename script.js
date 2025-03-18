@@ -160,7 +160,7 @@ var projects = [
         name: "Restoration Forth",
         coordinates: [-3.4364231, 56.0053005], // Longitude, Latitude
         image: "https://nativeoysternetwork.org/wp-content/uploads/sites/27/2015/12/MicrosoftTeams-image-5.png",
-        description: "Restoration Forth is working to restore native oyster beds and seagrass meadows in the Firth of Forth, Scotland. This collaborative project, which began in 2022, is working with local organisations and communities to restore 30,000 native oysters and 4 hectares of seagrass",
+        description: "Restoration Forth is working to restore native oyster beds and seagrass meadows in the Firth of Forth, Scotland. This collaborative project, which began in 2022, is working with local organisations and communities to restore 30,000 native oysters and 4 hectares of seagrass.",
         website: "https://www.wwf.org.uk/scotland/restoration-forth",
         helpNeeded: {
             donations: true,
