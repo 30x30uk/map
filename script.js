@@ -1,4 +1,4 @@
-const MAPBOX_TOKEN = "pk.eyJ1IjoiZTk4Nzg5czdkZiIsImEiOiJjbTd0MnZkejUxaWY3MmtxdHl2aXY3ZDJyIn0.BlgOWYTNNFS_GjoMwu0Y9g"; // public access and locked to domain
+const MAPBOX_TOKEN = "pk.eyJ1IjoiZTk4Nzg5czdkZiIsImEiOiJjbTd0MnZxYjUxZnAwMnFzZDhwNHdxMGx3In0.nzPNNdIPIX9jvBYIFMek8g"; // public access and locked to domain
 
 var projects = [
     {
@@ -146,6 +146,26 @@ var projects = [
             donations: true,
             volunteers: true
         }
+    }, {
+        name: "Mar Lodge Estate",
+        coordinates: [-4.0492719, 56.9913425], // Longitude, Latitude
+        image: "https://ntswebstorage01.blob.core.windows.net/nts-web-assets-production/imager/general/235614/Mar-Lodge-Estate-Glen-Lui-0218_c275fdf5aeb3ad7636a5c0ff14eb41a8.jpg",
+        description: "Britain’s largest National Nature Reserve – a wildlife wonderland in the heart of the Cairngorms",
+        website: "https://www.nts.org.uk/visit/places/mar-lodge-estate",
+        helpNeeded: {
+            donations: true,
+            volunteers: true
+        }
+    }, {
+        name: "Restoration Forth",
+        coordinates: [-3.4364231, 56.0053005], // Longitude, Latitude
+        image: "https://nativeoysternetwork.org/wp-content/uploads/sites/27/2015/12/MicrosoftTeams-image-5.png",
+        description: "Restoration Forth is working to restore native oyster beds and seagrass meadows in the Firth of Forth, Scotland. This collaborative project, which began in 2022, is working with local organisations and communities to restore 30,000 native oysters and 4 hectares of seagrass",
+        website: "https://www.wwf.org.uk/scotland/restoration-forth",
+        helpNeeded: {
+            donations: true,
+            volunteers: true
+        }
     }
 ];
 
@@ -230,8 +250,6 @@ function loadMap() {
 
     map.on('click', function (e) {
         // Query all layers at the clicked point
-        console.log('click')
-        console.log(e)
         
         // If a custom maker is being clicked on, then don’t show any other popup
         if (e.originalEvent && e.originalEvent.srcElement && e.originalEvent.srcElement.className.includes('custom-marker')) {
@@ -243,58 +261,88 @@ function loadMap() {
             layers: [
                 'sssi_units_england_simple', 
                 'spa_england_simple', 
+                'spa_scotland_simple', 
                 'sac_england_simple',
+                'sac_scotland_simple',
                 'ramsar_england_simple',
             ] // Ensure correct layer IDs
         });
 
         if (features.length === 0) return; // No features clicked
+        console.log(features[0].sourceLayer)
 
         // Sort features by layer order (last one in array is topmost)
         const mapItem = features[0].properties;
 
         // // Example properties (ensure your GeoJSON contains these fields)
         const name = mapItem.SSSI_NAME || mapItem.SPA_NAME || mapItem.SAC_NAME || mapItem.NAME || "Unknown protected area";
-        const code = mapItem.ENSIS_ID || mapItem.SAC_CODE || mapItem.SPA_CODE || mapItem.CODE ||"Unknown";
+        const code = mapItem.ENSIS_ID || mapItem.SAC_CODE || mapItem.SPA_CODE || mapItem.CODE || mapItem.PA_CODE || "Unknown";
         var type = "UNKNOWN";
+        var typeDescription = "UNKNOWN";
         var itemDescription = "Unknown";
         var mapKeyStatus = "mixed-condition"
         var mapKeyLabel = "Other protected areas, may count to 30x30 in future"
-        var area = mapItem.UNIT_AREA || mapItem.SAC_AREA || mapItem.SPA_AREA || mapItem.AREA || "Unknown";
+        var area = mapItem.UNIT_AREA || mapItem.SAC_AREA || mapItem.SPA_AREA || mapItem.AREA || mapItem.SITE_HA || "Unknown";
         var link = '';
 
-        if (mapItem.SSSI_NAME) {
-            type = "SSSI";
-            typeDescription = "Special Site of Scientific Interest";
-            itemDescription = "Condition: " + mapItem.CONDITION;
-            switch (mapItem.CONDITION) {
-                case "FAVOURABLE":
-                    mapKeyStatus = "good-condition";
-                    mapKeyLabel = "Counting towards 30x30, in 'favourable' condition";
-                    break;
-                case "UNFAVOURABLE RECOVERING":
-                    mapKeyStatus = "recovering-condition";
-                    mapKeyLabel = "Counting towards 30x30, in 'recovering' condition";
-                    break;
-            }
-            link = 'https://designatedsites.naturalengland.org.uk/SiteDetail.aspx?SiteCode=S' + code
-        } else if (mapItem.SPA_NAME) {
-            type = "SPA";
-            typeDescription = "Special Protected Area";
-            itemDescription = ''
-            link = 'https://designatedsites.naturalengland.org.uk/SiteDetail.aspx?SiteCode=' + code
-        }  else if (mapItem.SAC_NAME) {
-            type = "SAC";
-            typeDescription = "Special Area of Conservation";
-            itemDescription = ''
-            link = 'https://designatedsites.naturalengland.org.uk/SiteDetail.aspx?SiteCode=' + code
-        } else if (mapItem.NAME) { // RAMSAR
-            type = "RAMSAR";
-            typeDescription = "Ramsar site - internationally important wetland";
-            itemDescription = ''
-            link = 'https://designatedsites.naturalengland.org.uk/SiteDetail.aspx?SiteCode=' + code
-        }
+        console.log('tap')
+        console.log(mapItem)
 
+        switch (features[0].sourceLayer) {
+            case "sssi_units_england":
+                type = "SSSI";
+                typeDescription = "Special Site of Scientific Interest";
+                itemDescription = "Condition: " + mapItem.CONDITION;
+                switch (mapItem.CONDITION) {
+                    case "FAVOURABLE":
+                        mapKeyStatus = "good-condition";
+                        mapKeyLabel = "Counting towards 30x30, in 'favourable' condition";
+                        break;
+                    case "UNFAVOURABLE RECOVERING":
+                        mapKeyStatus = "recovering-condition";
+                        mapKeyLabel = "Counting towards 30x30, in 'recovering' condition";
+                        break;
+                }
+                link = 'https://designatedsites.naturalengland.org.uk/SiteDetail.aspx?SiteCode=S' + code
+                break;
+            case "sac_england":
+                type = "SAC";
+                typeDescription = "Special Area of Conservation";
+                itemDescription = ''
+                link = 'https://designatedsites.naturalengland.org.uk/SiteDetail.aspx?SiteCode=' + code
+                break;
+            case "sac_scotland":
+                type = "SAC";
+                typeDescription = "Special Area of Conservation";
+                itemDescription = ''
+                link = 'https://sitelink.nature.scot/site/' + code
+                mapKeyStatus = "recovering-condition";
+                mapKeyLabel = "Counting towards 30x30. We don’t have data on its ecological condition.";
+                break;
+            case "spa_england":
+                type = "SPA";
+                typeDescription = "Special Protected Area";
+                itemDescription = ''
+                link = 'https://designatedsites.naturalengland.org.uk/SiteDetail.aspx?SiteCode=' + code
+                break;
+            case "spa_scotland":
+                type = "SPA";
+                typeDescription = "Special Protected Area";
+                itemDescription = ''
+                link = 'https://sitelink.nature.scot/site/' + code
+                mapKeyStatus = "recovering-condition";
+                mapKeyLabel = "Counting towards 30x30. We don’t have data on its ecological condition.";
+                break;
+            case "ramsar_england":
+                type = "RAMSAR";
+                typeDescription = "Ramsar site - internationally important wetland";
+                itemDescription = ''
+                link = 'https://designatedsites.naturalengland.org.uk/SiteDetail.aspx?SiteCode=' + code
+                break;
+            default:
+                console.log('Unknown layer tapped')
+                console.log(features[0].sourceLayer)
+        }
 
         function formatNumber(value) {
             if (isNaN(value)) return "Invalid number";
@@ -336,12 +384,20 @@ function loadMap() {
     });
 
     // Change cursor to pointer when hovering over polygons
-    map.on('mouseenter', ['sssi_units_england_simple','spa_england_simple', 'sac_england_simple','ramsar_england_simple'], function () {
+    const interactionLayers = [
+        'sssi_units_england_simple',
+        'spa_england_simple', 
+        'spa_scotland_simple', 
+        'sac_england_simple',
+        'sac_scotland_simple',
+        'ramsar_england_simple',
+    ]
+    map.on('mouseenter', interactionLayers, function () {
         map.getCanvas().style.cursor = 'pointer';
     });
 
     // Reset cursor when not hovering
-    map.on('mouseleave', ['sssi_units_england_simple', 'spa_england_simple', 'sac_england_simple', 'ramsar_england_simple'], function () {
+    map.on('mouseleave', interactionLayers, function () {
         map.getCanvas().style.cursor = '';
     });
 
