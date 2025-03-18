@@ -224,13 +224,12 @@ function showMapLoading() {
 function loadMap() {
     showMapLoading()
 
-    console.log('load map3')
     mapboxgl.accessToken = MAPBOX_TOKEN;
     var zoomLevel = 5;
     var center = [-2.3, 53.1];
     var pitch = 30;
     if (window.innerWidth > 1024) {
-        zoomLevel = 6;
+        zoomLevel = 5;
         pitch = 45;
         center = [-2.3, 52.9]
     }
@@ -444,7 +443,6 @@ function loadMap() {
                 `);
 
             popup.on('open', (e) => {
-                console.log(document.querySelector('.mapboxgl-popup-content').scrollTop)
                 document.querySelector('.mapboxgl-popup-content').scrollTop = 0;
                 if (window.innerWidth >= 1024) {
                     return;
