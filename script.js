@@ -166,6 +166,16 @@ var projects = [
             donations: true,
             volunteers: true
         }
+    }, {
+        name: "Wilder Blean",
+        coordinates: [0.9915698, 51.3032157], // Longitude, Latitude
+        image: "https://www.kentwildlifetrust.org.uk/sites/default/files/styles/hero_xl/public/hero%20images/Bison%20In%20The%20Mist%202%20-%20Dec2022%20%28Donovan%20Wright%29.jpeg.webp?itok=Hh4TYZE-",
+        description: "First UK re-introduction of the European Bison. As ecosystem engineers they play a vital role in nature’s recovery.",
+        website: "https://www.kentwildlifetrust.org.uk/projects/wilder-blean",
+        helpNeeded: {
+            donations: true,
+            volunteers: true
+        }
     }
 ];
 
