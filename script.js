@@ -31,7 +31,7 @@ var projects = [
             donations: true,
             volunteers: false
         }
-    }, 
+    },
     {
         name: "Securing the Survival of Bolton's Willow Tits",
         coordinates: [-2.4244, 53.5785], // Longitude, Latitude
@@ -60,7 +60,7 @@ var projects = [
         name: "Wild Woodbury",
         coordinates: [-2.215747281959573, 50.753980362128424], // Longitude, Latitude
         image: "https://www.dorsetwildlifetrust.org.uk/sites/default/files/styles/hero_default/public/2022-10/Flowering%20musk%20thistle%20Seb%20Haggett.JPG",
-        description: "A Dorset Wildlife Trust’s community project rewilding 150 hectares near Bere Regis.",
+        description: "A Dorset Wildlife Trust's community project rewilding 150 hectares near Bere Regis.",
         website: "https://www.dorsetwildlifetrust.org.uk/appeals/wild-woodbury-project",
         eligibility: "criteria-matched",
         helpNeeded: {
@@ -72,7 +72,7 @@ var projects = [
         name: "The Great London Pond Project",
         coordinates: [-0.24609632664032371, 51.47520578459729], // Longitude, Latitude
         image: "https://www.crowdfunder.co.uk/uploads/projects/1592216.jpg",
-        description: "Working with local communities to restore Greater London’s ponds for nature recovery, wellbeing and climate resilience.",
+        description: "Working with local communities to restore Greater London's ponds for nature recovery, wellbeing and climate resilience.",
         website: "https://www.projectsfornature.com/p/the-great-london-pond-project",
         eligibility: "criteria-matched",
         helpNeeded: {
@@ -96,7 +96,7 @@ var projects = [
         name: "Cambridge City Chalk Streams Project",
         coordinates: [0.13404426836766054, 52.18604176228212], // Longitude, Latitude
         image: "https://www.crowdfunder.co.uk/uploads/projects/1594590.jpg?1733492151",
-        description: "Restoring Cambridge’s chalk streams into thriving, resilient ecosystems and reviving wildlife habitats.",
+        description: "Restoring Cambridge's chalk streams into thriving, resilient ecosystems and reviving wildlife habitats.",
         website: "https://www.projectsfornature.com/p/cambridge-city-chalk-streams-project",
         eligibility: "criteria-matched",
         helpNeeded: {
@@ -150,7 +150,7 @@ var projects = [
         name: "Mar Lodge Estate",
         coordinates: [-4.0492719, 56.9913425], // Longitude, Latitude
         image: "https://ntswebstorage01.blob.core.windows.net/nts-web-assets-production/imager/general/235614/Mar-Lodge-Estate-Glen-Lui-0218_c275fdf5aeb3ad7636a5c0ff14eb41a8.jpg",
-        description: "Britain’s largest National Nature Reserve – a wildlife wonderland in the heart of the Cairngorms",
+        description: "Britain's largest National Nature Reserve – a wildlife wonderland in the heart of the Cairngorms",
         website: "https://www.nts.org.uk/visit/places/mar-lodge-estate",
         helpNeeded: {
             donations: true,
@@ -170,7 +170,7 @@ var projects = [
         name: "Wilder Blean",
         coordinates: [0.9915698, 51.3032157], // Longitude, Latitude
         image: "https://www.kentwildlifetrust.org.uk/sites/default/files/styles/hero_xl/public/hero%20images/Bison%20In%20The%20Mist%202%20-%20Dec2022%20%28Donovan%20Wright%29.jpeg.webp?itok=Hh4TYZE-",
-        description: "First UK re-introduction of the European Bison. As ecosystem engineers they play a vital role in nature’s recovery.",
+        description: "First UK re-introduction of the European Bison. As ecosystem engineers they play a vital role in nature's recovery.",
         website: "https://www.kentwildlifetrust.org.uk/projects/wilder-blean",
         helpNeeded: {
             donations: true,
@@ -230,6 +230,28 @@ function showMapLoading() {
     showLoadingMessages();
 }
 
+function slugify(text) {
+    return text
+        .toString()
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, '-')        // Replace spaces with -
+        .replace(/[^\w\-]+/g, '')    // Remove all non-word chars
+        .replace(/\-\-+/g, '-');     // Replace multiple - with single -
+}
+
+function updateURLWithProject(projectName) {
+    const slug = slugify(projectName);
+    const url = new URL(window.location.href);
+    url.searchParams.set('project', slug);
+    window.history.pushState({}, '', url);
+}
+
+function removeProjectFromURL() {
+    const url = new URL(window.location.href);
+    url.searchParams.delete('project');
+    window.history.pushState({}, '', url);
+}
 
 function loadMap() {
     showMapLoading()
@@ -257,10 +279,13 @@ function loadMap() {
 
     map.addControl(new mapboxgl.NavigationControl(), 'top-right');
 
+    // Store markers in an array for later access
+    const markers = [];
+
     map.on('click', function (e) {
         // Query all layers at the clicked point
-        
-        // If a custom maker is being clicked on, then don’t show any other popup
+
+        // If a custom maker is being clicked on, then don't show any other popup
         if (e.originalEvent && e.originalEvent.srcElement && e.originalEvent.srcElement.className.includes('custom-marker')) {
             e.originalEvent.stopPropagation();
             return
@@ -268,9 +293,9 @@ function loadMap() {
 
         const features = map.queryRenderedFeatures(e.point, {
             layers: [
-                'sssi_units_england_simple', 
-                'spa_england_simple', 
-                'spa_scotland_simple', 
+                'sssi_units_england_simple',
+                'spa_england_simple',
+                'spa_scotland_simple',
                 'sac_england_simple',
                 'sac_scotland_simple',
                 'ramsar_england_simple',
@@ -326,7 +351,7 @@ function loadMap() {
                 itemDescription = ''
                 link = 'https://sitelink.nature.scot/site/' + code
                 mapKeyStatus = "recovering-condition";
-                mapKeyLabel = "Counting towards 30x30. We don’t have data on its ecological condition.";
+                mapKeyLabel = "Counting towards 30x30. We don't have data on its ecological condition.";
                 break;
             case "spa_england":
                 type = "SPA";
@@ -340,7 +365,7 @@ function loadMap() {
                 itemDescription = ''
                 link = 'https://sitelink.nature.scot/site/' + code
                 mapKeyStatus = "recovering-condition";
-                mapKeyLabel = "Counting towards 30x30. We don’t have data on its ecological condition.";
+                mapKeyLabel = "Counting towards 30x30. We don't have data on its ecological condition.";
                 break;
             case "ramsar_england":
                 type = "RAMSAR";
@@ -362,7 +387,7 @@ function loadMap() {
             // Add commas for numbers >= 1000
             return Number(rounded).toLocaleString();
         }
-        
+
         area = formatNumber(area)
 
         // Prevent lower layers from triggering their popups
@@ -379,7 +404,7 @@ function loadMap() {
             .setLngLat(e.lngLat)
             .setHTML(`
                 <div class="popup-title">
-                    <div class="legend-color ${mapKeyStatus}"></div> 
+                    <div class="legend-color ${mapKeyStatus}"></div>
                     <h3>${name}</h3>
                 </div>
                 <p><strong>Role:</strong> ${mapKeyLabel}</p>
@@ -395,8 +420,8 @@ function loadMap() {
     // Change cursor to pointer when hovering over polygons
     const interactionLayers = [
         'sssi_units_england_simple',
-        'spa_england_simple', 
-        'spa_scotland_simple', 
+        'spa_england_simple',
+        'spa_scotland_simple',
         'sac_england_simple',
         'sac_scotland_simple',
         'ramsar_england_simple',
@@ -422,12 +447,11 @@ function loadMap() {
             // Create a smaller marker with custom styling
             const markerElement = document.createElement('div');
             markerElement.className = "custom-marker";
-            markerElement.style.backgroundImage = "url('/assets/map-marker.svg')"; // Path to your SVG
+            markerElement.style.backgroundImage = "url('./assets/map-marker.svg')"; // Path to your SVG
             markerElement.style.width = "35px"; // Adjust size as needed
             markerElement.style.height = "46px";
             markerElement.style.backgroundSize = "contain";
             markerElement.style.cursor = "pointer";
-
 
             // Create the marker using custom element
             const marker = new mapboxgl.Marker(markerElement)
@@ -452,22 +476,48 @@ function loadMap() {
                     <span class="visit-website"><a href="${project.website}" target="_blank">Visit project website</a></span>
                 `);
 
+            // Store marker and project info for later access
+            markers.push({
+                marker: marker,
+                popup: popup,
+                project: project
+            });
+
+            // Handle popup open
             popup.on('open', (e) => {
                 document.querySelector('.mapboxgl-popup-content').scrollTop = 0;
+
+                // Update URL when popup opens
+                updateURLWithProject(project.name);
+
+                // Zoom to marker with animation
+                map.easeTo({
+                    center: project.coordinates,
+                    zoom: 8,
+                    duration: 1000,
+                    offset: [0, -100]
+                });
+
                 if (window.innerWidth >= 1024) {
                     return;
                 }
+
                 document.querySelectorAll('.close-while-popup-open').forEach(function(element) {
                     element.style = "display: none"
-                })
+                });
+
             });
+
+            // Handle popup close
             popup.on('close', () => {
+                // Remove project parameter when popup closes
+                removeProjectFromURL();
                 if (window.innerWidth >= 1024) {
                     return;
                 }
                 document.querySelectorAll('.close-while-popup-open').forEach(function(element) {
                     element.style = "display: flex"
-                })
+                });
             });
 
             // Attach popup to marker
@@ -484,6 +534,25 @@ function loadMap() {
         }, Math.floor(Math.random() * 500) + 500)
     });
 
+    // Check for project parameter in URL after map is loaded
+    map.on('load', () => {
+        const url = new URL(window.location.href);
+        const projectSlug = url.searchParams.get('project');
+
+        if (projectSlug) {
+            // Find the matching project
+            const matchingMarker = markers.find(marker => slugify(marker.project.name) === projectSlug);
+            if (matchingMarker) {
+                // Wait a bit for markers to be fully loaded
+                setTimeout(() => {
+                    // Ensure popup is properly initialized before opening
+                    if (!matchingMarker.popup.isOpen()) {
+                        matchingMarker.marker.togglePopup();
+                    }
+                }, 1000);
+            }
+        }
+    });
 }
 
 /**

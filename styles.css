@@ -127,10 +127,66 @@ strong {
 .map-legend {
     bottom: 50px;
     left: 10px;
-    padding-right: 8px;
+    padding-right: 10px;
     font-size: 12px;
     line-height: 1.6;
     z-index: 998;
+}
+
+.nation-progress {
+    bottom: 50px;
+    right: 10px;
+    padding-right: 8px;
+    font-size: 12px;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+}
+
+.nation-progress-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.nation-progress-item > div {
+    display: flex;
+    align-items: center;
+}
+
+.nation-progress-item img {
+    width: 18px;
+    height: 18px;
+    padding-right: 6px;
+}
+
+.nation-progress .legend-item {
+    margin-bottom: 20px;
+}
+
+.nation-progress summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px 0 10px 10px;
+}
+
+.nation-progress[open] summary {
+    position: absolute;
+    right: 0;
+    transform: scale(0.75);
+    top: -7.5px;
+}
+
+.nation-progress[open] summary span {
+    display: none;
+}
+
+.nation-progress[open] summary img {
+    transform: rotate(45deg);
 }
 
 /* Legend title */
@@ -153,6 +209,25 @@ strong {
     }
     .legend-title {
         font-size: 20px;
+    }
+    .nation-progress {
+        padding-right: 20px;
+        min-width: 200px;
+    }
+
+    .nation-progress[open] summary {
+        top: 0;
+        right: 20px;
+        transform: unset;
+        padding: 20px 0 20px 20px;
+    }
+
+    .nation-progress-item {
+        flex-direction: row;
+    }
+
+    .nation-progress-item > div:first-child {
+        width: 138px;
     }
 }
 
@@ -185,7 +260,7 @@ strong {
 }
 
 .recovering-condition {
-    background: url('/assets/map-crosshatch-key.svg');
+    background: url('./assets/map-crosshatch-key.svg');
     background-size: 300%;
 }
 
@@ -198,7 +273,7 @@ strong {
 
 .map-marker-key {
     position: absolute;
-    background: url('/assets/map-marker.svg') no-repeat center;
+    background: url('./assets/map-marker.svg') no-repeat center;
     background-size: contain; /* Uses the same branded marker */
     left: -4px;
     top: -3px;
@@ -217,7 +292,7 @@ strong {
 
 /* 📌 Floating Footer */
 .map-footer {
-    bottom: 10px;    
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     padding: 0px;
@@ -273,7 +348,7 @@ strong {
 /* Mapbox ovverrides */
 .mapboxgl-popup-content {
     font-family: 'Fredoka', sans-serif;
-    font-size: 14px; 
+    font-size: 14px;
     font-weight: 300;
     color: #1C4772;
     overflow-y: scroll;
@@ -351,8 +426,8 @@ strong {
 }
 
 .project-photo {
-    width:100%; 
-    border-radius:4px; 
+    width:100%;
+    border-radius:4px;
 }
 
 .requesting-help-panel {
