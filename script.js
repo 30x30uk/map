@@ -555,34 +555,88 @@ function loadMap() {
     });
 }
 
-/**
- * Explain Map popup
- */
 document.addEventListener("DOMContentLoaded", function() {
     const explainMapOverlay = document.getElementById("explain-map-overlay");
     const explainMapLink = document.getElementById("explain-map-link");
     const closeOverlay = document.getElementById("close-overlay");
+    const shareButton = document.getElementById('share-project-button');
 
     // Show overlay when clicking "Explain Map"
-    explainMapLink.addEventListener("click", onExplainMapTap);
+    if (explainMapLink) {
+        explainMapLink.addEventListener("click", (e) => {
+            e.preventDefault();
+            onExplainMapTap();
+        });
+    }
 
     // Close overlay when clicking close button
-    closeOverlay.addEventListener("click", function() {
-        explainMapOverlay.style.display = "none";
-    });
+    if (closeOverlay) {
+        closeOverlay.addEventListener("click", function() {
+            explainMapOverlay.style.display = "none";
+        });
+    }
 
     // Close overlay when clicking outside the content box
-    explainMapOverlay.addEventListener("click", function(event) {
-        if (event.target === explainMapOverlay) {
-            explainMapOverlay.style.display = "none";
-        }
+    if (explainMapOverlay) {
+        explainMapOverlay.addEventListener("click", function(event) {
+            if (event.target === explainMapOverlay) {
+                explainMapOverlay.style.display = "none";
+            }
+        });
+    }
+
+    document.querySelectorAll('.submit-project-trigger').forEach(el => {
+        el.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.open('https://docs.google.com/forms/d/e/1FAIpQLSehQLDM7oE1Wz96v1Op_lQ9Jrd56B7ZzhlPHuriSqSlVdx__A/viewform?usp=sharing', '_blank');
+        })
     });
+
+    if (shareButton) {
+        shareButton.addEventListener('click', async (event) => {
+            event.preventDefault();
+
+            const shareData = {
+                title: document.title,
+                text: document.querySelector('meta[name="description"]').content,
+                url: window.location.href,
+            };
+
+            const isMobile = window.innerWidth < 1024;
+
+            // Use Web Share API if on mobile and it's available
+            if (isMobile && navigator.share) {
+                try {
+                    await navigator.share(shareData);
+                } catch (err) {
+                    if (err.name !== 'AbortError') {
+                        console.error('Error sharing:', err);
+                    }
+                }
+            } else {
+                // Fallback to copying the link to the clipboard for desktop
+                try {
+                    await navigator.clipboard.writeText(shareData.url);
+                    const originalText = shareButton.textContent;
+                    shareButton.textContent = 'Link copied!';
+                    shareButton.style.pointerEvents = 'none';
+                    setTimeout(() => {
+                        shareButton.textContent = originalText;
+                        shareButton.style.pointerEvents = 'auto';
+                    }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy: ', err);
+                }
+            }
+        });
+    }
 });
 
 function onExplainMapTap() {
     const explainMapOverlay = document.getElementById("explain-map-overlay");
-    explainMapOverlay.style.display = "flex";
+    if (explainMapOverlay) {
+        explainMapOverlay.style.display = "flex";
+    }
 }
-
 
 loadMap();
