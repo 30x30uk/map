@@ -598,3 +598,7 @@ strong {
     font-weight: 300;
     margin-top: 10px;
 }
+
+.futures-wild {
+    max-width: 60px;
+}
