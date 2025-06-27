@@ -125,7 +125,7 @@ strong {
 
 
 .map-legend {
-    bottom: 50px;
+    bottom: 45px;
     left: 10px;
     padding-right: 10px;
     font-size: 12px;
@@ -134,7 +134,7 @@ strong {
 }
 
 .nation-progress {
-    bottom: 50px;
+    bottom: 45px;
     right: 10px;
     padding-right: 8px;
     font-size: 12px;
@@ -142,11 +142,12 @@ strong {
     display: flex;
     flex-direction: column;
     min-width: 100px;
+    z-index: 998;
 }
 
 .nation-progress-item {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 10px;
 }
@@ -171,7 +172,7 @@ strong {
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    padding: 10px 0 10px 10px;
+    padding: 5px 0 0 10px;
 }
 
 .nation-progress[open] summary {
@@ -179,6 +180,7 @@ strong {
     right: 0;
     transform: scale(0.75);
     top: -7.5px;
+    padding: 12px 4px 0px 0px;
 }
 
 .nation-progress[open] summary span {
@@ -189,6 +191,11 @@ strong {
     transform: rotate(45deg);
 }
 
+.nation-progress-explainer {
+    display: block;
+    max-width: 125px;
+}
+
 /* Legend title */
 .legend-title {
     font-size: 12px;
@@ -196,6 +203,11 @@ strong {
     line-height: 1.3;
     font-weight: 400;
     margin-bottom: 6px;
+}
+
+/* Legend title */
+.legend-subtitle {
+    font-size: 10px;
 }
 @media screen and (min-width: 1024px) {
     .map-legend {
@@ -209,10 +221,23 @@ strong {
     }
     .legend-title {
         font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .legend-subtitle {
+        font-size: 16px;
     }
     .nation-progress {
         padding-right: 20px;
         min-width: 200px;
+    }
+
+    .nation-progress {
+        bottom: 40px;
+        right: 40px;
+    }
+
+    .nation-progress summary {
+        padding: 13px 0 6px 20px;
     }
 
     .nation-progress[open] summary {
@@ -222,13 +247,14 @@ strong {
         padding: 20px 0 20px 20px;
     }
 
-    .nation-progress-item {
-        flex-direction: row;
-    }
-
     .nation-progress-item > div:first-child {
         width: 138px;
     }
+
+    .nation-progress-explainer {
+        max-width: none;
+    }
+
 }
 
 /* Legend items */
@@ -314,7 +340,7 @@ strong {
     display: flex;
     align-items: center;
     gap: 6px;
-    padding: 5px 10px;
+    padding: 5px 5px;
     transition: opacity 0.2s ease-in-out;
     min-width: fit-content;
 }

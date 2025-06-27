@@ -67,7 +67,6 @@
         <div class="panel-item tagline">
             <h2>Progress towards 30% of land and sea for nature, by 2030.</h1>
             <div class="header-feedback">
-                <span class="beta-label">BETA</span>
                 <a href="mailto:contact@30x30.org.uk?subject=30x30+UK+map+feedback" target="_blank" class="feedback-link">Feedback?</a>
             </div>
         </div>
@@ -76,7 +75,7 @@
 
     <!-- Fixed Map Legend -->
 
-    <div class="panel map-legend close-while-popup-open">
+    <div class="panel map-legend close-while-popup-open close-while-stats-open">
         <div class="panel-item">
             <div class="legend-title">Map key</div>
             <div class="legend-item">
@@ -95,43 +94,45 @@
     </div>
 
     <footer class="map-footer panel close-while-popup-open">
-        <a href="https://30x30.org.uk" class="footer-link">👈  Back home</a>
-        <a href="#" class="footer-link" id="explain-map-link">🗺️  Explain map</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSehQLDM7oE1Wz96v1Op_lQ9Jrd56B7ZzhlPHuriSqSlVdx__A/viewform?usp=sharing" class="footer-link">✉️  Submit project</a>
-        <a href="#" class="footer-link" id="share-project-button">🔗 Share</a>
+        <a href="https://30x30.org.uk" class="footer-link">30x30.org.uk</a>
+        <a href="#" class="footer-link explain-map-link">Explain map</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSehQLDM7oE1Wz96v1Op_lQ9Jrd56B7ZzhlPHuriSqSlVdx__A/viewform?usp=sharing" class="footer-link">Submit project</a>
+        <a href="#" class="footer-link" id="share-project-button">Share</a>
     </footer>
 
     <details class="panel nation-progress close-while-popup-open">
         <summary class="legend-title"><span>View stats</span> <img src="./assets/details-control.svg" /></summary>
         <div class="panel-item">
-            <div class="legend-title">England</div>
+            <div class="legend-title">Land and sea %</div>
+            <div class="legend-title legend-subtitle">England</div>
             <div class="legend-item">
                 <div class="nation-progress-item">
-                    <div><img src="./assets/sea-progress.png" />50% on target</div>
-                    <div><img src="./assets/land-progress.png" />20% on target</div>
+                    <div><img src="./assets/land-progress.png" /><strong>7.1%</strong></div>
+                    <div><img src="./assets/sea-progress.png" />40%*</div>
                 </div>
             </div>
-            <div class="legend-title">Northern Ireland</div>
+            <div class="legend-title legend-subtitle">Wales</div>
             <div class="legend-item">
                 <div class="nation-progress-item">
-                    <div><img src="./assets/sea-progress.png" />Unknow</div>
-                    <div><img src="./assets/land-progress.png" />Unknown</div>
+                    <div><img src="./assets/land-progress.png" /><strong>10.6%</strong></div>
+                    <div><img src="./assets/sea-progress.png" />50%*</div>
                 </div>
             </div>
-            <div class="legend-title">Scotland</div>
+            <div class="legend-title legend-subtitle">Northern Ireland</div>
             <div class="legend-item">
                 <div class="nation-progress-item">
-                    <div><img src="./assets/sea-progress.png" />Unknow</div>
-                    <div><img src="./assets/land-progress.png" />Unknown</div>
+                    <div><img src="./assets/land-progress.png" />9.8%*</div>
+                    <div><img src="./assets/sea-progress.png" />36%*</div>
                 </div>
             </div>
-            <div class="legend-title">Wales</div>
+            <div class="legend-title legend-subtitle">Scotland</div>
             <div class="legend-item">
                 <div class="nation-progress-item">
-                    <div><img src="./assets/sea-progress.png" />Unknow</div>
-                    <div><img src="./assets/land-progress.png" />Unknown</div>
+                    <div><img src="./assets/land-progress.png" />17.6%*</div>
+                    <div><img src="./assets/sea-progress.png" />37%*</div>
                 </div>
             </div>
+            <span class="nation-progress-explainer">*Using loose criteria only. <a href="#" class="explain-map-link">Explain</a>.</span>
         </div>
     </details>
 
@@ -139,7 +140,6 @@
     <div id="explain-map-overlay" class="overlay">
         <div class="overlay-content">
             <div class="overlay-header">
-                <span class="beta-label">BETA</span>
                 <button id="close-overlay" class="close-btn">&times;</button>
             </div>
             <h2>About this map</h2>
@@ -172,11 +172,19 @@
                     </div>
                 </div>
             </div>
+            <h3>How close are we to 30%?</h3>
+            <p>In England and Wales on land, just 7.1% and 10.6% respectively, are currently counting towards 30x30, this is largely Special Sites of Scientific Interest, with other projects set to be counted against the criteria later this year.</p> 
+
+            <p>Scotland, Northern Ireland and all of UK’s waters are yet to publish 30x30 specific criteria.</p>
+
+            <p>Where refined criteria is missing, the map and the Stats panel shows total area of designated protection, however these ares have unknown biological condition.</p>
+
+            <p>30x30 UK is asking for the missing criteria to be published.</p>
+
             <h3>Map limitations</h3>
             <ul>
-                <li>Data not yet loaded for Wales and Northern Ireland</li>
-                <li class="submit-project-trigger">Only a handful of projects have been loaded into the map. Submit your project</li>
-                <li>Marine Protected Areas are not yet shown as counting towards 30x30</li>
+                <li>Protected areas not yet loaded for Wales and Northern Ireland</li>
+                <li>Only a small selection of projects have been loaded into the map. <a href="#" class="submit-project-trigger">Submit your project</a></li>
                 <li>Data for woodlands that are not SSSI have not yet been loaded</li>
             </ul>
             <h3>New projects certified for 30x30</h3>

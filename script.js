@@ -557,17 +557,42 @@ function loadMap() {
 
 document.addEventListener("DOMContentLoaded", function() {
     const explainMapOverlay = document.getElementById("explain-map-overlay");
-    const explainMapLink = document.getElementById("explain-map-link");
+    const explainMapLinks = document.querySelectorAll(".explain-map-link");
     const closeOverlay = document.getElementById("close-overlay");
     const shareButton = document.getElementById('share-project-button');
+    const statsPanel = document.querySelector('details.panel.nation-progress');
+    const isMobile = window.innerWidth < 1024;
 
-    // Show overlay when clicking "Explain Map"
-    if (explainMapLink) {
+    
+    statsPanel.addEventListener('toggle', () => {
+        if (isMobile) {
+            if (statsPanel.open) {
+                document.querySelectorAll('.close-while-stats-open').forEach(function(element) {
+                    element.style = "display: none"
+                });
+
+            } else {
+                document.querySelectorAll('.close-while-stats-open').forEach(function(element) {
+                    element.style = "display: flex"
+                });
+            }
+        }
+    });
+
+    explainMapLinks.forEach(function(explainMapLink) {
         explainMapLink.addEventListener("click", (e) => {
-            e.preventDefault();
-            onExplainMapTap();
-        });
-    }
+                e.preventDefault();
+                onExplainMapTap();
+            });
+
+        // Show overlay when clicking "Explain Map"
+        if (explainMapLink) {
+            explainMapLink.addEventListener("click", (e) => {
+                e.preventDefault();
+                onExplainMapTap();
+            });
+        }
+    });
 
     // Close overlay when clicking close button
     if (closeOverlay) {
@@ -601,8 +626,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 text: document.querySelector('meta[name="description"]').content,
                 url: window.location.href,
             };
-
-            const isMobile = window.innerWidth < 1024;
 
             // Use Web Share API if on mobile and it's available
             if (isMobile && navigator.share) {
