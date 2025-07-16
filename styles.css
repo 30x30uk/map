@@ -398,9 +398,45 @@ strong {
     color: #1c4772;
 }
 
+/* 12 px circular “volunteer” marker */
+.marker-volunteer {
+  /* size & shape */
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #1c4772; /* stroke colour */
+  
+  /* colours */
+  background: #ffffff7d;          /* fill */
+  color: #1c4772;            /* “v” glyph */
+
+  /* centre the glyph */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* glyph styling */
+  font: 700 8px/1 sans-serif;  /* weight size line-height */
+  user-select: none;
+  pointer-events: none;        /* so clicks hit the marker, not the glyph */
+
+  z-index: 1; 
+}
+
+/* “spotlight” marker */
+.marker-spotlight {
+  background-image: url('/assets/map-marker.svg');
+  background-size: contain;
+  width: 35px;
+  height: 46px;
+  cursor: pointer;
+  z-index: 2; 
+}
+
 
 .x-custom-marker-container .mapboxgl-popup-content {
     margin: 115px 10px;
+    z-index: 2;
 }
 
 .mapboxgl-popup {
