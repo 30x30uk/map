@@ -209,7 +209,7 @@ function makeProjectPopup(project) {
 
     var imageUrl = ''
     if (project.Image && project.Image[0]) {
-        imageUrl = project.Image[0].url;
+        imageUrl = 'data/' + project.Image[0].url;
     }
 
     // Create a popup
@@ -227,7 +227,6 @@ function makeProjectPopup(project) {
             <p>💡 These projects are not yet certified for 30x30 however they may meet the criteria. See <a href="#" onclick="onExplainMapTap()">Explain map</a></p>
             <span class="visit-website"><a href="${project.LocationURL}" target="_blank">Visit project website</a></span>
         `);
-
 
     // Handle popup open
     popup.on('open', (e) => {
@@ -285,8 +284,13 @@ function addProjectsToMap() {
             if (project.Type && project.Type.find(function (type) {return type === 'Spotlight'})) {
                 markerElement.className = "marker-spotlight";
             } else {
-                markerElement.className = "marker-volunteer";
-                markerElement.textContent = 'v';
+                if (project.Type.length == 1 && project.Type.find(function (type) {return type === 'Volunteering'})) {
+                    markerElement.className = "marker-mini marker-volunteer";
+                    markerElement.textContent = 'v';
+                } else {
+                    markerElement.className = "marker-mini marker-project";
+                    markerElement.textContent = 'p';
+                }
             }
 
             // Create the marker using custom element
@@ -297,7 +301,6 @@ function addProjectsToMap() {
             // Using our own click handler so that the popup doesn’t immediately render on map load and bring 
             // in all the project images etc until it is tapped on
             marker.getElement().addEventListener('click', () => {
-
                 makeProjectPopup(project)
                     .setLngLat(marker.getLngLat())   // anchor popup to the same point
                     .addTo(map);

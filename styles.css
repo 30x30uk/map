@@ -398,17 +398,12 @@ strong {
     color: #1c4772;
 }
 
-/* 12 px circular “volunteer” marker */
-.marker-volunteer {
+/* 12 px circular mini marker */
+.marker-mini {
   /* size & shape */
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  border: 1px solid #1c4772; /* stroke colour */
-  
-  /* colours */
-  background: #ffffff7d;          /* fill */
-  color: #1c4772;            /* “v” glyph */
 
   /* centre the glyph */
   display: flex;
@@ -419,8 +414,19 @@ strong {
   font: 700 8px/1 sans-serif;  /* weight size line-height */
   user-select: none;
   pointer-events: none;        /* so clicks hit the marker, not the glyph */
-
+  cursor: pointer;
   z-index: 1; 
+}
+
+.marker-volunteer {
+  border: 1px solid #1c4772; /* stroke colour */
+  background: #ffffff7d;          /* fill */
+  color: #1c4772;            /* “v” glyph */
+}
+
+.marker-project {
+  background: #1c4772;
+  color: #d6fdc5;
 }
 
 /* “spotlight” marker */
