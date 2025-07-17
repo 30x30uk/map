@@ -212,9 +212,20 @@ function makeProjectPopup(project) {
         imageUrl = 'data/' + project.Image[0].url;
     }
 
-    // Create a popup
-    const popup = new mapboxgl.Popup({ offset: 20, maxWidth: "350px", className: "x-custom-marker-container", anchor: "center" })
-        .setHTML(`
+    var popupHtml =''
+    if (getProjectMainType(project) === 'Volunteering') {
+        popupHtml = `
+            <div class="popup-title">
+                <h3>${project.Name} - Volunteering</h3>
+            </div>
+
+            <p><strong>Description:</strong> ${project.VolunteeringDescription.substr(0,100)}...</p>
+            <p><strong>Host org:</strong> ${project.HostOrg}</p>
+            <p>🔗 <a href="" target="_blank">Full details on the Volunteering Hub</a></p>
+            <p><em>The Volunteering Hub brings together multiple conservation partners to provide wide coverage rewilding volunteering opportunities for your teams and customers.</em></p>
+        `
+    } else {
+        popupHtml = `
             <div class="popup-title">
                 <h3>${project.Name}</h3>
             </div>
@@ -226,7 +237,12 @@ function makeProjectPopup(project) {
             </div>
             <p>💡 These projects are not yet certified for 30x30 however they may meet the criteria. See <a href="#" onclick="onExplainMapTap()">Explain map</a></p>
             <span class="visit-website"><a href="${project.LocationURL}" target="_blank">Visit project website</a></span>
-        `);
+        `
+    }
+
+    // Create a popup
+    const popup = new mapboxgl.Popup({ offset: 20, maxWidth: "350px", className: "x-custom-marker-container", anchor: "center" })
+        .setHTML(popupHtml);
 
     // Handle popup open
     popup.on('open', (e) => {
@@ -281,16 +297,18 @@ function addProjectsToMap() {
             // Create a smaller marker with custom styling
             const markerElement = document.createElement('div');
 
-            if (project.Type && project.Type.find(function (type) {return type === 'Spotlight'})) {
-                markerElement.className = "marker-spotlight";
-            } else {
-                if (project.Type.length == 1 && project.Type.find(function (type) {return type === 'Volunteering'})) {
+            switch (getProjectMainType(project)) {
+                case 'Spotlight':
+                    markerElement.className = "marker-spotlight";
+                    break;
+                case 'Volunteering':
                     markerElement.className = "marker-mini marker-volunteer";
                     markerElement.textContent = 'v';
-                } else {
+                    break;
+                default:
                     markerElement.className = "marker-mini marker-project";
                     markerElement.textContent = 'p';
-                }
+                    break;
             }
 
             // Create the marker using custom element
@@ -325,6 +343,18 @@ function addProjectsToMap() {
             // });
         }, Math.floor(Math.random() * 500) + 500)
     });
+}
+
+function getProjectMainType(project) {
+    if (project.Type && project.Type.find(function (type) {return type === 'Spotlight'})) {
+        return 'Spotlight';
+    }
+     
+    if (project.Type.length == 1 && project.Type.find(function (type) {return type === 'Volunteering'})) {
+        return 'Volunteering'
+    }
+
+    return 'Funding'
 }
 
 function loadProjectsJson() {
