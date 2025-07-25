@@ -1,3 +1,7 @@
 .DS_Store
 data/*.json
 data/*.geojson
+
+# Allow
+!data/projects.json
+!data/all.json
