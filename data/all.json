@@ -182,7 +182,6 @@
     "Lat": 51.87766,
     "Long": -1.9381,
     "LocationShort": "Cheltenham, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -221,7 +220,6 @@
     "Lat": 51.72824,
     "Long": -1.81938,
     "LocationShort": "Quenington, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -260,7 +258,6 @@
     "Lat": 51.46728,
     "Long": -2.375005,
     "LocationShort": "Dyrham, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -299,7 +296,6 @@
     "Lat": 51.96773,
     "Long": -0.2737,
     "LocationShort": "Hitchin, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -338,7 +334,6 @@
     "Lat": 51.41367,
     "Long": -2.21734,
     "LocationShort": "Corsham, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -377,7 +372,6 @@
     "Lat": 51.44686,
     "Long": -2.03736,
     "LocationShort": "Calne, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -416,7 +410,6 @@
     "Lat": 52.2382,
     "Long": -3.35485,
     "LocationShort": "Llandrindod Wells, Wales",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -455,7 +448,6 @@
     "Lat": 51.2805,
     "Long": -2.3724,
     "LocationShort": "Radstock, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -494,7 +486,6 @@
     "Lat": 55.62587,
     "Long": -3.02433,
     "LocationShort": "Walkerburn, Scotland",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -533,7 +524,6 @@
     "Lat": 51.90812,
     "Long": -1.90796,
     "LocationShort": "Cheltenham, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -572,7 +562,6 @@
     "Lat": 50.4668,
     "Long": -4.48452,
     "LocationShort": "Liskeard, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -611,7 +600,6 @@
     "Lat": 54.04177,
     "Long": -1.94366,
     "LocationShort": "Skipton, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -650,7 +638,6 @@
     "Lat": 51.41883,
     "Long": -2.2434,
     "LocationShort": "Corsham, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -689,7 +676,6 @@
     "Lat": 54.48029,
     "Long": -1.15123,
     "LocationShort": "Great Ayton, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -728,7 +714,6 @@
     "Lat": 52.347,
     "Long": -1.47974,
     "LocationShort": "Coventry, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -767,7 +752,6 @@
     "Lat": 51.44757,
     "Long": -2.74573,
     "LocationShort": "Bristol, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -806,7 +790,6 @@
     "Lat": 51.88885,
     "Long": -1.81106,
     "LocationShort": "Cheltenham, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -845,7 +828,6 @@
     "Lat": 51.58637,
     "Long": -1.65237,
     "LocationShort": "Shrivenham, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -884,7 +866,6 @@
     "Lat": 51.79972,
     "Long": -1.75134,
     "LocationShort": "Cirencester, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -923,7 +904,6 @@
     "Lat": 51.67027,
     "Long": -1.6934,
     "LocationShort": "Faringdon, Oxfordshire",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -962,7 +942,6 @@
     "Lat": 51.92735,
     "Long": -1.88062,
     "LocationShort": "Cheltenham, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1001,7 +980,6 @@
     "Lat": 51.66146,
     "Long": -1.65908,
     "LocationShort": "Faringdon, Wiltshire",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1040,7 +1018,6 @@
     "Lat": 0,
     "Long": 0,
     "LocationShort": "Preston, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1079,7 +1056,6 @@
     "Lat": 53.69756,
     "Long": -2.87656,
     "LocationShort": "Preston, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1118,7 +1094,6 @@
     "Lat": 51.88121,
     "Long": -1.80677,
     "LocationShort": "Cheltenham, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1156,7 +1131,6 @@
     ],
     "Lat": 51.86869,
     "Long": -1.58722,
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1195,7 +1169,6 @@
     "Lat": 51.88121,
     "Long": -1.80677,
     "LocationShort": "Cheltenham, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1233,7 +1206,6 @@
     ],
     "Lat": 51.86869,
     "Long": -1.58722,
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1272,7 +1244,6 @@
     "Lat": 51.43593,
     "Long": -2.29228,
     "LocationShort": "Colerne, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1311,7 +1282,6 @@
     "Lat": 51.43502,
     "Long": -2.26463,
     "LocationShort": "Colerne, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1387,7 +1357,6 @@
     "Lat": 51.35838,
     "Long": -1.33675,
     "LocationShort": "Newbury, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1426,7 +1395,6 @@
     "Lat": 51.8814,
     "Long": 0.74695,
     "LocationShort": "Colchester, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1465,7 +1433,6 @@
     "Lat": 52.25487,
     "Long": -4.10579,
     "LocationShort": "Llanon, Wales",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1504,7 +1471,6 @@
     "Lat": 52.49296,
     "Long": -3.32125,
     "LocationShort": "Powys, Wales",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1543,7 +1509,6 @@
     "Lat": 51.0082,
     "Long": -3.44977,
     "LocationShort": "Tiverton",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1582,7 +1547,6 @@
     "Lat": 50.463355555556,
     "Long": -4.4188805555556,
     "LocationShort": "Liskeard, Cornwall",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1621,7 +1585,6 @@
     "Lat": 54.45367,
     "Long": -1.28133,
     "LocationShort": "Stokesley, North Yorkshire",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1660,7 +1623,6 @@
     "Lat": 54.9824,
     "Long": -2.26259,
     "LocationShort": "Hexham, Northumberland",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1699,7 +1661,6 @@
     "Lat": 51.63225,
     "Long": -2.05034,
     "LocationShort": "Malmesbury, Wiltshire",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1738,7 +1699,6 @@
     "Lat": 51.26817,
     "Long": -0.16851,
     "LocationShort": "Horsham, Essex",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1777,7 +1737,6 @@
     "Lat": 51.16117,
     "Long": -0.56264,
     "LocationShort": "Godalming, Surrey",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1816,7 +1775,6 @@
     "Lat": 52.0628,
     "Long": -4.50202,
     "LocationShort": "Newcastle Emlyn, Ceredigion",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1855,7 +1813,6 @@
     "Lat": 52.35047,
     "Long": -1.07337,
     "LocationShort": "West Haddon, Northamptonshire",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1894,7 +1851,6 @@
     "Lat": 52.13067,
     "Long": -4.3223,
     "LocationShort": "Cardigan, Wales",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1933,7 +1889,6 @@
     "Lat": 50.90305,
     "Long": -3.23578,
     "LocationShort": "Tiverton, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -1972,7 +1927,6 @@
     "Lat": 51.959023,
     "Long": -0.298214,
     "LocationShort": "Hitchin, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -2011,7 +1965,6 @@
     "Lat": 51.08571383,
     "Long": -1.371568952,
     "LocationShort": "Winchester, England",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -2050,7 +2003,6 @@
     "Lat": 51.35378826,
     "Long": -0.7048570426,
     "LocationShort": "Bagshot, Surrey",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -2089,7 +2041,6 @@
     "Lat": 54.37136769,
     "Long": -3.203320188,
     "LocationShort": "Broughton-in-Furness, Lake District",
-    "Approved": true,
     "Type": [
       "Volunteering"
     ]
@@ -2113,7 +2064,8 @@
     "Approved": true,
     "Type": [
       "Funding",
-      "Volunteering"
+      "Volunteering",
+      "Spotlight"
     ],
     "Description": "Transforming a site in Somerset from nature-poor to nature-rich, creating an inspiring place for wildlife and people.",
     "LocationURL": "https://healrewilding.org.uk"
@@ -2137,7 +2089,8 @@
     "Approved": true,
     "Type": [
       "Funding",
-      "Volunteering"
+      "Volunteering",
+      "Spotlight"
     ],
     "Description": "We are establishing a 100-mile nature recovery corridor across Sussex. Connecting our fragmented landscape will boost biodiversity, capture carbon, enhance food production and enrich our rural economy.",
     "LocationURL": "https://www.wealdtowaves.co.uk/"
@@ -2161,7 +2114,8 @@
     "Approved": true,
     "Type": [
       "Funding",
-      "Volunteering"
+      "Volunteering",
+      "Spotlight"
     ],
     "Description": "A 30-year project aiming to rewild a vast area between the west coast and Loch Ness, enhancing nature-based tourism and restoring natural habitats.",
     "LocationURL": "https://www.mossy.earth/rewilding-knowledge/rewilding-scotland"
@@ -3985,5 +3939,55 @@
     "Description": "Radnorshire Wildlife Trust’s plan to restore 130 ha of upland pasture near Llanbister to species‑rich hay meadows, wood‑pasture and a haven for marsh fritillaries.",
     "LocationURL": "https://www.rwtwales.org/our-projects/pentwyn-vision-future",
     "ContactEmailAddressOrWebpage": "info@rwtwales.org"
+  },
+  {
+    "id": "recW9J6ZX41axczJu",
+    "Name": "Black Mountain Wildlife & Rewilding Project",
+    "Google Link": {
+      "error": "#ERROR!"
+    },
+    "Image": [
+      {
+        "url": "project-img/att9Og5mlDSE1evfD.webp"
+      }
+    ],
+    "Region": [
+      "Northern Ireland"
+    ],
+    "HostOrg": "Black Mountain Rewilding Project",
+    "VolunteeringCost": "Free",
+    "Lat": 54.605,
+    "Long": -5.998,
+    "Type": [
+      "Funding"
+    ],
+    "Description": "Community‑led initiative working to let nature return on 20 acres of former farmland on Belfast’s Black Mountain, creating species‑rich grassland, ponds and native scrub for wildlife and public enjoyment.",
+    "LocationURL": "https://www.instagram.com/blackmountainrewildingproject/",
+    "ContactEmailAddressOrWebpage": "https://www.facebook.com/blackmountainwildlife"
+  },
+  {
+    "id": "rec4OthI7LdgzE9cd",
+    "Name": "Ards & North Down Council Rewilding",
+    "Google Link": {
+      "error": "#ERROR!"
+    },
+    "Image": [
+      {
+        "url": "project-img/att09aDnIkj3ddgja.webp"
+      }
+    ],
+    "Region": [
+      "Northern Ireland"
+    ],
+    "HostOrg": "Ards and North Down Borough Council",
+    "VolunteeringCost": "Free",
+    "Lat": 54.664,
+    "Long": -5.67,
+    "Type": [
+      "Funding"
+    ],
+    "Description": "Borough‑wide programme turning road verges, parks and over 80 green spaces into pollinator‑friendly meadows and native woodland to boost biodiversity and connect people with nature.",
+    "LocationURL": "https://www.ardsandnorthdown.gov.uk/article/2434/Rewilding",
+    "ContactEmailAddressOrWebpage": "enquiries@ardsandnorthdown.gov.uk"
   }
 ]
