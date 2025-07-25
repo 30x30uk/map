@@ -4,6 +4,18 @@ const MAPBOX_TOKEN = "pk.eyJ1IjoiZTk4Nzg5czdkZiIsImEiOiJjbTd0MnZxYjUxZnAwMnFzZDh
 const markers = [];
 var map;
 var projects = [];
+const mapLayers = [
+    'sssi_units_england_simple',
+    'sssi_wales_simple',
+    'spa_england_simple',
+    'spa_scotland_simple',
+    'spa_ni_simple',
+    'spa_wales_simple',
+    'sac_england_simple',
+    'sac_scotland_simple',
+    'sac_ni_simple',
+    'ramsar_england_simple',
+];
 
 
 function showMapLoading() {
@@ -78,35 +90,31 @@ function onMapClick(e) {
     // If a custom maker is being clicked on, then don't show any other popup
     if (e.originalEvent && e.originalEvent.srcElement && e.originalEvent.srcElement.className.includes('custom-marker')) {
         e.originalEvent.stopPropagation();
+        console.log ('stopped click propogation')
         return
     }
-    console.log ('stopped click propogation')
 
     const features = map.queryRenderedFeatures(e.point, {
-        layers: [
-            'sssi_units_england_simple',
-            'spa_england_simple',
-            'spa_scotland_simple',
-            'sac_england_simple',
-            'sac_scotland_simple',
-            'ramsar_england_simple',
-        ] // Ensure correct layer IDs
+        layers: mapLayers // Ensure correct layer IDs
     });
 
-    if (features.length === 0) return; // No features clicked
+    if (features.length === 0) {
+        console.log ('No features clicked');
+        return;
+    }
 
     // Sort features by layer order (last one in array is topmost)
     const mapItem = features[0].properties;
 
     // // Example properties (ensure your GeoJSON contains these fields)
-    const name = mapItem.SSSI_NAME || mapItem.SPA_NAME || mapItem.SAC_NAME || mapItem.NAME || "Unknown protected area";
-    const code = mapItem.ENSIS_ID || mapItem.SAC_CODE || mapItem.SPA_CODE || mapItem.CODE || mapItem.PA_CODE || "Unknown";
+    const name = mapItem.SSSI_NAME || mapItem.sssi_name || mapItem.SPA_NAME || mapItem.SPA_Name  || mapItem.SAC_NAME || mapItem.NAME || "Unknown protected area";
+    const code = mapItem.ENSIS_ID || mapItem.SAC_CODE || mapItem.SPA_CODE || mapItem.CODE || mapItem.PA_CODE || mapItem.SPA_code || "Unknown";
     var type = "UNKNOWN";
     var typeDescription = "UNKNOWN";
     var itemDescription = "Unknown";
     var mapKeyStatus = "mixed-condition"
     var mapKeyLabel = "Other protected areas, may count to 30x30 in future"
-    var area = mapItem.UNIT_AREA || mapItem.SAC_AREA || mapItem.SPA_AREA || mapItem.AREA || mapItem.SITE_HA || "Unknown";
+    var area = mapItem.UNIT_AREA || mapItem.SAC_AREA || mapItem.SPA_AREA || mapItem.AREA || mapItem.SITE_HA || mapItem.CART_AREA || mapItem.cartesian_area_ha || mapItem.CALC_ARE || mapItem.DEC_AREA || "Unknown";
     var link = '';
 
     switch (features[0].sourceLayer) {
@@ -126,6 +134,15 @@ function onMapClick(e) {
             }
             link = 'https://designatedsites.naturalengland.org.uk/SiteDetail.aspx?SiteCode=S' + code
             break;
+        case "sssi_wales_4326":
+            type = "SSSI";
+            typeDescription = "Special Site of Scientific Interest";
+                
+            mapKeyStatus = "recovering-condition";
+            mapKeyLabel = "Counting towards 30x30. We don't have data on its ecological condition.";
+
+            link = 'https://datamap.gov.wales/layers/inspire-nrw:NRW_SSSI' // no deep linking it seems
+            break;
         case "sac_england":
             type = "SAC";
             typeDescription = "Special Area of Conservation";
@@ -140,17 +157,39 @@ function onMapClick(e) {
             mapKeyStatus = "recovering-condition";
             mapKeyLabel = "Counting towards 30x30. We don't have data on its ecological condition.";
             break;
+        case "sac_ni":
+            type = "SAC";
+            typeDescription = "Special Area of Conservation";
+            itemDescription = ''
+            link = 'https://sac.jncc.gov.uk/site/' + code
+            mapKeyStatus = "recovering-condition";
+            mapKeyLabel = "Counting towards 30x30. We don't have data on its ecological condition.";
+            break;
         case "spa_england":
             type = "SPA";
             typeDescription = "Special Protected Area";
             itemDescription = ''
             link = 'https://designatedsites.naturalengland.org.uk/SiteDetail.aspx?SiteCode=' + code
             break;
+        case "spa_wales_4326":
+            type = "SPA";
+            typeDescription = "Special Protected Area";
+            itemDescription = ''
+            link = 'https://datamap.gov.wales/layers/inspire-nrw:NRW_SPA' // no deep linking it seems
+            break;
         case "spa_scotland":
             type = "SPA";
             typeDescription = "Special Protected Area";
             itemDescription = ''
             link = 'https://sitelink.nature.scot/site/' + code
+            mapKeyStatus = "recovering-condition";
+            mapKeyLabel = "Counting towards 30x30. We don't have data on its ecological condition.";
+            break;
+        case "spa_ni":
+            type = "SPA";
+            typeDescription = "Special Protected Area";
+            itemDescription = ''
+            link = 'https://jncc.gov.uk/our-work/list-of-spas/' // no deep linking it seems
             mapKeyStatus = "recovering-condition";
             mapKeyLabel = "Counting towards 30x30. We don't have data on its ecological condition.";
             break;
@@ -408,20 +447,12 @@ function loadMap() {
     map.on('click', onMapClick); //todo temp disabled to debug closing panel
 
     // Change cursor to pointer when hovering over polygons
-    const interactionLayers = [
-        'sssi_units_england_simple',
-        'spa_england_simple',
-        'spa_scotland_simple',
-        'sac_england_simple',
-        'sac_scotland_simple',
-        'ramsar_england_simple',
-    ]
-    map.on('mouseenter', interactionLayers, function () {
+    map.on('mouseenter', mapLayers, function () {
         map.getCanvas().style.cursor = 'pointer';
     });
 
     // Reset cursor when not hovering
-    map.on('mouseleave', interactionLayers, function () {
+    map.on('mouseleave', mapLayers, function () {
         map.getCanvas().style.cursor = '';
     });
 
