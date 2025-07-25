@@ -182,7 +182,7 @@ function onMapClick(e) {
 
     map.easeTo({
         center: [e.lngLat.lng, e.lngLat.lat], // Center on clicked location
-        offset: [0, -100], // Adjust upward so popup is visible
+        offset: [0, -50], // Adjust upward so popup is visible
         duration: 800 // Smooth animation
     });
 
@@ -218,7 +218,7 @@ function makeProjectPopup(project) {
             <div class="popup-title">
                 <h3>${project.Name} - Volunteering</h3>
             </div>
-
+            <h4 style="margin: 0;">This is a volunteering-specific location</h4>
             <p><strong>Description:</strong> ${project.VolunteeringDescription.substr(0,100)}...</p>
             <p><strong>Host org:</strong> ${project.HostOrg}</p>
             <p>🔗 <a href="" target="_blank">Full details on the Volunteering Hub</a></p>
@@ -241,7 +241,7 @@ function makeProjectPopup(project) {
     }
 
     // Create a popup
-    const popup = new mapboxgl.Popup({ offset: 20, maxWidth: "350px", className: "x-custom-marker-container", anchor: "center" })
+    const popup = new mapboxgl.Popup({ offset: 20, maxWidth: "350px", className: "x-custom-marker-container", anchor: "center", focusAfterOpen: false })
         .setHTML(popupHtml);
 
     // Handle popup open
@@ -261,7 +261,7 @@ function makeProjectPopup(project) {
             center: [project.Long, project.Lat],
             zoom: 8,
             duration: 1000,
-            offset: [0, -100]
+            offset: [0, -50]
         });
 
         if (window.innerWidth >= 1024) {
@@ -307,7 +307,7 @@ function addProjectsToMap() {
                     break;
                 default:
                     markerElement.className = "marker-mini marker-project";
-                    markerElement.textContent = 'p';
+                    markerElement.textContent = '';
                     break;
             }
 
@@ -358,7 +358,14 @@ function getProjectMainType(project) {
 }
 
 function loadProjectsJson() {
-    fetch('/data/projects.json')
+    const url = new URL(window.location.href);
+    const previewMode = url.searchParams.get('preview');
+    let dataJsonUrl = '/data/projects.json'
+    if (previewMode) {
+        dataJsonUrl = '/data/all.json'
+        console.log('preview')
+    }
+    fetch(dataJsonUrl)
       .then(function (res) {
         if (!res.ok) throw new Error('Network error ' + res.status);
         return res.json();                 // parse → JS array

@@ -419,14 +419,23 @@ strong {
 }
 
 .marker-volunteer {
-  border: 1px solid #1c4772; /* stroke colour */
-  background: #ffffff7d;          /* fill */
-  color: #1c4772;            /* “v” glyph */
+  background-image: url('/assets/map-marker-volunteer.svg');
+  background-size: contain;
+  width: 15px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1;
+  colour: #28466F;
+  padding-left: 0.5px;
 }
 
 .marker-project {
-  background: #1c4772;
-  color: #d6fdc5;
+  background-image: url('/assets/map-marker-project-mini.svg');
+  background-size: contain;
+  width: 16px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 2;
 }
 
 /* “spotlight” marker */
@@ -436,13 +445,13 @@ strong {
   width: 35px;
   height: 46px;
   cursor: pointer;
-  z-index: 2; 
+  z-index: 3; 
 }
 
 
 .x-custom-marker-container .mapboxgl-popup-content {
     margin: 115px 10px;
-    z-index: 2;
+    z-index: 4;
 }
 
 .mapboxgl-popup {
