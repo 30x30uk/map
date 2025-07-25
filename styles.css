@@ -425,15 +425,15 @@ strong {
   height: 20px;
   cursor: pointer;
   z-index: 1;
-  colour: #28466F;
+  colour: #476a99;
   padding-left: 0.5px;
 }
 
 .marker-project {
   background-image: url('/assets/map-marker-project-mini.svg');
   background-size: contain;
-  width: 16px;
-  height: 21px;
+  width: 15px;
+  height: 20px;
   cursor: pointer;
   z-index: 2;
 }
