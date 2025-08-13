@@ -653,3 +653,7 @@ strong {
 .futures-wild {
     max-width: 60px;
 }
+
+.ui-volunteering .volunteering-hide {
+    display: none;
+}

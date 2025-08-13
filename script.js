@@ -16,7 +16,9 @@ const mapLayers = [
     'sac_ni_simple',
     'ramsar_england_simple',
 ];
-
+const url = new URL(window.location.href);
+const volunteeringMode = url.searchParams.get('volunteering');
+const previewMode = url.searchParams.get('preview');
 
 function showMapLoading() {
     const loadingMessages = [
@@ -57,7 +59,18 @@ function showMapLoading() {
 
     // Show loading overlay when map starts loading
     document.getElementById("loading-overlay").style.display = "flex";
+    setupUI();
     showLoadingMessages();
+}
+
+function setupUI() {
+    if (!volunteeringMode) {
+        console.log('UI loading: All')
+        document.querySelector('body').className = 'ui-all';
+    } else {
+        console.log('UI loading: Volunteering')
+        document.querySelector('body').className = 'ui-volunteering';
+    }
 }
 
 function updateURLWithProject(projectName) {
@@ -72,13 +85,11 @@ function updateURLWithProject(projectName) {
     }
 
     const slug = slugify(projectName);
-    const url = new URL(window.location.href);
     url.searchParams.set('project', slug);
     window.history.pushState({}, '', url);
 }
 
 function removeProjectFromURL() {
-    const url = new URL(window.location.href);
     url.searchParams.delete('project');
     window.history.pushState({}, '', url);
 }
@@ -253,15 +264,28 @@ function makeProjectPopup(project) {
 
     var popupHtml =''
     if (getProjectMainType(project) === 'Volunteering') {
+        var linkURL;
+        var linkLabel;
+
+        if (previewMode) {
+            linkUrl = `https://app.30x30.org.uk/groundwork-location-details?recordId=${project.id}`
+            linkLabel = 'View details'
+            linkDescriptionHtml = ''
+        } else {
+            linkUrl = `https://30x30.org.uk/`
+            linkLabel = 'Become a 30x30 UK Groundwork member'
+            linkDescriptionHtml = '<p><em>Groundwork brings together multiple conservation partners to provide a wide coverage of local rewilding volunteering opportunities for your teams and customers.</em></p>'
+        }
         popupHtml = `
             <div class="popup-title">
                 <h3>${project.Name} - Volunteering</h3>
             </div>
+            <img src="${imageUrl}" alt="${project.Name}" class="project-photo">
             <h4 style="margin: 0;">This is a volunteering-specific location</h4>
             <p><strong>Description:</strong> ${project.VolunteeringDescription.substr(0,100)}...</p>
             <p><strong>Host org:</strong> ${project.HostOrg}</p>
-            <p>🔗 <a href="" target="_blank">Full details on the Volunteering Hub</a></p>
-            <p><em>The Volunteering Hub brings together multiple conservation partners to provide wide coverage rewilding volunteering opportunities for your teams and customers.</em></p>
+            <p>🔗 <a href="${linkUrl}" target="_parent">${linkLabel}</a></p>
+            ${linkDescriptionHtml}
         `
     } else {
         popupHtml = `
@@ -336,18 +360,23 @@ function addProjectsToMap() {
             // Create a smaller marker with custom styling
             const markerElement = document.createElement('div');
 
-            switch (getProjectMainType(project)) {
-                case 'Spotlight':
-                    markerElement.className = "marker-spotlight";
-                    break;
-                case 'Volunteering':
-                    markerElement.className = "marker-mini marker-volunteer";
-                    markerElement.textContent = 'v';
-                    break;
-                default:
-                    markerElement.className = "marker-mini marker-project";
-                    markerElement.textContent = '';
-                    break;
+            if (volunteeringMode) {
+                markerElement.className = "marker-mini marker-volunteer";
+                markerElement.textContent = 'v';
+            } else {
+                switch (getProjectMainType(project)) {
+                    case 'Spotlight':
+                        markerElement.className = "marker-spotlight";
+                        break;
+                    case 'Volunteering':
+                        markerElement.className = "marker-mini marker-volunteer";
+                        markerElement.textContent = 'v';
+                        break;
+                    default:
+                        markerElement.className = "marker-mini marker-project";
+                        markerElement.textContent = '';
+                        break;
+                }
             }
 
             // Create the marker using custom element
@@ -397,8 +426,7 @@ function getProjectMainType(project) {
 }
 
 function loadProjectsJson() {
-    const url = new URL(window.location.href);
-    const previewMode = url.searchParams.get('preview');
+    
     let dataJsonUrl = '/data/projects.json'
     if (previewMode) {
         dataJsonUrl = '/data/all.json'
