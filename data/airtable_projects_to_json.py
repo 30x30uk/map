@@ -68,6 +68,11 @@ records_out, img_count = [], 0
 for rec in fetch_records():
     f = rec["fields"]
 
+    fieldsToRemove = ["Google Link", "VolunteeringDescription", "Start", "End", "VolunteeringLocationURL", "VolunteeringCost", "Month", "ContactEmailAddressOrWebpage", "Approved", "Description", "LocationURL"]
+    for fieldToRemove in fieldsToRemove:            # records = list[dict]
+        if fieldToRemove in f and f[fieldToRemove]:
+            del f[fieldToRemove]
+
     if "Image" in f and f["Image"]:
         try:
             local = cache_image(f["Image"][0])
@@ -75,6 +80,9 @@ for rec in fetch_records():
             img_count += 1
         except Exception as e:
             print(f"[warn] {f.get('Name','(no name)')}: {e}")
+
+    f["Description"] = f["DescriptionVolunteeringFallback"]
+    del f["DescriptionVolunteeringFallback"]
 
     records_out.append({"id": rec["id"], **f})
 

@@ -282,7 +282,7 @@ function makeProjectPopup(project) {
             </div>
             <img src="${imageUrl}" alt="${project.Name}" class="project-photo">
             <h4 style="margin: 0;">This is a volunteering-specific location</h4>
-            <p><strong>Description:</strong> ${project.VolunteeringDescription.substr(0,100)}...</p>
+            <p><strong>Description:</strong> ${project.Description.substr(0,100)}...</p>
             <p><strong>Host org:</strong> ${project.HostOrg}</p>
             <p>🔗 <a href="${linkUrl}" target="_parent">${linkLabel}</a></p>
             ${linkDescriptionHtml}
