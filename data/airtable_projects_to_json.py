@@ -68,7 +68,7 @@ records_out, img_count = [], 0
 for rec in fetch_records():
     f = rec["fields"]
 
-    fieldsToRemove = ["Google Link", "VolunteeringDescription", "Start", "End", "VolunteeringLocationURL", "VolunteeringCost", "Month", "ContactEmailAddressOrWebpage", "Approved", "Description", "LocationURL"]
+    fieldsToRemove = ["Google Link", "VolunteeringDescription", "Start", "End", "VolunteeringLocationURL", "VolunteeringCost", "Month", "ContactEmailAddressOrWebpage", "Approved", "Description"]
     for fieldToRemove in fieldsToRemove:            # records = list[dict]
         if fieldToRemove in f and f[fieldToRemove]:
             del f[fieldToRemove]
