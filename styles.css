@@ -112,17 +112,6 @@ strong {
     }
 }
 
-/* 📌 BETA Label */
-.beta-label {
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 1px 5px;
-    margin-right: 5px;
-    background: #d6fdc5;
-    color: #1C4772;
-}
-
 
 .map-legend {
     bottom: 45px;

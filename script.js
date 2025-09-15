@@ -266,15 +266,15 @@ function makeProjectPopup(project) {
         var linkURL;
         var linkLabel;
 
-        // if (previewMode) {
-        //     linkUrl = `https://app.30x30.org.uk/groundwork-location-details?recordId=${project.id}`
-        //     linkLabel = 'View details'
-        //     linkDescriptionHtml = ''
-        // } else {
-        linkUrl = `https://30x30.org.uk/`
-        linkLabel = 'Become a 30x30 UK Groundwork member'
-        linkDescriptionHtml = '<p><em>Groundwork brings together multiple conservation partners to provide a wide coverage of local rewilding volunteering opportunities for your teams and customers.</em></p>'
-        // }
+        if (volunteeringMode) {
+            linkUrl = `https://app.30x30.org.uk/groundwork-location-details?recordId=${project.id}`
+            linkLabel = 'View details & book'
+            linkDescriptionHtml = ''
+        } else {
+            linkUrl = `https://30x30.org.uk/`
+            linkLabel = 'Become a 30x30 UK Groundwork member'
+            linkDescriptionHtml = '<p><em>Groundwork brings together multiple conservation partners to provide a wide coverage of local rewilding volunteering opportunities for your teams and customers.</em></p>'
+        }
         popupHtml = `
             <div class="popup-title">
                 <h3>${project.Name} - Volunteering</h3>
