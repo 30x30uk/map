@@ -4,6 +4,7 @@ const MAPBOX_TOKEN = "pk.eyJ1IjoiZTk4Nzg5czdkZiIsImEiOiJjbTd0MnZxYjUxZnAwMnFzZDh
 const markers = [];
 var map;
 var projects = [];
+var openPopups = [];
 const mapLayers = [
     'sssi_units_england_simple',
     'sssi_wales_simple',
@@ -253,9 +254,6 @@ function onMapClick(e) {
 }
 
 function makeProjectPopup(project) {
-    console.log('make popup')
-    console.log(project)
-
     var imageUrl = ''
     if (project.Image && project.Image[0]) {
         imageUrl = 'data/' + project.Image[0].url;
@@ -301,6 +299,8 @@ function makeProjectPopup(project) {
             <span class="visit-website"><a href="${project.LocationURL}" target="_blank">Visit project website</a></span>
         `
     }
+
+    closeExistingPopups();
 
     // Create a popup
     const popup = new mapboxgl.Popup({ offset: 20, maxWidth: "350px", className: "x-custom-marker-container", anchor: "center", focusAfterOpen: false })
@@ -348,7 +348,16 @@ function makeProjectPopup(project) {
         });
     });
 
+    openPopups.push(popup);
+
     return popup;
+}
+
+function closeExistingPopups() {
+    openPopups.forEach(function(openPopup) {
+        openPopup.remove();
+    })
+    openPopups = []
 }
 
 function addProjectsToMap() {
