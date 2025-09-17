@@ -285,16 +285,36 @@ function makeProjectPopup(project) {
             ${linkDescriptionHtml}
         `
     } else {
+
+        var seekingVolunteering = isProjectSeekingSupportByType(project, 'Volunteering');
+        var seekingFunding = isProjectSeekingSupportByType(project, 'Funding');
+
+        var seekingHtml = ''
+        if (seekingFunding || seekingVolunteering) {
+            var seekingVolunteeringHtml = ''
+            var seekingFundingHtml = ''
+
+            if (seekingVolunteering) {
+                seekingVolunteeringHtml = '💪 Volunteer&nbsp;&nbsp;'
+            }
+            if (seekingFunding) {
+                seekingFundingHtml = '💳 Donate'
+            } 
+
+            seekingHtml = `
+            <div class="requesting-help-panel">
+                <p><strong>This project would love your help! 👋</strong></p>
+                <p>${seekingVolunteeringHtml}${seekingFundingHtml}</p>
+            </div>`
+        }
+
         popupHtml = `
             <div class="popup-title">
                 <h3>${project.Name}</h3>
             </div>
             <img src="${imageUrl}" alt="${project.Name}" class="project-photo">
             <p>${project.Description}</p>
-            <div class="requesting-help-panel">
-                <p><strong>This project would love your help! 👋</strong></p>
-                <p>💪 Volunteer&nbsp;&nbsp;💳 Donate</p>
-            </div>
+            ${seekingHtml}
             <p>💡 These projects are not yet certified for 30x30 however they may meet the criteria. See <a href="#" onclick="onExplainMapTap()">Explain map</a></p>
             <span class="visit-website"><a href="${project.LocationURL}" target="_blank">Visit project website</a></span>
         `
@@ -422,7 +442,10 @@ function addProjectsToMap() {
 }
 
 function getProjectMainType(project) {
-    if (project.Type && project.Type.find(function (type) {return type === 'Spotlight'})) {
+    if (!Array.isArray(project.Type)) {
+        return 'Funding';
+    }
+    if (project.Type.find(function (type) {return type === 'Spotlight'})) {
         return 'Spotlight';
     }
      
@@ -431,6 +454,14 @@ function getProjectMainType(project) {
     }
 
     return 'Funding'
+}
+
+function isProjectSeekingSupportByType(project, supportType) {
+    if (project.Type && project.Type.find(function (type) {return type === supportType})) {
+        return true;
+    }
+
+    return false;
 }
 
 function loadProjectsJson() {
