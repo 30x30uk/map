@@ -270,8 +270,8 @@ function makeProjectPopup(project) {
             linkDescriptionHtml = ''
         } else {
             linkUrl = `https://30x30.org.uk/`
-            linkLabel = 'Become a 30x30 UK Groundwork member'
-            linkDescriptionHtml = '<p><em>Groundwork brings together multiple conservation partners to provide a wide coverage of local rewilding volunteering opportunities for your teams and customers.</em></p>'
+            linkLabel = 'Full details on Groundwork'
+            linkDescriptionHtml = '<p><em>Groundwork is for your business to organise memorable rewilding volunteer days for your team and clients.</em></p>'
         }
         popupHtml = `
             <div class="popup-title">
@@ -280,8 +280,7 @@ function makeProjectPopup(project) {
             <img src="${imageUrl}" alt="${project.Name}" class="project-photo">
             <h4 style="margin: 0;">This is a volunteering-specific location</h4>
             <p><strong>Description:</strong> ${project.Description.substr(0,100)}...</p>
-            <p><strong>Host org:</strong> ${project.HostOrg}</p>
-            <p>🔗 <a href="${linkUrl}" target="_parent">${linkLabel}</a></p>
+            <a class="cta" href="${linkUrl}" target="_parent">${linkLabel}</a></p>
             ${linkDescriptionHtml}
         `
     } else {

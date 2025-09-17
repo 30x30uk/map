@@ -376,6 +376,23 @@ strong {
     color: #1C4772
 }
 
+.mapboxgl-popup-content a.cta {
+    border: 0;
+    background-color: #E195DE;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    padding: 10px;
+    border-radius: 50px;
+    margin: 0 auto;
+    display: block;
+    width: 210px;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+
 
 .mapboxgl-popup-close-button {
     background-color: #1c4772;
