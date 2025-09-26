@@ -260,7 +260,7 @@ function makeProjectPopup(project) {
     }
 
     var popupHtml =''
-    if (getProjectMainType(project) === 'Volunteering') {
+    if (volunteeringMode || getProjectMainType(project) === 'Volunteering') {
         var linkURL;
         var linkLabel;
 
@@ -278,7 +278,6 @@ function makeProjectPopup(project) {
                 <h3>${project.Name} - Volunteering</h3>
             </div>
             <img src="${imageUrl}" alt="${project.Name}" class="project-photo">
-            <h4 style="margin: 0;">This is a volunteering-specific location</h4>
             <p><strong>Description:</strong> ${project.Description.substr(0,100)}...</p>
             <a class="cta" href="${linkUrl}" target="_parent">${linkLabel}</a></p>
             ${linkDescriptionHtml}
@@ -388,6 +387,12 @@ function addProjectsToMap() {
             const markerElement = document.createElement('div');
 
             if (volunteeringMode) {
+                // Hide any non-volunteering projects
+                if (!isProjectSeekingSupportByType(project, 'Volunteering')) {
+                    return;
+                    
+                }
+
                 markerElement.className = "marker-mini marker-volunteer";
                 markerElement.textContent = 'v';
             } else {
