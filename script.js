@@ -265,7 +265,7 @@ function makeProjectPopup(project) {
         var linkLabel;
 
         if (volunteeringMode) {
-            linkUrl = `https://app.30x30.org.uk/groundwork-location-details?recordId=${project.id}`
+            linkUrl = `https://app.30x30.org.uk/groundwork/location-details?recordId=${project.id}`
             linkLabel = 'View details & book'
             linkDescriptionHtml = ''
         } else {
