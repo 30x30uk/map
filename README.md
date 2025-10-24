@@ -1,3 +1,7 @@
+# Run locally
+`python -m http.server`
+
+Access localhost:8000
 
 # Python setup 
 
@@ -11,5 +15,5 @@ pip install -r requirements.txt
 cd data/
 export AT_BASE_ID="xxx"
 export AT_TOKEN="xxx"
-export AT_VIEW="All" & export OUT_FILE=all.json
+export OUT_FILE=all.json
 python3 airtable_projects_to_json.py

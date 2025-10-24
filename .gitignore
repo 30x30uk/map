@@ -2,6 +2,14 @@
 data/*.json
 data/*.geojson
 
+# Virtual environments and temporary data
+.venv/
+data/.venv/
+data/one-time/
+data/#*/
+
 # Allow
 !data/projects.json
 !data/all.json
+
+

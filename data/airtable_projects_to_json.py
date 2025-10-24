@@ -20,7 +20,7 @@ from PIL import Image
 BASE_ID  = os.getenv("AT_BASE_ID")  or sys.exit("Missing AT_BASE_ID")
 TOKEN    = os.getenv("AT_TOKEN")    or sys.exit("Missing AT_TOKEN")
 TABLE    = os.getenv("AT_TABLE", "Projects")
-VIEW     = os.getenv("AT_VIEW",  "Approved")
+VIEW     = os.getenv("AT_VIEW",  "All")
 OUT_JSON = os.getenv("OUT_FILE", "projects.json")
 IMG_DIR  = Path("project-img")
 IMG_DIR.mkdir(exist_ok=True)
