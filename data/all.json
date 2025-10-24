@@ -7466,5 +7466,350 @@
     "VolunteeringWebsiteUrlFallback": "https://fospa.org.uk/",
     "DateCreated": "2025-10-23T13:51:15.000Z",
     "Description": "Expansive heathland, wetlands and woodlands in north Birmingham; ranger-supported volunteer tasks."
+  },
+  {
+    "id": "recSvCwAzmY4qGGsJ",
+    "Name": "Monkwood Nature Reserve",
+    "Image": [
+      {
+        "url": "project-img/attyhbIEC4BagRGhU.webp"
+      }
+    ],
+    "Region": [
+      "West Midlands"
+    ],
+    "HostOrg": "Worcestershire Wildlife Trust",
+    "ParticipationType": [
+      "Team",
+      "Individual"
+    ],
+    "Lat": 52.219,
+    "Long": -2.3,
+    "Type": [
+      "Volunteering"
+    ],
+    "LocationURL": "https://www.worcswildlifetrust.co.uk/nature-reserves/monkwood",
+    "HostVolunteeringIndividualUrl": "https://www.worcswildlifetrust.co.uk/volunteer",
+    "VolunteeringWebsiteUrlFallback": "https://www.worcswildlifetrust.co.uk/volunteer",
+    "DateCreated": "2025-10-24T08:50:35.000Z",
+    "Description": "Ancient woodland near Worcester with bluebells and coppice rides; monthly practical conservation tasks."
+  },
+  {
+    "id": "recYCjcyRBXz9qN83",
+    "Name": "Whisby Nature Park",
+    "Image": [
+      {
+        "url": "project-img/attmGo5KHRMrN3bvD.webp"
+      }
+    ],
+    "Region": [
+      "East Midlands"
+    ],
+    "HostOrg": "Lincolnshire Wildlife Trust",
+    "ParticipationType": [
+      "Team",
+      "Individual"
+    ],
+    "Lat": 53.2016,
+    "Long": -0.6258,
+    "Type": [
+      "Volunteering"
+    ],
+    "LocationURL": "https://www.lincstrust.org.uk/get-involved/top-reserves/whisby-nature-park",
+    "HostVolunteeringIndividualUrl": "https://www.lincstrust.org.uk/volunteer",
+    "VolunteeringWebsiteUrlFallback": "https://www.lincstrust.org.uk/volunteer",
+    "DateCreated": "2025-10-24T08:50:35.000Z",
+    "Description": "Post-quarry wetlands near Lincoln with boardwalks and reedbeds; strong volunteer programme."
+  },
+  {
+    "id": "recsaIhUOQVAaAaRE",
+    "Name": "Lugg Meadows",
+    "Image": [
+      {
+        "url": "project-img/attxrVwOdE9UNwl3q.webp"
+      }
+    ],
+    "Region": [
+      "West Midlands"
+    ],
+    "HostOrg": "Herefordshire Wildlife Trust",
+    "ParticipationType": [
+      "Team",
+      "Individual"
+    ],
+    "Lat": 52.0725,
+    "Long": -2.6761,
+    "Type": [
+      "Volunteering"
+    ],
+    "LocationURL": "https://www.herefordshirewt.org/nature-reserves/lugg-meadow",
+    "HostVolunteeringIndividualUrl": "https://www.herefordshirewt.org/volunteer",
+    "VolunteeringWebsiteUrlFallback": "https://www.herefordshirewt.org/volunteer",
+    "DateCreated": "2025-10-24T08:50:35.000Z",
+    "Description": "Traditional Lammas meadows on the edge of Hereford; seasonal scything, hedging and survey tasks."
+  },
+  {
+    "id": "recyPUNpCRnw0Kk2A",
+    "Name": "Caldecotte Lake",
+    "Image": [
+      {
+        "url": "project-img/attSQbP9F6poXPhqw.webp"
+      }
+    ],
+    "Region": [
+      "East Midlands"
+    ],
+    "HostOrg": "The Parks Trust Milton Keynes",
+    "ParticipationType": [
+      "Individual"
+    ],
+    "Lat": 52.0096,
+    "Long": -0.6944,
+    "Type": [
+      "Volunteering"
+    ],
+    "LocationURL": "https://www.theparkstrust.com/find-a-park/caldecotte-lake/",
+    "HostVolunteeringIndividualUrl": "https://www.theparkstrust.com/get-involved/volunteering/",
+    "VolunteeringWebsiteUrlFallback": "https://www.theparkstrust.com/get-involved/volunteering/",
+    "DateCreated": "2025-10-24T08:50:35.000Z",
+    "Description": "Linked lakes and grasslands with orchards and bat roosts on MK’s southern edge; conservation workdays."
+  },
+  {
+    "id": "recCltbHTNjZvdQuH",
+    "Name": "Hartlebury Common NNR",
+    "Image": [
+      {
+        "url": "project-img/att7hMSSj2nkFtYrq.webp"
+      }
+    ],
+    "Region": [
+      "West Midlands"
+    ],
+    "HostOrg": "Worcestershire County Council",
+    "ParticipationType": [
+      "Individual"
+    ],
+    "Lat": 52.3416,
+    "Long": -2.2485,
+    "Type": [
+      "Volunteering"
+    ],
+    "LocationURL": "https://www.hartleburycommon.org.uk/",
+    "HostVolunteeringIndividualUrl": "https://www.hartleburycommon.org.uk/join/",
+    "VolunteeringWebsiteUrlFallback": "https://www.hartleburycommon.org.uk/join/",
+    "DateCreated": "2025-10-24T08:50:35.000Z",
+    "Description": "Lowland heath with rare invertebrates and reptiles; path, scrub and habitat work parties."
+  },
+  {
+    "id": "recEAkmYI6lbp6X44",
+    "Name": "Stony Stratford Nature Reserve",
+    "Image": [
+      {
+        "url": "project-img/attp31hCZ5v0V7fok.webp"
+      }
+    ],
+    "Region": [
+      "East Midlands"
+    ],
+    "HostOrg": "The Parks Trust Milton Keynes",
+    "ParticipationType": [
+      "Individual"
+    ],
+    "Lat": 52.0593,
+    "Long": -0.8612,
+    "Type": [
+      "Volunteering"
+    ],
+    "LocationURL": "https://www.theparkstrust.com/find-a-park/stony-stratford-nature-reserve/",
+    "HostVolunteeringIndividualUrl": "https://www.theparkstrust.com/get-involved/volunteering/",
+    "VolunteeringWebsiteUrlFallback": "https://www.theparkstrust.com/get-involved/volunteering/",
+    "DateCreated": "2025-10-24T08:50:35.000Z",
+    "Description": "Ouse Valley wetlands with boardwalks and meadows on MK’s northwest fringe; active volunteer team."
+  },
+  {
+    "id": "recKjcQTVTxjVvBes",
+    "Name": "Ufton Fields Nature Reserve",
+    "Image": [
+      {
+        "url": "project-img/attVPpklXJdHIsCEW.webp"
+      }
+    ],
+    "Region": [
+      "West Midlands"
+    ],
+    "HostOrg": "Warwickshire Wildlife Trust",
+    "ParticipationType": [
+      "Individual"
+    ],
+    "Lat": 52.2506,
+    "Long": -1.493,
+    "Type": [
+      "Volunteering"
+    ],
+    "LocationURL": "https://countryparks.warwickshire.gov.uk/uftonfields",
+    "HostVolunteeringIndividualUrl": "https://countryparks.warwickshire.gov.uk/countryparks/volunteering",
+    "VolunteeringWebsiteUrlFallback": "https://countryparks.warwickshire.gov.uk/countryparks/volunteering",
+    "DateCreated": "2025-10-24T08:50:35.000Z",
+    "Description": "Warwickshire limestone grassland and scrub with ponds; established weekday work parties."
+  },
+  {
+    "id": "recNxCkKZnlSUEJFz",
+    "Name": "Ryton Pools Country Park",
+    "Image": [
+      {
+        "url": "project-img/attZwApVbQQQYQXUI.webp"
+      }
+    ],
+    "Region": [
+      "West Midlands"
+    ],
+    "HostOrg": "Warwickshire County Council",
+    "ParticipationType": [
+      "Individual"
+    ],
+    "Lat": 52.3535,
+    "Long": -1.4387,
+    "Type": [
+      "Volunteering"
+    ],
+    "LocationURL": "https://countryparks.warwickshire.gov.uk/homepage/8/ryton-pools-country-park",
+    "HostVolunteeringIndividualUrl": "https://countryparks.warwickshire.gov.uk/countryparks/volunteering",
+    "VolunteeringWebsiteUrlFallback": "https://countryparks.warwickshire.gov.uk/countryparks/volunteering",
+    "DateCreated": "2025-10-24T08:50:35.000Z",
+    "Description": "Lakes, meadows and woods east of Coventry; ranger-supported conservation volunteering."
+  },
+  {
+    "id": "recPH8oDgNKBJvmyj",
+    "Name": "Bodenham Lake Nature Reserve",
+    "Image": [
+      {
+        "url": "project-img/attAFBlUJXA7uBsS3.webp"
+      }
+    ],
+    "Region": [
+      "West Midlands"
+    ],
+    "HostOrg": "Herefordshire Wildlife Trust",
+    "ParticipationType": [
+      "Team",
+      "Individual"
+    ],
+    "Lat": 52.1215,
+    "Long": -2.7082,
+    "Type": [
+      "Volunteering"
+    ],
+    "LocationURL": "https://www.herefordshirewt.org/bodenhamlake",
+    "HostVolunteeringIndividualUrl": "https://www.herefordshirewt.org/volunteer",
+    "VolunteeringWebsiteUrlFallback": "https://www.herefordshirewt.org/volunteer",
+    "DateCreated": "2025-10-24T08:50:35.000Z",
+    "Description": "Herefordshire’s largest body of open water with orchard and wetlands; regular volunteer days."
+  },
+  {
+    "id": "rec0ptNGIuSEGzkDc",
+    "Name": "Howe Park Wood",
+    "Image": [
+      {
+        "url": "project-img/attkfe9bU0R2Fkfus.webp"
+      }
+    ],
+    "Region": [
+      "East Midlands"
+    ],
+    "HostOrg": "The Parks Trust Milton Keynes",
+    "ParticipationType": [
+      "Individual"
+    ],
+    "Lat": 52.003,
+    "Long": -0.7845,
+    "Type": [
+      "Volunteering"
+    ],
+    "LocationURL": "https://www.theparkstrust.com/find-a-park/howe-park-wood/",
+    "HostVolunteeringIndividualUrl": "https://www.theparkstrust.com/get-involved/volunteering/",
+    "VolunteeringWebsiteUrlFallback": "https://www.theparkstrust.com/get-involved/volunteering/",
+    "DateCreated": "2025-10-24T08:50:35.000Z",
+    "Description": "Ancient woodland SSSI in south-west MK with rides, glades and regular habitat tasks."
+  },
+  {
+    "id": "rec3aH2LvUCy82J51",
+    "Name": "Willow Tree Fen Nature Reserve",
+    "Image": [
+      {
+        "url": "project-img/attjbc1Z6TzRuEDE0.webp"
+      }
+    ],
+    "Region": [
+      "East Midlands"
+    ],
+    "HostOrg": "Lincolnshire Wildlife Trust",
+    "ParticipationType": [
+      "Team",
+      "Individual"
+    ],
+    "Lat": 52.739,
+    "Long": -0.228,
+    "Type": [
+      "Volunteering"
+    ],
+    "LocationURL": "https://www.lincstrust.org.uk/get-involved/top-reserves/willow-tree-fen",
+    "HostVolunteeringIndividualUrl": "https://www.lincstrust.org.uk/volunteer",
+    "VolunteeringWebsiteUrlFallback": "https://www.lincstrust.org.uk/volunteer",
+    "DateCreated": "2025-10-24T08:50:35.000Z",
+    "Description": "Reclaimed arable land turned fen with reedbeds and grazing; regular practical conservation tasks."
+  },
+  {
+    "id": "reciYf4p1wCJGOblK",
+    "Name": "Gwen Finch Wetland Reserve",
+    "Image": [
+      {
+        "url": "project-img/attM7hgGmgaJLzPrH.webp"
+      }
+    ],
+    "Region": [
+      "West Midlands"
+    ],
+    "HostOrg": "Worcestershire Wildlife Trust",
+    "ParticipationType": [
+      "Team",
+      "Individual"
+    ],
+    "Lat": 52.0679,
+    "Long": -2.039,
+    "Type": [
+      "Volunteering"
+    ],
+    "LocationURL": "https://www.worcswildlifetrust.co.uk/volunteering-opportunities/practical-conservation-gwen-finch-wetland-reserve",
+    "HostVolunteeringIndividualUrl": "https://www.worcswildlifetrust.co.uk/volunteering-opportunities/practical-conservation-gwen-finch-wetland-reserve",
+    "VolunteeringWebsiteUrlFallback": "https://www.worcswildlifetrust.co.uk/volunteering-opportunities/practical-conservation-gwen-finch-wetland-reserve",
+    "DateCreated": "2025-10-24T08:50:35.000Z",
+    "Description": "Reedbeds and shallow lagoons by the Avon near Nafford; habitat management and survey volunteering."
+  },
+  {
+    "id": "recmcKQ9QIVztHJ3v",
+    "Name": "Kirkby on Bain Nature Reserve",
+    "Image": [
+      {
+        "url": "project-img/attCC2OEfZakMHmS4.webp"
+      }
+    ],
+    "Region": [
+      "East Midlands"
+    ],
+    "HostOrg": "Lincolnshire Wildlife Trust",
+    "ParticipationType": [
+      "Team",
+      "Individual"
+    ],
+    "Lat": 53.1006,
+    "Long": -0.0951,
+    "Type": [
+      "Volunteering"
+    ],
+    "LocationURL": "https://www.lincstrust.org.uk/nature-reserves/kirkby-gravel-pits",
+    "HostVolunteeringIndividualUrl": "https://www.lincstrust.org.uk/volunteer",
+    "VolunteeringWebsiteUrlFallback": "https://www.lincstrust.org.uk/volunteer",
+    "DateCreated": "2025-10-24T08:50:35.000Z",
+    "Description": "Gravel pit lakes and heath near Woodhall Spa; habitat management and survey days."
   }
 ]
