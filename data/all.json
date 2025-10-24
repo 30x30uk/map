@@ -1643,7 +1643,7 @@
       }
     ],
     "Region": [
-      "South East England"
+      "West Midlands"
     ],
     "HostOrg": "Birmingham & Black Country Wildlife Trust",
     "ParticipationType": [
@@ -1658,8 +1658,8 @@
       "Spotlight"
     ],
     "LocationURL": "https://www.bbcwildlife.org.uk/WildWalsall",
-    "HostVolunteeringIndividualUrl": "https://www.bbcwildlife.org.uk/volunteer2024",
-    "VolunteeringWebsiteUrlFallback": "https://www.bbcwildlife.org.uk/volunteer2024",
+    "HostVolunteeringIndividualUrl": "https://www.bbcwildlife.org.uk/WildWalsall",
+    "VolunteeringWebsiteUrlFallback": "https://www.bbcwildlife.org.uk/WildWalsall",
     "DateCreated": "2025-07-15T15:30:34.000Z",
     "Description": "An ambitious nature recovery project run by Birmingham and Black Country Wildlife Trust targeting 1% of land in the Walsall borough."
   },
