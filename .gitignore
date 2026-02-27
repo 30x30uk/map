@@ -10,8 +10,8 @@ data/one-time/
 data/#*/
 
 # Allow
-!data/projects.json
-!data/all.json
+!data/published.json
+!data/stubs.json
 
 
 .env
