@@ -470,7 +470,7 @@ function isProjectSeekingSupportByType(project, supportType) {
 
 function loadProjectsJson() {
     
-    const dataJsonUrl = '/data/all.json'
+    const dataJsonUrl = '/data/published.json'
     fetch(dataJsonUrl)
       .then(function (res) {
         if (!res.ok) throw new Error('Network error ' + res.status);
