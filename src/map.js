@@ -194,7 +194,7 @@ function addProjectsToMap(projectsData, volunteeringMode, isMobile) {
         type: 'geojson',
         data: { type: 'FeatureCollection', features: geojsonFeatures },
         cluster: true,
-        clusterMaxZoom: 7,
+        clusterMaxZoom: 8,
         clusterRadius: 50
     });
 
@@ -294,10 +294,28 @@ function addProjectsToMap(projectsData, volunteeringMode, isMobile) {
     // --- INTERACTION EVENTS ---
     map.on('click', 'clusters', (e) => {
         const features = map.queryRenderedFeatures(e.point, { layers: ['clusters'] });
+        if (!features.length) return;
+
         const clusterId = features[0].properties.cluster_id;
+        const coordinates = features[0].geometry.coordinates;
+        
         map.getSource('projects').getClusterExpansionZoom(clusterId, (err, zoom) => {
             if (err) return;
-            map.easeTo({ center: features[0].geometry.coordinates, zoom: zoom });
+
+            let targetZoom = zoom;
+            const currentZoom = map.getZoom();
+
+            // If the cluster is stuck (target zoom is current zoom, or impossibly high),
+            // just force the map to zoom in by 2 levels as the user intended.
+            if (Math.abs(currentZoom - zoom) < 0.5 || zoom > 18) {
+                targetZoom = currentZoom + 2; 
+            }
+
+            map.easeTo({
+                center: coordinates,
+                zoom: targetZoom,
+                duration: 500
+            });
         });
     });
 
