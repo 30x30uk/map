@@ -9943,19 +9943,6 @@
     }
   },
   {
-    "id": "recjxwtPM9FhwwsIe",
-    "Name": "Coatham Marsh",
-    "LocationURL": "https://www.ywt.org.uk/nature-reserves/coatham-marsh-nature-reserve",
-    "Lat": 54.619,
-    "Long": -1.056,
-    "Type": [
-      "Fundraising"
-    ],
-    "Image": {
-      "url": "data/project-img/attOZkUfcV3hBfQRI.webp"
-    }
-  },
-  {
     "id": "recN6IJxswQ0CS01y",
     "Name": "Coatham Marsh (Strategic Industrial Wetland)",
     "LocationURL": "https://www.teeswildlife.org/nature-reserves/coatham-marsh/",
@@ -28728,20 +28715,6 @@
     ],
     "Image": {
       "url": "data/project-img/attsjr97Ej1jjW17B.webp"
-    }
-  },
-  {
-    "id": "rec6AphzWYpP5wir8",
-    "Name": "Market Weston Fen",
-    "LocationURL": "https://www.suffolkwildlifetrust.org.uk/nature-reserves/market-weston-fen",
-    "Lat": 52.37893,
-    "Long": 0.85243,
-    "Type": [
-      "Volunteering",
-      "Fundraising"
-    ],
-    "Image": {
-      "url": "data/project-img/attOZkUfcV3hBfQRI.webp"
     }
   },
   {

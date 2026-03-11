@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     showMapLoading();
 
     // 2. Fetch Data
-    const projectsData = await loadProjectsData();
+    const projectsData = await loadProjectsData(volunteeringMode);
 
     // 3. Initialize Mapbox
     initMap("root", isMobile, volunteeringMode, projectsData);

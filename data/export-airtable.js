@@ -12,6 +12,7 @@ const TABLE_NAME = process.env.AT_TABLE || 'Projects';
 // Force JSON files to save in the same directory as this script (the data/ folder)
 const PUBLISHED_JSON = path.join(__dirname, 'published.json');
 const STUBS_JSON = path.join(__dirname, 'stubs.json');
+const VOLUNTEERING_JSON = path.join(__dirname, 'volunteering.json');
 
 // Move the image folder inside the data directory
 const IMG_DIR = path.join(process.cwd(), 'data', 'project-img');
@@ -31,17 +32,15 @@ const base = new Airtable({ apiKey: AIRTABLE_PAT }).base(AIRTABLE_BASE_ID);
 async function cacheImage(attachment) {
     const filename = `${attachment.id}.webp`;
     const localFilePath = path.join(IMG_DIR, filename);
-    const relativePath = `data/project-img/${filename}`; // Updated relative path
+    const relativePath = `data/project-img/${filename}`; 
 
     try {
-        // 1. Check if it's already cached
         await fs.access(localFilePath);
         return relativePath;
     } catch {
-        // 2. Doesn't exist, proceed to download and optimize
+        // Doesn't exist, proceed to download and optimize
     }
 
-    // Fetch the raw image
     const response = await fetch(attachment.url);
     if (!response.ok) {
         throw new Error(`Failed to download image: ${response.statusText}`);
@@ -50,7 +49,6 @@ async function cacheImage(attachment) {
     const arrayBuffer = await response.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
 
-    // Optimize with Sharp (Resize to max 1600px width, convert to WebP)
     await sharp(buffer)
         .resize({ width: 1600, withoutEnlargement: true })
         .webp({ quality: 80, effort: 6 }) 
@@ -66,19 +64,17 @@ async function cacheImage(attachment) {
 async function cacheUniquePlaceholder(attachment) {
     const filename = `${attachment.id}.webp`;
     const localFilePath = path.join(PLACEHOLDER_DIR, filename);
-    const relativePath = `data/project-img/placeholders/${filename}`; // Updated relative path
+    const relativePath = `data/project-img/placeholders/${filename}`; 
 
     try {
-        // 1. Check if it's already cached by its unique ID
         await fs.access(localFilePath);
         return relativePath;
     } catch {
-        // 2. Doesn't exist, process it ONCE
+        // Doesn't exist, process it ONCE
     }
 
     console.log(`[info] Caching unique placeholder for the first time: ${relativePath}`);
 
-    // Fetch the raw image
     const response = await fetch(attachment.url);
     if (!response.ok) {
         throw new Error(`Failed to download placeholder image: ${response.statusText}`);
@@ -87,7 +83,6 @@ async function cacheUniquePlaceholder(attachment) {
     const arrayBuffer = await response.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
 
-    // Optimize with Sharp (Resize to max 800px width, convert to WebP for faster stubs)
     await sharp(buffer)
         .resize({ width: 800, withoutEnlargement: true })
         .webp({ quality: 75, effort: 6 }) 
@@ -104,8 +99,8 @@ async function runExport() {
     await fs.mkdir(PLACEHOLDER_DIR, { recursive: true });
 
     try {
-        let realImgCount = 0; // Track unique project images
-        let placeholderCacheCount = 0; // Track unique placeholders processed
+        let realImgCount = 0; 
+        let placeholderCacheCount = 0; 
 
         // ==========================================
         // 1. PROCESS PUBLISHED RECORDS
@@ -114,50 +109,52 @@ async function runExport() {
         const publishedRecords = await base(TABLE_NAME).select({ view: "Published" }).all();
         
         const outPublished = [];
+        const outVolunteering = []; 
 
         for (const rec of publishedRecords) {
             let f = { ...rec.fields };
 
-            // Strip unwanted fields
+            // Strip unwanted fields to prevent JSON bloat (Kept ParticipationType!)
             const fieldsToRemove = [
                 "Google Link", "VolunteeringDescription", "Start", "End", 
                 "VolunteeringLocationURL", "VolunteeringCost", "Month", 
                 "ContactEmailAddressOrWebpage", "Approved", "Description",
-                "Placeholder" // Ensure the placeholder field itself doesn't export
+                "Placeholder", "Tags", "Region", "HostOrg", 
+                "HostVolunteeringIndividualUrl", 
+                "ProjectVolunteeringIndividualUrl", "Published", 
+                "Display Image", "Run Update", "Image" 
             ];
             
             for (const field of fieldsToRemove) {
                 delete f[field];
             }
 
-            // Handle Image caching: First try 'Display Image', then fall back to 'Placeholder'
+            // Handle Image caching - using Display Image!
             let finalImage = undefined;
 
-            if (f['Image'] && f['Image'].length > 0) {
+            if (rec.fields['Display Image'] && rec.fields['Display Image'].length > 0) {
                 try {
-                    const localPath = await cacheImage(f['Display Image'][0]);
+                    const localPath = await cacheImage(rec.fields['Display Image'][0]);
                     finalImage = { url: localPath };
                     realImgCount++;
                 } catch (e) {
-                    console.log(`[warn] Published ${f.Name || '(no name)'}: Real Image Error: ${e.message}`);
-                    finalImage = f['Display Image'][0]; 
+                    console.log(`[warn] Published ${rec.fields.Name || '(no name)'}: Real Image Error: ${e.message}`);
+                    finalImage = rec.fields['Display Image'][0]; 
                 }
             } 
-            else if (f.Placeholder && f.Placeholder.length > 0) {
+            else if (rec.fields.Placeholder && rec.fields.Placeholder.length > 0) {
                 try {
-                    const localPath = await cacheUniquePlaceholder(f.Placeholder[0]);
+                    const localPath = await cacheUniquePlaceholder(rec.fields.Placeholder[0]);
                     finalImage = { url: localPath };
                     placeholderCacheCount++;
                 } catch (e) {
-                    console.log(`[warn] Published ${f.Name || '(no name)'}: Placeholder Error: ${e.message}`);
-                    finalImage = f.Placeholder[0]; 
+                    console.log(`[warn] Published ${rec.fields.Name || '(no name)'}: Placeholder Error: ${e.message}`);
+                    finalImage = rec.fields.Placeholder[0]; 
                 }
             }
 
             if (finalImage) {
                 f.Image = finalImage;
-            } else {
-                delete f.Image;
             }
 
             // Swap Description fallback
@@ -166,7 +163,13 @@ async function runExport() {
                 delete f.DescriptionVolunteeringFallback;
             }
 
-            outPublished.push({ id: rec.id, ...f });
+            const processedRecord = { id: rec.id, ...f };
+            outPublished.push(processedRecord);
+
+            // Check if this published project is a volunteering project
+            if (rec.fields.Type && Array.isArray(rec.fields.Type) && rec.fields.Type.includes("Volunteering")) {
+                outVolunteering.push(processedRecord);
+            }
         }
 
         await fs.writeFile(PUBLISHED_JSON, JSON.stringify(outPublished, null, 2), 'utf-8');
@@ -186,6 +189,7 @@ async function runExport() {
             
             let finalImage = undefined;
 
+            // Handle Image caching - using Display Image!
             if (f['Display Image'] && f['Display Image'].length > 0) {
                 try {
                     const localPath = await cacheImage(f['Display Image'][0]);
@@ -221,12 +225,21 @@ async function runExport() {
             }
 
             outStubs.push(stubData);
+
+            // Check if this stub is a volunteering project
+            if (f.Type && Array.isArray(f.Type) && f.Type.includes("Volunteering")) {
+                outVolunteering.push(stubData);
+            }
         }
 
         await fs.writeFile(STUBS_JSON, JSON.stringify(outStubs, null, 2), 'utf-8');
         console.log(`✔ Wrote ${outStubs.length} lightweight records to ${STUBS_JSON}`);
-        console.log(`✔ Total Unique project images processed: ${realImgCount}`);
-        console.log(`✔ Distinct recurring placeholders processed: ${placeholderCacheCount}`);
+        
+        // Write the combined volunteering JSON file
+        await fs.writeFile(VOLUNTEERING_JSON, JSON.stringify(outVolunteering, null, 2), 'utf-8');
+        console.log(`✔ Wrote ${outVolunteering.length} volunteering records to ${VOLUNTEERING_JSON}`);
+
+        console.log(`✔ Total Unique project/placeholder images processed: ${realImgCount}`);
         
         console.log("\n🎉 Export complete!");
 

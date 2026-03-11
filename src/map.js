@@ -318,8 +318,7 @@ function makeProjectPopup(project, volunteeringMode, isMobile) {
     let descriptionHtml = project.Description ? `<p>${project.Description.substring(0, 100) + '...'}</p>` : '';
     let ctaHtml = '';
 
-    // 2. Unverified Stub Warning (Common to both modes)
-    if (project.isStub) {
+    if (!volunteeringMode && project.isStub) {
         warningHtml += `
             <div class="requesting-help-panel requesting-help-panel--stub">
                 <p><strong>Unverified</strong>: We are showing limited information here as we have not yet verified the project. Visit their website for further details. <a href="mailto:contact@30x30.org.uk?subject=Map+feedback+for+location:+${project.Name}+${project.id}">Feedback</a>.</p>

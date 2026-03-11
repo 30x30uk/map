@@ -1,5 +1,9 @@
-export async function loadProjectsData() {
+export async function loadProjectsData(volunteeringMode) {
     try {
+        if (volunteeringMode) {
+            // just load data/volunteering.json
+        }
+
         // Fetch both files in parallel for maximum speed
         const [pubRes, stubsRes] = await Promise.all([
             fetch('data/published.json').catch(() => ({ ok: false })),
