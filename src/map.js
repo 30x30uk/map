@@ -193,7 +193,7 @@ function addProjectsToMap(projectsData, volunteeringMode, isMobile) {
         type: 'geojson',
         data: { type: 'FeatureCollection', features: geojsonFeatures },
         cluster: true,
-        clusterMaxZoom: 6,
+        clusterMaxZoom: 7,
         clusterRadius: 50
     });
 
