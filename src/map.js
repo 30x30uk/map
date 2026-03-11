@@ -164,6 +164,7 @@ function addProjectsToMap(projectsData, volunteeringMode, isMobile) {
         // 1. Spotlight Projects (Always DOM Markers, never clustered)
         if (isSpotlight && !volunteeringMode) {
             const markerElement = document.createElement('div');
+            markerElement.setAttribute('data-project-id', project.id);
             markerElement.className = "marker-spotlight";
             
             const marker = new mapboxgl.Marker(markerElement)
@@ -385,7 +386,7 @@ function makeProjectPopup(project, volunteeringMode, isMobile) {
         if (popupDom) popupDom.scrollTop = 0;
         
         updateURLWithProject(project.Name);
-        map.easeTo({ center: [project.Long, project.Lat], zoom: 8, duration: 1000, offset: [0, -50] });
+        map.easeTo({ center: [project.Long, project.Lat], duration: 1000, offset: [0, -50] });
 
         if (isMobile) document.querySelectorAll('.close-while-popup-open').forEach(el => el.style.display = "none");
     });
