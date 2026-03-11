@@ -503,6 +503,10 @@ strong {
     padding: 1px 0;
     margin-bottom: 8px;
 }
+.requesting-help-panel--stub p {
+    font-size: 13px;
+}
+
 .visit-website {
     text-align: center;
     display: block;

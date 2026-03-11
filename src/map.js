@@ -192,7 +192,7 @@ function addProjectsToMap(projectsData, volunteeringMode, isMobile) {
     map.addSource('projects', {
         type: 'geojson',
         data: { type: 'FeatureCollection', features: geojsonFeatures },
-        cluster: false,
+        cluster: true,
         clusterMaxZoom: 6,
         clusterRadius: 50
     });
@@ -305,62 +305,85 @@ function addProjectsToMap(projectsData, volunteeringMode, isMobile) {
 }
 
 function makeProjectPopup(project, volunteeringMode, isMobile) {
-    let popupHtml = '';
+    const isVolunteering = volunteeringMode || getProjectMainType(project) === 'Volunteering';
+    console.log(project)
+    const imageUrl = project.Image ? project.Image.url : '';
 
+    // 1. Initialize HTML blocks
+    let titleHtml = '';
+    const imageHtml = imageUrl ? `<img src="${imageUrl}" alt="${project.Name}" class="project-photo">` : '';
+    let warningHtml = '';
+    let seekingHelpHtml = '';
+    let descriptionHtml = project.Description ? `<p>${project.Description.substring(0, 100) + '...'}</p>` : '';
+    let ctaHtml = '';
+
+    // 2. Unverified Stub Warning (Common to both modes)
     if (project.isStub) {
-        popupHtml = `
-            <div class="popup-title"><h3>${project.Name}</h3></div>
-            <p><em>Project details are currently being updated.</em></p>
-            <span class="visit-website"><a href="${project.LocationURL}" target="_blank">Visit project website</a></span>
-        `;
-    } 
-    else if (volunteeringMode || getProjectMainType(project) === 'Volunteering') {
-        const imageUrl = project.Image?.[0] ? project.Image[0].url : '';
-        const linkUrl = volunteeringMode ? `https://app.30x30.org.uk/groundwork/location-details?recordId=${project.id}` : `https://30x30.org.uk/`;
-        const linkLabel = volunteeringMode ? 'View details & book' : 'Full details on Groundwork';
-        const linkDescriptionHtml = volunteeringMode ? '' : '<p><em>Groundwork is for your business to organise memorable rewilding volunteer days for your team and clients.</em></p>';
-        
-        popupHtml = `
-            <div class="popup-title"><h3>${project.Name} - Volunteering</h3></div>
-            ${imageUrl ? `<img src="${imageUrl}" alt="${project.Name}" class="project-photo">` : ''}
-            <p><strong>Description:</strong> ${project.Description.substring(0,100)}...</p>
-            <a class="cta" href="${linkUrl}" target="_parent">${linkLabel}</a></p>
-            ${linkDescriptionHtml}
-        `;
-    } 
-    else {
-        const imageUrl = project.Image?.[0] ? project.Image[0].url : '';
-        const seekingVol = isProjectSeekingSupportByType(project, 'Volunteering');
-        const seekingFund = isProjectSeekingSupportByType(project, 'Funding');
-        let seekingHtml = '';
-
-        if (seekingFund || seekingVol) {
-            seekingHtml = `
-            <div class="requesting-help-panel">
-                <p><strong>This project would love your help! 👋</strong></p>
-                <p>${seekingVol ? '💪 Volunteer&nbsp;&nbsp;' : ''}${seekingFund ? '💳 Donate' : ''}</p>
-            </div>`;
-        }
-
-        popupHtml = `
-            <div class="popup-title"><h3>${project.Name}</h3></div>
-            ${imageUrl ? `<img src="${imageUrl}" alt="${project.Name}" class="project-photo">` : ''}
-            <p>${project.Description}</p>
-            ${seekingHtml}
-            <p>💡 Not yet certified for 30x30. See <a href="#" onclick="document.getElementById('explain-map-overlay').style.display='flex'">Explain map</a></p>
-            <span class="visit-website"><a href="${project.LocationURL}" target="_blank">Visit project website</a></span>
+        warningHtml += `
+            <div class="requesting-help-panel requesting-help-panel--stub">
+                <p><strong>Unverified</strong>: We are showing limited information here as we have not yet verified the project. Visit their website for further details. <a href="mailto:contact@30x30.org.uk?subject=Map+feedback+for+location:+${project.Name}+${project.id}">Feedback</a>.</p>
+            </div>
         `;
     }
 
+    // 3. Populate blocks based on mode
+    if (isVolunteering) {
+        titleHtml = `<div class="popup-title"><h3>${project.Name} - Volunteering</h3></div>`;
+        
+        const linkUrl = volunteeringMode ? `https://app.30x30.org.uk/groundwork/location-details?recordId=${project.id}` : `https://30x30.org.uk/`;
+        const linkLabel = volunteeringMode ? 'View details & book' : 'Full details on Groundwork';
+        const linkDescriptionHtml = volunteeringMode 
+            ? '' 
+            : '<p><em>Groundwork is for your business to organise memorable rewilding volunteer days for your team and clients.</em></p>';
+        
+        ctaHtml = `
+            <p><a class="cta" href="${linkUrl}" target="_parent">${linkLabel}</a></p>
+            ${linkDescriptionHtml}
+        `;
+    } else {
+        titleHtml = `<div class="popup-title"><h3>${project.Name}</h3></div>`;
+
+        const seekingVol = isProjectSeekingSupportByType(project, 'Volunteering');
+        const seekingFund = isProjectSeekingSupportByType(project, 'Funding');
+        
+        if (!project.isStub && (seekingFund || seekingVol)) {
+            seekingHelpHtml = `
+                <div class="requesting-help-panel">
+                    <p><strong>This project would love your help! 💚</strong></p>
+                    <p>${seekingVol ? '🙋 Volunteer&nbsp;&nbsp;' : ''}${seekingFund ? '💷 Donate' : ''}</p>
+                </div>
+            `;
+        }
+
+        ctaHtml = `<p><span class="visit-website"><a href="${project.LocationURL}" target="_blank">Visit project website</a></span></p>`;
+    }
+
+    // 4. Construct final HTML exactly as requested
+    const popupHtml = `
+        ${titleHtml}
+        ${imageHtml}
+        ${warningHtml}
+        ${seekingHelpHtml}
+        ${descriptionHtml}
+        ${ctaHtml}
+    `;
+
+    // 5. Manage Mapbox popup lifecycle
     openPopups.forEach(p => p.remove());
     openPopups = [];
 
-    const popup = new mapboxgl.Popup({ offset: 20, maxWidth: "350px", className: "x-custom-marker-container", anchor: "center", focusAfterOpen: false })
-        .setHTML(popupHtml);
+    const popup = new mapboxgl.Popup({ 
+        offset: 20, 
+        maxWidth: "350px", 
+        className: "x-custom-marker-container", 
+        anchor: "center", 
+        focusAfterOpen: false 
+    }).setHTML(popupHtml);
 
     popup.on('open', () => {
         const popupDom = document.querySelector('.mapboxgl-popup-content');
-        if(popupDom) popupDom.scrollTop = 0;
+        if (popupDom) popupDom.scrollTop = 0;
+        
         updateURLWithProject(project.Name);
         map.easeTo({ center: [project.Long, project.Lat], zoom: 8, duration: 1000, offset: [0, -50] });
 
