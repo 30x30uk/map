@@ -12,6 +12,7 @@ data/#*/
 # Allow
 !data/published.json
 !data/stubs.json
+!data/volunteering.json
 
 
 .env
