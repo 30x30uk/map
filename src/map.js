@@ -321,15 +321,29 @@ function makeProjectPopup(project, volunteeringMode, isMobile) {
     if (!volunteeringMode && project.isStub) {
         warningHtml += `
             <div class="requesting-help-panel requesting-help-panel--stub">
-                <p><strong>Unverified</strong>: We are showing limited information here as we have not yet verified the project. Visit their website for further details. <a href="mailto:contact@30x30.org.uk?subject=Map+feedback+for+location:+${project.Name}+${project.id}">Feedback</a>.</p>
+                <p><strong>More details to come</strong>: Our team of map elves are working on it. In the meantime, visit the project’s own website for further information. <a href="mailto:contact@30x30.org.uk?subject=Map+feedback+for+location:+${project.Name}+${project.id}">Feedback</a>.</p>
             </div>
         `;
     }
 
+    // Check if the name contains parentheses
+    if (project.Name && project.Name.includes('(') && project.Name.includes(')')) {
+        const parts = project.Name.split('(');
+        const mainName = parts[0].trim();
+        const subName = parts[1].replace(')', '').trim();
+        
+        titleHtml = `
+            <div class="popup-title">
+                <h3>${mainName}</h3>
+                <h4>${subName}</h4>
+            </div>
+        `;
+    } else {
+        titleHtml = `<div class="popup-title"><h3>${project.Name}</h3></div>`;
+    }
+
     // 3. Populate blocks based on mode
     if (isVolunteering) {
-        titleHtml = `<div class="popup-title"><h3>${project.Name} - Volunteering</h3></div>`;
-        
         const linkUrl = volunteeringMode ? `https://app.30x30.org.uk/groundwork/location-details?recordId=${project.id}` : `https://30x30.org.uk/`;
         const linkLabel = volunteeringMode ? 'View details & book' : 'Full details on Groundwork';
         const linkDescriptionHtml = volunteeringMode 
@@ -341,7 +355,6 @@ function makeProjectPopup(project, volunteeringMode, isMobile) {
             ${linkDescriptionHtml}
         `;
     } else {
-        titleHtml = `<div class="popup-title"><h3>${project.Name}</h3></div>`;
 
         const seekingVol = isProjectSeekingSupportByType(project, 'Volunteering');
         const seekingFund = isProjectSeekingSupportByType(project, 'Funding');
@@ -355,7 +368,7 @@ function makeProjectPopup(project, volunteeringMode, isMobile) {
             `;
         }
 
-        ctaHtml = `<p><span class="visit-website"><a href="${project.LocationURL}" target="_blank">Visit project website</a></span></p>`;
+        ctaHtml = `<p><span class="visit-website"><a href="${project.LocationURL}" class="cta" target="_blank">Visit project website</a></span></p>`;
     }
 
     // 4. Construct final HTML exactly as requested

@@ -472,7 +472,7 @@ strong {
 }
 
 .popup-title {
-    display: flex;
+    display: block;
     align-items: center;
 }
 .popup-title h3 {
@@ -484,6 +484,10 @@ strong {
 }
 .popup-title .legend-color {
     margin: 5px 7px 15px 0;
+}
+
+.popup-title h4 {
+    margin-top: -7px;
 }
 
 @media screen and (min-width: 1024px) {

@@ -1,7 +1,17 @@
 export async function loadProjectsData(volunteeringMode) {
     try {
         if (volunteeringMode) {
-            // just load data/volunteering.json
+            // Just load data/volunteering.json
+            const res = await fetch('data/volunteering.json').catch(() => ({ ok: false }));
+            const volunteeringData = res.ok ? await res.json() : [];
+            
+            console.log(`Loaded ${volunteeringData.length} volunteering projects.`);
+            
+            // Set isStub to false for all, since we don't show the warning in volunteering mode
+            return volunteeringData.map(p => ({
+                ...p,
+                isStub: false
+            }));
         }
 
         // Fetch both files in parallel for maximum speed

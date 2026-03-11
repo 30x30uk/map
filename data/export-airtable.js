@@ -168,7 +168,12 @@ async function runExport() {
 
             // Check if this published project is a volunteering project
             if (rec.fields.Type && Array.isArray(rec.fields.Type) && rec.fields.Type.includes("Volunteering")) {
-                outVolunteering.push(processedRecord);
+                const volRecord = { ...processedRecord };
+                // Restore the original Description if it was stripped out earlier
+                if (!volRecord.Description && rec.fields.Description) {
+                    volRecord.Description = rec.fields.Description;
+                }
+                outVolunteering.push(volRecord);
             }
         }
 
@@ -228,7 +233,12 @@ async function runExport() {
 
             // Check if this stub is a volunteering project
             if (f.Type && Array.isArray(f.Type) && f.Type.includes("Volunteering")) {
-                outVolunteering.push(stubData);
+                const volRecord = { ...stubData };
+                // Inject the Description for stubs going into the volunteering JSON
+                if (f.Description) {
+                    volRecord.Description = f.Description;
+                }
+                outVolunteering.push(volRecord);
             }
         }
 
