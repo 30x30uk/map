@@ -386,7 +386,9 @@ function makeProjectPopup(project, volunteeringMode, isMobile) {
             `;
         }
 
-        ctaHtml = `<p><span class="visit-website"><a href="${project.LocationURL}" class="cta" target="_blank">Visit project website</a></span></p>`;
+        if (project.LocationURL) {
+            ctaHtml = `<p><span class="visit-website"><a href="${project.LocationURL}" class="cta" target="_blank">Visit project website</a></span></p>`;
+        }
     }
 
     // 4. Construct final HTML exactly as requested
