@@ -365,7 +365,6 @@ function makeProjectPopup(project, volunteeringMode, isMobile) {
         let appDomain = 'app.30x30.org.uk'
         const url = new URL(window.location.href);
         if (url.searchParams.get('appDomain')) {
-            console.log('set app domain')
             appDomain = url.searchParams.get('appDomain')
         }
         const linkUrl = volunteeringMode ? `https://${appDomain}/groundwork/location-details?recordId=${project.id}` : `https://30x30.org.uk/`;
