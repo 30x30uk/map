@@ -46,23 +46,29 @@ function isValidReservePageTitle(title) {
     
     // Admin / wiki metadata filters
     if (title.includes(':')) return false; 
-    if (lower.includes('wildlife trust')) return false;
-    if (lower.includes('natural england')) return false;
-    if (lower.includes('nature reserve')) return false;
-    if (lower.includes('site of special scientific interest')) return false;
-    if (lower.includes('ancient woodland')) return false;
-    if (lower.includes('trust for nature conservation')) return false;
     
-    // Geographic and generic wiki filters
-    const ignoreList = [
-        "england", "scotland", "wales", "northern ireland", "united kingdom",
-        "county", "district", "borough", "town", "city", "village", "parish",
-        "list of", "wayback machine", "wikipedia", "facebook", "twitter", "bbc"
+    // Exact match filters to prevent generic wiki pages 
+    // (Crucial Fix: Removed .includes() so it doesn't kill pages like "College Lake Nature Reserve")
+    const exactIgnores = [
+        "wildlife trust", "natural england", "nature reserve", 
+        "local nature reserve", "national nature reserve", 
+        "site of special scientific interest", "ancient woodland", 
+        "trust for nature conservation", "england", "scotland", 
+        "wales", "northern ireland", "united kingdom", "list of", 
+        "wayback machine", "wikipedia", "facebook", "twitter", "bbc"
+    ];
+    if (exactIgnores.includes(lower)) return false;
+    
+    // Geographic and administrative filters
+    const wordIgnores = [
+        "county", "district", "borough", "town", "city", "village", "parish"
     ];
     
-    if (ignoreList.some(item => lower === item || lower.endsWith(' ' + item) || lower.startsWith(item + ' '))) {
+    if (wordIgnores.some(item => lower === item || lower.endsWith(' ' + item) || lower.startsWith(item + ' '))) {
         return false;
     }
+
+    if (/^\d{1,4}$/.test(lower)) return false; // Ignore pages that are just years
     
     return true;
 }
@@ -170,7 +176,7 @@ async function discoverTrustPages() {
     const apiUrl = `https://en.wikipedia.org/w/api.php`;
     const params = {
         action: 'parse',
-        page: 'The_Wildlife_Trusts', // Fixed: Reverted to the correct master index page
+        page: 'The_Wildlife_Trusts', 
         format: 'json',
         prop: 'text',
         redirects: 1
@@ -373,16 +379,15 @@ async function scrapeTrustPage(pageTitle) {
                     if (fallbackLink) coords = parseGeoHackCoords(fallbackLink);
                 }
 
-                // SUBPAGE FALLBACK: If the table lacks coordinates, grab the link to the subpage
-                if (!coords) {
-                    const nameCellLink = $(cols[nameIdx]).find('a').first().attr('href');
-                    if (nameCellLink && nameCellLink.startsWith('/wiki/')) {
-                        const subTitle = nameCellLink.replace('/wiki/', '');
-                        if (isValidReservePageTitle(subTitle)) {
-                            candidateTitles.add(decodeURIComponent(subTitle));
-                        }
+                // ALWAYS harvest subpage links from the table Name column to guarantee robust batch extraction later
+                const nameCellLink = $(cols[nameIdx]).find('a').first().attr('href');
+                if (nameCellLink && nameCellLink.startsWith('/wiki/')) {
+                    const subTitle = nameCellLink.replace('/wiki/', '');
+                    if (isValidReservePageTitle(subTitle)) {
+                        candidateTitles.add(decodeURIComponent(subTitle));
                     }
-                    return; // Skip adding to `reserves` directly, the batch query will handle the subpage
+                    // If it lacks coordinates, bail out here and let the subpage batch query handle it!
+                    if (!coords) return; 
                 }
 
                 // Construct Description to the nearest hectare
@@ -415,10 +420,14 @@ async function scrapeTrustPage(pageTitle) {
         // ALWAYS scan for subpages, ignoring previous limits, to ensure comprehensive coverage
         console.log(`   🔍 Scanning page sections for linked subpages...`);
 
-        // Target links inside sections containing reserves/places/sites
-        const reserveHeadings = $('h2, h3, h4').filter((_, el) => {
+        // Target links inside sections containing reserves/places/sites/woods
+        const reserveHeadings = $('h1, h2, h3, h4, h5').filter((_, el) => {
             const text = $(el).text().toLowerCase();
-            return text.includes('reserve') || text.includes('site') || text.includes('protected') || text.includes('places') || text.includes('list');
+            return text.includes('reserve') || text.includes('site') || 
+                   text.includes('protected') || text.includes('places') || 
+                   text.includes('list') || text.includes('property') ||
+                   text.includes('locations') || text.includes('wood') ||
+                   text.includes('meadow') || text.includes('marsh') || text.includes('fen');
         });
 
         if (reserveHeadings.length > 0) {
@@ -451,7 +460,7 @@ async function scrapeTrustPage(pageTitle) {
 
         // Fallback: If no headings matched or very few candidates were found, do a broader list scan
         if (candidateTitles.size < 5) {
-            $('li a, td a, .div-col a').each((_, a) => {
+            $('li a, td a, .div-col a, div.columns a').each((_, a) => {
                 const href = $(a).attr('href');
                 const title = $(a).attr('title');
                 if (href && href.startsWith('/wiki/') && title) {
@@ -472,8 +481,10 @@ async function scrapeTrustPage(pageTitle) {
             for (let chunk of titleChunks) {
                 const batchReserves = await fetchBatchCoordsAndDetails(chunk);
                 for (let r of batchReserves) {
-                    // Avoid duplicates
-                    if (!reserves.some(existing => existing.Name.toLowerCase() === r.Name.toLowerCase())) {
+                    const existingIdx = reserves.findIndex(existing => existing.Name.toLowerCase() === r.Name.toLowerCase());
+                    
+                    if (existingIdx === -1) {
+                        // Add new reserve
                         reserves.push({
                             Name: r.Name,
                             Lat: r.Lat,
@@ -483,6 +494,12 @@ async function scrapeTrustPage(pageTitle) {
                             "Suggestion-Tags": ["Wikipedia Import"],
                             "AI-Notes": `[Wiki Subpage Scraped]: Programmatically parsed from subpage linked in: "${cleanTitle}". Details resolved using Wikipedia Query API (coordinates and extracts).`
                         });
+                    } else {
+                        // Update existing table reserve if the subpage yielded a better area
+                        if (r.Area !== null && reserves[existingIdx].Area === null) {
+                            reserves[existingIdx].Area = r.Area;
+                            reserves[existingIdx].Description = r.Description;
+                        }
                     }
                 }
                 await sleep(100); // Polite rate limit
