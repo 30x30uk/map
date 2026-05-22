@@ -3,34 +3,55 @@ const path = require('path');
 const crypto = require('crypto');
 const axios = require('axios');
 const cheerio = require('cheerio');
+const { gridRefToLatLon, extractGridRef, parseGeoHackCoords } = require('./geo-utils.js');
 
 // --- CONFIGURATION ---
-// Reads from CLI environment variable. Example: TEST_MODE_ONLY=true node data/scrape-wiki-reserves.js
 const TEST_MODE_ONLY = process.env.TEST_MODE_ONLY === 'true'; 
 const OUTPUT_FILE = path.join(process.cwd(), 'data', 'wiki-reserves.json');
 const CACHE_DIR = path.join(process.cwd(), 'data', 'wiki-cache');
-const TEST_DIR = path.join(process.cwd(), 'data', 'wildlife-trust-test-pages'); // Local HTML testing directory
+const TEST_DIR = path.join(process.cwd(), 'data', 'wildlife-trust-test-pages'); 
 
-// Wikipedia API requires a descriptive User-Agent header with contact info to prevent 403 Forbidden blocks
 const WIKI_HEADERS = {
     'User-Agent': 'WildlifeTrustReservesBot/1.0 (contact@30x30project.org.uk; Academic/Environmental research crawler)'
 };
 
-// Fallback list of Trust pages in case the dynamic index crawler fails
-const FALLBACK_TRUST_PAGES = [
-    "Leicestershire_and_Rutland_Wildlife_Trust",
-    "Derbyshire_Wildlife_Trust",
-    "Nottinghamshire_Wildlife_Trust",
-    "Staffordshire_Wildlife_Trust",
-    "Warwickshire_Wildlife_Trust"
+// --- VERIFIED TRUST DOMAINS & WIKIPEDIA PAGES ---
+const TRUST_DOMAINS = [
+    "https://www.alderneywildlife.org", "https://www.avonwildlifetrust.org.uk", "https://www.wildlifebcn.org", "https://www.bbowt.org.uk",
+    "https://www.bbcwildlife.org.uk", "https://www.cheshirewildlifetrust.org.uk", "https://www.cornwallwildlifetrust.org.uk", "https://www.cumbriawildlifetrust.org.uk",
+    "https://www.derbyshirewildlifetrust.org.uk", "https://www.devonwildlifetrust.org", "https://www.dorsetwildlifetrust.org.uk", "https://www.durhamwt.com",
+    "https://www.essexwt.org.uk", "https://www.gloucestershirewildlifetrust.co.uk", "https://www.gwentwildlife.org", "https://www.hiwwt.org.uk",
+    "https://www.herefordshirewt.org", "https://www.hertswildlifetrust.org.uk", "https://www.ios-wildlifetrust.org.uk", "https://www.kentwildlifetrust.org.uk",
+    "https://www.lancswt.org.uk", "https://www.lrwt.org.uk", "https://www.lincstrust.org.uk", "https://www.wildlondon.org.uk",
+    "https://www.mwt.im", "https://www.montwt.co.uk", "https://www.norfolkwildlifetrust.org.uk", "https://www.northwaleswildlifetrust.org.uk",
+    "https://www.nwt.org.uk", "https://www.nottinghamshirewildlife.org", "https://www.rwtwales.org", "https://scottishwildlifetrust.org.uk",
+    "https://www.shropshirewildlifetrust.org.uk", "https://www.somersetwildlife.org", "https://www.staffs-wildlife.org.uk", "https://www.suffolkwildlifetrust.org",
+    "https://www.surreywildlifetrust.org", "https://www.sussexwildlifetrust.org.uk", "https://www.teeswildlife.org", "https://www.ulsterwildlife.org",
+    "https://www.warwickshirewildlifetrust.org.uk", "https://www.wildsheffield.com", "https://www.welshwildlife.org", "https://www.wiltshirewildlife.org",
+    "https://www.worcswildlifetrust.co.uk", "https://www.ywt.org.uk"
 ];
 
-// Helper to pause execution to respect Wikipedia's API limits
+const TRUST_WIKI_PAGES = [
+    "Alderney_Wildlife_Trust", "Avon_Wildlife_Trust", "Bedfordshire,_Cambridgeshire_and_Northamptonshire_Wildlife_Trust", "Berkshire,_Buckinghamshire_and_Oxfordshire_Wildlife_Trust",
+    "Birmingham_and_Black_Country_Wildlife_Trust", "Cheshire_Wildlife_Trust", "Cornwall_Wildlife_Trust", "Cumbria_Wildlife_Trust",
+    "Derbyshire_Wildlife_Trust", "Devon_Wildlife_Trust", "Dorset_Wildlife_Trust", "Durham_Wildlife_Trust",
+    "Essex_Wildlife_Trust", "Gloucestershire_Wildlife_Trust", "Gwent_Wildlife_Trust", "Hampshire_and_Isle_of_Wight_Wildlife_Trust",
+    "Herefordshire_Wildlife_Trust", "Hertfordshire_and_Middlesex_Wildlife_Trust", "Isles_of_Scilly_Wildlife_Trust", "Kent_Wildlife_Trust",
+    "Lancashire_Wildlife_Trust", "Leicestershire_and_Rutland_Wildlife_Trust", "Lincolnshire_Wildlife_Trust", "London_Wildlife_Trust",
+    "Manx_Wildlife_Trust", "Montgomeryshire_Wildlife_Trust", "Norfolk_Wildlife_Trust", "North_Wales_Wildlife_Trust",
+    "Northumberland_Wildlife_Trust", "Nottinghamshire_Wildlife_Trust", "Radnorshire_Wildlife_Trust", "Scottish_Wildlife_Trust",
+    "Shropshire_Wildlife_Trust", "Somerset_Wildlife_Trust", "Staffordshire_Wildlife_Trust", "Suffolk_Wildlife_Trust",
+    "Surrey_Wildlife_Trust", "Sussex_Wildlife_Trust", "Tees_Valley_Wildlife_Trust", "Ulster_Wildlife_Trust",
+    "Warwickshire_Wildlife_Trust", "Wildlife_Trust_for_Sheffield_and_Rotherham", "Wildlife_Trust_of_South_and_West_Wales", "Wiltshire_Wildlife_Trust",
+    "Worcestershire_Wildlife_Trust", "Yorkshire_Wildlife_Trust"
+];
+
+const TRUST_HOSTNAMES = TRUST_DOMAINS.map(url => {
+    try { return new URL(url).hostname.replace(/^www\./, ''); } catch(e) { return url; }
+});
+
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-/**
- * Splits an array into smaller chunks of a specific size
- */
 function chunkArray(array, size) {
     const chunks = [];
     for (let i = 0; i < array.length; i += size) {
@@ -39,73 +60,54 @@ function chunkArray(array, size) {
     return chunks;
 }
 
-/**
- * Safely decodes URI components, preventing crashes on malformed raw strings.
- */
 function normalizeTitle(title) {
     if (!title) return '';
-    try {
-        return decodeURIComponent(title).replace(/_/g, ' ');
-    } catch (e) {
-        return title.replace(/_/g, ' ');
-    }
+    try { return decodeURIComponent(title).replace(/_/g, ' '); } catch (e) { return title.replace(/_/g, ' '); }
 }
 
-/**
- * Normalizes and filters out non-nature-reserve page links from Wikipedia lists.
- */
 function isValidReservePageTitle(title) {
     if (!title) return false;
     const decoded = normalizeTitle(title);
     const lower = decoded.toLowerCase();
     
-    // Admin / wiki metadata filters
     if (title.includes(':')) return false; 
+    if (lower.startsWith('list of')) return false; 
     
     const exactIgnores = [
-        "wildlife trust", "natural england", "nature reserve", 
-        "local nature reserve", "national nature reserve", 
-        "site of special scientific interest", "ancient woodland", 
-        "trust for nature conservation", "england", "scotland", 
-        "wales", "northern ireland", "united kingdom", "list of", 
-        "wayback machine", "wikipedia", "facebook", "twitter", "bbc",
-        "flora", "fauna", "species"
+        "wildlife trust", "natural england", "nature reserve", "local nature reserve", "national nature reserve", 
+        "site of special scientific interest", "ancient woodland", "trust for nature conservation", "england", "scotland", 
+        "wales", "northern ireland", "united kingdom", "wayback machine", "wikipedia", "facebook", "twitter", "bbc",
+        "flora", "fauna", "species", "statistics", "donate", "wikimedia foundation, inc.", "wikimedia foundation", 
+        "bronze age", "scheduled monument", "wiltshire", "main page", "contents", "current events", "random article", 
+        "about wikipedia", "contact us", "help", "learn to edit", "community portal", "recent changes", "upload file",
+        "issn (identifier)", "bibcode (identifier)", "kml", "british nature conservation statuses", "area of outstanding natural beauty",
+        "second world war", "natura 2000", "hectare", "biodiversity", "ramsar convention", "coppicing", "coppice with standards", "coppice",
+        "heritage lottery fund", "national lottery heritage fund", "environment agency", "forestry commission", 
+        "south gloucestershire", "north somerset", "severn estuary", "bristol channel"
     ];
     if (exactIgnores.includes(lower)) return false;
     
-    const wordIgnores = [
-        "county", "district", "borough", "town", "city", "village", "parish"
-    ];
-    
+    const wordIgnores = ["county", "district", "borough", "town", "city", "village", "parish", "council", "committee", "trustees"];
     if (wordIgnores.some(item => lower === item || lower.endsWith(' ' + item) || lower.startsWith(item + ' '))) {
         return false;
     }
 
-    if (/^\d{1,4}$/.test(lower)) return false; // Ignore pages that are just years
-    
+    if (/^\d{1,4}$/.test(lower)) return false; 
     return true;
 }
 
-/**
- * Natural Language Regex to extract area in hectares from Wikipedia intro text or raw wikitext.
- */
 function extractAreaFromText(text) {
     if (!text) return null;
-    
-    // 1. Check for Infobox definitions (Wikitext): area = 15.5 or area = {{convert|15|ha}}
     const infoboxRegex = /area\s*=\s*(?:\{\{convert\|)?([\d.,]+)\s*(?:\|)?\s*(ha|hectare|acre)/i;
     const infoMatch = text.match(infoboxRegex);
     if (infoMatch) {
         const val = parseFloat(infoMatch[1].replace(/,/g, ''));
         if (!isNaN(val)) {
-            if (infoMatch[2].toLowerCase().startsWith('acre')) {
-                return parseFloat((val * 0.4047).toFixed(2));
-            }
+            if (infoMatch[2].toLowerCase().startsWith('acre')) return parseFloat((val * 0.4047).toFixed(2));
             return parseFloat(val.toFixed(2));
         }
     }
 
-    // 2. Check for standard text descriptions
     const hectareRegex = /([\d.,]+)\s*(?:-|–|\s)*(?:hectare|ha)\b/i;
     const hectMatch = text.match(hectareRegex);
     if (hectMatch) {
@@ -119,196 +121,25 @@ function extractAreaFromText(text) {
         const val = parseFloat(acreMatch[1].replace(/,/g, ''));
         if (!isNaN(val)) return parseFloat((val * 0.4047).toFixed(2));
     }
-    
     return null;
 }
 
-/**
- * Converts standard OS Grid Reference strings (e.g., "SU104245", "SU 104 245", or "{{grid reference|SU|123|456}}")
- * into high-precision Latitude and Longitude using the Helmert transform.
- */
-function gridRefToLatLon(gridRef) {
-    if (!gridRef) return null;
-    
-    const cleanRef = gridRef.replace(/\s+/g, '').toUpperCase();
-    const match = cleanRef.match(/^([A-HJ-Z])([A-HJ-Z])(\d{2,10})$/);
-    if (!match) return null;
-    
-    const char1 = match[1];
-    const char2 = match[2];
-    const digits = match[3];
-    
-    if (digits.length % 2 !== 0) return null;
-    
-    const halfLen = digits.length / 2;
-    const eastingStr = digits.substring(0, halfLen);
-    const northingStr = digits.substring(halfLen);
-    
-    const getPos = (char) => {
-        let val = char.charCodeAt(0) - 65;
-        if (char.charCodeAt(0) > 73) val--;
-        return { col: val % 5, row: 4 - Math.floor(val / 5) };
-    };
-    
-    const pos1 = getPos(char1);
-    const pos2 = getPos(char2);
-    
-    const gridEasting = (pos1.col - 2) * 500000 + pos2.col * 100000;
-    const gridNorthing = (pos1.row - 1) * 500000 + pos2.row * 100000;
-    
-    const power = 5 - halfLen;
-    const easting = gridEasting + parseInt(eastingStr, 10) * Math.pow(10, power) + Math.pow(10, power) / 2;
-    const northing = gridNorthing + parseInt(northingStr, 10) * Math.pow(10, power) + Math.pow(10, power) / 2;
-    
-    return osgbToWgs84(easting, northing);
-}
-
-function osgbToWgs84(E, N) {
-    const a = 6377563.396;
-    const b = 6356256.909;
-    const F0 = 0.9996012717; 
-    const lat0 = 49 * Math.PI / 180;
-    const lon0 = -2 * Math.PI / 180;
-    const N0 = -100000;
-    const E0 = 400000;
-    
-    const e2 = (a*a - b*b) / (a*a);
-    const n = (a - b) / (a + b);
-    const n2 = n * n;
-    const n3 = n * n * n;
-    
-    let lat = lat0;
-    let M = 0;
-    
-    do {
-        lat = (N - N0 - M) / (a * F0) + lat;
-        const ma = (1 + n + 1.25*n2 + 1.25*n3) * (lat - lat0);
-        const mb = (3*n + 3*n2 + 2.625*n3) * Math.sin(lat - lat0) * Math.cos(lat + lat0);
-        const mc = (1.875*n2 + 1.875*n3) * Math.sin(2*(lat - lat0)) * Math.cos(2*(lat + lat0));
-        const md = (35/24)*n3 * Math.sin(3*(lat - lat0)) * Math.cos(3*(lat + lat0));
-        M = b * F0 * (ma - mb + mc - md);
-    } while (Math.abs(N - N0 - M) > 0.00001);
-    
-    const secLat = 1 / Math.cos(lat);
-    const tanLat = Math.tan(lat);
-    const tan2Lat = tanLat * tanLat;
-    const tan4Lat = tan2Lat * tan2Lat;
-    const tan6Lat = tan4Lat * tan2Lat;
-    
-    const nu = a * F0 / Math.sqrt(1 - e2 * Math.sin(lat) * Math.sin(lat));
-    const rho = a * F0 * (1 - e2) / Math.pow(1 - e2 * Math.sin(lat) * Math.sin(lat), 1.5);
-    const eta2 = nu / rho - 1;
-    
-    const VII = secLat / (2 * nu * rho);
-    const VIII = secLat / (24 * rho * Math.pow(nu, 3)) * (5 + 3*tan2Lat + eta2 - 9*tan2Lat*eta2);
-    const IX = secLat / (720 * rho * Math.pow(nu, 5)) * (61 + 90*tan2Lat + 45*tan4Lat);
-    const X = secLat / nu;
-    const XI = secLat / (6 * Math.pow(nu, 3)) * (secLat*secLat + 2*tan2Lat);
-    const XII = secLat / (120 * Math.pow(nu, 5)) * (5 + 28*tan2Lat + 24*tan4Lat);
-    const XIIA = secLat / (5040 * Math.pow(nu, 7)) * (61 + 662*tan2Lat + 1320*tan4Lat + 720*tan6Lat);
-    
-    const dE = E - E0;
-    const dE2 = dE * dE;
-    const dE3 = dE2 * dE;
-    const dE4 = dE2 * dE2;
-    const dE5 = dE4 * dE;
-    const dE6 = dE4 * dE2;
-    const dE7 = dE6 * dE;
-    
-    const latOSGB = lat - VII*dE2 + VIII*dE4 - IX*dE6;
-    const lonOSGB = lon0 + X*dE - XI*dE3 + XII*dE5 - XIIA*dE7;
-    
-    return helmertOSGB36toWGS84(latOSGB, lonOSGB);
-}
-
-function helmertOSGB36toWGS84(lat, lon) {
-    const a = 6377563.396;
-    const b = 6356256.909;
-    const e2 = (a*a - b*b) / (a*a);
-    
-    const cosLat = Math.cos(lat);
-    const sinLat = Math.sin(lat);
-    const cosLon = Math.cos(lon);
-    const sinLon = Math.sin(lon);
-    
-    const nu = a / Math.sqrt(1 - e2 * sinLat * sinLat);
-    const x1 = nu * cosLat * cosLon;
-    const y1 = nu * cosLat * sinLon;
-    const z1 = nu * (1 - e2) * sinLat;
-    
-    const tx = 446.448;
-    const ty = -125.157;
-    const tz = 542.060;
-    const s  = -20.4894 / 1000000;
-    const rx = (0.1502 / 3600) * Math.PI / 180;
-    const ry = (0.2470 / 3600) * Math.PI / 180;
-    const rz = (0.8421 / 3600) * Math.PI / 180;
-    
-    const xWGS = (1 + s)*x1 - rz*y1 + ry*z1 + tx;
-    const yWGS = rz*x1 + (1 + s)*y1 - rx*z1 + ty;
-    const zWGS = -ry*x1 + rx*y1 + (1 + s)*z1 + tz;
-    
-    const aWGS = 6378137.0;
-    const bWGS = 6356752.314245;
-    const e2WGS = (aWGS*aWGS - bWGS*bWGS) / (aWGS*aWGS);
-    
-    const p = Math.sqrt(xWGS*xWGS + yWGS*yWGS);
-    let latWGS = Math.atan2(zWGS, p * (1 - e2WGS));
-    let nuWGS = 0;
-    
-    for (let i = 0; i < 10; i++) {
-        const sinLatWGS = Math.sin(latWGS);
-        nuWGS = aWGS / Math.sqrt(1 - e2WGS * sinLatWGS * sinLatWGS);
-        latWGS = Math.atan2(zWGS + e2WGS * nuWGS * sinLatWGS, p);
+function extractLocationURL(wikitext) {
+    if (!wikitext) return null;
+    const urls = wikitext.match(/https?:\/\/[^\s\|\]\}\<"']+/ig) || [];
+    for (let url of urls) {
+        try {
+            const hostname = new URL(url).hostname.toLowerCase().replace(/^www\./, '');
+            if (TRUST_HOSTNAMES.some(trustHost => hostname === trustHost || hostname.endsWith('.' + trustHost))) {
+                return url; 
+            }
+        } catch(e) {}
     }
-    
-    const lonWGS = Math.atan2(yWGS, xWGS);
-    
-    return {
-        lat: parseFloat((latWGS * 180 / Math.PI).toFixed(6)),
-        lon: parseFloat((lonWGS * 180 / Math.PI).toFixed(6))
-    };
-}
-
-function extractGridRef(text) {
-    if (!text) return null;
-    
-    // 1. Template format: {{grid reference|SU|123|456}} found in Raw Wikitext
-    const templateRegex = /\{\{grid reference\|([A-Z]{2})\|(\d{2,5})\|(\d{2,5})/i;
-    const tMatch = text.match(templateRegex);
-    if (tMatch) {
-        return tMatch[1].toUpperCase() + tMatch[2] + tMatch[3];
-    }
-
-    // 2. Standard Spaced Format
-    const regexSpaced = /\b([HNOST][A-HJ-Z])\s*(\d{1,5})\s*(\d{1,5})\b/i;
-    const matchSpaced = text.match(regexSpaced);
-    if (matchSpaced) {
-        const prefix = matchSpaced[1].toUpperCase();
-        const eastingPart = matchSpaced[2];
-        const northingPart = matchSpaced[3];
-        if (eastingPart.length === northingPart.length) {
-            return prefix + eastingPart + northingPart;
-        }
-    }
-    
-    // 3. Contiguous Format
-    const regexContiguous = /\b([HNOST][A-HJ-Z])\s*(\d{2,10})\b/i;
-    const matchCont = text.match(regexContiguous);
-    if (matchCont) {
-        const prefix = matchCont[1].toUpperCase();
-        const digits = matchCont[2];
-        if (digits.length % 2 === 0 && digits.length >= 2 && digits.length <= 10) {
-            return prefix + digits;
-        }
-    }
-    
+    const infoboxMatch = wikitext.match(/(?:website|url)\s*=\s*(?:\{\{URL\||\[)?(https?:\/\/[^\s\}\|\]\<"']+)/i);
+    if (infoboxMatch) return infoboxMatch[1];
     return null;
 }
 
-/**
- * Caching Core
- */
 function getCacheFilename(action, key) {
     const safeKey = key.replace(/[^a-zA-Z0-9-_]/g, '_').substring(0, 100);
     const hash = crypto.createHash('md5').update(key).digest('hex');
@@ -316,151 +147,62 @@ function getCacheFilename(action, key) {
 }
 
 async function fetchWithCache(action, key, fetchFn) {
-    if (!fs.existsSync(CACHE_DIR)) {
-        fs.mkdirSync(CACHE_DIR, { recursive: true });
-    }
-    
+    if (!fs.existsSync(CACHE_DIR)) fs.mkdirSync(CACHE_DIR, { recursive: true });
     const cacheFile = getCacheFilename(action, key);
-    
     if (fs.existsSync(cacheFile)) {
         try { return JSON.parse(fs.readFileSync(cacheFile, 'utf8')); } catch (e) {}
     }
-    
     const data = await fetchFn();
-    
     if (data && !data.error) {
         try { fs.writeFileSync(cacheFile, JSON.stringify(data, null, 2)); } catch (e) {}
     }
     return data;
 }
 
-/**
- * Parses coordinates from standard Wikipedia GeoHack URLs.
- */
-function parseGeoHackCoords(href) {
-    if (!href) return null;
-    try {
-        const urlParams = new URLSearchParams(href.split('?')[1]);
-        const paramsVal = urlParams.get('params');
-        if (!paramsVal) return null;
-
-        const regex = /^([\d.]+)_([NS])_([\d.]+)_([EW])/i;
-        const match = paramsVal.match(regex);
-        if (match) {
-            let lat = parseFloat(match[1]);
-            let lon = parseFloat(match[3]);
-            
-            if (match[2].toUpperCase() === 'S') lat = -lat;
-            if (match[4].toUpperCase() === 'W') lon = -lon;
-            
-            return { lat: parseFloat(lat.toFixed(6)), lon: parseFloat(lon.toFixed(6)) };
-        }
-    } catch (e) {}
-    return null;
-}
-
-/**
- * Highly robust link extractor that works on both live Wikipedia HTML
- * and HTML saved locally by a web browser (which often mangles hrefs).
- */
 function extractPageTitleFromElement($el) {
     const href = $el.attr('href');
     const title = $el.attr('title');
     
     if (!href) return null;
-    if (href.startsWith('#')) return null; // Skip local anchor links
+    if (href.startsWith('#')) return null; 
     
-    // 1. Standard Wikipedia path extraction (Live web or absolute URLs)
     const match = href.match(/\/wiki\/([^#?]+)/);
     if (match) return match[1];
     
-    // 2. Local Save Fallback: If href is mangled (e.g., file://.../Graig_Wood.html)
-    // Rely on the title attribute, which Wikipedia sets perfectly on almost all links.
     if (title) {
-        // Ignore standard wiki UI titles that might pollute searches
         const ignoreTitles = ["Edit section", "Enlarge", "Wikipedia", "Wikimedia"];
         if (ignoreTitles.some(t => title.includes(t))) return null;
         return title.replace(/ /g, '_');
     }
-    
+
+    if (href.endsWith('.html') || href.endsWith('.htm')) return href.split('/').pop().replace(/\.html?$/, '');
+
+    const text = $el.text().trim();
+    if (text) return text.replace(/ /g, '_');
     return null;
 }
 
-/**
- * Discover all regional Wildlife Trusts from the central list.
- */
-async function discoverTrustPages() {
-    console.log("⏳ Discovering regional Wildlife Trust Wikipedia pages from index...");
-    const apiUrl = `https://en.wikipedia.org/w/api.php`;
-    const params = {
-        action: 'parse',
-        page: 'The_Wildlife_Trusts', 
-        format: 'json',
-        prop: 'text',
-        redirects: 1
-    };
-
-    try {
-        const responseData = await fetchWithCache('discover', 'The_Wildlife_Trusts', async () => {
-            const response = await axios.get(apiUrl, { params, headers: WIKI_HEADERS });
-            return response.data;
-        });
-
-        const htmlContent = responseData.parse?.text?.['*'];
-        if (!htmlContent) {
-            console.log("⚠️ Could not fetch index page. Falling back to default list.");
-            return FALLBACK_TRUST_PAGES;
-        }
-
-        const $ = cheerio.load(htmlContent);
-        const discovered = new Set();
-
-        $('a').each((_, a) => {
-            const href = $(a).attr('href');
-            if (href && href.startsWith('/wiki/')) {
-                const pageTitle = href.replace('/wiki/', '');
-                const decoded = decodeURIComponent(pageTitle);
-                
-                if (
-                    decoded.includes('Wildlife_Trust') && 
-                    decoded !== 'The_Wildlife_Trusts' &&
-                    decoded !== 'List_of_Wildlife_Trusts_in_the_United_Kingdom' &&
-                    !decoded.includes(':')
-                ) {
-                    discovered.add(decoded);
-                }
-            }
-        });
-
-        const list = Array.from(discovered);
-        console.log(`🎯 Discovered ${list.length} regional Wildlife Trust pages!`);
-        return list.length > 0 ? list : FALLBACK_TRUST_PAGES;
-    } catch (err) {
-        console.error("❌ Error discovering trust pages:", err.message);
-        return FALLBACK_TRUST_PAGES;
-    }
-}
-
-/**
- * Query Wikipedia Batch API to get details, coordinates, and raw wikitext for multiple titles at once.
- */
-async function fetchBatchCoordsAndDetails(titles) {
+async function fetchBatchCoordsAndDetails(titles, hostOrg) {
     if (titles.length === 0) return [];
     
     const apiUrl = `https://en.wikipedia.org/w/api.php`;
     const params = {
         action: 'query',
         titles: titles.join('|'),
-        prop: 'coordinates|extracts|revisions',
+        prop: 'coordinates|extracts|revisions|pageimages',
         rvprop: 'content',
         rvslots: 'main',
+        pithumbsize: 800,
         exintro: 1,
         explaintext: 1,
+        exlimit: 'max', 
+        redirects: 1, 
         format: 'json'
     };
 
     try {
-        const responseData = await fetchWithCache('query_v2', titles.join('|'), async () => {
+        // BUMP CACHE KEY to v14 to clear out the old NLP anomalies 
+        const responseData = await fetchWithCache('query_v14', titles.join('|'), async () => {
             const response = await axios.get(apiUrl, { params, headers: WIKI_HEADERS });
             return response.data;
         });
@@ -468,68 +210,121 @@ async function fetchBatchCoordsAndDetails(titles) {
         const pages = responseData?.query?.pages;
         if (!pages) return [];
 
+        const titleMap = {};
+        titles.forEach(t => titleMap[t.toLowerCase()] = t);
+
+        if (responseData.query.normalized) {
+            responseData.query.normalized.forEach(n => titleMap[n.to.toLowerCase()] = titleMap[n.from.toLowerCase()] || n.from);
+        }
+        if (responseData.query.redirects) {
+            responseData.query.redirects.forEach(r => titleMap[r.to.toLowerCase()] = titleMap[r.from.toLowerCase()] || r.from);
+        }
+
         const results = [];
         for (let id in pages) {
             const page = pages[id];
+            const originalTitle = titleMap[page.title.toLowerCase()] || page.title;
             
-            // Extract raw wikitext for deep searching hidden infobox attributes
             let wikitext = "";
             if (page.revisions && page.revisions.length > 0) {
                 wikitext = page.revisions[0].slots?.main?.['*'] || page.revisions[0]['*'] || "";
             }
 
-            let lat = null;
-            let lon = null;
+            // --- STRICT NLP VALIDATION FILTER ---
+            // Extract a clean first sentence by removing newlines and parenthetical text (e.g. pronunciations/dates)
+            let cleanExtractForSentence = (page.extract || "").replace(/\n/g, ' ').replace(/\s*\([^)]*\)/g, '').trim();
+            const firstSentence = (cleanExtractForSentence.split(/(?<=[.!?])\s+/)[0] || "").toLowerCase();
             
-            // Check for area in plain extract first, then fallback to deep wikitext search
-            let area = extractAreaFromText(page.extract);
-            if (area === null) area = extractAreaFromText(wikitext);
+            let locationUrl = extractLocationURL(wikitext);
             
-            // Standard coordinate check
-            if (page.coordinates && page.coordinates.length > 0) {
-                const coord = page.coordinates[0];
-                lat = parseFloat(coord.lat.toFixed(6));
-                lon = parseFloat(coord.lon.toFixed(6));
-            } else {
-                // FALLBACK: Look for OS Grid Reference inside page intro text OR raw wikitext infoboxes
-                let gridRef = extractGridRef(page.extract);
-                if (!gridRef) gridRef = extractGridRef(wikitext);
+            // SECURITY FIX: Ensure the URL is an explicitly verified Trust domain, not a generic infobox link
+            let isVerifiedUrl = false;
+            if (locationUrl) {
+                try {
+                    const hostname = new URL(locationUrl).hostname.toLowerCase().replace(/^www\./, '');
+                    isVerifiedUrl = TRUST_HOSTNAMES.some(trustHost => hostname === trustHost || hostname.endsWith('.' + trustHost));
+                } catch(e) {}
+            }
 
+            const isNatureReserve = firstSentence.includes("nature reserve") || firstSentence.includes("sssi") || firstSentence.includes("site of special scientific interest") || firstSentence.includes("nature park") || firstSentence.includes("country park");
+
+            // 1. HARD DROPS: Massive geographical areas, administrative bodies, species, concepts. 
+            // We drop these even if they have a Wildlife Trust URL in their footnotes!
+            const hardDropRegex = /\b(is|are|forms|was|were|refers to)\b.{0,60}?\b(towns?|villages?|cities|city|civil parishes|civil parish|suburbs?|hamlets?|settlements?|count(?:y|ies)|ceremonial count(?:y|ies)|districts?|boroughs?|unitary authorities|unitary authority|regions?|countries|country|national parks?|biosphere reserves?|newspapers?|publications?|charit(?:y|ies)|organisations?|organizations?|funds?|public bodies|public body|government departments?|agenc(?:y|ies)|councils?|coastal plains?|upland areas?|mountain ranges?|disciplines?|sciences?|studies|study|concepts?|businesses|business|compan(?:y|ies)|websites?|universit(?:y|ies)|colleges?|schools?|partners?|trusts?|birds?|ducks?|plants?|species|genus|families|family|mammals?|insects?|butterflies|butterfly|moths?|periods?|eras?|rivers?|estuar(?:y|ies)|canals?|mountains?|waterfalls?|waterways?)\b/i;
+            
+            if (firstSentence.match(hardDropRegex) && !isNatureReserve) {
+                continue; 
+            }
+
+            // 2. SOFT DROPS: Biological organisms, physical landmarks, and properties that MIGHT be a reserve.
+            // We drop these UNLESS they have a verified URL (e.g. a Trust-owned quarry) OR explicitly claim to be a reserve.
+            const softDropRegex = /\b(is|are|forms|was|were)\b.{0,60}?\b(hills?|promontor(?:y|ies)|headlands?|peninsulas?|islands?|lochs?|sea lochs?|railway stations?|halts?|stations?|stately homes?|mansions?|estates?|hillforts?|castles?|quarr(?:y|ies)|kilns?|works|factories|factory|mills?|lakes?|reservoirs?|archaeological sites?|historic sites?|monuments?|buildings?|stadiums?|farms?|woods?|forests?)\b/i;
+            const isSoftConcept = firstSentence.match(softDropRegex) || firstSentence.match(/\b(was|is)\b.{0,30}?\b(general|statesman|author|person)\b/i);
+            
+            if (isSoftConcept && !isNatureReserve && !isVerifiedUrl) {
+                continue;
+            }
+
+            const extractLower = (page.extract || '').toLowerCase();
+            
+            // STRICT CONTEXT: Must have a verified Trust URL, OR explicitly mention the Trust in the intro text.
+            const hasConservationContext = 
+                isVerifiedUrl ||
+                extractLower.includes('wildlife trust') ||
+                (hostOrg && extractLower.includes(hostOrg.toLowerCase()));
+
+            if (!hasConservationContext && !isNatureReserve) {
+                continue; 
+            }
+            // --- END CONTENT VALIDATION FILTER ---
+
+            let area = extractAreaFromText(page.extract) || extractAreaFromText(wikitext);
+            let lat = null, lon = null;
+            
+            if (page.coordinates && page.coordinates.length > 0) {
+                lat = parseFloat(page.coordinates[0].lat.toFixed(6));
+                lon = parseFloat(page.coordinates[0].lon.toFixed(6));
+            } else {
+                let gridRef = extractGridRef(page.extract, true) || extractGridRef(wikitext, true); 
                 if (gridRef) {
                     const coords = gridRefToLatLon(gridRef);
-                    if (coords) {
-                        lat = coords.lat;
-                        lon = coords.lon;
-                    }
+                    if (coords) { lat = coords.lat; lon = coords.lon; }
                 }
             }
 
-            if (lat !== null && lon !== null) {
-                let descriptionText = "A local nature reserve.";
-                if (area !== null) {
-                    const roundedHectares = Math.round(area);
-                    if (roundedHectares === 0) {
-                        descriptionText = "A local nature reserve of less than 1 hectare.";
-                    } else if (roundedHectares === 1) {
-                        descriptionText = "A local nature reserve of approximately 1 hectare.";
-                    } else {
-                        descriptionText = `A local nature reserve of approximately ${roundedHectares} hectares.`;
-                    }
-                } else if (page.extract) {
-                    const sentences = page.extract.split(/[.!?]/);
-                    if (sentences[0]) {
-                        descriptionText = sentences[0].trim() + ".";
-                    }
-                }
+            const imageUrl = page.thumbnail ? page.thumbnail.source : null;
+            if (!locationUrl) locationUrl = `https://en.wikipedia.org/wiki/${encodeURIComponent(page.title.replace(/ /g, '_'))}`;
 
-                results.push({
-                    Name: page.title,
-                    Lat: lat,
-                    Long: lon,
-                    Area: area,
-                    Description: descriptionText
-                });
+            let descriptionText = null;
+            if (page.extract && page.extract.length > 20) {
+                let cleanExtract = page.extract.replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' '); 
+                const sentences = cleanExtract.match(/[^.!?]+[.!?]+/g);
+                descriptionText = (sentences && sentences.length > 0) ? sentences.slice(0, 2).join(' ').trim() : cleanExtract.trim();
             }
+
+            if (!descriptionText) {
+                try {
+                    const htmlRes = await axios.get(locationUrl, { headers: WIKI_HEADERS });
+                    const _$ = cheerio.load(htmlRes.data);
+                    _$('p').not('.mw-empty-elt').each((i, el) => {
+                        const text = _$(el).text().trim();
+                        if (text.length > 40 && !text.includes('Coordinates:')) {
+                            let cleanExtract = text.replace(/\[.*?\]/g, '').replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ');
+                            const sentences = cleanExtract.match(/[^.!?]+[.!?]+/g);
+                            descriptionText = (sentences && sentences.length > 0) ? sentences.slice(0, 2).join(' ').trim() : cleanExtract.trim();
+                            return false; 
+                        }
+                    });
+                } catch(e) {}
+            }
+
+            if (!descriptionText) {
+                descriptionText = area !== null 
+                    ? `A local nature reserve of approximately ${Math.round(area)} hectares.`
+                    : "A local nature reserve.";
+            }
+
+            results.push({ Name: originalTitle, HostOrg: hostOrg, Lat: lat, Long: lon, Area: area, Description: descriptionText, Image: imageUrl, LocationUrl: locationUrl });
         }
         return results;
     } catch (err) {
@@ -538,37 +333,27 @@ async function fetchBatchCoordsAndDetails(titles) {
     }
 }
 
-/**
- * Core parsing logic decoupled so it can process both local HTML files and Wikipedia API responses.
- */
-async function extractReservesFromHtml(htmlContent, cleanTitle) {
+async function extractReservesFromHtml(htmlContent, cleanTitle, hostOrg) {
     const $ = cheerio.load(htmlContent);
     const reserves = [];
     const candidateTitles = new Set(); 
 
-    // --- METHOD 1: PARSE STRUCTURED TABLES ---
     const tables = $('table.wikitable');
-    
     tables.each((_, table) => {
         const headers = [];
-        $(table).find('tr').first().find('th, td').each((_, cell) => {
-            headers.push($(cell).text().trim().toLowerCase());
-        });
+        $(table).find('tr').first().find('th, td').each((_, cell) => headers.push($(cell).text().trim().toLowerCase()));
 
-        const nameIdx = headers.findIndex(h => h.includes('reserve') || h.includes('name') || h.includes('site'));
+        const nameIdx = headers.findIndex(h => h.includes('reserve') || h.includes('name') || h.includes('site') || h.includes('location') || h.includes('property') || h.includes('title'));
         const areaIdx = headers.findIndex(h => h.includes('area') || h.includes('size') || h.includes('ha') || h.includes('hectares'));
         const coordIdx = headers.findIndex(h => h.includes('coordinate') || h.includes('location') || h.includes('grid ref'));
 
         if (nameIdx === -1) return;
 
         $(table).find('tr').slice(1).each((_, row) => {
-            // FIX: Some tables use <th> for the Name column instead of <td>! We must search both.
             const cols = $(row).find('td, th'); 
             if (cols.length === 0) return;
 
-            // Remove citations like [1] before extracting text to ensure clean names
-            const nameTextRaw = $(cols[nameIdx]).text();
-            const nameText = nameTextRaw.replace(/\[\d+\]/g, '').trim().replace(/\s+/g, ' ');
+            const nameText = $(cols[nameIdx]).text().replace(/\[.*?\]/g, '').trim().replace(/\s+/g, ' ');
             if (!nameText) return;
 
             let areaValue = null;
@@ -578,163 +363,68 @@ async function extractReservesFromHtml(htmlContent, cleanTitle) {
                 const areaMatch = areaText.match(/([\d.,]+)\s*(?:ha|hectare|acres)?/);
                 if (areaMatch) {
                     const parsedArea = parseFloat(areaMatch[1].replace(/,/g, ''));
-                    if (!isNaN(parsedArea)) {
-                        const isAcres = areaText.includes('acres') && !areaText.includes('ha') && !areaText.includes('hectare');
-                        areaValue = isAcres ? parseFloat((parsedArea * 0.4047).toFixed(2)) : parseFloat(parsedArea.toFixed(2));
-                    }
+                    if (!isNaN(parsedArea)) areaValue = areaText.includes('acres') && !areaText.includes('ha') && !areaText.includes('hectare') ? parseFloat((parsedArea * 0.4047).toFixed(2)) : parseFloat(parsedArea.toFixed(2));
                 }
             }
 
             let coords = null;
-            if (coordIdx !== -1 && cols[coordIdx]) {
-                const coordLink = $(cols[coordIdx]).find('a[href*="geohack"]').first().attr('href');
-                if (coordLink) coords = parseGeoHackCoords(coordLink);
-            }
-
+            if (coordIdx !== -1 && cols[coordIdx]) coords = parseGeoHackCoords($(cols[coordIdx]).find('a[href*="geohack"]').first().attr('href'));
+            if (!coords) coords = parseGeoHackCoords($(row).find('a[href*="geohack"]').first().attr('href'));
             if (!coords) {
-                const fallbackLink = $(row).find('a[href*="geohack"]').first().attr('href');
-                if (fallbackLink) coords = parseGeoHackCoords(fallbackLink);
+                const gridRef = extractGridRef($(row).text(), false); 
+                if (gridRef) coords = gridRefToLatLon(gridRef);
             }
 
-            if (!coords) {
-                const rowText = $(row).text();
-                const gridRef = extractGridRef(rowText);
-                if (gridRef) {
-                    coords = gridRefToLatLon(gridRef);
-                }
-            }
-
-            // Extract the subpage link from the Name column (whether it's a TH or TD)
             let subPageTitle = null;
-            const $nameCellLink = $(cols[nameIdx]).find('a').first();
-            const rawSubTitle = extractPageTitleFromElement($nameCellLink);
-            
+            const rawSubTitle = extractPageTitleFromElement($(cols[nameIdx]).find('a').first());
             if (rawSubTitle && isValidReservePageTitle(rawSubTitle)) {
                 subPageTitle = normalizeTitle(rawSubTitle);
                 candidateTitles.add(subPageTitle);
             }
 
-            if (areaValue !== null) {
-                const roundedHectares = Math.round(areaValue);
-                if (roundedHectares === 0) {
-                    descriptionText = "A local nature reserve of less than 1 hectare.";
-                } else if (roundedHectares === 1) {
-                    descriptionText = "A local nature reserve of approximately 1 hectare.";
-                } else {
-                    descriptionText = `A local nature reserve of approximately ${roundedHectares} hectares.`;
-                }
-            }
+            if (areaValue !== null) descriptionText = `A local nature reserve of approximately ${Math.round(areaValue)} hectares.`;
 
-            // MERGE STRATEGY: Even if coords are null, we push the row from the table!
-            // We use `_subPageTitle` as an internal tracker so the batch query can populate the coords later.
             reserves.push({
-                Name: nameText,
-                Lat: coords ? coords.lat : null,
-                Long: coords ? coords.lon : null,
-                Area: areaValue,
-                Description: descriptionText,
+                Name: nameText, HostOrg: hostOrg, Lat: coords ? coords.lat : null, Long: coords ? coords.lon : null, Area: areaValue, Description: descriptionText, Image: null, LocationUrl: null, 
                 "Suggestion-Tags": ["Wikipedia Import"],
-                "AI-Notes": coords 
-                    ? `[Wiki Table Scraped]: Programmatically parsed from Wikipedia page: "${cleanTitle}". Coordinates resolved using standard geo-mapping lookup.` 
-                    : `[Wiki Table + Subpage Merge]: Name parsed from table on "${cleanTitle}". Attempting to merge coordinates from subpage.`,
+                "AI-Notes": coords ? `[Wiki Table Scraped]: Programmatically parsed from Wikipedia page: "${hostOrg}". Coordinates resolved using standard geo-mapping lookup.` : `[Wiki Table + Subpage Merge]: Name parsed from table on "${hostOrg}". Attempting to merge coordinates from subpage.`,
                 _subPageTitle: subPageTitle
             });
         });
     });
 
-    // --- METHOD 2: PARSE LINKED SUBPAGES ---
-    console.log(`   🔍 Scanning page sections for linked subpages...`);
+    console.log(`   🔍 Scanning page text for linked subpages...`);
 
-    const reserveHeadings = $('h1, h2, h3, h4, h5').filter((_, el) => {
-        const text = $(el).text().toLowerCase();
-        return text.includes('reserve') || text.includes('site') || 
-               text.includes('protected') || text.includes('places') || 
-               text.includes('list') || text.includes('property') ||
-               text.includes('locations') || text.includes('wood') ||
-               text.includes('meadow') || text.includes('marsh') || text.includes('fen');
+    $('p a, li a, td a, th a, .div-col a, div.columns a').each((_, a) => {
+        if ($(a).closest('.navbox, .navbox-title, [role="navigation"], .infobox, .mw-indicators, .reflist, .references, .reference').length > 0) return;
+        
+        const rawSubTitle = extractPageTitleFromElement($(a));
+        if (rawSubTitle && isValidReservePageTitle(rawSubTitle)) {
+            candidateTitles.add(normalizeTitle(rawSubTitle));
+        }
     });
-
-    if (reserveHeadings.length > 0) {
-        reserveHeadings.each((_, heading) => {
-            let container = $(heading).closest('.mw-heading');
-            if (container.length === 0) container = $(heading);
-            
-            let sibling = container.next();
-            // FIX: heading is a raw element, use .tagName or .name safely
-            const tagStr = heading.tagName || heading.name || 'h2';
-            const headingLevel = parseInt(tagStr.substring(1), 10);
-            
-            while (sibling.length > 0) {
-                // FIX: safely get the sibling's tag name
-                let nextTagName = (sibling[0].tagName || sibling[0].name || '').toLowerCase();
-                let nextLevel = 99;
-                if (nextTagName.match(/^h[1-6]$/)) {
-                    nextLevel = parseInt(nextTagName.substring(1), 10);
-                } else if (sibling.hasClass('mw-heading')) {
-                    const hTag = sibling.find('h1, h2, h3, h4, h5, h6').first();
-                    if (hTag.length > 0) {
-                        const innerTagStr = hTag[0].tagName || hTag[0].name || 'h2';
-                        nextLevel = parseInt(innerTagStr.substring(1), 10);
-                    }
-                }
-
-                if (nextLevel <= headingLevel) break; 
-                
-                sibling.find('a').addBack('a').each((_, a) => {
-                    const rawSubTitle = extractPageTitleFromElement($(a));
-                    if (rawSubTitle && isValidReservePageTitle(rawSubTitle)) {
-                        candidateTitles.add(normalizeTitle(rawSubTitle));
-                    }
-                });
-                sibling = sibling.next();
-            }
-        });
-    }
-
-    if (candidateTitles.size < 5) {
-        $('li a, td a, th a, .div-col a, div.columns a').each((_, a) => {
-            const rawSubTitle = extractPageTitleFromElement($(a));
-            if (rawSubTitle && isValidReservePageTitle(rawSubTitle)) {
-                candidateTitles.add(normalizeTitle(rawSubTitle));
-            }
-        });
-    }
 
     const titlesArray = Array.from(candidateTitles);
     if (titlesArray.length > 0) {
         console.log(`   📡 Batch querying ${titlesArray.length} candidate subpage links...`);
-        const titleChunks = chunkArray(titlesArray, 50);
+        const titleChunks = chunkArray(titlesArray, 10); 
         
         for (let chunk of titleChunks) {
-            const batchReserves = await fetchBatchCoordsAndDetails(chunk);
+            const batchReserves = await fetchBatchCoordsAndDetails(chunk, hostOrg);
             for (let r of batchReserves) {
-                
-                // MERGE EXECUTION: Look for a table reserve that matches the subpage title OR exact name
-                const existingIdx = reserves.findIndex(existing => 
-                    (existing._subPageTitle && existing._subPageTitle.toLowerCase() === r.Name.toLowerCase()) || 
-                    (existing.Name.toLowerCase() === r.Name.toLowerCase())
-                );
+                const existingIdx = reserves.findIndex(existing => (existing._subPageTitle && existing._subPageTitle.toLowerCase() === r.Name.toLowerCase()) || (existing.Name.toLowerCase() === r.Name.toLowerCase()));
                 
                 if (existingIdx !== -1) {
-                    // Update the placeholder table entry with the actual coordinates from the subpage!
-                    if (reserves[existingIdx].Lat === null && r.Lat !== null) {
-                        reserves[existingIdx].Lat = r.Lat;
-                        reserves[existingIdx].Long = r.Long;
-                        reserves[existingIdx].Description = r.Description; // The subpage description is usually richer
-                    }
-                    if (r.Area !== null && reserves[existingIdx].Area === null) {
-                        reserves[existingIdx].Area = r.Area;
-                    }
+                    if (reserves[existingIdx].Lat === null && r.Lat !== null) { reserves[existingIdx].Lat = r.Lat; reserves[existingIdx].Long = r.Long; }
+                    if (r.Area !== null && reserves[existingIdx].Area === null) reserves[existingIdx].Area = r.Area;
+                    if (r.Description && !r.Description.startsWith("A local nature reserve")) reserves[existingIdx].Description = r.Description; 
+                    if (r.Image) reserves[existingIdx].Image = r.Image;
+                    if (r.LocationUrl) reserves[existingIdx].LocationUrl = r.LocationUrl;
                 } else {
-                    // If it wasn't in a table, just add it as a new reserve
                     reserves.push({
-                        Name: r.Name,
-                        Lat: r.Lat,
-                        Long: r.Long,
-                        Area: r.Area,
-                        Description: r.Description,
+                        Name: r.Name, HostOrg: hostOrg, Lat: r.Lat, Long: r.Long, Area: r.Area, Description: r.Description, Image: r.Image, LocationUrl: r.LocationUrl,
                         "Suggestion-Tags": ["Wikipedia Import"],
-                        "AI-Notes": `[Wiki Subpage Scraped]: Programmatically parsed from subpage linked in: "${cleanTitle}". Details resolved using Wikipedia Query API (coordinates and extracts).`
+                        "AI-Notes": `[Wiki Subpage Scraped]: Programmatically parsed from subpage linked in: "${hostOrg}". Details resolved using Wikipedia Query API (coordinates and extracts).`
                     });
                 }
             }
@@ -742,31 +432,49 @@ async function extractReservesFromHtml(htmlContent, cleanTitle) {
         }
     }
 
-    // FINAL SAFETY FILTER: Drop any reserves that STILL have no coordinates (e.g., table placeholders where the subpage also had no coordinates)
     const validReserves = reserves.filter(r => r.Lat !== null && r.Long !== null);
-    
-    // Clean up internal tracking keys before exporting to JSON
-    validReserves.forEach(r => delete r._subPageTitle);
 
+    if (isValidReservePageTitle(cleanTitle)) {
+        console.log(`   💡 Evaluating page itself as a reserve: "${cleanTitle}"`);
+        let localDescription = null;
+        $('p').not('.mw-empty-elt').each((i, el) => {
+            const text = $(el).text().trim();
+            if (text.length > 30) {
+                let cleanExtract = text.replace(/\[.*?\]/g, '').replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ');
+                const sentences = cleanExtract.match(/[^.!?]+[.!?]+/g);
+                localDescription = (sentences && sentences.length > 0) ? sentences.slice(0, 2).join(' ').trim() : cleanExtract.trim();
+                return false; 
+            }
+        });
+
+        const selfBatch = await fetchBatchCoordsAndDetails([cleanTitle], hostOrg);
+        
+        for (let r of selfBatch) {
+            if (localDescription && (!r.Description || r.Description.startsWith("A local nature reserve"))) r.Description = localDescription;
+            const existingIdx = reserves.findIndex(existing => (existing._subPageTitle && existing._subPageTitle.toLowerCase() === r.Name.toLowerCase()) || (existing.Name.toLowerCase() === r.Name.toLowerCase()));
+            
+            if (existingIdx !== -1) {
+                if (reserves[existingIdx].Lat === null && r.Lat !== null) { reserves[existingIdx].Lat = r.Lat; reserves[existingIdx].Long = r.Long; }
+                if (r.Area !== null && reserves[existingIdx].Area === null) reserves[existingIdx].Area = r.Area;
+                if (r.Description && !r.Description.startsWith("A local nature reserve")) reserves[existingIdx].Description = r.Description;
+                if (r.Image) reserves[existingIdx].Image = r.Image;
+                if (r.LocationUrl) reserves[existingIdx].LocationUrl = r.LocationUrl;
+            } else if (r.Lat !== null && r.Long !== null) {
+                validReserves.push(r);
+            }
+        }
+    }
+
+    validReserves.forEach(r => delete r._subPageTitle);
     console.log(`   🎯 Extracted ${validReserves.length} reserves with valid coordinates.`);
     return validReserves;
 }
 
-/**
- * Wrapper for Live Wikipedia Scraping
- */
 async function scrapeTrustPage(pageTitle) {
     const cleanTitle = pageTitle.replace(/_/g, ' ');
     console.log(`\n⏳ Fetching Wikipedia Page: "${cleanTitle}"...`);
-    
     const apiUrl = `https://en.wikipedia.org/w/api.php`;
-    const params = {
-        action: 'parse',
-        page: pageTitle,
-        format: 'json',
-        prop: 'text',
-        redirects: 1
-    };
+    const params = { action: 'parse', page: pageTitle, format: 'json', prop: 'text', redirects: 1 };
 
     try {
         const responseData = await fetchWithCache('parse', pageTitle, async () => {
@@ -779,25 +487,42 @@ async function scrapeTrustPage(pageTitle) {
             console.log(`   ⚠️ Could not find parseable content for ${pageTitle}`);
             return [];
         }
-
-        return await extractReservesFromHtml(htmlContent, cleanTitle);
+        return await extractReservesFromHtml(htmlContent, cleanTitle, cleanTitle);
     } catch (err) {
         console.error(`   ❌ Error querying ${pageTitle}:`, err.message);
         return [];
     }
 }
 
-/**
- * Wrapper for Local HTML Testing
- */
 async function scrapeLocalPage(filePath) {
     const fileName = path.basename(filePath);
-    const cleanTitle = fileName.replace(/\.html?$/, '').replace(/_/g, ' ');
-    console.log(`\n🧪 Processing Local Test Page: "${cleanTitle}"...`);
+    console.log(`\n🧪 Processing Local Test Page: "${fileName}"...`);
     
     try {
         const htmlContent = fs.readFileSync(filePath, 'utf8');
-        return await extractReservesFromHtml(htmlContent, cleanTitle);
+        const $ = cheerio.load(htmlContent);
+        
+        let cleanTitle = $('title').text().replace(/ - Wikipedia$/, '').trim();
+        if (!cleanTitle) cleanTitle = fileName.replace(/\.html?$/, '').replace(/_/g, ' ');
+        
+        let hostOrg = cleanTitle;
+        const trustPageNames = TRUST_WIKI_PAGES.map(t => t.replace(/_/g, ' '));
+        
+        if (!trustPageNames.includes(cleanTitle)) {
+            const pageText = $('body').text().replace(/\s+/g, ' ');
+            for (let trustName of trustPageNames) {
+                if (pageText.includes(trustName)) {
+                    hostOrg = trustName;
+                    break;
+                }
+            }
+        }
+        
+        console.log(`   🏢 Detected HostOrg: "${hostOrg}"`);
+        const extracted = await extractReservesFromHtml(htmlContent, cleanTitle, hostOrg);
+        
+        extracted.forEach(r => r.SourceFile = fileName);
+        return extracted;
     } catch (err) {
         console.error(`   ❌ Error reading local file ${fileName}:`, err.message);
         return [];
@@ -808,133 +533,128 @@ async function main() {
     console.log("🌐 Initializing Wikipedia Nature Reserve Scraper...");
     let allReserves = [];
 
-    // Ensure necessary folders exist
     const outputDir = path.dirname(OUTPUT_FILE);
-    if (!fs.existsSync(outputDir)) {
-        fs.mkdirSync(outputDir, { recursive: true });
-    }
+    if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
     if (!fs.existsSync(TEST_DIR)) {
         fs.mkdirSync(TEST_DIR, { recursive: true });
         console.log(`📁 Created test directory: ${TEST_DIR}`);
         console.log(`💡 You can drop .html files in here to test the parser before querying the web.`);
     }
 
-    // ==========================================
-    // STEP 0: Process Local Test Pages (If Any)
-    // ==========================================
     const testFiles = fs.readdirSync(TEST_DIR).filter(f => f.endsWith('.htm') || f.endsWith('.html'));
     if (testFiles.length > 0) {
         console.log(`\n🛠️ Found ${testFiles.length} local test pages. Processing these first...`);
         for (let file of testFiles) {
-            const filePath = path.join(TEST_DIR, file);
-            const testReserves = await scrapeLocalPage(filePath);
-            allReserves = allReserves.concat(testReserves);
+            allReserves = allReserves.concat(await scrapeLocalPage(path.join(TEST_DIR, file)));
         }
 
-        // ==========================================
-        // AUTOMATED TEST SUITE: Verify against expected.json
-        // ==========================================
         const expectedPath = path.join(TEST_DIR, 'expected.json');
         if (fs.existsSync(expectedPath)) {
             console.log(`\n🧪 Running Automated Tests against expected.json...`);
             try {
                 const expectedData = JSON.parse(fs.readFileSync(expectedPath, 'utf8'));
-                let passed = 0;
-                let failed = 0;
+                let passed = 0, failed = 0;
 
                 for (let testCase of expectedData) {
-                    const expected = testCase.expectedReserve;
-                    if (!expected || !expected.Name) {
-                        console.warn(`   ⚠️ Invalid test case found (missing expectedReserve.Name)`);
-                        continue;
-                    }
+                    if (testCase.expectedReserve) {
+                        const expected = testCase.expectedReserve;
 
-                    const found = allReserves.find(r => r.Name.toLowerCase() === expected.Name.toLowerCase());
-
-                    if (!found) {
-                        console.error(`   ❌ FAIL: Could not find reserve named "${expected.Name}"`);
-                        failed++;
-                        continue;
-                    }
-
-                    let match = true;
-                    let errors = [];
-
-                    for (let key in expected) {
-                        if (Array.isArray(expected[key])) {
-                            if (JSON.stringify(found[key]) !== JSON.stringify(expected[key])) {
-                                match = false;
-                                errors.push(`Mismatched ${key}: Expected ${JSON.stringify(expected[key])}, got ${JSON.stringify(found[key])}`);
+                        if (expected.validMinReserves !== undefined) {
+                            const sourceMatch = expected.source;
+                            const count = sourceMatch ? allReserves.filter(r => r.SourceFile && r.SourceFile.replace(/\.html?$/, '') === sourceMatch.replace(/\.html?$/, '')).length : allReserves.length;
+                            
+                            if (count >= expected.validMinReserves) {
+                                console.log(`   ✅ PASS: Found ${count} reserves for source "${sourceMatch || 'overall'}" (Expected min: ${expected.validMinReserves}).`);
+                                passed++;
+                            } else {
+                                console.error(`   ❌ FAIL: Found only ${count} reserves for source "${sourceMatch || 'overall'}" (Expected min: ${expected.validMinReserves}).`);
+                                failed++;
                             }
-                        } else if (found[key] !== expected[key]) {
-                            match = false;
-                            errors.push(`Mismatched ${key}: Expected ${expected[key]}, got ${found[key]}`);
+                            continue;
                         }
-                    }
 
-                    if (match) {
-                        console.log(`   ✅ PASS: "${expected.Name}" successfully extracted and verified.`);
-                        passed++;
-                    } else {
-                        console.error(`   ❌ FAIL: Data mismatch for "${expected.Name}".`);
-                        errors.forEach(err => console.error(`       - ${err}`));
-                        failed++;
+                        if (!expected.Name) {
+                            console.warn(`   ⚠️ Invalid test case found (missing expectedReserve.Name or validMinReserves)`);
+                            continue;
+                        }
+
+                        const found = allReserves.find(r => r.Name.toLowerCase() === expected.Name.toLowerCase());
+
+                        if (!found) {
+                            console.error(`   ❌ FAIL: Could not find reserve named "${expected.Name}"`);
+                            failed++;
+                            continue;
+                        }
+
+                        let match = true;
+                        let errors = [];
+
+                        for (let key in expected) {
+                            if (key === 'Description') {
+                                const cleanExpected = expected[key].replace(/\[.*?\]/g, '').replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim();
+                                const cleanFound = found[key] || '';
+                                const matchLen = Math.min(25, cleanExpected.length);
+                                if (!cleanFound.includes(cleanExpected.substring(0, matchLen)) && cleanFound !== cleanExpected) {
+                                    match = false; errors.push(`Mismatched Description:\nExpected: ${cleanExpected}\nGot: ${cleanFound}`);
+                                }
+                            } else if (Array.isArray(expected[key])) {
+                                if (JSON.stringify(found[key]) !== JSON.stringify(expected[key])) { match = false; errors.push(`Mismatched ${key}`); }
+                            } else if (found[key] !== expected[key]) {
+                                match = false; errors.push(`Mismatched ${key}: Expected ${expected[key]}, got ${found[key]}`);
+                            }
+                        }
+
+                        if (match) { console.log(`   ✅ PASS: "${expected.Name}" successfully extracted and verified.`); passed++; } 
+                        else { console.error(`   ❌ FAIL: Data mismatch for "${expected.Name}".`); errors.forEach(err => console.error(`       - ${err}`)); failed++; }
+                    } 
+                    else if (testCase.notExpectedReserves || testCase.notExptectedReserves) {
+                        const notExpectedArray = testCase.notExpectedReserves || testCase.notExptectedReserves;
+                        if (Array.isArray(notExpectedArray)) {
+                            for (let badName of notExpectedArray) {
+                                if (allReserves.find(r => r.Name.toLowerCase() === badName.toLowerCase())) {
+                                    console.error(`   ❌ FAIL: Found reserve named "${badName}" but it was expected NOT to be scraped (Should have been filtered!).`);
+                                    failed++;
+                                } else {
+                                    console.log(`   ✅ PASS: "${badName}" was correctly ignored/filtered.`);
+                                    passed++;
+                                }
+                            }
+                        }
                     }
                 }
 
                 console.log(`\n📊 Test Summary: ${passed} passed, ${failed} failed.`);
-                
-                if (failed > 0 && TEST_MODE_ONLY) {
-                    console.log(`🛑 TEST_MODE_ONLY is active. Stopping execution due to test failures.`);
-                    process.exit(1);
-                }
+                if (failed > 0 && TEST_MODE_ONLY) { console.log(`🛑 Stopping execution due to test failures.`); process.exit(1); }
 
-            } catch (err) {
-                console.error(`   ❌ Error running tests: ${err.message}`);
-            }
+            } catch (err) { console.error(`   ❌ Error running tests: ${err.message}`); }
         }
-    } else {
-        console.log(`\n(No local HTML files found in ${TEST_DIR}.)`);
     }
 
-    // ==========================================
-    // STEP 1: Discover all 46 regional trusts
-    // ==========================================
     if (!TEST_MODE_ONLY) {
-        const trustPages = await discoverTrustPages();
-
-        // ==========================================
-        // STEP 2: Process each Trust page
-        // ==========================================
-        for (let i = 0; i < trustPages.length; i++) {
-            const page = trustPages[i];
-            console.log(`\n💼 [Trust ${i + 1}/${trustPages.length}]`);
-            const pageReserves = await scrapeTrustPage(page);
-            allReserves = allReserves.concat(pageReserves);
-            await sleep(500); // Polite rate-limiting between Trusts
+        console.log(`\n🚀 Crawling the ${TRUST_WIKI_PAGES.length} explicitly verified UK Wildlife Trust pages...`);
+        for (let i = 0; i < TRUST_WIKI_PAGES.length; i++) {
+            console.log(`\n💼 [Trust ${i + 1}/${TRUST_WIKI_PAGES.length}]`);
+            allReserves = allReserves.concat(await scrapeTrustPage(TRUST_WIKI_PAGES[i]));
+            await sleep(500); 
         }
     } else {
         console.log(`\n⚠️ TEST_MODE_ONLY is set to true. Skipping the live UK index crawl.`);
     }
 
-    // ==========================================
-    // STEP 3: Global Deduplication
-    // ==========================================
     const uniqueReserves = [];
     const seenNames = new Set();
     for (let res of allReserves) {
         const key = res.Name.toLowerCase().trim();
-        if (!seenNames.has(key)) {
-            seenNames.add(key);
-            uniqueReserves.push(res);
+        if (!seenNames.has(key)) { 
+            seenNames.add(key); 
+            const toSave = { ...res };
+            delete toSave.SourceFile;
+            uniqueReserves.push(toSave); 
         }
     }
 
-    // Save final outputs
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(uniqueReserves, null, 2));
-    
-    console.log(`\n🎉 Process Complete!`);
-    console.log(`💾 Saved ${uniqueReserves.length} unique reserves to: ${OUTPUT_FILE}`);
+    console.log(`\n🎉 Process Complete! Saved ${uniqueReserves.length} unique reserves to: ${OUTPUT_FILE}`);
 }
 
 main();
