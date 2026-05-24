@@ -460,6 +460,11 @@ strong {
         font-size: 16px;
     }
 
+    .mapboxgl-popup-content .wikipedia-source,
+    .mapboxgl-popup-content .no-link-source {
+        font-size: 12px;
+    }
+
     .mapboxgl-popup-anchor-center {
         display: flex;
     }
@@ -496,9 +501,52 @@ strong {
     }
 }
 
+.project-photo-container {
+    position: relative;
+    display: block;
+}
+
 .project-photo {
     width:100%;
     border-radius:4px;
+    display: block;
+}
+
+.photo-credit {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.55);
+    color: #fff;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    line-height: 1.4;
+}
+
+.photo-credit a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.description-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.wikipedia-source,
+.no-link-source {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.wikipedia-source a,
+.no-link-source a {
+    color: #999;
 }
 
 .requesting-help-panel {

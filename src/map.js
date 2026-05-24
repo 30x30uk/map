@@ -8,14 +8,20 @@ let markersOnScreen = {}; // Tracks custom HTML markers currently visible
 
 export function initMap(containerId, isMobile, volunteeringMode, projectsData) {
     mapboxgl.accessToken = MAPBOX_TOKEN;
-    
+
+    // If deep-linking to a specific project, start the map centred and zoomed in on it
+    const urlParams = new URL(window.location.href).searchParams;
+    const deepLinkedProject = urlParams.has('project')
+        ? projectsData.find(p => slugify(p.Name) === urlParams.get('project'))
+        : null;
+
     map = new mapboxgl.Map({
         container: containerId,
         style: "mapbox://styles/e98789s7df/cm70fthzc01ji01qxawvpabla",
-        center: isMobile ? [-2.3, 53.1] : [-2.3, 52.9],
+        center: deepLinkedProject ? [deepLinkedProject.Long, deepLinkedProject.Lat] : (isMobile ? [-2.3, 53.1] : [-2.3, 52.9]),
         pitch: isMobile ? 30 : 45,
         bearing: -10,
-        zoom: isMobile ? 5 : 5
+        zoom: deepLinkedProject ? 11 : (isMobile ? 5 : 5)
     });
 
     map.addControl(new mapboxgl.NavigationControl(), 'top-right');
@@ -24,16 +30,11 @@ export function initMap(containerId, isMobile, volunteeringMode, projectsData) {
         addProjectsToMap(projectsData, volunteeringMode, isMobile);
 
         // Deep linking check
-        const url = new URL(window.location.href);
-        const projectSlug = url.searchParams.get('project');
-        if (projectSlug) {
-            const project = projectsData.find(p => slugify(p.Name) === projectSlug);
-            if (project) {
-                setTimeout(() => {
-                    const popup = makeProjectPopup(project, volunteeringMode, isMobile);
-                    popup.setLngLat([project.Long, project.Lat]).addTo(map);
-                }, 1000);
-            }
+        if (deepLinkedProject) {
+            setTimeout(() => {
+                const popup = makeProjectPopup(deepLinkedProject, volunteeringMode, isMobile);
+                popup.setLngLat([deepLinkedProject.Long, deepLinkedProject.Lat]).addTo(map);
+            }, 1000);
         }
     });
 
@@ -324,19 +325,30 @@ function addProjectsToMap(projectsData, volunteeringMode, isMobile) {
 }
 
 function makeProjectPopup(project, volunteeringMode, isMobile) {
-    const isVolunteering = volunteeringMode || getProjectMainType(project) === 'Volunteering';
+    const isVolunteering = volunteeringMode;
     console.log(project)
     const imageUrl = project.Image ? project.Image.url : '';
 
     // 1. Initialize HTML blocks
     let titleHtml = '';
-    const imageHtml = imageUrl ? `<img src="${imageUrl}" alt="${project.Name}" class="project-photo">` : '';
+    const isWikipedia = project.Source === 'Wikipedia';
+    const creditHtml = isWikipedia
+        ? `<span class="photo-credit">© Wikimedia / <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA</a></span>`
+        : '';
+    const imageHtml = imageUrl
+        ? `<div class="project-photo-container"><img src="${imageUrl}" alt="${project.Name}" class="project-photo">${creditHtml}</div>`
+        : '';
     let warningHtml = '';
     let seekingHelpHtml = '';
-    let descriptionHtml = project.Description ? `<p>${project.Description.substring(0, 100) + '...'}</p>` : '';
+    const wikipediaSourceHtml = isWikipedia
+        ? `<p class="wikipedia-source">Source: Wikipedia. <a href="mailto:contact@30x30.org.uk?subject=Map+feedback+for+location:+${project.Name}+${project.id}">Report an issue?</a></p>`
+        : '';
+    let descriptionHtml = project.Description
+        ? `<p class="description-text">${project.Description}</p>`
+        : '';
     let ctaHtml = '';
 
-    if (!volunteeringMode && project.isStub) {
+    if (!volunteeringMode && project.isStub && !isWikipedia) {
         warningHtml += `
             <div class="requesting-help-panel requesting-help-panel--stub">
                 <p><strong>More details to come</strong>: Our team of map elves are working on it. In the meantime, visit the project’s own website for further information. <a href="mailto:contact@30x30.org.uk?subject=Map+feedback+for+location:+${project.Name}+${project.id}">Feedback</a>.</p>
@@ -393,6 +405,13 @@ function makeProjectPopup(project, volunteeringMode, isMobile) {
 
         if (project.LocationURL) {
             ctaHtml = `<p><span class="visit-website"><a href="${project.LocationURL}" class="cta" target="_blank">Visit project website</a></span></p>`;
+        } else {
+            const searchQuery = project.HostOrg ? `${project.Name} ${project.HostOrg}` : project.Name;
+            const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`;
+            ctaHtml = `
+                <p><span class="visit-website"><a href="${searchUrl}" class="cta" target="_blank">Search for project</a></span></p>
+                <p class="no-link-source">We don't have a link to this project. <a href="mailto:contact@30x30.org.uk?subject=Map+feedback+for+location:+${project.Name}+${project.id}">Report an issue?</a></p>
+            `;
         }
     }
 
@@ -404,6 +423,7 @@ function makeProjectPopup(project, volunteeringMode, isMobile) {
         ${seekingHelpHtml}
         ${descriptionHtml}
         ${ctaHtml}
+        ${wikipediaSourceHtml}
     `;
 
     // 5. Manage Mapbox popup lifecycle
