@@ -1,9 +1,38 @@
-export function setupUI(volunteeringMode) {
+export function setupUI(volunteeringMode, techukMode) {
     if (!volunteeringMode) {
         document.querySelector('body').className = 'ui-all';
     } else {
         document.querySelector('body').className = 'ui-volunteering';
     }
+
+    if (techukMode) {
+        document.querySelector('body').classList.add('ui-techuk');
+        initTechUKTotaliser();
+    }
+}
+
+function initTechUKTotaliser() {
+    const CURRENT = 140000;
+    const TARGET = 250000;
+    const pct = Math.round((CURRENT / TARGET) * 100);
+
+    const panel = document.getElementById('techuk-totaliser');
+    if (!panel) return;
+    panel.style.display = 'block';
+
+    const fill = panel.querySelector('.techuk-bar-fill');
+    const currentEl = panel.querySelector('.techuk-current');
+    const targetEl = panel.querySelector('.techuk-target');
+
+    currentEl.textContent = CURRENT.toLocaleString('en-GB');
+    targetEl.textContent = TARGET.toLocaleString('en-GB');
+
+    // Animate bar in after a short delay
+    requestAnimationFrame(() => {
+        setTimeout(() => {
+            fill.style.width = pct + '%';
+        }, 400);
+    });
 }
 
 export function showMapLoading() {

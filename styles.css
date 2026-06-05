@@ -703,3 +703,123 @@ strong {
 .ui-volunteering .volunteering-hide {
     display: none;
 }
+
+/* ── techUK mode ─────────────────────────────────────── */
+
+.techuk-totaliser {
+    top: 10px;
+    right: 10px;
+    width: 240px;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+@media screen and (min-width: 1024px) {
+    .techuk-totaliser {
+        top: 40px;
+        right: 40px;
+        width: 280px;
+    }
+}
+
+.techuk-header {
+    background: #1a2744;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    gap: 10px;
+}
+
+.techuk-logo {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    line-height: 1;
+}
+
+.techuk-logo-tech {
+    color: #fff;
+}
+
+.techuk-logo-uk {
+    color: #5bcfde;
+}
+
+.techuk-x {
+    color: rgba(255,255,255,0.4);
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.techuk-logo-30x30 img {
+    height: 36px;
+    width: auto;
+    display: block;
+    filter: brightness(0) invert(1);
+}
+
+.techuk-body {
+    padding: 14px 16px 16px;
+    background: #fff;
+}
+
+.techuk-label {
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #1a2744;
+    margin-bottom: 6px;
+}
+
+.techuk-numbers {
+    font-size: 20px;
+    font-weight: 500;
+    color: #1a2744;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+    .techuk-numbers {
+        font-size: 24px;
+    }
+}
+
+.techuk-current {
+    color: #1a2744;
+}
+
+.techuk-separator,
+.techuk-target,
+.techuk-unit {
+    color: #8899aa;
+    font-size: 0.75em;
+    font-weight: 300;
+}
+
+.techuk-bar-track {
+    background: #e8eef4;
+    border-radius: 100px;
+    height: 10px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.techuk-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #1a2744 0%, #5bcfde 100%);
+    border-radius: 100px;
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.techuk-sublabel {
+    font-size: 10px;
+    color: #8899aa;
+    font-weight: 300;
+}

@@ -5,10 +5,11 @@ import { initMap } from './map.js';
 document.addEventListener("DOMContentLoaded", async () => {
     const url = new URL(window.location.href);
     const volunteeringMode = url.searchParams.get('volunteering');
+    const techukMode = url.searchParams.has('techuk');
     const isMobile = window.innerWidth < 1024;
 
     // 1. Prepare UI
-    setupUI(volunteeringMode);
+    setupUI(volunteeringMode, techukMode);
     initDOMListeners();
     showMapLoading();
 
