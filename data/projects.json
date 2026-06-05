@@ -4338,23 +4338,6 @@
     "isStub": true
   },
   {
-    "id": "reczbhpjPAnm9S9X4",
-    "Name": "Asham Meads",
-    "HostOrg": "Berkshire, Buckinghamshire and Oxfordshire Wildlife Trust",
-    "Lat": 51.8242,
-    "Long": -1.1453,
-    "Type": [
-      "Volunteering",
-      "Fundraising"
-    ],
-    "Description": "A local nature reserve of approximately 23 hectares.",
-    "Source": "Wikipedia",
-    "Image": {
-      "url": "data/project-img/att5TFxlFbGEmBcOn.webp"
-    },
-    "isStub": true
-  },
-  {
     "id": "recli0p9bdAcwJpPt",
     "Name": "Ashclyst Forest",
     "HostOrg": "National Trust",
@@ -10860,7 +10843,6 @@
     "HostOrg": "Devon Wildlife Trust",
     "Lat": 50.5849,
     "Long": -3.6421,
-    "LocationURL": "https://en.wikipedia.org/wiki/Chudleigh_Knighton_Heath",
     "Type": [
       "Volunteering",
       "Fundraising"
@@ -10931,7 +10913,7 @@
     "HostOrg": "Cornwall Wildlife Trust",
     "Lat": 50.3978,
     "Long": -4.2277,
-    "LocationURL": "https://en.wikipedia.org/wiki/Churchtown_Farm",
+    "LocationURL": "http://www.churchtownfarm.saltash.website/",
     "Type": [
       "Volunteering",
       "Fundraising"
@@ -12792,7 +12774,6 @@
     "HostOrg": "Staffordshire Wildlife Trust",
     "Lat": 52.727461,
     "Long": -1.720452,
-    "LocationURL": "https://en.wikipedia.org/wiki/Croxall_Lakes",
     "Type": [
       "Volunteering",
       "Fundraising"
@@ -14641,7 +14622,6 @@
     "HostOrg": "Hampshire and Isle of Wight Wildlife Trust",
     "Lat": 50.686,
     "Long": -1.178,
-    "LocationURL": "https://en.wikipedia.org/wiki/Eaglehead_and_Bloodstone_Copses",
     "Type": [
       "Volunteering",
       "Fundraising"
@@ -16209,7 +16189,7 @@
   },
   {
     "id": "rectAnkyT6jatUQG1",
-    "Name": "Folly Farm, Somerset",
+    "Name": "Folly Farm",
     "HostOrg": "Avon Wildlife Trust",
     "Lat": 51.34132,
     "Long": -2.56559,
@@ -17519,24 +17499,6 @@
     "isStub": true
   },
   {
-    "id": "recaLbGPKZ6a1mmMe",
-    "Name": "Gloucestershire Wildlife Trust",
-    "HostOrg": "Gloucestershire Wildlife Trust",
-    "Lat": 51.833611,
-    "Long": -2.2325,
-    "LocationURL": "https://www.gloucestershirewildlifetrust.co.uk/who-we-are/our-structure/senior-management-team",
-    "Type": [
-      "Volunteering",
-      "Fundraising"
-    ],
-    "Description": "The Gloucestershire Wildlife Trust is the Gloucestershire local partner in a conservation network of 46 Wildlife Trusts.  The Wildlife Trusts are local charities with the specific aim of protecting the United Kingdom's natural heritage.",
-    "Source": "Wikipedia",
-    "Image": {
-      "url": "data/project-img/attb1NjGSSPuJvb8c.webp"
-    },
-    "isStub": true
-  },
-  {
     "id": "recs4KEB4pozTp34n",
     "Name": "Glyme Valley",
     "HostOrg": "Berkshire, Buckinghamshire and Oxfordshire Wildlife Trust",
@@ -17999,15 +17961,16 @@
   },
   {
     "id": "recEWVcIKdL98NmLD",
-    "Name": "Grangelands and The Rifle Range",
+    "Name": "Grangelands and Pulpit Hill",
     "HostOrg": "Berkshire, Buckinghamshire and Oxfordshire Wildlife Trust",
     "Lat": 51.7376,
     "Long": -0.8009,
+    "LocationURL": "https://www.bbowt.org.uk/nature-reserves/grangelands-and-rifle-range",
     "Type": [
       "Volunteering",
       "Fundraising"
     ],
-    "Description": "A local nature reserve of approximately 18 hectares.",
+    "Description": "Grangelands and Pulpit Hill is a 25 hectare biological Site of Special Scientific Interest in Cadsden in Buckinghamshire. It lies within the Chilterns Area of Outstanding Natural Beauty.",
     "Source": "Wikipedia",
     "Image": {
       "url": "data/project-img/attb1NjGSSPuJvb8c.webp"
@@ -23335,23 +23298,6 @@
     "isStub": true
   },
   {
-    "id": "recb0NwYSxO5vxW4a",
-    "Name": "Leicestershire and Rutland Wildlife Trust",
-    "HostOrg": "Leicestershire and Rutland Wildlife Trust",
-    "Lat": 52.560699,
-    "Long": -1.176274,
-    "LocationURL": "http://www.lrwt.org.uk/support-us/become-member/",
-    "Type": [
-      "Volunteering",
-      "Fundraising"
-    ],
-    "Description": "The Leicestershire and Rutland Wildlife Trust is one of 46 wildlife trusts across the United Kingdom.  It manages nature reserves in Leicestershire and Rutland, and was founded in 1956 as the Leicestershire and Rutland Trust for Nature Conservation.",
-    "Image": {
-      "url": "data/project-img/attybmHfGcNWGfDro.webp"
-    },
-    "isStub": true
-  },
-  {
     "id": "rec2wFSTbaB7UIsLZ",
     "Name": "Leigh Woods",
     "HostOrg": "National Trust",
@@ -25811,7 +25757,6 @@
     "HostOrg": "Avon Wildlife Trust",
     "Lat": 51.3131,
     "Long": -2.8529,
-    "LocationURL": "https://en.wikipedia.org/wiki/Max_Bog",
     "Type": [
       "Volunteering",
       "Fundraising"
@@ -36709,24 +36654,6 @@
     "isStub": true
   },
   {
-    "id": "recQZV0SlCrb2giJ0",
-    "Name": "Stow St Mary Halt railway station",
-    "HostOrg": "Essex Wildlife Trust",
-    "Lat": 51.6612,
-    "Long": 0.6514,
-    "LocationURL": "https://en.wikipedia.org/wiki/Stow_St_Mary_Halt_railway_station",
-    "Type": [
-      "Volunteering",
-      "Fundraising"
-    ],
-    "Description": "Stow St.  Mary Halt railway station was a halt that served the village of Stow Maries, Essex.",
-    "Source": "Wikipedia",
-    "Image": {
-      "url": "data/project-img/att5TFxlFbGEmBcOn.webp"
-    },
-    "isStub": true
-  },
-  {
     "id": "recP0IBXfKNE5AKsm",
     "Name": "Strangford Lough",
     "HostOrg": "The National Trust",
@@ -36871,23 +36798,6 @@
     "Description": "Sumburgh Head is a nature reserve and lighthouse at the southern tip of mainland Shetland. It is a key breeding site for seabirds including puffins, guillemots, razorbills, and kittiwakes. The site offers panoramic views and an accessible visitor centre.",
     "Image": {
       "url": "data/project-img/attlAvNxzPUtohr3C.webp"
-    },
-    "isStub": true
-  },
-  {
-    "id": "recRqNB2RUYjHn6JM",
-    "Name": "Surrey Wildlife Trust",
-    "HostOrg": "Surrey Wildlife Trust",
-    "Lat": 51.25,
-    "Long": -0.416667,
-    "LocationURL": "https://www.surreywildlifetrust.org/what-we-do/about-us",
-    "Type": [
-      "Volunteering",
-      "Fundraising"
-    ],
-    "Description": "Surrey Wildlife Trust was founded in 1959 as Surrey Naturalists' Trust and it is one of forty-six wildlife trusts covering Great Britain, Northern Ireland, Isle of Man and Alderney.  SWT carries out conservation activities on a considerable area of Surrey County Council's large countryside estate and also manages land on behalf of the Ministry of Defence estate.",
-    "Image": {
-      "url": "data/project-img/attSyivbgwMPFtWGU.webp"
     },
     "isStub": true
   },
