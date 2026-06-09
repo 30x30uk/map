@@ -234,7 +234,7 @@ async function fetchBatchDetails(titles) {
         prop: 'coordinates|extracts|revisions|images',
         rvprop: 'content',
         rvslots: 'main',
-        imlimit: 50,
+        imlimit: 500,
         exintro: 1,
         explaintext: 1,
         exlimit: 'max',
