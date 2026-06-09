@@ -1,0 +1,35 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Hazards on the road - geograph.org.uk - 225224.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Hazards_on_the_road_-_geograph.org.uk_-_225224.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hazards_on_the_road_-_geograph.org.uk_-_225224.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=9335283"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Minchinhampton Common, beware of cows - geograph.org.uk - 225219.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Minchinhampton_Common%2C_beware_of_cows_-_geograph.org.uk_-_225219.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Minchinhampton_Common,_beware_of_cows_-_geograph.org.uk_-_225219.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=9342341"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "80150423": {
+        "pageid": 80150423,
+        "ns": 6,
+        "title": "File:Ben Lomond Mountains (Turner).jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/en/f/f6/Ben_Lomond_Mountains_%28Turner%29.jpg",
+            "descriptionurl": "https://en.wikipedia.org/wiki/File:Ben_Lomond_Mountains_(Turner).jpg",
+            "descriptionshorturl": "https://en.wikipedia.org/w/index.php?curid=80150423"
+          }
+        ]
+      },
+      "-1": {
+        "ns": 6,
+        "title": "File:Ben Lomond - summit ridge.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Ben_Lomond_-_summit_ridge.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Ben_Lomond_-_summit_ridge.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=33910999"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Ben Lomond from Beinn Narnain.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Ben_Lomond_from_Beinn_Narnain.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Ben_Lomond_from_Beinn_Narnain.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=57799032"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Ben Lomond from Ptarmigan.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Ben_Lomond_from_Ptarmigan.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Ben_Lomond_from_Ptarmigan.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=30998691"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Loch Lomond Lomond Mountain.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Loch_Lomond_Lomond_Mountain.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Loch_Lomond_Lomond_Mountain.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=586312"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:Munros section01.png",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Munros_section01.png",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Munros_section01.png",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=4289927"
+          }
+        ]
+      },
+      "-6": {
+        "ns": 6,
+        "title": "File:Pen y Fan from Cribyn.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Pen_y_Fan_from_Cribyn.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Pen_y_Fan_from_Cribyn.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1517217"
+          }
+        ]
+      },
+      "-7": {
+        "ns": 6,
+        "title": "File:Schiehallion 01.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Schiehallion_01.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Schiehallion_01.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=7421607"
+          }
+        ]
+      },
+      "-8": {
+        "ns": 6,
+        "title": "File:Scotland relief location map.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Scotland_relief_location_map.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Scotland_relief_location_map.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=10728234"
+          }
+        ]
+      },
+      "-9": {
+        "ns": 6,
+        "title": "File:Slioch from Loch Maree.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Slioch_from_Loch_Maree.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Slioch_from_Loch_Maree.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=7977960"
+          }
+        ]
+      }
+    }
+  }
+}

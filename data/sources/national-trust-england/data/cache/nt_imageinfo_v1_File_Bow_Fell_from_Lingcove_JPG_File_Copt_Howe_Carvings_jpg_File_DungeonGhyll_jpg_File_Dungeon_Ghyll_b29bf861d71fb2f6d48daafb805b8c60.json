@@ -1,0 +1,133 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Bow Fell from Lingcove.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Bow_Fell_from_Lingcove.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Bow_Fell_from_Lingcove.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=7126652"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Copt Howe Carvings.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Copt_Howe_Carvings.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Copt_Howe_Carvings.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=190570003"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:DungeonGhyll.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/DungeonGhyll.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:DungeonGhyll.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=15249577"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Dungeon Ghyll.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Dungeon_Ghyll.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Dungeon_Ghyll.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=170509825"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:Great Langdale Meets Windermere.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Great_Langdale_Meets_Windermere.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Great_Langdale_Meets_Windermere.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=190641890"
+          }
+        ]
+      },
+      "-6": {
+        "ns": 6,
+        "title": "File:Great Langdale and Copt Howe.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Great_Langdale_and_Copt_Howe.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Great_Langdale_and_Copt_Howe.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=6051237"
+          }
+        ]
+      },
+      "-7": {
+        "ns": 6,
+        "title": "File:Great Langdale and Pavey Ark - geograph.org.uk - 1252005.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Great_Langdale_and_Pavey_Ark_-_geograph.org.uk_-_1252005.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Great_Langdale_and_Pavey_Ark_-_geograph.org.uk_-_1252005.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=13976433"
+          }
+        ]
+      },
+      "-8": {
+        "ns": 6,
+        "title": "File:ODG Langdale.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/ODG_Langdale.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:ODG_Langdale.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=2342964"
+          }
+        ]
+      },
+      "-9": {
+        "ns": 6,
+        "title": "File:The Langdale Pikes from Chapel Stile.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/The_Langdale_Pikes_from_Chapel_Stile.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:The_Langdale_Pikes_from_Chapel_Stile.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=190641272"
+          }
+        ]
+      }
+    }
+  }
+}

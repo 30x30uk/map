@@ -1,0 +1,91 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:A lidar view of Durrington Walls and Woodhenge.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/A_lidar_view_of_Durrington_Walls_and_Woodhenge.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:A_lidar_view_of_Durrington_Walls_and_Woodhenge.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=179066884"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Stonehenge Closeup.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Stonehenge_Closeup.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Stonehenge_Closeup.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=69675"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Stonehenge cursus 2007.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Stonehenge_cursus_2007.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Stonehenge_cursus_2007.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=58966080"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:The Landscape South of Stonehenge.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/The_Landscape_South_of_Stonehenge.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:The_Landscape_South_of_Stonehenge.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=179713642"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:United Kingdom relief location map.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/United_Kingdom_relief_location_map.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:United_Kingdom_relief_location_map.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=19934584"
+          }
+        ]
+      },
+      "-6": {
+        "ns": 6,
+        "title": "File:Wiltshire UK relief location map.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Wiltshire_UK_relief_location_map.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Wiltshire_UK_relief_location_map.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=17515769"
+          }
+        ]
+      }
+    }
+  }
+}

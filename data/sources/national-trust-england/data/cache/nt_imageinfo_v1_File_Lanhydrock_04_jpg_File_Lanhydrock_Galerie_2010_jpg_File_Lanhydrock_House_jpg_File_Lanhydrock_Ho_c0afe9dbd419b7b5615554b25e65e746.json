@@ -1,0 +1,91 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Lanhydrock 04.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Lanhydrock_04.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lanhydrock_04.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=7670515"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Lanhydrock Galerie 2010.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Lanhydrock_Galerie_2010.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lanhydrock_Galerie_2010.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=10911650"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Lanhydrock House.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Lanhydrock_House.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lanhydrock_House.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=360636"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Lanhydrock House Billardzimmer 2014.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Lanhydrock_House_Billardzimmer_2014.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lanhydrock_House_Billardzimmer_2014.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=57414771"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:Lanhydrock House Gatehouse.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Lanhydrock_House_Gatehouse.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lanhydrock_House_Gatehouse.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=369614"
+          }
+        ]
+      },
+      "-6": {
+        "ns": 6,
+        "title": "File:Lanhydrock corridor.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Lanhydrock_corridor.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lanhydrock_corridor.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=21874234"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Fine view of May Hill - geograph.org.uk - 906969.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Fine_view_of_May_Hill_-_geograph.org.uk_-_906969.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Fine_view_of_May_Hill_-_geograph.org.uk_-_906969.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=13592644"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:May Hill - geograph.org.uk - 7712.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/May_Hill_-_geograph.org.uk_-_7712.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:May_Hill_-_geograph.org.uk_-_7712.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=9121851"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Severn from May Hill.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Severn_from_May_Hill.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Severn_from_May_Hill.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=7386481"
+          }
+        ]
+      }
+    }
+  }
+}

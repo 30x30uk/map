@@ -1,0 +1,49 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:HardwickHall ES carving (cropped).jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/HardwickHall_ES_carving_%28cropped%29.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:HardwickHall_ES_carving_(cropped).jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=131577693"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Hardwick Hall - picture gallery by George Washington Wilson (d 1893).jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Hardwick_Hall_-_picture_gallery_by_George_Washington_Wilson_%28d_1893%29.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hardwick_Hall_-_picture_gallery_by_George_Washington_Wilson_(d_1893).jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=37941818"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Hardwick Hall 3 (7027835143).jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Hardwick_Hall_3_%287027835143%29.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hardwick_Hall_3_(7027835143).jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=27213330"
+          }
+        ]
+      }
+    }
+  }
+}

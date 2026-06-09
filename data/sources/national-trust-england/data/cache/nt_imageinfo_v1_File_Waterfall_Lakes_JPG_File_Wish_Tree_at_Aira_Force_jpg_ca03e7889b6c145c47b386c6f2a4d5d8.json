@@ -1,0 +1,35 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Waterfall Lakes.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Waterfall_Lakes.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Waterfall_Lakes.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=25602274"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Wish Tree at Aira Force.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Wish_Tree_at_Aira_Force.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Wish_Tree_at_Aira_Force.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=16255500"
+          }
+        ]
+      }
+    }
+  }
+}

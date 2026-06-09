@@ -18,5 +18,8 @@
     "googlethis": "^1.8.0",
     "p-limit": "^2.3.0",
     "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "ngrok": "^5.0.0-beta.2"
   }
 }

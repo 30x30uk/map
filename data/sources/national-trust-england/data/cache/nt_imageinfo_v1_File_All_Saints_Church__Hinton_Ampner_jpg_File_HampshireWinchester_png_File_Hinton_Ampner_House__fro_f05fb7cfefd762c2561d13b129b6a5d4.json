@@ -1,0 +1,105 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:All Saints Church, Hinton Ampner.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/51/All_Saints_Church%2C_Hinton_Ampner.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:All_Saints_Church,_Hinton_Ampner.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=108257813"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:HampshireWinchester.png",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/07/HampshireWinchester.png",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:HampshireWinchester.png",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=589678"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Hinton Ampner House, from lawn.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Hinton_Ampner_House%2C_from_lawn.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hinton_Ampner_House,_from_lawn.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=17170999"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Hinton Ampner North Side.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Hinton_Ampner_North_Side.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hinton_Ampner_North_Side.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=108257820"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:The dining room at Hinton Ampner.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/The_dining_room_at_Hinton_Ampner.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:The_dining_room_at_Hinton_Ampner.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=136557780"
+          }
+        ]
+      },
+      "-6": {
+        "ns": 6,
+        "title": "File:The library at Hinton Ampner.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/89/The_library_at_Hinton_Ampner.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:The_library_at_Hinton_Ampner.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=136557518"
+          }
+        ]
+      },
+      "-7": {
+        "ns": 6,
+        "title": "File:Yew Path, Hinton Ampner.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Yew_Path%2C_Hinton_Ampner.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Yew_Path,_Hinton_Ampner.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=138220992"
+          }
+        ]
+      }
+    }
+  }
+}

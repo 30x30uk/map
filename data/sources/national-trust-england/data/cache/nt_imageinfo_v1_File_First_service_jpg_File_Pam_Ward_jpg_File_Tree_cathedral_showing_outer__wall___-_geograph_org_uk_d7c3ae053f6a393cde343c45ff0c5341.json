@@ -1,0 +1,76 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "77492671": {
+        "pageid": 77492671,
+        "ns": 6,
+        "title": "File:Pam Ward.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/en/4/4d/Pam_Ward.jpg",
+            "descriptionurl": "https://en.wikipedia.org/wiki/File:Pam_Ward.jpg",
+            "descriptionshorturl": "https://en.wikipedia.org/w/index.php?curid=77492671"
+          }
+        ]
+      },
+      "-1": {
+        "ns": 6,
+        "title": "File:First service.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/First_service.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:First_service.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=193537262"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Tree cathedral showing outer \"wall\". - geograph.org.uk - 1238975.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Tree_cathedral_showing_outer_%22wall%22._-_geograph.org.uk_-_1238975.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Tree_cathedral_showing_outer_%22wall%22._-_geograph.org.uk_-_1238975.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=13959789"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Whipsnade Tree Cathedral, Nave.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Whipsnade_Tree_Cathedral%2C_Nave.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Whipsnade_Tree_Cathedral,_Nave.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=363430"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Whipsnade Tree Cathedral, South Transcept.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Whipsnade_Tree_Cathedral%2C_South_Transcept.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Whipsnade_Tree_Cathedral,_South_Transcept.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=363431"
+          }
+        ]
+      }
+    }
+  }
+}

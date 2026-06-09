@@ -1,0 +1,63 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Cissbury Ring2.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Cissbury_Ring2.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Cissbury_Ring2.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=120201853"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Cissbury Ring Digital Terrain Model.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Cissbury_Ring_Digital_Terrain_Model.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Cissbury_Ring_Digital_Terrain_Model.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=111070991"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Cissbury Ring neolithic flint mine 1.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Cissbury_Ring_neolithic_flint_mine_1.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Cissbury_Ring_neolithic_flint_mine_1.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=18713127"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Cissbury Ring rampart 5.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Cissbury_Ring_rampart_5.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Cissbury_Ring_rampart_5.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=18713720"
+          }
+        ]
+      }
+    }
+  }
+}

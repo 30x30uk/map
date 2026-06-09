@@ -1,0 +1,91 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:ArmsOf SirJohnIVArundell Died1561 OfTrerice Cornwall.PNG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/ArmsOf_SirJohnIVArundell_Died1561_OfTrerice_Cornwall.PNG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:ArmsOf_SirJohnIVArundell_Died1561_OfTrerice_Cornwall.PNG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=40093268"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:ArundellGlass 15thC SelworthyChurch Somerset.PNG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/ArundellGlass_15thC_SelworthyChurch_Somerset.PNG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:ArundellGlass_15thC_SelworthyChurch_Somerset.PNG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=40114985"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Compass Point Bude Cornwall England.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Compass_Point_Bude_Cornwall_England.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Compass_Point_Bude_Cornwall_England.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=20118590"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Cornwall 1989 099.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Cornwall_1989_099.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Cornwall_1989_099.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=11186687"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:Lansladron Quartering Pellor SelworthyChurch Somerset.PNG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Lansladron_Quartering_Pellor_SelworthyChurch_Somerset.PNG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lansladron_Quartering_Pellor_SelworthyChurch_Somerset.PNG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=40224471"
+          }
+        ]
+      },
+      "-6": {
+        "ns": 6,
+        "title": "File:MargaretAcland (LadyArundell OfTrerice) Died1691 TrericeHouse Cornwall.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/MargaretAcland_%28LadyArundell_OfTrerice%29_Died1691_TrericeHouse_Cornwall.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:MargaretAcland_(LadyArundell_OfTrerice)_Died1691_TrericeHouse_Cornwall.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=40108068"
+          }
+        ]
+      }
+    }
+  }
+}

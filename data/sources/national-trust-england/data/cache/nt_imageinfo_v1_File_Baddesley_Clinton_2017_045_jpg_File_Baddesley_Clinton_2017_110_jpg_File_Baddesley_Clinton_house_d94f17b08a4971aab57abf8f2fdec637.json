@@ -1,0 +1,91 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Baddesley Clinton 2017 045.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Baddesley_Clinton_2017_045.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Baddesley_Clinton_2017_045.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=59833675"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Baddesley Clinton 2017 110.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Baddesley_Clinton_2017_110.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Baddesley_Clinton_2017_110.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=59834609"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Baddesley Clinton house north-west 2016.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Baddesley_Clinton_house_north-west_2016.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Baddesley_Clinton_house_north-west_2016.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=50503963"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Baddesley Clinton house north 2016.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Baddesley_Clinton_house_north_2016.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Baddesley_Clinton_house_north_2016.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=47097511"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:Baddesley Clinton house south west 2016.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Baddesley_Clinton_house_south_west_2016.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Baddesley_Clinton_house_south_west_2016.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=47097510"
+          }
+        ]
+      },
+      "-6": {
+        "ns": 6,
+        "title": "File:WarwickshireWarwick.png",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/WarwickshireWarwick.png",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:WarwickshireWarwick.png",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=706060"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Chalcocite-104084.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Chalcocite-104084.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Chalcocite-104084.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=10138348"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Borthwood.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Borthwood.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Borthwood.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=51825671"
+          }
+        ]
+      }
+    }
+  }
+}

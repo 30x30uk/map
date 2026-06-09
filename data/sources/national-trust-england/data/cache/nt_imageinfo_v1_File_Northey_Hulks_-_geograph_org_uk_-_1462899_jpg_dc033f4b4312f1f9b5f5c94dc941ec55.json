@@ -1,0 +1,21 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Northey Hulks - geograph.org.uk - 1462899.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Northey_Hulks_-_geograph.org.uk_-_1462899.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Northey_Hulks_-_geograph.org.uk_-_1462899.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=14212826"
+          }
+        ]
+      }
+    }
+  }
+}

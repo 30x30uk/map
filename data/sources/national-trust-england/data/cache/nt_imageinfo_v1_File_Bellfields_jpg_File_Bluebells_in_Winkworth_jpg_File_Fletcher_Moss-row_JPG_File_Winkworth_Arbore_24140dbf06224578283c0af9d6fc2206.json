@@ -1,0 +1,63 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Bellfields.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Bellfields.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Bellfields.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=89385548"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Bluebells in Winkworth.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Bluebells_in_Winkworth.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Bluebells_in_Winkworth.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=4349734"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Fletcher Moss-row.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Fletcher_Moss-row.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Fletcher_Moss-row.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=2515642"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Winkworth Arboretum in spring.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Winkworth_Arboretum_in_spring.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Winkworth_Arboretum_in_spring.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=85105152"
+          }
+        ]
+      }
+    }
+  }
+}

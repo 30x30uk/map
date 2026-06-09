@@ -1,0 +1,90 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "9126361": {
+        "pageid": 9126361,
+        "ns": 6,
+        "title": "File:Leith hill 07.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/en/2/2e/Leith_hill_07.jpg",
+            "descriptionurl": "https://en.wikipedia.org/wiki/File:Leith_hill_07.jpg",
+            "descriptionshorturl": "https://en.wikipedia.org/w/index.php?curid=9126361"
+          }
+        ]
+      },
+      "-1": {
+        "ns": 6,
+        "title": "File:Leith Hill Place 2.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Leith_Hill_Place_2.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Leith_Hill_Place_2.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=44320392"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Leith hill tower.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Leith_hill_tower.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Leith_hill_tower.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=2153586"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Neolithic, Lithic implement (FindID 608908).jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Neolithic%2C_Lithic_implement_%28FindID_608908%29.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Neolithic,_Lithic_implement_(FindID_608908).jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=55316980"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Surrey UK relief location map.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Surrey_UK_relief_location_map.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Surrey_UK_relief_location_map.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=17515717"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:Western Weald geology cross section.png",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Western_Weald_geology_cross_section.png",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Western_Weald_geology_cross_section.png",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=92312451"
+          }
+        ]
+      }
+    }
+  }
+}

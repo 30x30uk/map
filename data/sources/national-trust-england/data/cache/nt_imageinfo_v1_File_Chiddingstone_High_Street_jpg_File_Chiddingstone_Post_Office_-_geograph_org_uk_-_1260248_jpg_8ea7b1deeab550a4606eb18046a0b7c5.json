@@ -1,0 +1,35 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Chiddingstone High Street.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Chiddingstone_High_Street.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Chiddingstone_High_Street.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=104995342"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Chiddingstone Post Office - geograph.org.uk - 1260248.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Chiddingstone_Post_Office_-_geograph.org.uk_-_1260248.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Chiddingstone_Post_Office_-_geograph.org.uk_-_1260248.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=13985335"
+          }
+        ]
+      }
+    }
+  }
+}

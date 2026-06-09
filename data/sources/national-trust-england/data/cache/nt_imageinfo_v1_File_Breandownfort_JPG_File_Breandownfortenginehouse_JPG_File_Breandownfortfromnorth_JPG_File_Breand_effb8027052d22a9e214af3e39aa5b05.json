@@ -1,0 +1,91 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Breandownfort.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Breandownfort.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Breandownfort.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=3998926"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Breandownfortenginehouse.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Breandownfortenginehouse.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Breandownfortenginehouse.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=3998911"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Breandownfortfromnorth.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Breandownfortfromnorth.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Breandownfortfromnorth.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=3998823"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Breandownfortfromsouthpath.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Breandownfortfromsouthpath.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Breandownfortfromsouthpath.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=3998936"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:Breandownfortgunemplacement.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Breandownfortgunemplacement.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Breandownfortgunemplacement.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=3998866"
+          }
+        ]
+      },
+      "-6": {
+        "ns": 6,
+        "title": "File:Breandownfortofficersquarters.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Breandownfortofficersquarters.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Breandownfortofficersquarters.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=3998839"
+          }
+        ]
+      }
+    }
+  }
+}

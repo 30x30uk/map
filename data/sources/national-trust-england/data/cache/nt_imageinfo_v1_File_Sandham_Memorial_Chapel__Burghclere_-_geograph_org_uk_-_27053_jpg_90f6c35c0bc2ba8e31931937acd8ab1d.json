@@ -1,0 +1,21 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Sandham Memorial Chapel, Burghclere - geograph.org.uk - 27053.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Sandham_Memorial_Chapel%2C_Burghclere_-_geograph.org.uk_-_27053.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Sandham_Memorial_Chapel,_Burghclere_-_geograph.org.uk_-_27053.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=6123978"
+          }
+        ]
+      }
+    }
+  }
+}

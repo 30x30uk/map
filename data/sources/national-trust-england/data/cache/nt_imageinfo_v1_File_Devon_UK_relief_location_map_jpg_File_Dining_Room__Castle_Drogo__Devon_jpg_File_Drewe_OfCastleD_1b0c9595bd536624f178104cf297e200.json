@@ -1,0 +1,91 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Devon UK relief location map.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Devon_UK_relief_location_map.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Devon_UK_relief_location_map.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=17515522"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Dining Room, Castle Drogo, Devon.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Dining_Room%2C_Castle_Drogo%2C_Devon.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Dining_Room,_Castle_Drogo,_Devon.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=164099812"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Drewe OfCastleDrogo Arms.png",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Drewe_OfCastleDrogo_Arms.png",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Drewe_OfCastleDrogo_Arms.png",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=47395585"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Drogo-wyrd-01.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Drogo-wyrd-01.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Drogo-wyrd-01.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=45363907"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:Drogo-wyrd-04.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Drogo-wyrd-04.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Drogo-wyrd-04.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=45363618"
+          }
+        ]
+      },
+      "-6": {
+        "ns": 6,
+        "title": "File:Drogo-wyrd-06.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Drogo-wyrd-06.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Drogo-wyrd-06.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=45363495"
+          }
+        ]
+      }
+    }
+  }
+}

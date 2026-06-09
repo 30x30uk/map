@@ -1,0 +1,147 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Cliffs of Dover erosion.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Cliffs_of_Dover_erosion.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Cliffs_of_Dover_erosion.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=2631224"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Dover989.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Dover989.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Dover989.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=23262347"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:DoverCastle-lighthouse-2004-10-03.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/DoverCastle-lighthouse-2004-10-03.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:DoverCastle-lighthouse-2004-10-03.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=44108"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Dover Castle (EH) 20-04-2012 (7217044814).jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Dover_Castle_%28EH%29_20-04-2012_%287217044814%29.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Dover_Castle_(EH)_20-04-2012_(7217044814).jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=62042445"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:Dover cliffs, South Foreland Lighthouse (7961633780).jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Dover_cliffs%2C_South_Foreland_Lighthouse_%287961633780%29.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Dover_cliffs,_South_Foreland_Lighthouse_(7961633780).jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=31861949"
+          }
+        ]
+      },
+      "-6": {
+        "ns": 6,
+        "title": "File:Exmoors on Exmoor.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Exmoors_on_Exmoor.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Exmoors_on_Exmoor.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=8729583"
+          }
+        ]
+      },
+      "-7": {
+        "ns": 6,
+        "title": "File:Folkestone and Dover from ISS 2013-03.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Folkestone_and_Dover_from_ISS_2013-03.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Folkestone_and_Dover_from_ISS_2013-03.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=25135978"
+          }
+        ]
+      },
+      "-8": {
+        "ns": 6,
+        "title": "File:France manche vue dover.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/France_manche_vue_dover.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:France_manche_vue_dover.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=863700"
+          }
+        ]
+      },
+      "-9": {
+        "ns": 6,
+        "title": "File:Landslide near Dover Harbour.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Landslide_near_Dover_Harbour.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Landslide_near_Dover_Harbour.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=44652489"
+          }
+        ]
+      },
+      "-10": {
+        "ns": 6,
+        "title": "File:Lighthouse in Dover.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Lighthouse_in_Dover.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lighthouse_in_Dover.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=19901235"
+          }
+        ]
+      }
+    }
+  }
+}

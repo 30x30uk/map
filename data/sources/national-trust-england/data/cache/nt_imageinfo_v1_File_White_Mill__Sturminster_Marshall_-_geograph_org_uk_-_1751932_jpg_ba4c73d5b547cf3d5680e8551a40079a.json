@@ -1,0 +1,21 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:White Mill, Sturminster Marshall - geograph.org.uk - 1751932.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/White_Mill%2C_Sturminster_Marshall_-_geograph.org.uk_-_1751932.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:White_Mill,_Sturminster_Marshall_-_geograph.org.uk_-_1751932.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=14490994"
+          }
+        ]
+      }
+    }
+  }
+}

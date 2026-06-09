@@ -1,0 +1,21 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Avebury Manor view from south.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Avebury_Manor_view_from_south.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Avebury_Manor_view_from_south.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1122659"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Danbury Common - geograph.org.uk - 1282346.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Danbury_Common_-_geograph.org.uk_-_1282346.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Danbury_Common_-_geograph.org.uk_-_1282346.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=14006992"
+          }
+        ]
+      }
+    }
+  }
+}

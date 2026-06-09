@@ -1,0 +1,49 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Gateway and Lodge, Hardcastle Crags, Wadsworth - geograph.org.uk - 1391281.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Gateway_and_Lodge%2C_Hardcastle_Crags%2C_Wadsworth_-_geograph.org.uk_-_1391281.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Gateway_and_Lodge,_Hardcastle_Crags,_Wadsworth_-_geograph.org.uk_-_1391281.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=14130259"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Gibson Mill, Hardcastle Crags - geograph.org.uk - 835051.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Gibson_Mill%2C_Hardcastle_Crags_-_geograph.org.uk_-_835051.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Gibson_Mill,_Hardcastle_Crags_-_geograph.org.uk_-_835051.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=13515564"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Gibson Mill.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Gibson_Mill.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Gibson_Mill.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=4632954"
+          }
+        ]
+      }
+    }
+  }
+}

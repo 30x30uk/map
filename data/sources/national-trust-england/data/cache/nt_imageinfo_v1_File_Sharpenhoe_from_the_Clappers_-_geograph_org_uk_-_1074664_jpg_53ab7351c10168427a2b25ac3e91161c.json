@@ -1,0 +1,21 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Sharpenhoe from the Clappers - geograph.org.uk - 1074664.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Sharpenhoe_from_the_Clappers_-_geograph.org.uk_-_1074664.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Sharpenhoe_from_the_Clappers_-_geograph.org.uk_-_1074664.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=13782438"
+          }
+        ]
+      }
+    }
+  }
+}

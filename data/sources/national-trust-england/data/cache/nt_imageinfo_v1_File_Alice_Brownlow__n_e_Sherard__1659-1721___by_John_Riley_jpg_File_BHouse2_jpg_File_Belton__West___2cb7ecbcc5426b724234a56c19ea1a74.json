@@ -1,0 +1,144 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "20134867": {
+        "pageid": 20134867,
+        "ns": 6,
+        "title": "File:Belton Belvedere Giano.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/en/2/2d/Belton_Belvedere_Giano.jpg",
+            "descriptionurl": "https://en.wikipedia.org/wiki/File:Belton_Belvedere_Giano.jpg",
+            "descriptionshorturl": "https://en.wikipedia.org/w/index.php?curid=20134867"
+          }
+        ]
+      },
+      "20134938": {
+        "pageid": 20134938,
+        "ns": 6,
+        "title": "File:Belton Church Giano.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/en/5/57/Belton_Church_Giano.jpg",
+            "descriptionurl": "https://en.wikipedia.org/wiki/File:Belton_Church_Giano.jpg",
+            "descriptionshorturl": "https://en.wikipedia.org/w/index.php?curid=20134938"
+          }
+        ]
+      },
+      "21435845": {
+        "pageid": 21435845,
+        "ns": 6,
+        "title": "File:BHouse2.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/en/9/93/BHouse2.jpg",
+            "descriptionurl": "https://en.wikipedia.org/wiki/File:BHouse2.jpg",
+            "descriptionshorturl": "https://en.wikipedia.org/w/index.php?curid=21435845"
+          }
+        ]
+      },
+      "-1": {
+        "ns": 6,
+        "title": "File:Alice Brownlow, née Sherard (1659-1721), by John Riley.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Alice_Brownlow%2C_n%C3%A9e_Sherard_%281659-1721%29%2C_by_John_Riley.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Alice_Brownlow,_n%C3%A9e_Sherard_(1659-1721),_by_John_Riley.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=57764925"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Belton. West. Giano.png",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Belton._West._Giano.png",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Belton._West._Giano.png",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=34912163"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Belton Exedra Giano.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Belton_Exedra_Giano.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Belton_Exedra_Giano.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=30732950"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Belton Garden.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Belton_Garden.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Belton_Garden.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=2590558"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:Belton House, Library-geograph-3646935.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Belton_House%2C_Library-geograph-3646935.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Belton_House,_Library-geograph-3646935.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=44220924"
+          }
+        ]
+      },
+      "-6": {
+        "ns": 6,
+        "title": "File:Belton House South Elevation.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Belton_House_South_Elevation.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Belton_House_South_Elevation.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=16017950"
+          }
+        ]
+      },
+      "-7": {
+        "ns": 6,
+        "title": "File:Belton House stairwell-geograph-3397778.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Belton_House_stairwell-geograph-3397778.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Belton_House_stairwell-geograph-3397778.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=44220636"
+          }
+        ]
+      }
+    }
+  }
+}

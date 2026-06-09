@@ -1,0 +1,35 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Bowl barrow on Witley Common 250m north of Stable Lake 06.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Bowl_barrow_on_Witley_Common_250m_north_of_Stable_Lake_06.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Bowl_barrow_on_Witley_Common_250m_north_of_Stable_Lake_06.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=151604926"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Witley - Witley Common Visitors Centre - geograph.org.uk - 165201.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Witley_-_Witley_Common_Visitors_Centre_-_geograph.org.uk_-_165201.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Witley_-_Witley_Common_Visitors_Centre_-_geograph.org.uk_-_165201.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=9284870"
+          }
+        ]
+      }
+    }
+  }
+}

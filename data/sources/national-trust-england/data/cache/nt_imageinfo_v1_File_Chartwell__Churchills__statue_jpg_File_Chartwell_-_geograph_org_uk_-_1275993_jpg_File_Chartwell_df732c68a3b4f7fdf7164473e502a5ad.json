@@ -1,0 +1,147 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Chartwell, Churchills' statue.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Chartwell%2C_Churchills%27_statue.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Chartwell,_Churchills%27_statue.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=33758739"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Chartwell - geograph.org.uk - 1275993.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Chartwell_-_geograph.org.uk_-_1275993.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Chartwell_-_geograph.org.uk_-_1275993.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=13996064"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Chartwell - the Entrance front.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Chartwell_-_the_Entrance_front.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Chartwell_-_the_Entrance_front.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=62196419"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Chartwell House, rear.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Chartwell_House%2C_rear.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Chartwell_House,_rear.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=33792957"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:Chartwell House.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Chartwell_House.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Chartwell_House.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=266108"
+          }
+        ]
+      },
+      "-6": {
+        "ns": 6,
+        "title": "File:Chartwell House Floorplan - labelled.png",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Chartwell_House_Floorplan_-_labelled.png",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Chartwell_House_Floorplan_-_labelled.png",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=60602039"
+          }
+        ]
+      },
+      "-7": {
+        "ns": 6,
+        "title": "File:Chartwell and Surrounding Land.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Chartwell_and_Surrounding_Land.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Chartwell_and_Surrounding_Land.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=72661921"
+          }
+        ]
+      },
+      "-8": {
+        "ns": 6,
+        "title": "File:Kent UK relief location map.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Kent_UK_relief_location_map.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Kent_UK_relief_location_map.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=17515622"
+          }
+        ]
+      },
+      "-9": {
+        "ns": 6,
+        "title": "File:MunichAgreement.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/MunichAgreement.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:MunichAgreement.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1053695"
+          }
+        ]
+      },
+      "-10": {
+        "ns": 6,
+        "title": "File:PanzersJune1941.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/PanzersJune1941.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:PanzersJune1941.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=2353635"
+          }
+        ]
+      }
+    }
+  }
+}

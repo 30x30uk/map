@@ -1,0 +1,35 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Eggardon Hill from southwest.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Eggardon_Hill_from_southwest.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Eggardon_Hill_from_southwest.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=29199656"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Eggardon hill from south east 19Mar2006.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Eggardon_hill_from_south_east_19Mar2006.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Eggardon_hill_from_south_east_19Mar2006.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=644827"
+          }
+        ]
+      }
+    }
+  }
+}

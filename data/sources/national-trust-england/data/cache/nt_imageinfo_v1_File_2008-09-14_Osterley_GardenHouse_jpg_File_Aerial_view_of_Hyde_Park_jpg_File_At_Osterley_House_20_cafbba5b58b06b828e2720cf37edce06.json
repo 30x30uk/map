@@ -1,0 +1,147 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:2008-09-14 Osterley GardenHouse.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/2008-09-14_Osterley_GardenHouse.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:2008-09-14_Osterley_GardenHouse.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=4793901"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Aerial view of Hyde Park.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Aerial_view_of_Hyde_Park.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Hyde_Park.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=16012772"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:At Osterley House 2024 067.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/At_Osterley_House_2024_067.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:At_Osterley_House_2024_067.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=153055686"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Ceiling detail at Osterley Park.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Ceiling_detail_at_Osterley_Park.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Ceiling_detail_at_Osterley_Park.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=50464076"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:Columns of Osterley Park.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Columns_of_Osterley_Park.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Columns_of_Osterley_Park.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=50464095"
+          }
+        ]
+      },
+      "-6": {
+        "ns": 6,
+        "title": "File:Courtyard of Osterley Park.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Courtyard_of_Osterley_Park.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Courtyard_of_Osterley_Park.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=50464098"
+          }
+        ]
+      },
+      "-7": {
+        "ns": 6,
+        "title": "File:Farmland at Osterley Park.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Farmland_at_Osterley_Park.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Farmland_at_Osterley_Park.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=50464023"
+          }
+        ]
+      },
+      "-8": {
+        "ns": 6,
+        "title": "File:Main mansion at Osterley Park.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Main_mansion_at_Osterley_Park.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Main_mansion_at_Osterley_Park.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=50464016"
+          }
+        ]
+      },
+      "-9": {
+        "ns": 6,
+        "title": "File:Osterley Park - design for the Etruscan room.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Osterley_Park_-_design_for_the_Etruscan_room.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Osterley_Park_-_design_for_the_Etruscan_room.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=543067"
+          }
+        ]
+      },
+      "-10": {
+        "ns": 6,
+        "title": "File:Osterley Park House, London-25June2009-rc.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Osterley_Park_House%2C_London-25June2009-rc.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Osterley_Park_House,_London-25June2009-rc.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=8539021"
+          }
+        ]
+      }
+    }
+  }
+}

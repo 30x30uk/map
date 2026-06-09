@@ -1,0 +1,147 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Crathes Castle.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Crathes_Castle.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Crathes_Castle.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=2197415"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Crathes Castle (December 2019).jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Crathes_Castle_%28December_2019%29.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Crathes_Castle_(December_2019).jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=179463607"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Crathes Castle (June 2025).jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Crathes_Castle_%28June_2025%29.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Crathes_Castle_(June_2025).jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=179462527"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Crathes Castle (June 2025) (seen from the gardens).jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Crathes_Castle_%28June_2025%29_%28seen_from_the_gardens%29.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Crathes_Castle_(June_2025)_(seen_from_the_gardens).jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=179464063"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:Crathes Castle (June 2025) 2.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Crathes_Castle_%28June_2025%29_2.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Crathes_Castle_(June_2025)_2.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=179462825"
+          }
+        ]
+      },
+      "-6": {
+        "ns": 6,
+        "title": "File:Crathes Castle (October 2020).jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Crathes_Castle_%28October_2020%29.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Crathes_Castle_(October_2020).jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=179463276"
+          }
+        ]
+      },
+      "-7": {
+        "ns": 6,
+        "title": "File:Crathes Castle 1597 chair.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Crathes_Castle_1597_chair.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Crathes_Castle_1597_chair.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=111704940"
+          }
+        ]
+      },
+      "-8": {
+        "ns": 6,
+        "title": "File:Crathes Castle Gardens (June 2025).jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Crathes_Castle_Gardens_%28June_2025%29.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Crathes_Castle_Gardens_(June_2025).jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=179464371"
+          }
+        ]
+      },
+      "-9": {
+        "ns": 6,
+        "title": "File:Crathes castle 1991.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Crathes_castle_1991.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Crathes_castle_1991.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=6200060"
+          }
+        ]
+      },
+      "-10": {
+        "ns": 6,
+        "title": "File:ScotlandAberdeenshireMarr.png",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/51/ScotlandAberdeenshireMarr.png",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:ScotlandAberdeenshireMarr.png",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=3045139"
+          }
+        ]
+      }
+    }
+  }
+}

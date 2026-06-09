@@ -1,0 +1,63 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Lower Womans Way Pond at Sheffield Park - geograph.org.uk - 3203263.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Lower_Womans_Way_Pond_at_Sheffield_Park_-_geograph.org.uk_-_3203263.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lower_Womans_Way_Pond_at_Sheffield_Park_-_geograph.org.uk_-_3203263.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=115097661"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Sheffield Park Gardens, Fletching, Sussex - geograph.org.uk - 1582535.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Sheffield_Park_Gardens%2C_Fletching%2C_Sussex_-_geograph.org.uk_-_1582535.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Sheffield_Park_Gardens,_Fletching,_Sussex_-_geograph.org.uk_-_1582535.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=14342052"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Sheffield Park Panorama.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Sheffield_Park_Panorama.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Sheffield_Park_Panorama.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=4663982"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Sheffield Park and Garden 22-10-2010-5461506668.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Sheffield_Park_and_Garden_22-10-2010-5461506668.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Sheffield_Park_and_Garden_22-10-2010-5461506668.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=57100239"
+          }
+        ]
+      }
+    }
+  }
+}

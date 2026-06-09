@@ -1,0 +1,147 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Hanbury Hall 1701.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Hanbury_Hall_1701.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hanbury_Hall_1701.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=11479050"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Hanbury Hall 2016.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Hanbury_Hall_2016.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hanbury_Hall_2016.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=51731885"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Hanbury Hall Long Gallery.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Hanbury_Hall_Long_Gallery.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hanbury_Hall_Long_Gallery.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=4396005"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Hanbury Hall Orangery and Mushroom House 2016.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Hanbury_Hall_Orangery_and_Mushroom_House_2016.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hanbury_Hall_Orangery_and_Mushroom_House_2016.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=51358058"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:Hanbury Hall near sunset - geograph.org.uk - 2791684.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Hanbury_Hall_near_sunset_-_geograph.org.uk_-_2791684.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hanbury_Hall_near_sunset_-_geograph.org.uk_-_2791684.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=112893272"
+          }
+        ]
+      },
+      "-6": {
+        "ns": 6,
+        "title": "File:Hanbury Hall parterre 01.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Hanbury_Hall_parterre_01.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hanbury_Hall_parterre_01.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=11479210"
+          }
+        ]
+      },
+      "-7": {
+        "ns": 6,
+        "title": "File:Hanbury Hall parterre 02.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Hanbury_Hall_parterre_02.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hanbury_Hall_parterre_02.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=11479305"
+          }
+        ]
+      },
+      "-8": {
+        "ns": 6,
+        "title": "File:Hanburyhallmorris edited.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Hanburyhallmorris_edited.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hanburyhallmorris_edited.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=595429"
+          }
+        ]
+      },
+      "-9": {
+        "ns": 6,
+        "title": "File:Ice House at Hanbury Hall - geograph.org.uk - 738617.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Ice_House_at_Hanbury_Hall_-_geograph.org.uk_-_738617.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Ice_House_at_Hanbury_Hall_-_geograph.org.uk_-_738617.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=13402233"
+          }
+        ]
+      },
+      "-10": {
+        "ns": 6,
+        "title": "File:Staircase ceiling at Hanbury Hall.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Staircase_ceiling_at_Hanbury_Hall.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Staircase_ceiling_at_Hanbury_Hall.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=152172533"
+          }
+        ]
+      }
+    }
+  }
+}

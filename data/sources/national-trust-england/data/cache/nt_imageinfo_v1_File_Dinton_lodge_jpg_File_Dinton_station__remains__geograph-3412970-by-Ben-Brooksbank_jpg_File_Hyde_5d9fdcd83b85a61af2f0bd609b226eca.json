@@ -1,0 +1,77 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Dinton lodge.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Dinton_lodge.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Dinton_lodge.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=35204199"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Dinton station (remains) geograph-3412970-by-Ben-Brooksbank.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Dinton_station_%28remains%29_geograph-3412970-by-Ben-Brooksbank.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Dinton_station_(remains)_geograph-3412970-by-Ben-Brooksbank.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=26830055"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:HydeArmorials.PNG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/HydeArmorials.PNG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:HydeArmorials.PNG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=26028349"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:St. Mary the Virgin Church, Dinton.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/51/St._Mary_the_Virgin_Church%2C_Dinton.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:St._Mary_the_Virgin_Church,_Dinton.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=35203611"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:WyndhamArms.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/WyndhamArms.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:WyndhamArms.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=18410263"
+          }
+        ]
+      }
+    }
+  }
+}

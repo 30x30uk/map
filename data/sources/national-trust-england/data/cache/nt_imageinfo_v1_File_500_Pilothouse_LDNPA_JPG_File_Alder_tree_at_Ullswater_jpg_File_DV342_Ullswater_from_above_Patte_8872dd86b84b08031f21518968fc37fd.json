@@ -1,0 +1,146 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "26111299": {
+        "pageid": 26111299,
+        "ns": 6,
+        "title": "File:Herdwick sheep crop.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/en/6/6b/Herdwick_sheep_crop.jpg",
+            "descriptionurl": "https://en.wikipedia.org/wiki/File:Herdwick_sheep_crop.jpg",
+            "descriptionshorturl": "https://en.wikipedia.org/w/index.php?curid=26111299"
+          }
+        ]
+      },
+      "-1": {
+        "ns": 6,
+        "title": "File:500 Pilothouse LDNPA.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/500_Pilothouse_LDNPA.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:500_Pilothouse_LDNPA.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=34929175"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Alder tree at Ullswater.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Alder_tree_at_Ullswater.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Alder_tree_at_Ullswater.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=120141095"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:DV342 Ullswater from above Pattersdale.png",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/DV342_Ullswater_from_above_Pattersdale.png",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:DV342_Ullswater_from_above_Pattersdale.png",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=47585043"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Lake District National Park UK relief location map.png",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Lake_District_National_Park_UK_relief_location_map.png",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lake_District_National_Park_UK_relief_location_map.png",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=18727774"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:Place Fell viewed across Ullswater - geograph.org.uk - 192932.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Place_Fell_viewed_across_Ullswater_-_geograph.org.uk_-_192932.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Place_Fell_viewed_across_Ullswater_-_geograph.org.uk_-_192932.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=9309874"
+          }
+        ]
+      },
+      "-6": {
+        "ns": 6,
+        "title": "File:STEAMER ON ULLSWATER.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/STEAMER_ON_ULLSWATER.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:STEAMER_ON_ULLSWATER.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=512097"
+          }
+        ]
+      },
+      "-7": {
+        "ns": 6,
+        "title": "File:Sailing on Ullswater - geograph.org.uk - 173422.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Sailing_on_Ullswater_-_geograph.org.uk_-_173422.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Sailing_on_Ullswater_-_geograph.org.uk_-_173422.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=9294256"
+          }
+        ]
+      },
+      "-8": {
+        "ns": 6,
+        "title": "File:Sharrow Bay Country House Hotel.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Sharrow_Bay_Country_House_Hotel.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Sharrow_Bay_Country_House_Hotel.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=8940629"
+          }
+        ]
+      },
+      "-9": {
+        "ns": 6,
+        "title": "File:The Western Belle on Ullswater.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/The_Western_Belle_on_Ullswater.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:The_Western_Belle_on_Ullswater.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=55027709"
+          }
+        ]
+      }
+    }
+  }
+}

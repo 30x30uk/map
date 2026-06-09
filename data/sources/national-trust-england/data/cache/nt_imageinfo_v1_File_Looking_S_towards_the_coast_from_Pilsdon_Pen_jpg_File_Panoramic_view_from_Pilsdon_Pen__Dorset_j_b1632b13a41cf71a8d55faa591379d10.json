@@ -1,0 +1,91 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Looking S towards the coast from Pilsdon Pen.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Looking_S_towards_the_coast_from_Pilsdon_Pen.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Looking_S_towards_the_coast_from_Pilsdon_Pen.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=60082776"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Panoramic view from Pilsdon Pen. Dorset.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Panoramic_view_from_Pilsdon_Pen._Dorset.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Panoramic_view_from_Pilsdon_Pen._Dorset.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=20901877"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Pilsdon Pen Digital Terrain Model.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Pilsdon_Pen_Digital_Terrain_Model.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Pilsdon_Pen_Digital_Terrain_Model.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=111074060"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Pilsdon Pen from the info board to the S.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Pilsdon_Pen_from_the_info_board_to_the_S.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Pilsdon_Pen_from_the_info_board_to_the_S.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=60082963"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:Pilsdon Pen from the southeast.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Pilsdon_Pen_from_the_southeast.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Pilsdon_Pen_from_the_southeast.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=60082648"
+          }
+        ]
+      },
+      "-6": {
+        "ns": 6,
+        "title": "File:Triangulation stone atop Pilsdon Pen.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Triangulation_stone_atop_Pilsdon_Pen.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Triangulation_stone_atop_Pilsdon_Pen.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=162649398"
+          }
+        ]
+      }
+    }
+  }
+}

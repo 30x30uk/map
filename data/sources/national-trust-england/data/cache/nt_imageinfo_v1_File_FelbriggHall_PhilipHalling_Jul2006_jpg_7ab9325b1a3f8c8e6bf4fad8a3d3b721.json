@@ -1,0 +1,21 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:FelbriggHall(PhilipHalling)Jul2006.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/FelbriggHall%28PhilipHalling%29Jul2006.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:FelbriggHall(PhilipHalling)Jul2006.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=4917258"
+          }
+        ]
+      }
+    }
+  }
+}

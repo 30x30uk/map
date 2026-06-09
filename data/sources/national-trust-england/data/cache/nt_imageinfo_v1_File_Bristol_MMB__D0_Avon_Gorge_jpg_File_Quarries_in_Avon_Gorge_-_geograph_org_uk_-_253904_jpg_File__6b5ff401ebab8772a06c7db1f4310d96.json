@@ -1,0 +1,77 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Bristol MMB «D0 Avon Gorge.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Bristol_MMB_%C2%ABD0_Avon_Gorge.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Bristol_MMB_%C2%ABD0_Avon_Gorge.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=20121608"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Quarries in Avon Gorge - geograph.org.uk - 253904.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Quarries_in_Avon_Gorge_-_geograph.org.uk_-_253904.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Quarries_in_Avon_Gorge_-_geograph.org.uk_-_253904.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=11286103"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Spindle berries in Leigh Woods - geograph.org.uk - 1592321.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Spindle_berries_in_Leigh_Woods_-_geograph.org.uk_-_1592321.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Spindle_berries_in_Leigh_Woods_-_geograph.org.uk_-_1592321.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=14352690"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Stokeleigh Camp in Leigh Woods.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Stokeleigh_Camp_in_Leigh_Woods.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Stokeleigh_Camp_in_Leigh_Woods.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=12860244"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:Uk bristol lw2.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Uk_bristol_lw2.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Uk_bristol_lw2.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1749276"
+          }
+        ]
+      }
+    }
+  }
+}

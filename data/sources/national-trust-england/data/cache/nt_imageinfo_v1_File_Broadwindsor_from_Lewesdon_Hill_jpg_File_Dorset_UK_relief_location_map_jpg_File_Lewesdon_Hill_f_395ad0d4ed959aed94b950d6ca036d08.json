@@ -1,0 +1,105 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Broadwindsor from Lewesdon Hill.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Broadwindsor_from_Lewesdon_Hill.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Broadwindsor_from_Lewesdon_Hill.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=161056924"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Dorset UK relief location map.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Dorset_UK_relief_location_map.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Dorset_UK_relief_location_map.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=17515530"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Lewesdon Hill from the south.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Lewesdon_Hill_from_the_south.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lewesdon_Hill_from_the_south.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=60082546"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Lewesdon Hill from the west.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Lewesdon_Hill_from_the_west.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lewesdon_Hill_from_the_west.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=60082433"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:Lewesdon Hill gate and memorial plague.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Lewesdon_Hill_gate_and_memorial_plague.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lewesdon_Hill_gate_and_memorial_plague.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=141648898"
+          }
+        ]
+      },
+      "-6": {
+        "ns": 6,
+        "title": "File:Lewesdon Spitfire Memorial 2023.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Lewesdon_Spitfire_Memorial_2023.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lewesdon_Spitfire_Memorial_2023.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=141647291"
+          }
+        ]
+      },
+      "-7": {
+        "ns": 6,
+        "title": "File:Lewesdonhilldorset.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Lewesdonhilldorset.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lewesdonhilldorset.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=9448976"
+          }
+        ]
+      }
+    }
+  }
+}

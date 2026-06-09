@@ -1,0 +1,77 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Hidcote04.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Hidcote04.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hidcote04.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=10816453"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Hidcote34.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Hidcote34.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hidcote34.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=18106321"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Hidcote7.png",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Hidcote7.png",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hidcote7.png",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=170363644"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Hidcote Manor.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Hidcote_Manor.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hidcote_Manor.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=6010647"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:Hidcote Manor Garden 02.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Hidcote_Manor_Garden_02.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hidcote_Manor_Garden_02.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=6010565"
+          }
+        ]
+      }
+    }
+  }
+}

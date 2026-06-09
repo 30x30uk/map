@@ -1,0 +1,147 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Fletcher Moss-row.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Fletcher_Moss-row.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Fletcher_Moss-row.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=2515642"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Glendurgan Agave 01.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Glendurgan_Agave_01.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Glendurgan_Agave_01.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=680511"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Glendurgan Agave 02.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Glendurgan_Agave_02.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Glendurgan_Agave_02.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=680512"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Glendurgan Bamboo.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Glendurgan_Bamboo.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Glendurgan_Bamboo.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=680509"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:Glendurgan Maze 01.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Glendurgan_Maze_01.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Glendurgan_Maze_01.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=680513"
+          }
+        ]
+      },
+      "-6": {
+        "ns": 6,
+        "title": "File:Glendurgan Maze 02.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Glendurgan_Maze_02.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Glendurgan_Maze_02.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=680514"
+          }
+        ]
+      },
+      "-7": {
+        "ns": 6,
+        "title": "File:Glendurgan Phoenix.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Glendurgan_Phoenix.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Glendurgan_Phoenix.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=680510"
+          }
+        ]
+      },
+      "-8": {
+        "ns": 6,
+        "title": "File:Glendurgan View 01.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Glendurgan_View_01.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Glendurgan_View_01.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=680516"
+          }
+        ]
+      },
+      "-9": {
+        "ns": 6,
+        "title": "File:Glendurgan View 02.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Glendurgan_View_02.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Glendurgan_View_02.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=680518"
+          }
+        ]
+      },
+      "-10": {
+        "ns": 6,
+        "title": "File:Glendurgan View 03.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Glendurgan_View_03.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Glendurgan_View_03.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=680519"
+          }
+        ]
+      }
+    }
+  }
+}

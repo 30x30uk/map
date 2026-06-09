@@ -1,0 +1,21 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Bluebells in Bradenham Woods.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Bluebells_in_Bradenham_Woods.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Bluebells_in_Bradenham_Woods.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=62727808"
+          }
+        ]
+      }
+    }
+  }
+}

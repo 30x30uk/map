@@ -1,0 +1,35 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Bronze-Oak-Leaf-Cluster.png",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Bronze-Oak-Leaf-Cluster.png",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Bronze-Oak-Leaf-Cluster.png",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=5293372"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Lamb and sarsens, Piggle Dean - geograph.org.uk - 411909.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Lamb_and_sarsens%2C_Piggle_Dean_-_geograph.org.uk_-_411909.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lamb_and_sarsens,_Piggle_Dean_-_geograph.org.uk_-_411909.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=12932033"
+          }
+        ]
+      }
+    }
+  }
+}

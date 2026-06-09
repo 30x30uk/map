@@ -1,0 +1,24 @@
+{
+  "continue": {
+    "iistart": "2014-10-30T19:35:53Z",
+    "continue": "||"
+  },
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Snowshill Manor exterior.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Snowshill_Manor_exterior.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Snowshill_Manor_exterior.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=36501312"
+          }
+        ]
+      }
+    }
+  }
+}

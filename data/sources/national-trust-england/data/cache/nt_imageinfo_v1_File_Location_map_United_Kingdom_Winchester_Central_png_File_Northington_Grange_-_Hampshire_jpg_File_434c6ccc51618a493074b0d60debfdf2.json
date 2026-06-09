@@ -1,0 +1,49 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Location map United Kingdom Winchester Central.png",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Location_map_United_Kingdom_Winchester_Central.png",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Location_map_United_Kingdom_Winchester_Central.png",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=27572940"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Northington Grange - Hampshire.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Northington_Grange_-_Hampshire.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Northington_Grange_-_Hampshire.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=42874598"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Winchester city mill march 2024.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Winchester_city_mill_march_2024.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Winchester_city_mill_march_2024.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=146666951"
+          }
+        ]
+      }
+    }
+  }
+}

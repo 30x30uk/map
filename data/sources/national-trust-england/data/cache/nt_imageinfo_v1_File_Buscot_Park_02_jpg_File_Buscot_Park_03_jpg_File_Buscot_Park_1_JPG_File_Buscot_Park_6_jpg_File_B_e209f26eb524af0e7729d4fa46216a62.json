@@ -1,0 +1,105 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Buscot Park 02.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Buscot_Park_02.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Buscot_Park_02.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=4611357"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Buscot Park 03.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Buscot_Park_03.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Buscot_Park_03.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=4611381"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Buscot Park 1.JPG",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Buscot_Park_1.JPG",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Buscot_Park_1.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=2171748"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Buscot Park 6.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Buscot_Park_6.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Buscot_Park_6.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=4611388"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:Buscot Park 7.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Buscot_Park_7.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Buscot_Park_7.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=4611396"
+          }
+        ]
+      },
+      "-6": {
+        "ns": 6,
+        "title": "File:Buscot Park 8.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Buscot_Park_8.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Buscot_Park_8.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=4611401"
+          }
+        ]
+      },
+      "-7": {
+        "ns": 6,
+        "title": "File:Buscot Wiki.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Buscot_Wiki.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Buscot_Wiki.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=16263983"
+          }
+        ]
+      }
+    }
+  }
+}

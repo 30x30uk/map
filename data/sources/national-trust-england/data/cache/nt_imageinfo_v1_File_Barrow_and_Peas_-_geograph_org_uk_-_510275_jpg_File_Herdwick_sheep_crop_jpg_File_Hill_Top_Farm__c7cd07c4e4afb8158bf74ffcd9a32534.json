@@ -1,0 +1,76 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "26111299": {
+        "pageid": 26111299,
+        "ns": 6,
+        "title": "File:Herdwick sheep crop.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/en/6/6b/Herdwick_sheep_crop.jpg",
+            "descriptionurl": "https://en.wikipedia.org/wiki/File:Herdwick_sheep_crop.jpg",
+            "descriptionshorturl": "https://en.wikipedia.org/w/index.php?curid=26111299"
+          }
+        ]
+      },
+      "-1": {
+        "ns": 6,
+        "title": "File:Barrow and Peas - geograph.org.uk - 510275.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Barrow_and_Peas_-_geograph.org.uk_-_510275.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Barrow_and_Peas_-_geograph.org.uk_-_510275.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=13036157"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Hill Top Farm, Near Sawrey, Cumbria - geograph.org.uk - 43164.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Hill_Top_Farm%2C_Near_Sawrey%2C_Cumbria_-_geograph.org.uk_-_43164.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hill_Top_Farm,_Near_Sawrey,_Cumbria_-_geograph.org.uk_-_43164.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=9162044"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Potterhome.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Potterhome.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Potterhome.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=5040303"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Tale of tom kitten.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Tale_of_tom_kitten.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Tale_of_tom_kitten.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=48458365"
+          }
+        ]
+      }
+    }
+  }
+}

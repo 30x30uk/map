@@ -1,0 +1,35 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Hardy Monument 201307.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Hardy_Monument_201307.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hardy_Monument_201307.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=36028136"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Hardy Monument II.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Hardy_Monument_II.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hardy_Monument_II.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=36028120"
+          }
+        ]
+      }
+    }
+  }
+}

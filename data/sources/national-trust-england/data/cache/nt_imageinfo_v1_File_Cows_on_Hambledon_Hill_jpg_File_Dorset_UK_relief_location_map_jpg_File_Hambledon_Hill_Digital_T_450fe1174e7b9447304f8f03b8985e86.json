@@ -1,0 +1,91 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Cows on Hambledon Hill.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Cows_on_Hambledon_Hill.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Cows_on_Hambledon_Hill.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=9670872"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Dorset UK relief location map.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Dorset_UK_relief_location_map.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Dorset_UK_relief_location_map.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=17515530"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Hambledon Hill Digital Terrain Model.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Hambledon_Hill_Digital_Terrain_Model.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hambledon_Hill_Digital_Terrain_Model.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=111072754"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Hambledon Hill and Child Okeford 20080301.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Hambledon_Hill_and_Child_Okeford_20080301.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hambledon_Hill_and_Child_Okeford_20080301.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=9697402"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:Hambledon from south.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Hambledon_from_south.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hambledon_from_south.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=9670848"
+          }
+        ]
+      },
+      "-6": {
+        "ns": 6,
+        "title": "File:North end of Hambledon Hill.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/North_end_of_Hambledon_Hill.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:North_end_of_Hambledon_Hill.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=55500928"
+          }
+        ]
+      }
+    }
+  }
+}

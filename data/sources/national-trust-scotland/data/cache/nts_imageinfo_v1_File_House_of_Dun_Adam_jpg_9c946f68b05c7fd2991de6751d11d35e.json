@@ -1,0 +1,21 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:House of Dun Adam.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/House_of_Dun_Adam.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:House_of_Dun_Adam.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=2682258"
+          }
+        ]
+      }
+    }
+  }
+}

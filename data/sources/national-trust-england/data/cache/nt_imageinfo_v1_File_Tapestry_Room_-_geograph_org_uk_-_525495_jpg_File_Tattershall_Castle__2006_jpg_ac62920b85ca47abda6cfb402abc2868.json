@@ -1,0 +1,35 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Tapestry Room - geograph.org.uk - 525495.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Tapestry_Room_-_geograph.org.uk_-_525495.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Tapestry_Room_-_geograph.org.uk_-_525495.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=13056133"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Tattershall Castle, 2006.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Tattershall_Castle%2C_2006.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Tattershall_Castle,_2006.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=8748722"
+          }
+        ]
+      }
+    }
+  }
+}

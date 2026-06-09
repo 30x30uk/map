@@ -1,0 +1,21 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:The Gallery - geograph.org.uk - 510315.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/The_Gallery_-_geograph.org.uk_-_510315.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:The_Gallery_-_geograph.org.uk_-_510315.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=6050871"
+          }
+        ]
+      }
+    }
+  }
+}

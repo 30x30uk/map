@@ -1,0 +1,77 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Castle on Holy Island from the west (Finden, Gutenburg).jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Castle_on_Holy_Island_from_the_west_%28Finden%2C_Gutenburg%29.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Castle_on_Holy_Island_from_the_west_(Finden,_Gutenburg).jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=31131703"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Entrance, Lindisfarne Castle, Holy Island - geograph.org.uk - 1232251.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Entrance%2C_Lindisfarne_Castle%2C_Holy_Island_-_geograph.org.uk_-_1232251.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Entrance,_Lindisfarne_Castle,_Holy_Island_-_geograph.org.uk_-_1232251.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=13952780"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:LindisfarneCastleHolyIsland.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/LindisfarneCastleHolyIsland.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LindisfarneCastleHolyIsland.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=4234713"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Lindisfarne Castle during renovation.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Lindisfarne_Castle_during_renovation.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lindisfarne_Castle_during_renovation.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=59156312"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:Lindisfarne Castle panorama.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Lindisfarne_Castle_panorama.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lindisfarne_Castle_panorama.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=94575667"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:01-SteepGradeRailway.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/01-SteepGradeRailway.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:01-SteepGradeRailway.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=3149722"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Devil's Dyke - geograph.org.uk - 30789.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Devil%27s_Dyke_-_geograph.org.uk_-_30789.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Devil%27s_Dyke_-_geograph.org.uk_-_30789.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=9145890"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Devils Dyke.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Devils_Dyke.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Devils_Dyke.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=9015354"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Picture 1777.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Picture_1777.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Picture_1777.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=4249370"
+          }
+        ]
+      }
+    }
+  }
+}

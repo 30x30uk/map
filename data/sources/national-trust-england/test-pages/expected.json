@@ -1,0 +1,32 @@
+[
+  {
+    "expectedProperty": {
+      "Name": "Dunstable Downs",
+      "HostOrg": "National Trust",
+      "Lat": 51.864243,
+      "Long": -0.536344
+    }
+  },
+  {
+    "expectedProperty": {
+      "Name": "Cock Marsh",
+      "HostOrg": "National Trust",
+      "Area": 61,
+      "LocationUrl": "https://www.nationaltrust.org.uk/maidenhead-and-cookham-commons/features/walking-at-cockmarsh"
+    }
+  },
+  {
+    "expectedProperty": {
+      "Name": "Smithcombe, Sharpenhoe and Sundon Hills",
+      "HostOrg": "National Trust",
+      "Area": 86.1
+    }
+  },
+  {
+    "notExpectedProperties": [
+      "Blaise Hamlet",
+      "Willington Dovecote and Stables",
+      "Westbury College Gatehouse"
+    ]
+  }
+]

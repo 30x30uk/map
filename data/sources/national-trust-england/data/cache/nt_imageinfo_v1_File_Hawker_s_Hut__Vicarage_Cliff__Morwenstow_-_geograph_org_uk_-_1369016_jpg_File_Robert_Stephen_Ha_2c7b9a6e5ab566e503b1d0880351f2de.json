@@ -1,0 +1,105 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Hawker's Hut, Vicarage Cliff, Morwenstow - geograph.org.uk - 1369016.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Hawker%27s_Hut%2C_Vicarage_Cliff%2C_Morwenstow_-_geograph.org.uk_-_1369016.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hawker%27s_Hut,_Vicarage_Cliff,_Morwenstow_-_geograph.org.uk_-_1369016.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=14096626"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Robert Stephen Hawker 1864.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Robert_Stephen_Hawker_1864.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Robert_Stephen_Hawker_1864.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=7312519"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Vicarage Cliff, site of Hawker's Hut, across The Tidna - geograph.org.uk - 412192.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Vicarage_Cliff%2C_site_of_Hawker%27s_Hut%2C_across_The_Tidna_-_geograph.org.uk_-_412192.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Vicarage_Cliff,_site_of_Hawker%27s_Hut,_across_The_Tidna_-_geograph.org.uk_-_412192.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=12936738"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:View N-W from Hawker's Hut - geograph.org.uk - 412056.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/View_N-W_from_Hawker%27s_Hut_-_geograph.org.uk_-_412056.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:View_N-W_from_Hawker%27s_Hut_-_geograph.org.uk_-_412056.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=12936754"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:View W-S-W from Hawker's Hut - geograph.org.uk - 412030.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/View_W-S-W_from_Hawker%27s_Hut_-_geograph.org.uk_-_412030.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:View_W-S-W_from_Hawker%27s_Hut_-_geograph.org.uk_-_412030.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=12936762"
+          }
+        ]
+      },
+      "-6": {
+        "ns": 6,
+        "title": "File:View from Hawker's Hut.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/31/View_from_Hawker%27s_Hut.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:View_from_Hawker%27s_Hut.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=6021845"
+          }
+        ]
+      },
+      "-7": {
+        "ns": 6,
+        "title": "File:View from Hawker's Hut 2019-06-08.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/be/View_from_Hawker%27s_Hut_2019-06-08.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:View_from_Hawker%27s_Hut_2019-06-08.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=90401988"
+          }
+        ]
+      }
+    }
+  }
+}

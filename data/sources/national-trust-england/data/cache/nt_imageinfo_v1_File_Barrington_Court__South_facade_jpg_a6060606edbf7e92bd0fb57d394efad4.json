@@ -1,0 +1,21 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Barrington Court, South facade.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Barrington_Court%2C_South_facade.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Barrington_Court,_South_facade.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=84499870"
+          }
+        ]
+      }
+    }
+  }
+}

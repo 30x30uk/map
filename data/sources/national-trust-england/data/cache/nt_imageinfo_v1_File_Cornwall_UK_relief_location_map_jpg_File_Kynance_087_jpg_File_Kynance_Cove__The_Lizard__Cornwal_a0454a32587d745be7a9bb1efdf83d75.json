@@ -1,0 +1,63 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Cornwall UK relief location map.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Cornwall_UK_relief_location_map.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Cornwall_UK_relief_location_map.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=17515502"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Kynance 087.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Kynance_087.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Kynance_087.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=6021858"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Kynance Cove, The Lizard, Cornwall, England 12Sept2017 arp.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Kynance_Cove%2C_The_Lizard%2C_Cornwall%2C_England_12Sept2017_arp.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Kynance_Cove,_The_Lizard,_Cornwall,_England_12Sept2017_arp.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=72287493"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Kynance Cove hello.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Kynance_Cove_hello.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Kynance_Cove_hello.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=153869475"
+          }
+        ]
+      }
+    }
+  }
+}

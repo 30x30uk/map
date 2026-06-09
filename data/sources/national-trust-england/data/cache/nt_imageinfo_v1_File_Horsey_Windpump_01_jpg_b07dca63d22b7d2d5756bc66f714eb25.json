@@ -1,0 +1,21 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Horsey Windpump 01.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Horsey_Windpump_01.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Horsey_Windpump_01.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=6039880"
+          }
+        ]
+      }
+    }
+  }
+}

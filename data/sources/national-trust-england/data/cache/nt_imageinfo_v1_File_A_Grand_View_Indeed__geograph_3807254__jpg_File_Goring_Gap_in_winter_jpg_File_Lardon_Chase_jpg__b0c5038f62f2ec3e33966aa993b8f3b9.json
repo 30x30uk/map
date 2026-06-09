@@ -1,0 +1,77 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:A Grand View Indeed (geograph 3807254).jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/A_Grand_View_Indeed_%28geograph_3807254%29.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:A_Grand_View_Indeed_(geograph_3807254).jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=46790448"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Goring Gap in winter.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Goring_Gap_in_winter.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Goring_Gap_in_winter.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=4052815"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Lardon Chase.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Lardon_Chase.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lardon_Chase.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=4052672"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Lough Down - geograph.org.uk - 436000.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Lough_Down_-_geograph.org.uk_-_436000.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lough_Down_-_geograph.org.uk_-_436000.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=12953181"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:The Holies.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/The_Holies.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:The_Holies.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=4052604"
+          }
+        ]
+      }
+    }
+  }
+}

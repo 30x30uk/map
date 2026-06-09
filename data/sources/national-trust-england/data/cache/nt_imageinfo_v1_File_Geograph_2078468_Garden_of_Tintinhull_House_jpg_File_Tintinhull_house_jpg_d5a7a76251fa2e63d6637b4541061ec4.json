@@ -1,0 +1,35 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Geograph 2078468 Garden of Tintinhull House.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Geograph_2078468_Garden_of_Tintinhull_House.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Geograph_2078468_Garden_of_Tintinhull_House.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=30173642"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Tintinhull house.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Tintinhull_house.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Tintinhull_house.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=6974533"
+          }
+        ]
+      }
+    }
+  }
+}

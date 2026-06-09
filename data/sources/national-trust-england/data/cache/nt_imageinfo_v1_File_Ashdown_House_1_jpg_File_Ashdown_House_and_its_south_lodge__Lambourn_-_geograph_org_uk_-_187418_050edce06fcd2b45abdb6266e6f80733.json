@@ -1,0 +1,49 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:Ashdown House 1.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Ashdown_House_1.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Ashdown_House_1.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=5953830"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Ashdown House and its south lodge, Lambourn - geograph.org.uk - 1874182.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Ashdown_House_and_its_south_lodge%2C_Lambourn_-_geograph.org.uk_-_1874182.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Ashdown_House_and_its_south_lodge,_Lambourn_-_geograph.org.uk_-_1874182.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=103401888"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Parterre garden, Ashdown House, Lambourn - geograph.org.uk - 3439250.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Parterre_garden%2C_Ashdown_House%2C_Lambourn_-_geograph.org.uk_-_3439250.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Parterre_garden,_Ashdown_House,_Lambourn_-_geograph.org.uk_-_3439250.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=117414648"
+          }
+        ]
+      }
+    }
+  }
+}

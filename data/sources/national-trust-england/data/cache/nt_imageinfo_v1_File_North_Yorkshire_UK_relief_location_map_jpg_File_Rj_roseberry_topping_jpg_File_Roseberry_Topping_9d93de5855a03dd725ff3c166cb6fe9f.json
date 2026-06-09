@@ -1,0 +1,63 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:North Yorkshire UK relief location map.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/North_Yorkshire_UK_relief_location_map.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:North_Yorkshire_UK_relief_location_map.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=17515663"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:Rj roseberry topping.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Rj_roseberry_topping.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Rj_roseberry_topping.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1927845"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Roseberry Topping hoard.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Roseberry_Topping_hoard.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Roseberry_Topping_hoard.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=19380097"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Roseberry topping north side.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Roseberry_topping_north_side.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Roseberry_topping_north_side.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=2421183"
+          }
+        ]
+      }
+    }
+  }
+}

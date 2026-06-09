@@ -1,0 +1,146 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "26111299": {
+        "pageid": 26111299,
+        "ns": 6,
+        "title": "File:Herdwick sheep crop.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/en/6/6b/Herdwick_sheep_crop.jpg",
+            "descriptionurl": "https://en.wikipedia.org/wiki/File:Herdwick_sheep_crop.jpg",
+            "descriptionshorturl": "https://en.wikipedia.org/w/index.php?curid=26111299"
+          }
+        ]
+      },
+      "-1": {
+        "ns": 6,
+        "title": "File:Alice de La Chere.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Alice_de_La_Chere.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Alice_de_La_Chere.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=33164032"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:France Loiret La Bussiere Potager 05.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/France_Loiret_La_Bussiere_Potager_05.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:France_Loiret_La_Bussiere_Potager_05.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=600804"
+          }
+        ]
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:Gasparine Ursule Ida de Finguerlin de Bischingen (05).jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Gasparine_Ursule_Ida_de_Finguerlin_de_Bischingen_%2805%29.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Gasparine_Ursule_Ida_de_Finguerlin_de_Bischingen_(05).jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=53946335"
+          }
+        ]
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:Henriette Rose Peronne de Sercey (05).jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Henriette_Rose_Peronne_de_Sercey_%2805%29.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Henriette_Rose_Peronne_de_Sercey_(05).jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=53747133"
+          }
+        ]
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:Lord Thomas Strickland Standish (1763-1813).jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Lord_Thomas_Strickland_Standish_%281763-1813%29.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lord_Thomas_Strickland_Standish_(1763-1813).jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=53954782"
+          }
+        ]
+      },
+      "-6": {
+        "ns": 6,
+        "title": "File:Mary Matthews (1823-1890), Madame de La Chère (05).jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Mary_Matthews_%281823-1890%29%2C_Madame_de_La_Ch%C3%A8re_%2805%29.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Mary_Matthews_(1823-1890),_Madame_de_La_Ch%C3%A8re_(05).jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=54167388"
+          }
+        ]
+      },
+      "-7": {
+        "ns": 6,
+        "title": "File:Sizergh Castle.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Sizergh_Castle.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Sizergh_Castle.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=68127770"
+          }
+        ]
+      },
+      "-8": {
+        "ns": 6,
+        "title": "File:Sizergh Castle against a blue sky, July 2016.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Sizergh_Castle_against_a_blue_sky%2C_July_2016.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Sizergh_Castle_against_a_blue_sky,_July_2016.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=50484973"
+          }
+        ]
+      },
+      "-9": {
+        "ns": 6,
+        "title": "File:Sizergh Castle garden.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Sizergh_Castle_garden.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Sizergh_Castle_garden.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=68127798"
+          }
+        ]
+      }
+    }
+  }
+}

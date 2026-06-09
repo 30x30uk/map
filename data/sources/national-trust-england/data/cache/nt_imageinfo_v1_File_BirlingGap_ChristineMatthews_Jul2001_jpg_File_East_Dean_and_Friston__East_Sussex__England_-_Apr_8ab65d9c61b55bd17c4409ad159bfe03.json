@@ -1,0 +1,35 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:BirlingGap(ChristineMatthews)Jul2001.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/BirlingGap%28ChristineMatthews%29Jul2001.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:BirlingGap(ChristineMatthews)Jul2001.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1469067"
+          }
+        ]
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:East Dean and Friston, East Sussex, England - April 2010 edit1.jpg",
+        "missing": "",
+        "known": "",
+        "imagerepository": "shared",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/East_Dean_and_Friston%2C_East_Sussex%2C_England_-_April_2010_edit1.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:East_Dean_and_Friston,_East_Sussex,_England_-_April_2010_edit1.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=9985706"
+          }
+        ]
+      }
+    }
+  }
+}

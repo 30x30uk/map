@@ -6,6 +6,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8765"],
       "port": 8765
+    },
+    {
+      "name": "image-picker",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["data/sources/national-trust-england/picker-server.js"],
+      "port": 8766
     }
   ]
 }
