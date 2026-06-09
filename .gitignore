@@ -17,3 +17,7 @@ data/#*/
 
 .env
 node_modules/
+
+# Scraped cache and temp images — too large and ephemeral for git
+Data/sources/**/data/cache/
+Data/sources/**/data/image-tmp/
