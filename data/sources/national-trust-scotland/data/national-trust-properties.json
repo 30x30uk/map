@@ -1,0 +1,1133 @@
+[
+  {
+    "Name": "Crathes Castle",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 57.061483,
+    "Long": -2.439917,
+    "Area": null,
+    "Description": "Crathes Castle is a castle built in the 16th century, near Banchory in Aberdeenshire, Scotland.  It is in the historic county of Kincardineshire.",
+    "DescriptionModified": "Crathes Castle features renowned walled gardens and extensive estate woodlands, supporting diverse plant life and wildlife.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/8/85/Crathes_Castle.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/3/39/Crathes_Castle_%28December_2019%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/f/f9/Crathes_Castle_%28June_2025%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/c/ca/Crathes_Castle_%28June_2025%29_%28seen_from_the_gardens%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/e/e0/Crathes_Castle_%28June_2025%29_2.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/2/2f/Crathes_Castle_%28October_2020%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/b/bd/Crathes_Castle_1597_chair.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/b/bb/Crathes_Castle_Gardens_%28June_2025%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/f/f5/Crathes_castle_1991.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/5/51/ScotlandAberdeenshireMarr.png"
+    ],
+    "LocationUrl": "http://www.nts.org.uk/Property/Crathes-Castle-Garden-and-Estate/",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Pitmedden Garden",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 57.3427,
+    "Long": -2.1923,
+    "Area": null,
+    "Description": "Pitmedden Garden is a garden near the village of Pitmedden, Aberdeenshire, Scotland.  It is owned by the National Trust for Scotland.",
+    "DescriptionModified": "Pitmedden Garden nurtures vibrant herbaceous borders and a fruitful orchard.",
+    "Images": [],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/pitmedden-garden",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Mar Lodge",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 56.991667,
+    "Long": -3.488611,
+    "Area": null,
+    "Description": "Mar Lodge is a sporting lodge 5 miles to the west of Braemar and the principal building on the Mar Lodge Estate in Aberdeenshire, Scotland.  It was built in 1895, replacing an earlier building, by Alexander Duff, 1st Duke of Fife.",
+    "DescriptionModified": "A jewel of the Cairngorms, Mar Lodge Estate protects ancient pine forests, rugged mountains, and a haven for diverse Scottish wildlife.",
+    "Images": [],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/mar-lodge-estate/highlights/the-lodge?lang=en_gb",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Mar Lodge Estate",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 57,
+    "Long": -3.5,
+    "Area": null,
+    "Description": "Mar Lodge Estate is a highland estate in western Aberdeenshire, Scotland, which has been owned and managed by the National Trust for Scotland since 1995.  Its principal building, Mar Lodge, is about 4 miles west of the village of Braemar.",
+    "DescriptionModified": "Mar Lodge Estate is an immensely important conservation landscape within the Cairngorms, featuring magnificent mountains, glacial valleys, and the headwaters of the River Dee.",
+    "Images": [],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/mar-lodge-estate",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Leith Hall",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 57.356256,
+    "Long": -2.764753,
+    "Area": 115.74,
+    "Description": "Leith Hall is a country house in Kennethmont, Aberdeenshire, Scotland.  It was built in 1650, on the site of the medieval Peill Castle, and was the home of the Leith-Hay family for nearly three centuries.",
+    "DescriptionModified": "Explore the expansive 286-acre estate of Leith Hall, featuring diverse gardens and surrounding landscapes in Aberdeenshire.",
+    "Images": [],
+    "LocationUrl": "https://www.nts.org.uk/Visit/Leith-Hall/",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Ben Lomond",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 56.19063,
+    "Long": -4.63317,
+    "Area": null,
+    "Description": "Ben Lomond, 974 metres, is a mountain in the Scottish Highlands.  Situated on the eastern shore of Loch Lomond, it is the most southerly of the Munros.",
+    "DescriptionModified": "Ben Lomond is a popular Scottish Munro offering spectacular Highland views from the eastern shore of Loch Lomond within a National Park.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/en/f/f6/Ben_Lomond_Mountains_%28Turner%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/d/dc/Ben_Lomond_-_summit_ridge.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/e/ee/Ben_Lomond_from_Beinn_Narnain.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/b/b5/Ben_Lomond_from_Ptarmigan.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/f/f1/Loch_Lomond_Lomond_Mountain.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/8/8e/Munros_section01.png",
+      "https://upload.wikimedia.org/wikipedia/commons/6/64/Pen_y_Fan_from_Cribyn.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/a/a2/Schiehallion_01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/7/7e/Scotland_relief_location_map.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/f/f1/Slioch_from_Loch_Maree.jpg"
+    ],
+    "LocationUrl": "http://www.nts.org.uk/Property/11/",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "House of Dun",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 56.7293,
+    "Long": -2.5404,
+    "Area": null,
+    "Description": "The House of Dun is a National Trust for Scotland property in the parish of Dun, lying close to the edge of Montrose Basin and situated approximately halfway between the towns of Montrose and Brechin, in Angus, Scotland.",
+    "DescriptionModified": "Explore grounds close to the internationally important Montrose Basin, a vast tidal estuary teeming with migrating birds and diverse wildlife.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/e/eb/House_of_Dun_Adam.jpg"
+    ],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/house-of-dun",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Arduaine Garden",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 56.236389,
+    "Long": -5.542222,
+    "Area": null,
+    "Description": "Arduaine is a Scottish coastal hamlet located on the A816 about 20 miles south of Oban and 18 miles north of Lochgilphead.  It is in the council area of Argyll and Bute, at the southern boundary of the civil parish of Kilmelford and Kilninver, and comprises about two dozen houses, a hotel and restaurant, and a botanical garden.",
+    "DescriptionModified": "Arduaine Garden showcases diverse plant collections on a green, fertile promontory along the Scottish coast.",
+    "Images": [],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/arduaine-garden",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Geilston Garden",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 55.9691,
+    "Long": -4.6618,
+    "Area": null,
+    "Description": "Geilston Garden is a property of the National Trust for Scotland, north-west of Cardross, Argyll and Bute.  Geilston Garden was developed more than two hundred years ago with a date given for its development being 1797, combining several features.",
+    "DescriptionModified": "This garden features a towering Wellingtonia, vibrant walled and kitchen gardens with seasonal produce, and the meandering Geilston burn.",
+    "Images": [],
+    "LocationUrl": "http://www.nts.org.uk/Property/96/",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Bucinch",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 56.09169,
+    "Long": -4.59425,
+    "Area": null,
+    "Description": "Bucinch or Buc-Innis is a small island in Loch Lomond, in west central Scotland.  The heavily wooded island lies due north of Inchcruin and rises steeply from a rocky coastline to 24 metres in a central summit.",
+    "DescriptionModified": "Bucinch is a heavily wooded island in Loch Lomond, rising steeply from a rocky coastline to a central summit.",
+    "Images": [],
+    "LocationUrl": null,
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Barry Water Mill",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 56.50443,
+    "Long": -2.75846,
+    "Area": null,
+    "Description": "Barry Mill is a working Category A listed watermill in Barry, Angus in eastern Scotland.  It is owned and operated by the National Trust for Scotland as an educational tourist attraction.",
+    "DescriptionModified": "This mill is set in a secluded natural area, powered by the Barry Burn, a tranquil watercourse vital to the local landscape.",
+    "Images": [],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/barry-mill",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Goat Fell",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 55.625972,
+    "Long": -5.190556,
+    "Area": null,
+    "Description": "Goat Fell is the highest point on the Isle of Arran.  At 875 metres, it is one of four Corbetts on the island.",
+    "DescriptionModified": "Arran's highest mountain, Goat Fell provides breathtaking vistas of the island's rugged highland landscapes.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/f/f9/Arran_satellite.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/98/Brodick_Tideline_-_panoramio_%28cropped%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/6/67/Goatfell_Summit2.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/1/1e/North_Ayrshire_UK_relief_location_map.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/6/64/Pen_y_Fan_from_Cribyn.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/a/a2/Schiehallion_01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/f/f1/Slioch_from_Loch_Maree.jpg"
+    ],
+    "LocationUrl": null,
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Culzean Castle",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 55.3544,
+    "Long": -4.7895,
+    "Area": 97,
+    "Description": "Culzean Castle is a castle overlooking the Firth of Clyde, near Maybole, Carrick, in South Ayrshire, on the west coast of Scotland.  It is the former home of the Marquess of Ailsa, the chief of Clan Kennedy, but is now owned by the National Trust for Scotland.",
+    "DescriptionModified": "The 240-acre Culzean Castle Country Park features dramatic clifftop views of the Firth of Clyde and includes a beautiful walled garden.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/1/12/Carrick%2C_South_Ayrshire.png",
+      "https://upload.wikimedia.org/wikipedia/commons/8/83/Culzean_Castle.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/99/Culzean_Castle_house_and_gardens_01.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/3/3b/Culzean_Castle_sca1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/3/3a/Culzean_Castle_sca10.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/a/a4/Culzean_Castle_sca2.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/7/70/Culzean_Castle_sca3.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/a/a7/Culzean_Castle_sca4.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/95/Culzean_Castle_sca5.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/5/50/Culzean_Castle_sca6.jpg"
+    ],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/culzean/planning-your-visit",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Brodick Castle",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": null,
+    "Long": null,
+    "Area": null,
+    "Description": "Brodick Castle is a castle situated outside the port of Brodick on the Isle of Arran, an island in the Firth of Clyde, Scotland.  It was previously a seat of the Dukes of Hamilton, but is now owned by the National Trust for Scotland.",
+    "DescriptionModified": "Immerse yourself in spectacular gardens and designed landscapes, offering breathtaking views across the Firth of Clyde from the Isle of Arran.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/en/7/7f/Hamiltonarms.gif",
+      "https://upload.wikimedia.org/wikipedia/commons/f/f9/Arran_satellite.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/1/19/Brodick_Castle%2C_Isle_of_Arran%2C_Scotland_-gardens-13Feb2011.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/e/e3/Brodick_Castle_Main_Building_East_01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/1/1e/North_Ayrshire_UK_relief_location_map.jpg"
+    ],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/brodick-castle-garden-country-park",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Ben Lawers",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 56.545556,
+    "Long": -4.220833,
+    "Area": null,
+    "Description": "Ben Lawers is the highest mountain in the Breadalbane region of the Scottish Highlands.  It lies north of Loch Tay and is the highest peak of the 'Ben Lawers group', a ridge that includes six other Munros: Beinn Ghlas, Meall Garbh, Meall Corranaich, An Stùc, Meall Greigh and Meall a' Choire Leith.",
+    "DescriptionModified": "Ben Lawers is a towering Munro in the Scottish Highlands, featuring a dramatic ridge of peaks and unique metamorphic rock formations.",
+    "Images": [],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/ben-lawers",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Dunmore Pineapple",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 56.07671,
+    "Long": -3.7867,
+    "Area": null,
+    "Description": "The Dunmore Pineapple is a folly in Dunmore Park, near Airth in Stirlingshire, Scotland.  In 1995, it was ranked \"as the most bizarre building in Scotland\".",
+    "DescriptionModified": "This Stirlingshire site features mature woodlands, orchards, and extensive parkland, providing habitats for diverse wildlife.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/f/f9/Dunmore_pineapple_north_elevation.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/e/ee/Dunmore_Pineapple%2C_Dunmore_Park_near_Airth.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/4/41/Dunmore_Pineapple%2C_cupola_detail.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/3/37/Dunmore_pineapple.jpg"
+    ],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/the-pineapple",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Grey Mare's Tail, Moffat Hills",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 55.4175,
+    "Long": -3.2875,
+    "Area": null,
+    "Description": "Grey Mare's Tail is a 60-metre hanging valley waterfall near to Moffat in southern Scotland.  The fall is produced by the Tail Burn flowing from Loch Skeen cascading into the Moffat Water in the lower valley below.",
+    "DescriptionModified": "Discover a dramatic waterfall, upland loch, and rare plants within this botanically diverse Southern Uplands landscape, home to unique wildlife like wild goats.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/0/05/Lophophanes_cristatus_Luc_Viatour_4.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/8/86/Grey_Mare%27s_Tail.jpg"
+    ],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/grey-mares-tail",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Murray Isles",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 54.8,
+    "Long": -4.216667,
+    "Area": null,
+    "Description": "The Islands of Fleet are a group of small islands in Galloway, Scotland.  They are in Fleet Bay, which is part of Wigtown Bay, and is in turn part of the Solway Firth in the Irish Sea.",
+    "DescriptionModified": "Murray Isles is a small, tidal island located within the nationally important Borgue Coast Site of Special Scientific Interest.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/c/c8/Ardwall_Isle_from_the_Carrick_Shore._-_geograph.org.uk_-_933067.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/d/d0/Scottish_Isles.gif"
+    ],
+    "LocationUrl": null,
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Rockcliffe, Dumfries and Galloway",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 54.865,
+    "Long": -3.796,
+    "Area": null,
+    "Description": "Rockcliffe is a small, coastal village in Kirkcudbrightshire, Dumfries and Galloway in Scotland, with a view of Rough Island, Hestan Island, the Solway Firth and sometimes the Cumbrian coast.  Rockcliffe lies on the eastern side of the River Urr estuary, and gives access to Rough Island by way of both firm mud exposed at low tide and a natural, tidal causeway.",
+    "DescriptionModified": "This coastal village in Dumfries and Galloway overlooks the Solway Firth and River Urr estuary, with tidal access to Rough Island.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/8/8f/Baron%27s_Craig_Hotel_-_geograph.org.uk_-_536743.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/6/6d/Rockcliffe%2C_Dumfries_%26_Galloway.jpg"
+    ],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/rockcliffe/things-to-do",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Moirlanich Longhouse",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 56.4774,
+    "Long": -4.3361,
+    "Area": null,
+    "Description": "Moirlanich Longhouse is a rare example of a cruck frame Scottish cottage.  It is located at grid reference NN562341 in Glen Lochay near Killin in the Stirling council area, Scotland.",
+    "DescriptionModified": "Set within Glen Lochay, this site offers visitors a glimpse into the natural beauty and tranquil landscape of a Scottish glen.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/3/38/Moirlanich_Longhouse_-_geograph.org.uk_-_278876.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/2/28/Moirlanich_Longhouse_thatched_roof.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/e/ee/Moirlanich_Longhouse_thatched_roof_2.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/5/50/Morlanich_Longhouse_2004.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/8/81/Wfm_wallace_monument.jpg"
+    ],
+    "LocationUrl": "http://www.nts.org.uk/Property/80/",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Dollar Glen",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 56.167881,
+    "Long": -3.668369,
+    "Area": null,
+    "Description": "Dollar Glen is a small glen owned by the National Trust for Scotland.  It is located in the Ochils that dramatically mark the Highland fault.",
+    "DescriptionModified": "A dramatic glen within the Ochils, highlighting the striking landscape along the Highland fault.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/c/ce/Dollar_Glen_-_geograph.org.uk_-_1242168.jpg"
+    ],
+    "LocationUrl": null,
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Broughton House",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 54.836944,
+    "Long": -4.054444,
+    "Area": null,
+    "Description": "Broughton House is an 18th-century town house standing on the High Street of Kirkcudbright, Scotland.  It was the home of Scots impressionist artist E.",
+    "DescriptionModified": "Discover the tranquil, Japanese-influenced gardens, celebrated for their unique design and horticultural beauty.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/7/79/Broughton_House%2C_Kirkcudbright%2C_home_of_artist_E_A_Hornel_-_geograph.org.uk_-_1747577.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/8/85/Broughton_House_-_view_of_gallery_interior.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/2/24/Garden_of_Broughton_House%2C_Kirkcudbright%2C_home_of_artist_E_A_Hornel_-_geograph.org.uk_-_14886.jpg"
+    ],
+    "LocationUrl": "http://www.nts.org.uk/Property/Broughton-House-and-Garden",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "House of the Binns",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 55.990833,
+    "Long": -3.523056,
+    "Area": null,
+    "Description": "The House of the Binns, or simply the Binns, is a historic house and estate in West Lothian, Scotland, the seat of the Dalyell baronets and family.  It dates principally from the early 17th century and was gifted to the National Trust for Scotland in 1944 by Eleanor Dalyell.",
+    "DescriptionModified": "Set amidst 200 acres of parkland, this \"house of the hills\" offers panoramic views across the Forth to the Highlands and Pentland Hills.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/f/fa/Sword_of_William_Cunningham_Dalyell.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/b/b0/The_Binns_Tower.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/0/01/The_Bins.jpeg",
+      "https://upload.wikimedia.org/wikipedia/commons/4/4c/Thomas_Dalyell.jpg"
+    ],
+    "LocationUrl": "http://www.nts.org.uk/Property/33/",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Inveresk Lodge Garden",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 55.93425,
+    "Long": -3.04478,
+    "Area": null,
+    "Description": "Inveresk Lodge Garden is in the care of the National Trust for Scotland, in the village of Inveresk, East Lothian.  The lodge lies about 10 km south-east of Edinburgh, and for over a century was one of the homes of the Wedderburn family.",
+    "DescriptionModified": "Explore this garden's cultivated beauty, offering diverse plant life and a green space for local wildlife.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/e/ef/Aviary01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/e/e3/Conservatory01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/3/32/Ferns01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/3/32/GardenRoom01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/6/69/Inveresk_Lodge01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/5/5a/Inveresk_Lodge02.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/b/b6/Inveresk_Lodge_and_Garden_-_geograph.org.uk_-_911983.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/1/11/Pond01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/0/05/Sundial01.jpg"
+    ],
+    "LocationUrl": "http://www.nts.org.uk/Property/35/",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Preston Mill",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 55.99219,
+    "Long": -2.65114,
+    "Area": null,
+    "Description": "Preston Mill is a watermill on the River Tyne at the eastern edge of East Linton on the B1407 Preston Road, in East Lothian, Scotland, UK.  It is situated close to Prestonkirk Parish Church, the Smeaton Hepburn Estate, Smeaton Lake, and Phantassie Doocot.",
+    "DescriptionModified": "This picturesque watermill, powered by the River Tyne, sits amidst a tranquil waterside landscape featuring a mill pond and nearby Smeaton Lake.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/1/16/PrestonMillBEST.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/d/dc/PrestonMillExhib.jpg"
+    ],
+    "LocationUrl": null,
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Threave Gardens",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 54.923128,
+    "Long": -3.946503,
+    "Area": 26,
+    "Description": "Threave Garden and Estate is a series of gardens owned and managed by the National Trust for Scotland, located near Castle Douglas in the historical county of Kirkcudbrightshire in Dumfries and Galloway region of Scotland.  Covering 64 acres, the gardens are part of the 1,500 acres Threave Estate originally developed by William Gordon who bought the estate in 1867.",
+    "DescriptionModified": "Threave's diverse gardens and ponds are part of a wider nature reserve, home to bats and ospreys, within a Special Protection Area.",
+    "Images": [],
+    "LocationUrl": "http://www.nts.org.uk/Property/61/Details/",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Newhailes",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 55.94086,
+    "Long": -3.079214,
+    "Area": null,
+    "Description": "Newhailes House is a Palladian style country house which stands in 80 acres of parkland on the edge of the small town of Musselburgh in East Lothian, Scotland.  It is a Category A listed building which is now occupied and maintained by the National Trust for Scotland.",
+    "DescriptionModified": "Explore 80 acres of tranquil parkland at Newhailes, a green oasis offering a valuable habitat on the edge of Musselburgh.",
+    "Images": [],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/newhailes/planning-your-visit",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Malleny House and Garden",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 55.884783,
+    "Long": -3.336711,
+    "Area": null,
+    "Description": "The Malleny House and Garden is an historic house and garden owned by the National Trust for Scotland in Balerno, 6 mi southwest of Edinburgh.  The gardens are notable for its large yew trees, as well as one of the largest rose collections in Scotland.",
+    "DescriptionModified": "Malleny Garden boasts ancient yew trees and Scotland's national collection of heritage shrub roses, a botanical treasure trove southwest of Edinburgh.",
+    "Images": [],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/malleny-garden",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Culross",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 56.0554,
+    "Long": -3.6293,
+    "Area": null,
+    "Description": "Culross is a village and former royal burgh, and parish, in Fife, Scotland.  According to the 2006 estimate, the village has a population of 395.",
+    "DescriptionModified": "Positioned on the Firth of Forth, the property offers views across this significant Scottish estuary.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/b/b3/Anchor_and_wheelie_bin_store_building_-_geograph.org.uk_-_952290.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/0/0d/Culross%2C_Fife%2C_Scotland.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/c/ce/Culross_Palace.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/4/4f/Culrosshouse7_December.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/0/0f/Mercat_Cross%2C_Culross.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/3/38/Street_in_Culross.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/7/7f/Tanhouse_Brae%2C_Culross%2C_looking_south_to_the_Firth_of_Forth.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/7/7f/Tanhouse_Brae%2C_Culross.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/3/31/West_Kirk_of_Culross_viewed_from_west.jpg"
+    ],
+    "LocationUrl": "https://www.nts.org.uk/stories/film-tv-locations-in-scotland",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Kellie Castle",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 56.237222,
+    "Long": -2.775833,
+    "Area": null,
+    "Description": "Kellie Castle is a castle just outside Arncroach and below the dominant hill in the area, Kellie Law.  It is about 4 kilometres north of Pittenweem in the East Neuk of Fife, Scotland.",
+    "DescriptionModified": "Nestled below the dominant Kellie Law, Kellie Castle sits amidst the rolling countryside of Fife's East Neuk.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/2/22/Kellie_Castle_%28rear_view%29%2C_Fife%2C_Scotland.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/5/5e/Kellie_Castle_Gardens.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/a/a1/Kellie_Castle_and_Grounds.JPG"
+    ],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/kellie-castle",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Greenbank Garden",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": null,
+    "Long": null,
+    "Area": 1.01,
+    "Description": "Greenbank Garden is a 2. 5-acre 18th century walled garden in Carolside, Clarkston, East Renfrewshire, Scotland, owned and operated by the National Trust for Scotland and open to the public.",
+    "DescriptionModified": "Greenbank Garden features a vibrant 2.5-acre walled garden, a rich horticultural landscape providing diverse plantings and supporting local wildlife.",
+    "Images": [],
+    "LocationUrl": "http://www.nts.org.uk/Property/28/",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Hill of Tarvit",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 56.294982,
+    "Long": -3.005504,
+    "Area": null,
+    "Description": "The Hill of Tarvit is a 20th-century mansion house and gardens in Fife, Scotland.  They were designed by Sir Robert Lorimer and are today owned by the National Trust for Scotland.",
+    "DescriptionModified": "Discover the serene gardens of Hill of Tarvit, a haven for diverse plant life and local wildlife.",
+    "Images": [],
+    "LocationUrl": "http://www.nts.org.uk/Property/1/",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Black Hill (Clydesdale)",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 55.6708,
+    "Long": -3.8602,
+    "Area": null,
+    "Description": "The Black Hill in South Lanarkshire is owned by the National Trust for Scotland.  It overlooks the Clyde Valley, and is the location of a burial cairn from the Bronze Age and an Iron Age fortress.",
+    "DescriptionModified": "A prominent South Lanarkshire hill providing extensive panoramic views of the Clyde Valley, Southern Highlands, and distant islands.",
+    "Images": [],
+    "LocationUrl": null,
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Fair Isle",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 59.541667,
+    "Long": -1.6225,
+    "Area": null,
+    "Description": "Fair Isle is the southernmost of the Shetland Islands, Scotland.  It is situated at the approximate midpoint between the southern tip of Mainland, Shetland; and North Ronaldsay, the northernmost of the Orkney Islands; in an area bordering the North Sea and the Atlantic Ocean known as the Fair Isle Gap.",
+    "DescriptionModified": "Fair Isle, the UK's most remote inhabited island, is internationally renowned for its wild bird observatory and rich marine environment.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/3/38/100kW_Aerogenerator%2C_Fair_Isle_-_geograph.org.uk_-_9129.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/d/dd/Boreray_and_the_Stacs.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/7/78/Burkle%2C_Fair_Isle_-_geograph.org.uk_-_3151098.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/d/dc/Da_Sherriff_-_geograph.org.uk_-_344962.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/e/e3/Directflight_Britten-Norman_BN-2B-20_Islander_at_Fair_Isle.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/6/6c/Fair_Isle_-_Croft_houses.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/6/62/Fair_Isle_-_West_cliffs.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/c/cd/Fair_Isle_Kirk_interior_-_geograph.org.uk_-_893323.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/1/1a/Fair_Isle_Scotland.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/8/80/Fair_Isle_South_light_-_geograph.org.uk_-_259309.jpg"
+    ],
+    "LocationUrl": null,
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Battle of Culloden",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 57.477222,
+    "Long": -4.0925,
+    "Area": null,
+    "Description": "The Battle of Culloden took place on 16 April 1746, near Inverness, in the Scottish Highlands.  A Jacobite army under Charles Edward Stuart was decisively defeated by a British government force commanded by the Duke of Cumberland, thereby ending the Jacobite rising of 1745.",
+    "DescriptionModified": "Vast open moorland and heathland reflect the natural beauty of the Scottish Highlands at Culloden.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/c/c7/%22The_End_of_the_%27Forty_Five%27_Rebellion%22.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/5/5f/Battle_of_Culloden_%28campaign_map_01%29.png",
+      "https://upload.wikimedia.org/wikipedia/commons/0/09/Battle_of_Culloden_woodcut_painting_1746.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/4/4b/Culloden_Battlefield_Memorial_Cairn.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/b/b8/Culloden_Cairn_at_Knoydart%2C_Nova_Scotia.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/1/14/Culloden_House_%28old%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/f/f0/Culloden_grave_%28road_and_three_graves%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/b/bd/Lost_Portrait_of_Charles_Edward_Stuart.jpg"
+    ],
+    "LocationUrl": "http://www.nts.org.uk/Culloden/PPF/VisitorCentre/",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Brodie Castle",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": null,
+    "Long": null,
+    "Area": null,
+    "Description": "Brodie Castle is a well-preserved Z-plan tower house located north of Brodie about 3. 5 miles west of Forres, in Moray, Scotland.",
+    "DescriptionModified": "Its diverse grounds, included in Scotland's Inventory of Gardens and Designed Landscapes, showcase varied plant life.",
+    "Images": [],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/brodie-castle",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Glen Coe",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 56.667778,
+    "Long": -4.986667,
+    "Area": null,
+    "Description": "Glen Coe is a glen of glacial origins that cuts though volcanic rocks in the Highlands of Scotland.  It lies in the north of the county of Argyll, close to the border with the historic province of Lochaber, within the modern council area of Highland.",
+    "DescriptionModified": "Glen Coe is a dramatic glacial glen carved through volcanic rock in the Scottish Highlands, offering soaring mountain scenery for mountaineering and hillwalking.",
+    "Images": [],
+    "LocationUrl": "https://www.nts.org.uk/Visit/Glencoe/",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Pollok House",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 55.827928,
+    "Long": -4.318222,
+    "Area": null,
+    "Description": "Pollok House, formerly the family seat of the Stirling-Maxwell family, is located at Pollok Country Park in Glasgow, Scotland.",
+    "DescriptionModified": "Pollok House is located in Pollok Country Park, featuring extensive woodlands and diverse wildlife habitats.",
+    "Images": [],
+    "LocationUrl": "http://www.nts.org.uk/web/site/home/visit/places/Property.asp?PropID=10050&NavPage=10050&NavId=5117",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Corrieshalloch Gorge National Nature Reserve",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 57.7552,
+    "Long": -5.0204,
+    "Area": null,
+    "Description": "Corrieshalloch Gorge is a gorge situated about 20 kilometres south of Ullapool, close to the junction of the A832 and A835 roads near Braemore in the Scottish Highlands.  The gorge is approximately 1.",
+    "DescriptionModified": "Experience the majestic Corrieshalloch Gorge, a profound Highland ravine with the roaring Falls of Measach, revealing a landscape shaped by ancient glacial forces.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/en/c/c9/Corrieshalloch-2006-06-n3-1118.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/0/0e/Corrieshalloch_Gorge_visitor_centre.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/90/Ross_and_Cromarty_UK_relief_location_map.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/0/09/Scotland_Corrieshalloch_Gorge_Waterfall.jpg"
+    ],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/corrieshalloch-gorge",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Falls of Glomach",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 57.2786,
+    "Long": -5.2892,
+    "Area": null,
+    "Description": "The Falls of Glomach, in Highland, Scotland, is one of the tallest waterfalls in Britain, with a single drop of 113 m.  The falls are located approximately 18 miles east of Kyle of Lochalsh, in the historic county of Ross-shire.",
+    "DescriptionModified": "The remote Falls of Glomach plunge 113m through wild Highland countryside, making it one of Britain's tallest and most spectacular waterfalls.",
+    "Images": [],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/falls-of-glomach/getting-here",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Dunkeld",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 56.5656,
+    "Long": -3.5861,
+    "Area": null,
+    "Description": "Dunkeld is a town in Perth and Kinross, Scotland.  The location of a historic cathedral, it lies on the north bank of the River Tay, opposite Birnam.",
+    "DescriptionModified": "Dunkeld is the scenic gateway to the Highlands, nestled on the River Tay, and includes the beautiful countryside of The Hermitage.",
+    "Images": [],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/dunkeld",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Killiecrankie",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 56.745,
+    "Long": -3.778889,
+    "Area": null,
+    "Description": "Killiecrankie is a village in Perth and Kinross, Scotland on the River Garry.  It lies at the Pass of Killiecrankie, by the A9 road which has been bypassed since 1986.",
+    "DescriptionModified": "Explore the dramatic Pass of Killiecrankie, renowned for its ancient aspen woods and the scenic River Garry flowing through this stunning gorge.",
+    "Images": [],
+    "LocationUrl": null,
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "The Hermitage (Scotland)",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 56.559,
+    "Long": -3.621,
+    "Area": null,
+    "Description": "The Hermitage is a National Trust for Scotland-protected site in Dunkeld, Perth and Kinross.  Located just to the west of the A9, it sits on the banks of the River Braan in Craigvinean Forest.",
+    "DescriptionModified": "Ancient woodlands along the River Braan feature towering Douglas-fir trees, creating a majestic forest landscape.",
+    "Images": [],
+    "LocationUrl": null,
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Balmacara Estate",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 57.2929,
+    "Long": -5.6429,
+    "Area": 2750,
+    "Description": "Balmacara is a scattered village on the north shore of Loch Alsh near Kyle of Lochalsh, Ross-shire, Highland and is in the Scottish council area of the Highland, Scotland.  In 1946, Lady Hamilton, bequeathed the 2,750-hectare Balmacara crofting estate to the people of Scotland, by donating it to the National Trust for Scotland.",
+    "DescriptionModified": "This expansive crofting estate offers scenic coastal landscapes along the shores of Loch Alsh and Balmacara Bay.",
+    "Images": [],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/balmacara-estate",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Linn of Tummel",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 56.721,
+    "Long": -3.785,
+    "Area": 19,
+    "Description": "Linn of Tummel is a 19-hectare woodland property at the confluence of the rivers Garry and Tummel, near Pitlochry in Perthshire, Scotland.  It is owned and maintained by the National Trust for Scotland, and is adjacent to the Trust's property at Killiecrankie.",
+    "DescriptionModified": "Woodlands at the confluence of the Rivers Garry and Tummel, supporting pine martens, otters, and diverse flora.",
+    "Images": [],
+    "LocationUrl": "http://www.nts.org.uk/Property/43/",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Inverewe Garden",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 57.775,
+    "Long": -5.604167,
+    "Area": 850,
+    "Description": "Inverewe Garden is a botanical garden in Wester Ross in the Scottish Highlands.  It is located just to the north of Poolewe in Wester Ross, and is noted for the breadth of its collection.",
+    "DescriptionModified": "Inverewe Garden is a diverse botanical collection in the Scottish Highlands, featuring over 2,500 exotic plants and renowned rhododendron collections, cultivated from barren land.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/3/35/Fletcher_Moss-row.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/f/f7/InvereweGardens-pjt1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/4/4b/Scotland_Inverewe_Gardens.jpg"
+    ],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/inverewe/highlights/garden",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "West Affric",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 57.23596,
+    "Long": -5.15327,
+    "Area": 10117.5,
+    "Description": "Glen Affric is a glen south-west of the village of Cannich in the Highland region of Scotland, some 15 miles west of Loch Ness.  The River Affric runs along its length, passing through Loch Affric and Loch Beinn a' Mheadhoin.",
+    "DescriptionModified": "Experience West Affric, a truly spectacular Scottish glen featuring ancient Caledonian pinewoods, sparkling lochs, vast moorland, and dramatic mountains.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/1/11/Affric_Lodge%2C_Glen_Affric_%28geograph_3199291%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/d/d7/Benevean_dam_%28PaulHookway.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/3/34/Gleann_Afraig_is_Beinn_Fhada.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/92/Glen_Affric_tartan.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/5/50/Glen_affric_loch_affric.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/8/82/Glen_affric_youth_hostel.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/5/53/Highland_UK_relief_location_map.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/4/4f/Islands_-_panoramio_%282%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/97/Lady_Glen_Affric%2C_nee_Fanny_Spencer-Churchill.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/7/7e/Scotland_relief_location_map.jpg"
+    ],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/west-affric",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Strome Castle",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 57.359147,
+    "Long": -5.555856,
+    "Area": null,
+    "Description": "Strome Castle is a ruined castle on the shore of Loch Carron in Stromemore, 3. 5 miles south-west of the village of Lochcarron, on the headland between Loch Carron and Loch Kishorn, on the west coast of the Scottish Highlands.",
+    "DescriptionModified": "Perched on a dramatic headland between two sea lochs, this Highland ruin offers breathtaking coastal views and a wild Scottish landscape.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/4/49/Scotland_Loch_Carron.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/a/a9/Scotland_Strome_Castle.jpg"
+    ],
+    "LocationUrl": "https://www.nts.org.uk/stories/little-gems",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Kintail",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 57.205833,
+    "Long": -5.352222,
+    "Area": null,
+    "Description": "Kintail is a mountainous area sitting at the head of Loch Duich in the Northwest Highlands of Scotland, located in the Highland Council area.",
+    "DescriptionModified": "Kintail is a stunning mountainous area at the head of Loch Duich, showcasing the dramatic landscapes of the Northwest Highlands.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/6/61/Five_Sisters.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/1/10/Five_Sisters_of_Kintail.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/5/53/Highland_UK_relief_location_map.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/8/8d/Kintail_estate_signage_in_Morvich.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/b/bb/Kintail_mountain_rescue_center.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/0/01/Kintail_signage_and_map_in_Morvich.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/7/73/Royal_Engineers_bridge_in_Kintail.jpg"
+    ],
+    "LocationUrl": "https://www.nts.org.uk/Holidays/Accommodation/Kintail-Outdoor-Centre-Kintail-and-Morvich/",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Morvich, Highland",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 57.2316,
+    "Long": -5.38322,
+    "Area": null,
+    "Description": "Morvich is a settlement in Glen Shiel near the southern end of Loch Duich, and to the north of Kintail, in Lochalsh, in the Highland council area of Scotland.  The name \"Morvich\" may be from the Gaelic for \"sea plain\" or \"the carse\".",
+    "DescriptionModified": "A gateway to dramatic Highland landscapes, featuring towering mountains like the Five Sisters of Kintail, the stunning Falls of Glomach, and expansive glens.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/f/f6/Clan_MacRae_memorial.jpg"
+    ],
+    "LocationUrl": "http://www.nts.org.uk/Property/40/",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Harmony Garden, Scottish Borders",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 55.5996,
+    "Long": -2.72,
+    "Area": null,
+    "Description": "The Harmony Garden is the garden of Harmony Hall which is in the town of Melrose, in the Scottish Borders, administered by the National Trust for Scotland.",
+    "DescriptionModified": "Discover the botanical diversity and tranquil green spaces of Harmony Garden, a peaceful natural oasis in the Scottish Borders.",
+    "Images": [],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/harmony-garden",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Priorwood Garden",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 55.5983,
+    "Long": -2.7183,
+    "Area": null,
+    "Description": "Priorwood Garden is a garden in Melrose in the Scottish Borders area of Scotland.  The garden contains an apple orchard of unusual apple trees.",
+    "DescriptionModified": "Priorwood Garden cultivates an orchard of unusual apple varieties and a vibrant flower garden providing blooms for dried arrangements.",
+    "Images": [],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/priorwood-garden",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Shieldaig Island",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": null,
+    "Long": null,
+    "Area": null,
+    "Description": "Shieldaig Island is an island in Loch Shieldaig, in the council area of Highland, Scotland.  It is located 400 metres offshore from Shieldaig.",
+    "DescriptionModified": "Shieldaig Island is a Scots pine-covered island in Loch Shieldaig, supporting a thriving bird population.",
+    "Images": [],
+    "LocationUrl": "https://www.nts.org.uk/stories/little-gems",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Iona",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 56.33,
+    "Long": -6.41,
+    "Area": null,
+    "Description": "Iona is an island in the Inner Hebrides, off the Ross of Mull on the western coast of Scotland.  It is mainly known for Iona Abbey, though there are other buildings on the island.",
+    "DescriptionModified": "Iona is a tranquil Inner Hebridean island, celebrated for its peaceful natural environments and stunning coastal landscapes.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/6/6c/Argyll_and_Bute_UK_relief_location_map.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/d/dd/Boreray_and_the_Stacs.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/5/5f/Cathedral_Rock%2C_Iona_-_Samuel_John_Peploe_-_ABDAG010719.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/e/e1/Cloisters_of_Abbey_on_the_Isle_of_Iona.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/b/b5/Hebridesmap.png",
+      "https://upload.wikimedia.org/wikipedia/commons/6/60/Iona.showing.monasteries.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/1/1d/Iona2may11.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/7/7f/Iona_%2815020668711%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/b/b7/Iona_Abbey._Panorama.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/6/60/Iona_Village_from_seawards.jpg"
+    ],
+    "LocationUrl": "http://www.nts.org.uk/Property/Iona/About/",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "St Kilda, Scotland",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 57.815,
+    "Long": -8.5875,
+    "Area": null,
+    "Description": "St Kilda is a remote archipelago situated 35 nautical miles west-northwest of North Uist in the North Atlantic Ocean.  It contains the westernmost islands of the Outer Hebrides of Scotland.",
+    "DescriptionModified": "St Kilda is a wild, remote Atlantic archipelago with the United Kingdom's highest sea cliffs, vital for vast seabird populations.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/5/5a/A_Cleit_On_St_Kilda_-_geograph.org.uk_-_1379478.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/8/8a/Blotonstkilda.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/d/dd/Boreray_and_the_Stacs.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/3/38/Carte_of_Scotlande.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/4/4b/Cleit_above_Village_Bay.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/3/3d/Dun%2C_St_Kilda.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/a/a0/Featherstorestkilda.jpg"
+    ],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/st-kilda/highlights/church-and-museum",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Staffa National Nature Reserve",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 56.436111,
+    "Long": -6.340278,
+    "Area": null,
+    "Description": "Staffa is an island of the Inner Hebrides in Argyll and Bute, Scotland.  The Vikings gave it the name because its columnar basalt reminded them of their houses, which were constructed using vertical logs.",
+    "DescriptionModified": "Staffa is a small island renowned for its dramatic columnar basalt formations, including the famous Fingal's Cave.",
+    "Images": [],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/staffa",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Canna, Scotland",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 57.06,
+    "Long": -6.55,
+    "Area": null,
+    "Description": "Canna is the westernmost of the Small Isles archipelago, in the Scottish Inner Hebrides.  It is linked to the neighbouring island of Sanday by a road and sandbanks at low tide.",
+    "DescriptionModified": "This remote Inner Hebridean island is a conservation area, known for its unique coastal landscape and sandbank links to Sanday.",
+    "Images": [],
+    "LocationUrl": "https://www.nts.org.uk/stories/solas-event-week-on-canna-call-for-papers",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Sanday, Inner Hebrides",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 57.05,
+    "Long": -6.49,
+    "Area": null,
+    "Description": "Sanday is one of the Small Isles, in the Scottish Inner Hebrides.  It is a tidal island linked to its larger neighbour, Canna, via sandbanks at low tide, and also connected to the larger island by a bridge.",
+    "DescriptionModified": "Sanday, an Inner Hebridean tidal island, showcases some of Scotland's youngest volcanic rocks and is linked to Canna by sandbanks.",
+    "Images": [],
+    "LocationUrl": "https://www.nts.org.uk/what-we-do/countryside-and-wildlife/3-key-projects",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Mingulay",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 56.811,
+    "Long": -7.637,
+    "Area": 55,
+    "Description": "Mingulay is the second largest of the Barra Isles in the Outer Hebrides of Scotland.  Located 12 nautical miles south of Barra, it is known for an extensive Gaelic oral tradition incorporating folklore, song and stories and its important seabird populations, including puffins, black-legged kittiwakes, and razorbills, which nest in the sea-cliffs, amongst the highest in the British Isles.",
+    "DescriptionModified": "Mingulay boasts towering sea-cliffs, among the highest in Britain, providing a vital nesting site for important seabird populations including puffins and razorbills.",
+    "Images": [],
+    "LocationUrl": "http://www.nts.org.uk/web/site/home/visit/places/Property.asp?PropID=10097&NavPage=10097&NavId=5123",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Barra Head",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 56.783,
+    "Long": -7.645,
+    "Area": null,
+    "Description": "Barra Head, also known as Berneray, is the southernmost island of the Outer Hebrides in Scotland.  Within the Outer Hebrides, it forms part of the Barra Isles archipelago.",
+    "DescriptionModified": "Barra Head's dramatic cliffs host profuse seabird colonies, making this uninhabited Outer Hebridean island a vital Special Protection Area for marine birdlife.",
+    "Images": [],
+    "LocationUrl": "http://www.nts.org.uk/Property/78/Details/",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Pabbay, Barra, Scotland",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 56.85,
+    "Long": -7.57,
+    "Area": null,
+    "Description": "Pabbay is one of the Barra Isles at the southern end of the Outer Hebrides of Scotland.  The name comes from Papey, which is Norse for \"island of the papar\".",
+    "DescriptionModified": "This remote Outer Hebridean island is a vital summer sanctuary for many ground-nesting birds, thriving in the absence of predators.",
+    "Images": [],
+    "LocationUrl": null,
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "St Abb's Head National Nature Reserve",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 55.916083,
+    "Long": -2.138611,
+    "Area": null,
+    "Description": "St Abb's Head is a rocky promontory by the village of St Abbs in Berwickshire, Scotland, and a national nature reserve administered by the National Trust for Scotland.  St Abb's Head Lighthouse was designed and built by the brothers David Stevenson and Thomas Stevenson and began service on 24 February 1862.",
+    "DescriptionModified": "This national nature reserve protects a dramatic rocky promontory, offering vital habitats for diverse coastal wildlife and unique plant species.",
+    "Images": [],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/st-abbs-head",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  },
+  {
+    "Name": "Treshnish Islands",
+    "HostOrg": "National Trust for Scotland",
+    "Lat": 56.497,
+    "Long": -6.418,
+    "Area": null,
+    "Description": "The Treshnish Isles are an archipelago of small islands and skerries, lying west of the Isle of Mull, in Scotland.  They are part of the Inner Hebrides.",
+    "DescriptionModified": "A wild Inner Hebrides archipelago of small islands and skerries, providing vital habitats for coastal wildlife and seabirds.",
+    "Images": [
+      "https://upload.wikimedia.org/wikipedia/commons/d/dd/Boreray_and_the_Stacs.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/b/b5/Hebridesmap.png",
+      "https://upload.wikimedia.org/wikipedia/commons/1/14/Mull_topographic_locator_map.png",
+      "https://upload.wikimedia.org/wikipedia/commons/d/d0/Scottish_Isles.gif",
+      "https://upload.wikimedia.org/wikipedia/commons/3/34/Treshnish_Isles_from_above_Port_Haunn.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/9a/Treshnisheast.JPG"
+    ],
+    "LocationUrl": "https://www.nts.org.uk/visit/places/treshnish-isles",
+    "Suggestion-Tags": [
+      "Wikipedia Import"
+    ],
+    "AI-Notes": "[Wiki Subpage Scraped]: Programmatically parsed from Wikipedia. Source index: \"List_of_National_Trust_for_Scotland_properties\"."
+  }
+]
