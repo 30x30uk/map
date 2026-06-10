@@ -348,7 +348,7 @@ function makeProjectPopup(project, volunteeringMode, isMobile) {
         : '';
     let ctaHtml = '';
 
-    if (!volunteeringMode && project.isStub && !isWikipedia) {
+    if (!volunteeringMode && project.isStub && !isWikipedia && project.HostOrg !== 'Forestry England') {
         warningHtml += `
             <div class="requesting-help-panel requesting-help-panel--stub">
                 <p><strong>More details to come</strong>: Our team of map elves are working on it. In the meantime, visit the project’s own website for further information. <a href="mailto:contact@30x30.org.uk?subject=Map+feedback+for+location:+${project.Name}+${project.id}">Feedback</a>.</p>

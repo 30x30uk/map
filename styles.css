@@ -508,6 +508,9 @@ strong {
 
 .project-photo {
     width:100%;
+    max-height: 40vh;
+    object-fit: cover;
+    object-position: center;
     border-radius:4px;
     display: block;
 }

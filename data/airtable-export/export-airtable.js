@@ -134,6 +134,13 @@ async function runExport() {
         console.log(`✔ Wrote ${outVolunteering.length} volunteering records to ${VOLUNTEERING_JSON}`);
 
         console.log(`✔ Total images processed: ${totalImgCount}`);
+
+        // Copy to data/ so the app picks up the latest without a manual step
+        const DATA_DIR = path.join(__dirname, '..');
+        await fs.copyFile(PROJECTS_JSON, path.join(DATA_DIR, 'projects.json'));
+        await fs.copyFile(VOLUNTEERING_JSON, path.join(DATA_DIR, 'volunteering.json'));
+        console.log(`✔ Copied to data/projects.json and data/volunteering.json`);
+
         console.log("\n🎉 Export complete!");
 
     } catch (err) {
