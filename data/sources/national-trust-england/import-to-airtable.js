@@ -119,7 +119,7 @@ async function downloadImage(url) {
     const filename = path.basename(new URL(url).pathname);
     const localPath = path.join(IMAGE_TMP_DIR, filename);
     if (fs.existsSync(localPath)) return filename; // cached
-    const response = await axios.get(url, { responseType: 'arraybuffer', headers: { 'User-Agent': 'NationalTrustImportBot/1.0 (contact@30x30project.org.uk)' }, timeout: 15000 });
+    const response = await axios.get(url, { responseType: 'arraybuffer', headers: { 'User-Agent': 'Mozilla/5.0 (compatible; NationalTrustImportBot/1.0; contact@30x30project.org.uk)', 'Referer': 'https://en.wikipedia.org/' }, timeout: 15000 });
     fs.writeFileSync(localPath, response.data);
     return filename;
 }
@@ -143,13 +143,16 @@ async function prepareAttachment(images) {
 // Airtable helpers
 // ---------------------------------------------------------------------------
 async function getExistingNames() {
-    console.log('🔍 Fetching existing record names from Airtable to avoid duplicates...');
+    console.log('🔍 Fetching existing National Trust records from Airtable to avoid duplicates...');
     const existing = new Set();
-    await base(TABLE_NAME).select({ fields: ['Name'] }).eachPage((records, next) => {
+    await base(TABLE_NAME).select({
+        filterByFormula: '{HostOrg}="National Trust"',
+        fields: ['Name']
+    }).eachPage((records, next) => {
         records.forEach(r => { if (r.fields.Name) existing.add(r.fields.Name.toLowerCase().trim()); });
         next();
     });
-    console.log(`   Found ${existing.size} existing records.`);
+    console.log(`   Found ${existing.size} existing National Trust records.`);
     return existing;
 }
 
@@ -198,7 +201,8 @@ async function main() {
 
     for (const property of toImport) {
         try {
-            const attachment = await prepareAttachment(property.Images);
+            const imageUrl = property.Image || (property.Images && property.Images[0]) || null;
+            const attachment = await prepareAttachment(imageUrl ? [imageUrl] : []);
             const fields = mapToAirtableFields(property, attachment);
 
             await base(TABLE_NAME).create(fields, { typecast: true });

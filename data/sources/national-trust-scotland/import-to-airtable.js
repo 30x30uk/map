@@ -61,12 +61,21 @@ function deriveRegion(lat, lon) {
 // ---------------------------------------------------------------------------
 // Local HTTP image server (serves downloaded Wikipedia images to Airtable)
 // ---------------------------------------------------------------------------
+const CLOUDFLARED_BIN = '/tmp/cloudflared';
+
 let imageServer = null;
-let ngrokProcess = null;
+let tunnelProcess = null;
 let ngrokUrl = null;
 
 async function startImageServer() {
     if (!fs.existsSync(IMAGE_TMP_DIR)) fs.mkdirSync(IMAGE_TMP_DIR, { recursive: true });
+
+    // If TUNNEL_URL is set, skip starting local server — user is running both externally
+    if (process.env.TUNNEL_URL) {
+        ngrokUrl = process.env.TUNNEL_URL.replace(/\/$/, '');
+        console.log(`🖼️  Using existing tunnel → ${ngrokUrl}`);
+        return;
+    }
 
     // Start local HTTP server
     imageServer = http.createServer((req, res) => {
@@ -84,29 +93,25 @@ async function startImageServer() {
     });
     await new Promise(resolve => imageServer.listen(IMAGE_SERVER_PORT, resolve));
 
-    // Kill any lingering ngrok processes cleanly
-    try { execSync('pkill -f "ngrok http"', { stdio: 'ignore' }); await sleep(800); } catch (e) {}
+    // Kill any lingering tunnel processes
+    try { execSync('pkill -f cloudflared', { stdio: 'ignore' }); await sleep(500); } catch (e) {}
 
-    // Spawn ngrok CLI directly — more reliable than the npm wrapper for static domains
-    const ngrokArgs = ['http', IMAGE_SERVER_PORT.toString(), '--log=stdout', '--log-format=json'];
-    if (NGROK_DOMAIN) ngrokArgs.push(`--domain=${NGROK_DOMAIN}`);
-    ngrokProcess = spawn(NGROK_BIN, ngrokArgs, { env: { ...process.env, HOME: process.env.HOME } });
+    // Spawn Cloudflare Tunnel — unlimited bandwidth, no account needed
+    tunnelProcess = spawn(CLOUDFLARED_BIN, ['tunnel', '--url', `http://localhost:${IMAGE_SERVER_PORT}`, '--no-autoupdate'], {
+        env: { ...process.env, HOME: process.env.HOME }
+    });
 
-    // Wait for ngrok to emit the tunnel URL in its JSON log
+    // Parse the tunnel URL from cloudflared's stderr output
     ngrokUrl = await new Promise((resolve, reject) => {
-        const timeout = setTimeout(() => reject(new Error('ngrok startup timed out after 15s')), 15000);
-        ngrokProcess.stdout.on('data', chunk => {
-            for (const line of chunk.toString().split('\n')) {
-                try {
-                    const entry = JSON.parse(line);
-                    const url = entry.url || (entry.msg === 'started tunnel' && entry.url);
-                    if (url) { clearTimeout(timeout); resolve(url); }
-                    if (entry.err && entry.err !== 'EOF' && entry.err !== '<nil>') { clearTimeout(timeout); reject(new Error(entry.err)); }
-                } catch (e) {}
-            }
-        });
-        ngrokProcess.stderr.on('data', d => process.stderr.write(d));
-        ngrokProcess.on('error', e => { clearTimeout(timeout); reject(e); });
+        const timeout = setTimeout(() => reject(new Error('cloudflared startup timed out after 20s')), 20000);
+        const onData = chunk => {
+            const text = chunk.toString();
+            const match = text.match(/https:\/\/[a-z0-9-]+\.trycloudflare\.com/);
+            if (match) { clearTimeout(timeout); resolve(match[0]); }
+        };
+        tunnelProcess.stdout.on('data', onData);
+        tunnelProcess.stderr.on('data', onData);
+        tunnelProcess.on('error', e => { clearTimeout(timeout); reject(e); });
     });
 
     console.log(`🖼️  Image server live → ${ngrokUrl}`);
@@ -116,7 +121,7 @@ async function downloadImage(url) {
     const filename = path.basename(new URL(url).pathname);
     const localPath = path.join(IMAGE_TMP_DIR, filename);
     if (fs.existsSync(localPath)) return filename; // cached
-    const response = await axios.get(url, { responseType: 'arraybuffer', headers: { 'User-Agent': 'NationalTrustScotlandImportBot/1.0 (contact@30x30project.org.uk)' }, timeout: 15000 });
+    const response = await axios.get(url, { responseType: 'arraybuffer', headers: { 'User-Agent': 'Mozilla/5.0 (compatible; NationalTrustScotlandImportBot/1.0; contact@30x30project.org.uk)', 'Referer': 'https://en.wikipedia.org/' }, timeout: 15000 });
     fs.writeFileSync(localPath, response.data);
     return filename;
 }
@@ -127,7 +132,6 @@ async function prepareAttachment(images) {
     try {
         const filename = await downloadImage(images[0]);
         const publicUrl = `${ngrokUrl}/${encodeURIComponent(filename)}`;
-        await axios.head(publicUrl, { timeout: 5000 });
         return { url: publicUrl };
     } catch (err) {
         console.warn(`     ⚠️  Image not reachable: ${err.message}`);
@@ -141,11 +145,14 @@ async function prepareAttachment(images) {
 async function getExistingNames() {
     console.log('🔍 Fetching existing record names from Airtable to avoid duplicates...');
     const existing = new Set();
-    await base(TABLE_NAME).select({ fields: ['Name'] }).eachPage((records, next) => {
+    await base(TABLE_NAME).select({
+        filterByFormula: '{HostOrg}="National Trust for Scotland"',
+        fields: ['Name']
+    }).eachPage((records, next) => {
         records.forEach(r => { if (r.fields.Name) existing.add(r.fields.Name.toLowerCase().trim()); });
         next();
     });
-    console.log(`   Found ${existing.size} existing records.`);
+    console.log(`   Found ${existing.size} existing National Trust for Scotland records.`);
     return existing;
 }
 
@@ -216,7 +223,7 @@ async function main() {
 
     console.log(`\n🎉 Done! Imported: ${imported}, Failed: ${failed}, Skipped: ${skipped}`);
     if (imageServer) imageServer.close();
-    if (ngrokProcess) ngrokProcess.kill();
+    if (tunnelProcess) tunnelProcess.kill();
 }
 
 main();
