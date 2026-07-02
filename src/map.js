@@ -6,7 +6,7 @@ let map;
 let openPopups = [];
 let markersOnScreen = {}; // Tracks custom HTML markers currently visible
 
-export function initMap(containerId, isMobile, volunteeringMode, projectsData) {
+export function initMap(containerId, isMobile, volunteeringMode, projectsData, noClusterMode) {
     mapboxgl.accessToken = MAPBOX_TOKEN;
 
     // If deep-linking to a specific project, start the map centred and zoomed in on it
@@ -27,7 +27,7 @@ export function initMap(containerId, isMobile, volunteeringMode, projectsData) {
     map.addControl(new mapboxgl.NavigationControl(), 'top-right');
 
     map.on('load', () => {
-        addProjectsToMap(projectsData, volunteeringMode, isMobile);
+        addProjectsToMap(projectsData, volunteeringMode, isMobile, noClusterMode);
 
         // Deep linking check
         if (deepLinkedProject) {
@@ -155,7 +155,7 @@ function onMapClick(e, volunteeringMode) {
         .addTo(map);
 }
 
-function addProjectsToMap(projectsData, volunteeringMode, isMobile) {
+function addProjectsToMap(projectsData, volunteeringMode, isMobile, noClusterMode) {
     const geojsonFeatures = [];
 
     projectsData.forEach(project => {
@@ -194,7 +194,7 @@ function addProjectsToMap(projectsData, volunteeringMode, isMobile) {
     map.addSource('projects', {
         type: 'geojson',
         data: { type: 'FeatureCollection', features: geojsonFeatures },
-        cluster: true,
+        cluster: !noClusterMode,
         clusterMaxZoom: 8,
         clusterRadius: 50
     });

@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const url = new URL(window.location.href);
     const volunteeringMode = url.searchParams.get('volunteering');
     const techukMode = url.searchParams.has('techuk');
+    const noClusterMode = url.searchParams.has('nocluster');
     const isMobile = window.innerWidth < 1024;
 
     // 1. Prepare UI
@@ -17,5 +18,5 @@ document.addEventListener("DOMContentLoaded", async () => {
     const projectsData = await loadProjectsData(volunteeringMode);
 
     // 3. Initialize Mapbox
-    initMap("root", isMobile, volunteeringMode, projectsData);
+    initMap("root", isMobile, volunteeringMode, projectsData, noClusterMode);
 });
